@@ -108,6 +108,12 @@ export const AnomalyDetectionSimulator: React.FC = () => {
     return () => { if (animRef.current) clearTimeout(animRef.current); };
   }, []);
 
+  // Auto-animate on mount for one-click experience
+  useEffect(() => {
+    const timer = setTimeout(() => handleAnimate(), 800);
+    return () => clearTimeout(timer);
+  }, []);
+
   // ── Isolation split lines (for animation) ──────────────────────────────
   const splitLines = useMemo(() => [
     { x1: 310, y1: 10, x2: 310, y2: 330 },  // vertical through middle
@@ -258,24 +264,24 @@ export const AnomalyDetectionSimulator: React.FC = () => {
         {/* Right panel: metrics + histogram */}
         <div className="flex flex-col gap-2 min-w-[130px]">
           {/* Metrics */}
-          <div className="bg-white rounded-xl border border-[#E5DDD0] p-3 text-[10px] font-mono space-y-1.5">
+          <div className="bg-[#FAF6EE] rounded-xl border border-[#E5DDD0] p-3 text-[10px] font-mono space-y-1.5">
             <div className="font-bold text-[#2E251E] text-xs mb-1">Detection Metrics</div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Precision</span>
-              <span className="font-bold text-green-600">{(metrics.precision * 100).toFixed(0)}%</span>
+              <span className="text-[#6E6257]">Precision</span>
+              <span className="font-bold text-[#3B7A57]">{(metrics.precision * 100).toFixed(0)}%</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Recall</span>
-              <span className="font-bold text-blue-600">{(metrics.recall * 100).toFixed(0)}%</span>
+              <span className="text-[#6E6257]">Recall</span>
+              <span className="font-bold text-[#C18C3B]">{(metrics.recall * 100).toFixed(0)}%</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">F1 Score</span>
+              <span className="text-[#6E6257]">F1 Score</span>
               <span className="font-bold text-[#B6532B]">{(metrics.f1 * 100).toFixed(0)}%</span>
             </div>
-            <div className="border-t border-gray-100 pt-1 mt-1">
-              <div className="flex justify-between"><span className="text-gray-400">TP</span><span className="text-green-500">{metrics.tp}</span></div>
-              <div className="flex justify-between"><span className="text-gray-400">FP</span><span className="text-orange-500">{metrics.fp}</span></div>
-              <div className="flex justify-between"><span className="text-gray-400">FN</span><span className="text-red-500">{metrics.fn}</span></div>
+            <div className="border-t border-[#E5DDD0] pt-1 mt-1">
+              <div className="flex justify-between"><span className="text-[#6E6257]">TP</span><span className="text-[#3B7A57] font-bold">{metrics.tp}</span></div>
+              <div className="flex justify-between"><span className="text-[#6E6257]">FP</span><span className="text-[#C18C3B] font-bold">{metrics.fp}</span></div>
+              <div className="flex justify-between"><span className="text-[#6E6257]">FN</span><span className="text-[#B6532B] font-bold">{metrics.fn}</span></div>
             </div>
           </div>
 

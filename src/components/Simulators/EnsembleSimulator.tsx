@@ -162,12 +162,12 @@ export const EnsembleSimulator: React.FC = () => {
 
       {/* Boosting iteration slider */}
       {mode === 'boosting' && (
-        <div className="flex items-center gap-3 bg-white border border-[#E5DDD0] rounded-xl px-4 py-2 justify-center">
+        <div className="flex items-center gap-3 bg-[#FAF6EE] border border-[#E5DDD0] rounded-xl px-4 py-2 justify-center">
           <span className="text-xs font-mono text-[#6E6257]">Boosting Iteration:</span>
           <input type="range" min={1} max={8} step={1} value={boostIter}
             onChange={e => setBoostIter(Number(e.target.value))}
-            className="w-36 accent-purple-600" />
-          <span className="text-sm font-bold text-purple-600 font-mono w-12">{boostIter}/8</span>
+            className="w-36 accent-[#B6532B]" />
+          <span className="text-sm font-bold text-[#B6532B] font-mono w-12">{boostIter}/8</span>
         </div>
       )}
 
@@ -181,7 +181,7 @@ export const EnsembleSimulator: React.FC = () => {
               <rect key={i}
                 x={cell.x} y={cell.y}
                 width={gridSize + 0.5} height={gridSize + 0.5}
-                fill={cell.cls === 1 ? '#dbeafe' : '#fee2e2'}
+                fill={cell.cls === 1 ? '#C18C3B22' : '#B6532B22'}
                 opacity={0.3 + cell.confidence * 0.5}
               />
             ))}
@@ -207,7 +207,7 @@ export const EnsembleSimulator: React.FC = () => {
             {points.map((pt, i) => (
               <circle key={i}
                 cx={pt.x} cy={pt.y} r={5}
-                fill={pt.cls === 0 ? '#ef4444' : '#3b82f6'}
+                fill={pt.cls === 0 ? '#B6532B' : '#C18C3B'}
                 stroke="white" strokeWidth={1.5}
                 opacity={0.9} />
             ))}
@@ -222,23 +222,23 @@ export const EnsembleSimulator: React.FC = () => {
               <g>
                 {Array.from({ length: boostIter }, (_, i) => (
                   <rect key={i} x={8 + i*26} y={H - 22} width={20} height={10}
-                    fill="#7c3aed" rx={3} opacity={0.6 - i * 0.04} />
+                    fill="#B6532B" rx={3} opacity={0.6 - i * 0.04} />
                 ))}
-                <text x={8} y={H - 26} fontSize={8} fill="#7c3aed" fontFamily="monospace">
+                <text x={8} y={H - 26} fontSize={8} fill="#B6532B" fontFamily="monospace">
                   Active trees:
                 </text>
               </g>
             )}
 
             {/* Axis labels */}
-            <text x={W/2} y={H - 3} textAnchor="middle" fontSize={9} fill="#d1d5db" fontFamily="monospace">Feature 1</text>
-            <text x={8} y={H/2} textAnchor="middle" fontSize={9} fill="#d1d5db" fontFamily="monospace"
+            <text x={W/2} y={H - 3} textAnchor="middle" fontSize={9} fill="#6E6257" fontFamily="monospace">Feature 1</text>
+            <text x={8} y={H/2} textAnchor="middle" fontSize={9} fill="#6E6257" fontFamily="monospace"
               transform={`rotate(-90, 8, ${H/2})`}>Feature 2</text>
           </svg>
 
           {/* Boundary toggle */}
           <button onClick={() => setShowBoundary(!showBoundary)}
-            className="absolute bottom-2 right-2 text-[9px] font-mono bg-white/90 border border-[#E5DDD0] rounded px-1.5 py-0.5 text-gray-500 hover:text-[#B6532B] transition-colors">
+            className="absolute bottom-2 right-2 text-[9px] font-mono bg-[#FAF6EE]/90 border border-[#E5DDD0] rounded px-1.5 py-0.5 text-[#6E6257] hover:text-[#B6532B] transition-colors">
             {showBoundary ? 'Hide' : 'Show'} Boundary
           </button>
         </div>
@@ -246,51 +246,51 @@ export const EnsembleSimulator: React.FC = () => {
         {/* Stats Panel */}
         <div className="flex flex-col gap-2 min-w-[150px]">
           {/* Mode description */}
-          <div className="bg-white rounded-xl border p-3 flex-1" style={{ borderColor: stat.color + '66' }}>
+          <div className="bg-[#FAF6EE] rounded-xl border p-3 flex-1" style={{ borderColor: stat.color + '66' }}>
             <div className="text-2xl mb-1">{stat.icon}</div>
             <div className="text-xs font-bold mb-1" style={{ color: stat.color }}>
               {mode === 'single' ? 'Single Decision Tree' : mode === 'bagging' ? 'Bagging (Random Forest)' : `Gradient Boosting (Iter ${boostIter})`}
             </div>
-            <p className="text-[10px] text-gray-500 leading-relaxed">{stat.desc}</p>
+            <p className="text-[10px] text-[#6E6257] leading-relaxed">{stat.desc}</p>
           </div>
 
           {/* Error bars */}
-          <div className="bg-white rounded-xl border border-[#E5DDD0] p-3 space-y-2">
+          <div className="bg-[#FAF6EE] rounded-xl border border-[#E5DDD0] p-3 space-y-2">
             <div className="text-[10px] font-bold text-[#2E251E] font-mono">Error Comparison</div>
             {/* Train error */}
             <div>
-              <div className="flex justify-between text-[9px] font-mono text-gray-500 mb-0.5">
-                <span>Train Error</span><span className="font-bold text-green-600">{stat.trainErr}</span>
+              <div className="flex justify-between text-[9px] font-mono text-[#6E6257] mb-0.5">
+                <span>Train Error</span><span className="font-bold text-[#3B7A57]">{stat.trainErr}</span>
               </div>
-              <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full bg-green-400 rounded-full transition-all duration-500"
+              <div className="h-2 bg-[#E5DDD0] rounded-full overflow-hidden">
+                <div className="h-full bg-[#3B7A57] rounded-full transition-all duration-500"
                   style={{ width: stat.trainErr }} />
               </div>
             </div>
             {/* Test error */}
             <div>
-              <div className="flex justify-between text-[9px] font-mono text-gray-500 mb-0.5">
-                <span>Test Error</span><span className="font-bold text-red-500">{stat.testErr}</span>
+              <div className="flex justify-between text-[9px] font-mono text-[#6E6257] mb-0.5">
+                <span>Test Error</span><span className="font-bold text-[#B6532B]">{stat.testErr}</span>
               </div>
-              <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full bg-red-400 rounded-full transition-all duration-500"
+              <div className="h-2 bg-[#E5DDD0] rounded-full overflow-hidden">
+                <div className="h-full bg-[#B6532B] rounded-full transition-all duration-500"
                   style={{ width: stat.testErr }} />
               </div>
             </div>
             {/* Bias/Variance badges */}
             <div className="flex gap-1 pt-1">
               <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded ${
-                stat.bias === 'Low' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
+                stat.bias === 'Low' ? 'bg-[#3B7A57]/10 text-[#3B7A57]' : 'bg-[#C18C3B]/10 text-[#C18C3B]'
               }`}>Bias: {stat.bias}</span>
               <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded ${
-                stat.variance === 'Low' ? 'bg-green-100 text-green-700' :
-                stat.variance === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'
+                stat.variance === 'Low' ? 'bg-[#3B7A57]/10 text-[#3B7A57]' :
+                stat.variance === 'Medium' ? 'bg-[#C18C3B]/10 text-[#C18C3B]' : 'bg-[#B6532B]/10 text-[#B6532B]'
               }`}>Var: {stat.variance}</span>
             </div>
           </div>
 
           {/* Comparison mini-table */}
-          <div className="bg-white rounded-xl border border-[#E5DDD0] p-3">
+          <div className="bg-[#FAF6EE] rounded-xl border border-[#E5DDD0] p-3">
             <div className="text-[10px] font-bold text-[#2E251E] font-mono mb-1.5">All Models</div>
             {(['single', 'bagging', 'boosting'] as const).map(m => (
               <div key={m} className={`flex justify-between items-center text-[9px] font-mono py-0.5 px-1 rounded mb-0.5 cursor-pointer transition-all ${

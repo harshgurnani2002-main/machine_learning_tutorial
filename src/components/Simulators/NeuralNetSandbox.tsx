@@ -76,6 +76,12 @@ export const NeuralNetSandbox: React.FC = () => {
     initializeNetwork();
   }, [hiddenLayers]);
 
+  // Auto-start training on mount for one-click experience
+  useEffect(() => {
+    const timer = setTimeout(() => setIsPlaying(true), 900);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Hidden layers manipulations
   const addHiddenLayer = () => {
     if (hiddenLayers.length >= 3) return;

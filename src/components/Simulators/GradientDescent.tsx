@@ -108,6 +108,12 @@ export const GradientDescent: React.FC = () => {
     stepRef.current = step;
   }, [step]);
 
+  // Auto-start descent on mount for one-click experience
+  useEffect(() => {
+    const timer = setTimeout(() => setIsPlaying(true), 800);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {

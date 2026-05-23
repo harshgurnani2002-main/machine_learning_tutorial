@@ -60,6 +60,12 @@ export const KMeansSandbox: React.FC = () => {
     initializeSimulation();
   }, [k]);
 
+  // Auto-start after mount for one-click experience
+  useEffect(() => {
+    const timer = setTimeout(() => setIsPlaying(true), 700);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Execute single iteration step
   const executeStep = () => {
     if (centroids.length === 0) return;

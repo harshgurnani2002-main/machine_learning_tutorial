@@ -19,6 +19,16 @@ import { FeatureScalingSimulator } from './FeatureScalingSimulator';
 import { ImbalancedDataSimulator } from './ImbalancedDataSimulator';
 import { AnomalyDetectionSimulator } from './AnomalyDetectionSimulator';
 import { EnsembleSimulator } from './EnsembleSimulator';
+import { QLearningSimulator } from './QLearningSimulator';
+import { GANSimulator } from './GANSimulator';
+import { VAESimulator } from './VAESimulator';
+import { PerceptronSimulator } from './PerceptronSimulator';
+import { ActivationsSimulator } from './ActivationsSimulator';
+import { CNNSimulator } from './CNNSimulator';
+import { RNNSimulator } from './RNNSimulator';
+import { RegularizationSimulator } from './RegularizationSimulator';
+import { BiasVarianceSimulator } from './BiasVarianceSimulator';
+import { TSNESimulator } from './TSNESimulator';
 import { Database } from 'lucide-react';
 
 export const ModuleSimulator: React.FC = () => {
@@ -57,20 +67,30 @@ export const ModuleSimulator: React.FC = () => {
       case 'time-series':
         return <TimeSeriesSimulator />;
       case 'feature-scaling':
-      case 'regularization':
-      case 'bias-variance':
         return <FeatureScalingSimulator />;
+      case 'regularization':
+        return <RegularizationSimulator />;
+      case 'bias-variance':
+        return <BiasVarianceSimulator />;
       case 'mlp':
-      case 'perceptron':
-      case 'cnn':
-      case 'rnn':
-      case 'q-learning':
-      case 'gan':
-      case 'vae':
-      case 'tsne':
-      case 'activations':
       case 'optimizers':
         return <NeuralNetSandbox />;
+      case 'tsne':
+        return <TSNESimulator />;
+      case 'perceptron':
+        return <PerceptronSimulator />;
+      case 'cnn':
+        return <CNNSimulator />;
+      case 'rnn':
+        return <RNNSimulator />;
+      case 'q-learning':
+        return <QLearningSimulator />;
+      case 'gan':
+        return <GANSimulator />;
+      case 'vae':
+        return <VAESimulator />;
+      case 'activations':
+        return <ActivationsSimulator />;
       case 'imbalanced-simulator':
         return <ImbalancedDataSimulator />;
       case 'anomaly-simulator':

@@ -382,9 +382,9 @@ function MainAppContent() {
 
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6 flex flex-col lg:flex-row gap-6 relative">
         <aside className={`
-          fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] flex flex-col bg-[#F4EFE6] border-r border-[#E5DDD0] shadow-2xl transition-transform duration-300 ease-in-out transform
+          fixed top-[61px] bottom-0 left-0 z-50 w-80 max-w-[85vw] flex flex-col bg-[#F4EFE6] border-r border-[#E5DDD0] shadow-2xl transition-transform duration-300 ease-in-out transform
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-          lg:relative lg:translate-x-0 lg:flex lg:w-80 lg:shrink-0 lg:border lg:rounded-2xl lg:max-h-[85vh] lg:overflow-hidden lg:shadow-none
+          lg:relative lg:top-auto lg:bottom-auto lg:translate-x-0 lg:flex lg:w-80 lg:shrink-0 lg:border lg:rounded-2xl lg:max-h-[85vh] lg:overflow-hidden lg:shadow-none
         `}>
           <div className="p-4 border-b border-[#E5DDD0] bg-[#F4EFE6] sticky top-0 z-10 flex justify-between items-center">
             <div>
@@ -552,7 +552,7 @@ function MainAppContent() {
                   <div className="flex gap-3 pt-1 flex-wrap">
                     <span className="text-[9px] bg-[#C18C3B]/10 text-[#C18C3B] border border-[#C18C3B]/20 px-2 py-0.5 rounded font-mono font-semibold">🖱 Click to interact</span>
                     <span className="text-[9px] bg-[#3B7A57]/10 text-[#3B7A57] border border-[#3B7A57]/20 px-2 py-0.5 rounded font-mono font-semibold">⚡ Real-time updates</span>
-                    <span className="text-[9px] bg-[#B6532B]/10 text-[#B6532B] border border-[#B6532B]/20 px-2 py-0.5 rounded font-mono font-semibold">🎛 Adjust parameters</span>
+                    <span className="text-[9px] bg-[#B6532B]/10 text-[#B6532B] border border-[#B6532B]/20 px-2 py-0.5 rounded font-mono font-semibold">▶ Auto-running</span>
                   </div>
                 </div>
                 <div className="p-4">

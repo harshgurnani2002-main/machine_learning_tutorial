@@ -216,38 +216,38 @@ export const ImbalancedDataSimulator: React.FC = () => {
 
       {/* Stats Panel */}
       <div className="grid grid-cols-3 gap-2 text-center">
-        <div className="bg-red-50 border border-red-200 rounded-xl p-2">
-          <div className="text-lg font-bold text-red-500">{counts.majority}</div>
-          <div className="text-[10px] text-red-400 font-mono">Majority Class</div>
-          <div className="text-[10px] text-gray-400 mt-0.5">Recall ≈ {majorityAccuracy}%</div>
+        <div className="bg-[#B6532B]/5 border border-[#B6532B]/20 rounded-xl p-2">
+          <div className="text-lg font-bold text-[#B6532B]">{counts.majority}</div>
+          <div className="text-[10px] text-[#B6532B] font-mono">Majority Class</div>
+          <div className="text-[10px] text-[#6E6257] mt-0.5">Recall ≈ {majorityAccuracy}%</div>
         </div>
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-2">
-          <div className="text-lg font-bold text-blue-500">{counts.minority}</div>
-          <div className="text-[10px] text-blue-400 font-mono">Minority (Real)</div>
-          <div className="text-[10px] text-gray-400 mt-0.5">
+        <div className="bg-[#3B7A57]/5 border border-[#3B7A57]/20 rounded-xl p-2">
+          <div className="text-lg font-bold text-[#3B7A57]">{counts.minority}</div>
+          <div className="text-[10px] text-[#3B7A57] font-mono">Minority (Real)</div>
+          <div className="text-[10px] text-[#6E6257] mt-0.5">
             Ratio 1:{(counts.majority / Math.max(1, counts.minority)).toFixed(0)}
           </div>
         </div>
-        <div className="bg-purple-50 border border-purple-200 rounded-xl p-2">
-          <div className="text-lg font-bold text-purple-500">{counts.synthetic}</div>
-          <div className="text-[10px] text-purple-400 font-mono">Synthetic (SMOTE)</div>
-          <div className="text-[10px] text-gray-400 mt-0.5">Minority Recall ≈ {minorityAccuracy}%</div>
+        <div className="bg-[#C18C3B]/5 border border-[#C18C3B]/20 rounded-xl p-2">
+          <div className="text-lg font-bold text-[#C18C3B]">{counts.synthetic}</div>
+          <div className="text-[10px] text-[#C18C3B] font-mono">Synthetic (SMOTE)</div>
+          <div className="text-[10px] text-[#6E6257] mt-0.5">Minority Recall ≈ {minorityAccuracy}%</div>
         </div>
       </div>
 
       {/* Legend */}
       <div className="flex justify-center gap-4 text-[10px] font-mono text-[#6E6257]">
         <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-red-400 inline-block" /> Majority
+          <span className="w-3 h-3 rounded-full bg-[#B6532B] inline-block" /> Majority
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-blue-500 inline-block" /> Minority (Real)
+          <span className="w-3 h-3 rounded-full bg-[#3B7A57] inline-block" /> Minority (Real)
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-full bg-purple-400 inline-block border border-dashed border-purple-500" /> Synthetic
+          <span className="w-3 h-3 rounded-full bg-[#C18C3B] inline-block border border-dashed border-[#C18C3B]" /> Synthetic
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-5 border-t-2 border-dashed border-gray-500 inline-block" /> Decision Boundary
+          <span className="w-5 border-t-2 border-dashed border-[#6E6257] inline-block" /> Decision Boundary
         </span>
       </div>
     </div>

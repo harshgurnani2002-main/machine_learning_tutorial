@@ -120,58 +120,58 @@ export const KNNClassifierSimulator: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6">
-      <div className="md:col-span-4 bg-[#FAF6EE] border border-[#E5DDD0] p-6 rounded-3xl flex flex-col justify-between shadow-xl">
+      <div className="md:col-span-4 bg-[#F4EFE6] border border-[#E5DDD0] p-6 rounded-2xl flex flex-col justify-between">
         <div className="space-y-6">
-          <h4 className="text-slate-900 font-bold text-xl tracking-tight flex items-center gap-3">
-            <Network className="w-6 h-6 text-purple-500" /> K-Nearest Neighbors
+          <h4 className="text-[#2E251E] font-bold text-xl tracking-tight flex items-center gap-3">
+            <Network className="w-6 h-6 text-[#B6532B]" /> K-Nearest Neighbors
           </h4>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            KNN classifies a point based on the majority vote of its <span className="font-semibold text-purple-500">K</span> closest training examples. Notice how K=1 creates sharp Voronoi boundaries, while higher K values create smoother regions.
+          <p className="text-[#6E6257] text-sm leading-relaxed">
+            KNN classifies a point based on the majority vote of its <span className="font-semibold text-[#B6532B]">K</span> closest training examples. K=1 creates sharp boundaries, while higher K creates smoother regions.
           </p>
 
           <div className="space-y-3">
-            <label className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Class Selector</label>
-            <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
-              <button onClick={() => setActiveLabel(0)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 0 ? 'bg-rose-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+            <label className="text-xs text-[#6E6257] font-bold uppercase tracking-wider block font-mono">Class Selector</label>
+            <div className="flex bg-[#FAF6EE] border border-[#E5DDD0] p-1 rounded-xl gap-1">
+              <button onClick={() => setActiveLabel(0)} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${activeLabel === 0 ? 'bg-[#B6532B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>
                 Class 0
               </button>
-              <button onClick={() => setActiveLabel(1)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 1 ? 'bg-sky-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+              <button onClick={() => setActiveLabel(1)} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${activeLabel === 1 ? 'bg-[#C18C3B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>
                 Class 1
               </button>
-              <button onClick={() => setActiveLabel(2)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 2 ? 'bg-purple-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+              <button onClick={() => setActiveLabel(2)} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${activeLabel === 2 ? 'bg-[#3B7A57] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>
                 Class 2
               </button>
             </div>
           </div>
 
           <div className="space-y-3">
-            <label className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Distance Metric</label>
-            <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
-              <button onClick={() => setMetric('euclidean')} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${metric === 'euclidean' ? 'bg-purple-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>Euclidean (L2)</button>
-              <button onClick={() => setMetric('manhattan')} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${metric === 'manhattan' ? 'bg-purple-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>Manhattan (L1)</button>
+            <label className="text-xs text-[#6E6257] font-bold uppercase tracking-wider block font-mono">Distance Metric</label>
+            <div className="flex bg-[#FAF6EE] border border-[#E5DDD0] p-1 rounded-xl gap-1">
+              <button onClick={() => setMetric('euclidean')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${metric === 'euclidean' ? 'bg-[#B6532B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>Euclidean (L2)</button>
+              <button onClick={() => setMetric('manhattan')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${metric === 'manhattan' ? 'bg-[#B6532B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>Manhattan (L1)</button>
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className="flex justify-between items-center text-sm font-bold">
-              <span className="text-slate-500">Neighbors (K):</span>
-              <span className="text-purple-600 bg-purple-50 px-3 py-1 rounded-full">{kValue}</span>
+              <span className="text-[#6E6257] font-mono text-xs">Neighbors (K):</span>
+              <span className="text-[#B6532B] bg-[#B6532B]/10 px-3 py-1 rounded-full text-xs font-mono font-bold border border-[#B6532B]/20">{kValue}</span>
             </div>
-            <input type="range" min="1" max="15" step="2" value={kValue} onChange={(e) => setKValue(parseInt(e.target.value))} className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-500" />
-            <p className="text-[10px] text-slate-400 mt-1">We use odd values of K to avoid ties during voting.</p>
+            <input type="range" min="1" max="15" step="2" value={kValue} onChange={(e) => setKValue(parseInt(e.target.value))} className="w-full accent-[#B6532B]" />
+            <p className="text-[10px] text-[#6E6257] font-mono mt-1">Odd values of K avoid ties during voting.</p>
           </div>
         </div>
 
-        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-sm font-bold transition-colors flex justify-center items-center gap-2">
+        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] text-[#6E6257] hover:text-[#2E251E] hover:bg-[#F4EFE6] text-sm font-bold transition-colors flex justify-center items-center gap-2">
           <Trash2 className="w-5 h-5" /> Clear Data
         </button>
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-[#2E251E] border border-[#4A3D31] p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
-          <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-2xl cursor-crosshair w-full aspect-[3/2]" />
-          <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-xs font-mono text-white shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-            Decision regions are painted based on K-closest points
+        <div className="bg-[#FAF6EE] border border-[#E5DDD0] p-2 rounded-2xl w-full flex justify-center shadow-inner relative overflow-hidden group">
+          <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-xl cursor-crosshair w-full aspect-[3/2]" />
+          <div className="absolute top-4 left-4 bg-[#2E251E]/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-[#E5DDD0]/20 text-[9px] font-mono text-[#FAF6EE] pointer-events-none">
+            Click to add points · K-decision regions shown
           </div>
         </div>
       </div>
