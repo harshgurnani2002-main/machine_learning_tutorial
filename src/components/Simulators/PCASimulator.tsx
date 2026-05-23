@@ -78,11 +78,15 @@ export const PCASimulator: React.FC = () => {
     const w = canvas.width = 600;
     const h = canvas.height = 400;
 
-    ctx.fillStyle = '#0f172a';
+    // Warm cream gradient background
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, '#FAF6EE');
+    grad.addColorStop(1, '#F4EFE6');
+    ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
-    // Grid Overlay
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    // Subtle warm grid
+    ctx.strokeStyle = 'rgba(110, 98, 87, 0.1)';
     ctx.lineWidth = 1;
     for (let x = 0; x < w; x += 50) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
@@ -96,15 +100,18 @@ export const PCASimulator: React.FC = () => {
       ctx.beginPath();
       ctx.moveTo(meanX - pc1.dx * 1000, meanY - pc1.dy * 1000);
       ctx.lineTo(meanX + pc1.dx * 1000, meanY + pc1.dy * 1000);
-      ctx.strokeStyle = 'rgba(244, 63, 94, 0.5)'; // Rose
-      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#B6532B';
+      ctx.shadowColor = '#B6532B';
+      ctx.shadowBlur = 10;
       ctx.stroke();
-
-      // Draw PC2 line
+      ctx.shadowBlur = 0;
+      
+      // Draw PC2 (shorter, orthogonal)
       ctx.beginPath();
-      ctx.moveTo(meanX - pc2.dx * 1000, meanY - pc2.dy * 1000);
-      ctx.lineTo(meanX + pc2.dx * 1000, meanY + pc2.dy * 1000);
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.3)'; // Sky
+      ctx.moveTo(meanX - pc2.y * 100, meanY - pc2.x * 100);
+      ctx.lineTo(meanX + pc2.y * 100, meanY + pc2.x * 100);
+      ctx.strokeStyle = '#C18C3B';
+      ctx.shadowColor = '#C18C3B'; // Sky
       ctx.lineWidth = 2;
       ctx.stroke();
 
@@ -145,12 +152,12 @@ export const PCASimulator: React.FC = () => {
     points.forEach(pt => {
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-      ctx.fillStyle = '#94a3b8';
+      ctx.fillStyle = '#6E6257';
       ctx.fill();
       
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-      ctx.strokeStyle = '#ffffff';
+      ctx.strokeStyle = '#FAF6EE';
       ctx.lineWidth = 1.5;
       ctx.stroke();
     });
@@ -159,49 +166,49 @@ export const PCASimulator: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6">
-      <div className="md:col-span-4 bg-white border border-slate-200 p-6 rounded-3xl flex flex-col justify-between shadow-xl">
+      <div className="md:col-span-4 bg-[#FAF6EE] border border-[#E5DDD0] p-6 rounded-3xl flex flex-col justify-between shadow-xl">
         <div className="space-y-6">
-          <h4 className="text-slate-900 font-bold text-xl tracking-tight flex items-center gap-3">
-            <Compass className="w-6 h-6 text-orange-500" /> Principal Component Analysis
+          <h4 className="text-[#2E251E] font-bold text-xl tracking-tight flex items-center gap-3">
+            <Compass className="w-6 h-6 text-[#B6532B]" /> Principal Component Analysis
           </h4>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            PCA finds orthogonal axes of maximum variance. The <span className="font-semibold text-rose-500">First Principal Component (PC1)</span> is the line that minimizes projection errors and captures the most information.
+          <p className="text-[#6E6257] text-sm leading-relaxed">
+            PCA finds orthogonal axes of maximum variance. The <span className="font-semibold text-[#B6532B]">First Principal Component (PC1)</span> is the line that minimizes projection errors and captures the most information.
           </p>
 
-          <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-4 shadow-inner">
-            <h5 className="text-xs text-slate-400 font-bold uppercase tracking-wider block border-b border-slate-200 pb-2">Variance Explained</h5>
+          <div className="p-5 bg-[#FAF6EE] border border-[#E5DDD0] rounded-2xl space-y-4 shadow-inner">
+            <h5 className="text-xs text-[#6E6257] font-bold uppercase tracking-wider block border-b border-[#E5DDD0] pb-2">Variance Explained</h5>
             
             <div>
               <div className="flex justify-between items-center mb-1">
-                <span className="text-rose-500 text-sm font-bold">PC1 (Red Line)</span>
-                <span className="text-slate-700 font-mono font-bold">{(variance.v1 * 100).toFixed(1)}%</span>
+                <span className="text-[#B6532B] text-sm font-bold">PC1 (Terracotta)</span>
+                <span className="text-[#2E251E] font-mono font-bold">{(variance.v1 * 100).toFixed(1)}%</span>
               </div>
-              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-                <div className="h-full bg-rose-500 transition-all duration-300" style={{ width: `${variance.v1 * 100}%` }} />
+              <div className="w-full h-2 bg-[#E5DDD0] rounded-full overflow-hidden">
+                <div className="h-full bg-[#B6532B] transition-all duration-300" style={{ width: `${variance.v1 * 100}%` }} />
               </div>
             </div>
 
             <div>
               <div className="flex justify-between items-center mb-1">
-                <span className="text-sky-500 text-sm font-bold">PC2 (Blue Line)</span>
-                <span className="text-slate-700 font-mono font-bold">{(variance.v2 * 100).toFixed(1)}%</span>
+                <span className="text-[#C18C3B] text-sm font-bold">PC2 (Ochre)</span>
+                <span className="text-[#2E251E] font-mono font-bold">{(variance.v2 * 100).toFixed(1)}%</span>
               </div>
-              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-                <div className="h-full bg-sky-500 transition-all duration-300" style={{ width: `${variance.v2 * 100}%` }} />
+              <div className="w-full h-2 bg-[#E5DDD0] rounded-full overflow-hidden">
+                <div className="h-full bg-[#C18C3B] transition-all duration-300" style={{ width: `${variance.v2 * 100}%` }} />
               </div>
             </div>
           </div>
         </div>
 
-        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-sm font-bold transition-colors flex justify-center items-center gap-2">
+        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#B6532B] text-sm font-bold transition-colors flex justify-center items-center gap-2 shadow-sm">
           <Trash2 className="w-5 h-5" /> Clear Data
         </button>
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-slate-900 border border-slate-800 p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-[#F4EFE6] border border-[#E5DDD0] p-2 rounded-3xl w-full flex justify-center shadow-md relative overflow-hidden group">
           <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-2xl cursor-crosshair w-full aspect-[3/2]" />
-          <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-xs font-mono text-white shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute top-6 left-6 bg-[#2E251E]/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#E5DDD0]/30 text-xs font-mono text-[#FAF6EE] shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
             Dashed lines represent projection error onto PC1
           </div>
         </div>

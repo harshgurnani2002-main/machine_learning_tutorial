@@ -144,18 +144,18 @@ export const LogisticRegressionSimulator: React.FC = () => {
         const z = w[0] * nx + w[1] * ny + b;
         const prob = 1 / (1 + Math.exp(-z));
 
-        // Blend: 0 = Rose (rgba(244, 63, 94)), 1 = Sky Blue (rgba(56, 189, 248))
-        const r = Math.floor(244 * (1 - prob) + 56 * prob);
-        const g = Math.floor(63 * (1 - prob) + 189 * prob);
-        const bCol = Math.floor(94 * (1 - prob) + 248 * prob);
+        // Blend: 0 = Terracotta, 1 = Ochre
+        const r = Math.floor(182 * (1 - prob) + 193 * prob);
+        const g = Math.floor(83 * (1 - prob) + 140 * prob);
+        const bCol = Math.floor(43 * (1 - prob) + 59 * prob);
         
         ctx.fillStyle = `rgba(${r}, ${g}, ${bCol}, 0.25)`;
         ctx.fillRect(x, y, step, step);
       }
     }
 
-    // Grid Overlay
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    // Subtle warm grid
+    ctx.strokeStyle = 'rgba(110, 98, 87, 0.1)';
     ctx.lineWidth = 1;
     for (let x = 0; x < width; x += 50) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke();
@@ -166,23 +166,23 @@ export const LogisticRegressionSimulator: React.FC = () => {
 
     // Draw Decision Line (prob = 0.5)
     ctx.shadowBlur = 10;
-    ctx.shadowColor = '#ffffff';
-    drawLinearBoundary(ctx, w[0], w[1], b, width, height, '#ffffff', 3);
+    ctx.shadowColor = '#FAF6EE';
+    drawLinearBoundary(ctx, w[0], w[1], b, width, height, '#FAF6EE', 3);
     ctx.shadowBlur = 0;
 
     // Draw coordinate points
     points.forEach(pt => {
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 10, 0, Math.PI * 2);
-      ctx.fillStyle = pt.label === 0 ? '#f43f5e' : '#38bdf8';
+      ctx.fillStyle = pt.label === 0 ? '#B6532B' : '#C18C3B';
       ctx.shadowBlur = 10;
-      ctx.shadowColor = pt.label === 0 ? '#f43f5e' : '#38bdf8';
+      ctx.shadowColor = pt.label === 0 ? '#B6532B' : '#C18C3B';
       ctx.fill();
       ctx.shadowBlur = 0;
 
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 10, 0, Math.PI * 2);
-      ctx.strokeStyle = '#ffffff';
+      ctx.strokeStyle = '#FAF6EE';
       ctx.lineWidth = 2.5;
       ctx.stroke();
     });
@@ -211,33 +211,33 @@ export const LogisticRegressionSimulator: React.FC = () => {
                     : 'text-[#6E6257] hover:bg-[#E5DDD0]'
                 }`}
               >
-                <span className={`w-3 h-3 rounded-full ${activeLabel === 0 ? 'bg-white' : 'bg-rose-500'}`} /> Class 0
+                <span className={`w-3 h-3 rounded-full ${activeLabel === 0 ? 'bg-white' : 'bg-[#B6532B]'}`} /> Class 0
               </button>
               <button
                 onClick={() => setActiveLabel(1)}
                 className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${
                   activeLabel === 1
-                    ? 'bg-sky-500 text-white shadow-md'
+                    ? 'bg-[#C18C3B] text-white shadow-md'
                     : 'text-[#6E6257] hover:bg-[#E5DDD0]'
                 }`}
               >
-                <span className={`w-3 h-3 rounded-full ${activeLabel === 1 ? 'bg-white' : 'bg-sky-500'}`} /> Class 1
+                <span className={`w-3 h-3 rounded-full ${activeLabel === 1 ? 'bg-white' : 'bg-[#C18C3B]'}`} /> Class 1
               </button>
             </div>
           </div>
 
-          <div className="p-5 bg-[#2E251E] border border-[#4A3D31] rounded-2xl space-y-4 shadow-inner">
+          <div className="p-5 bg-[#FAF6EE] border border-[#E5DDD0] rounded-2xl space-y-4 shadow-inner">
             <div className="flex justify-between items-center">
-              <span className="text-slate-400 text-sm font-medium">Epochs</span>
-              <span className="text-white font-mono font-bold">{epochs}</span>
+              <span className="text-[#6E6257] text-sm font-medium">Epochs</span>
+              <span className="text-[#B6532B] font-mono font-bold">{epochs}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-slate-400 text-sm font-medium">BCE Loss</span>
-              <span className="text-emerald-400 font-mono font-bold text-lg">{loss.toFixed(4)}</span>
+              <span className="text-[#6E6257] text-sm font-medium">BCE Loss</span>
+              <span className="text-[#3B7A57] font-mono font-bold text-lg">{loss.toFixed(4)}</span>
             </div>
-            <div className="pt-4 mt-2 border-t border-[#4A3D31]">
-              <span className="text-xs text-[#CFC5B4] font-mono">Weights:</span>
-              <div className="text-sm text-[#E5DDD0] font-mono mt-1">
+            <div className="pt-4 mt-2 border-t border-[#E5DDD0]">
+              <span className="text-xs text-[#6E6257] font-mono">Weights:</span>
+              <div className="text-sm text-[#2E251E] font-mono mt-1">
                 w₁={w[0].toFixed(2)}, w₂={w[1].toFixed(2)}, b={b.toFixed(2)}
               </div>
             </div>
@@ -262,7 +262,7 @@ export const LogisticRegressionSimulator: React.FC = () => {
           </div>
           <button
             onClick={clearPoints}
-            className="w-full py-3 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-sm font-bold transition-colors flex justify-center items-center gap-2"
+            className="w-full py-3 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#B6532B] text-sm font-bold transition-colors flex justify-center items-center gap-2 shadow-sm"
           >
             <Trash2 className="w-4 h-4" /> Clear Canvas
           </button>
@@ -270,14 +270,14 @@ export const LogisticRegressionSimulator: React.FC = () => {
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-[#2E251E] border border-[#4A3D31] p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-[#F4EFE6] border border-[#E5DDD0] p-2 rounded-3xl w-full flex justify-center shadow-md relative overflow-hidden group">
           <canvas
             ref={canvasRef}
             onClick={handleCanvasClick}
             className="rounded-2xl cursor-crosshair w-full aspect-[3/2]"
           />
-          <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-xs font-mono text-white shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-            Click to plot {activeLabel === 0 ? 'Class 0 (Red)' : 'Class 1 (Blue)'}
+          <div className="absolute top-6 left-6 bg-[#2E251E]/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#E5DDD0]/30 text-xs font-mono text-[#FAF6EE] shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+            Click to plot {activeLabel === 0 ? 'Class 0' : 'Class 1'}
           </div>
         </div>
       </div>

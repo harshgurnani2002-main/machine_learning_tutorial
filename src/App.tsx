@@ -384,7 +384,7 @@ function MainAppContent() {
         <aside className={`
           fixed top-[61px] bottom-0 left-0 z-50 w-80 max-w-[85vw] flex flex-col bg-[#F4EFE6] border-r border-[#E5DDD0] shadow-2xl transition-transform duration-300 ease-in-out transform
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-          lg:relative lg:top-auto lg:bottom-auto lg:translate-x-0 lg:flex lg:w-80 lg:shrink-0 lg:border lg:rounded-2xl lg:max-h-[85vh] lg:overflow-hidden lg:shadow-none
+          lg:relative lg:top-auto lg:bottom-auto lg:translate-x-0 lg:flex lg:w-80 lg:shrink-0 lg:border lg:rounded-2xl lg:max-h-[85vh] lg:overflow-hidden lg:shadow-none lg:z-auto
         `}>
           <div className="p-4 border-b border-[#E5DDD0] bg-[#F4EFE6] sticky top-0 z-10 flex justify-between items-center">
             <div>

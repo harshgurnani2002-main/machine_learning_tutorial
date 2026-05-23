@@ -66,7 +66,11 @@ export const KNNClassifierSimulator: React.FC = () => {
     const w = canvas.width = 600;
     const h = canvas.height = 400;
 
-    ctx.fillStyle = '#0f172a';
+    // Warm cream gradient background
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, '#FAF6EE');
+    grad.addColorStop(1, '#F4EFE6');
+    ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
     if (points.length > 0) {
@@ -76,11 +80,11 @@ export const KNNClassifierSimulator: React.FC = () => {
         for (let y = 0; y < h; y += step) {
           const pred = predictKNN(x + step/2, y + step/2);
           if (pred === 0) {
-            ctx.fillStyle = 'rgba(244, 63, 94, 0.2)'; // Rose
+            ctx.fillStyle = 'rgba(182, 83, 43, 0.15)'; // Terracotta
           } else if (pred === 1) {
-            ctx.fillStyle = 'rgba(56, 189, 248, 0.2)'; // Sky
+            ctx.fillStyle = 'rgba(193, 140, 59, 0.15)'; // Ochre
           } else if (pred === 2) {
-            ctx.fillStyle = 'rgba(167, 139, 250, 0.2)'; // Purple
+            ctx.fillStyle = 'rgba(59, 122, 87, 0.15)'; // Green
           } else {
             continue;
           }
@@ -89,8 +93,8 @@ export const KNNClassifierSimulator: React.FC = () => {
       }
     }
 
-    // Grid Overlay
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    // Subtle warm grid
+    ctx.strokeStyle = 'rgba(110, 98, 87, 0.1)';
     ctx.lineWidth = 1;
     for (let x = 0; x < w; x += 50) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
@@ -103,7 +107,7 @@ export const KNNClassifierSimulator: React.FC = () => {
     points.forEach(pt => {
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 8, 0, Math.PI * 2);
-      ctx.fillStyle = pt.label === 0 ? '#f43f5e' : pt.label === 1 ? '#38bdf8' : '#a78bfa';
+      ctx.fillStyle = pt.label === 0 ? '#B6532B' : pt.label === 1 ? '#C18C3B' : '#3B7A57';
       ctx.shadowBlur = 10;
       ctx.shadowColor = ctx.fillStyle;
       ctx.fill();
@@ -111,7 +115,7 @@ export const KNNClassifierSimulator: React.FC = () => {
       
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 8, 0, Math.PI * 2);
-      ctx.strokeStyle = '#ffffff';
+      ctx.strokeStyle = '#FAF6EE';
       ctx.lineWidth = 2;
       ctx.stroke();
     });
@@ -168,9 +172,9 @@ export const KNNClassifierSimulator: React.FC = () => {
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-[#FAF6EE] border border-[#E5DDD0] p-2 rounded-2xl w-full flex justify-center shadow-inner relative overflow-hidden group">
+        <div className="bg-[#F4EFE6] border border-[#E5DDD0] p-2 rounded-2xl w-full flex justify-center shadow-md relative overflow-hidden group">
           <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-xl cursor-crosshair w-full aspect-[3/2]" />
-          <div className="absolute top-4 left-4 bg-[#2E251E]/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-[#E5DDD0]/20 text-[9px] font-mono text-[#FAF6EE] pointer-events-none">
+          <div className="absolute top-4 left-4 bg-[#2E251E]/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-[#E5DDD0]/30 text-[9px] font-mono text-[#FAF6EE] pointer-events-none">
             Click to add points · K-decision regions shown
           </div>
         </div>

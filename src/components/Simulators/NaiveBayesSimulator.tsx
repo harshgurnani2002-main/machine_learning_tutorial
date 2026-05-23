@@ -59,7 +59,11 @@ export const NaiveBayesSimulator: React.FC = () => {
     const w = canvas.width = 600;
     const h = canvas.height = 400;
 
-    ctx.fillStyle = '#0f172a';
+    // Warm cream gradient background
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, '#FAF6EE');
+    grad.addColorStop(1, '#F4EFE6');
+    ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
     const stats0 = computeStats(0);
@@ -94,9 +98,9 @@ export const NaiveBayesSimulator: React.FC = () => {
           const totalProb = prob0 + prob1;
           const normProb1 = prob1 / totalProb;
 
-          const r = Math.floor(244 * (1 - normProb1) + 56 * normProb1);
-          const g = Math.floor(63 * (1 - normProb1) + 189 * normProb1);
-          const bCol = Math.floor(94 * (1 - normProb1) + 248 * normProb1);
+          const r = Math.floor(182 * (1 - normProb1) + 193 * normProb1);
+          const g = Math.floor(83 * (1 - normProb1) + 140 * normProb1);
+          const bCol = Math.floor(43 * (1 - normProb1) + 59 * normProb1);
           
           // Calculate intensity based on total probability density (how "confident" or close to the cluster)
           // Scale it up so it's visible
@@ -108,15 +112,15 @@ export const NaiveBayesSimulator: React.FC = () => {
           
           // Draw Decision Boundary (approx)
           if (Math.abs(normProb1 - 0.5) < 0.05 && totalProb > maxProbApprox * 0.001) {
-            ctx.fillStyle = 'rgba(255,255,255,0.5)';
+            ctx.fillStyle = 'rgba(110, 98, 87, 0.2)';
             ctx.fillRect(x, y, step, step);
           }
         }
       }
     }
 
-    // Grid Overlay
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    // Subtle warm grid
+    ctx.strokeStyle = 'rgba(110, 98, 87, 0.1)';
     ctx.lineWidth = 1;
     for (let x = 0; x < w; x += 50) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
@@ -144,14 +148,14 @@ export const NaiveBayesSimulator: React.FC = () => {
       ctx.fill();
     };
 
-    drawEllipse(stats0, '#f43f5e');
-    drawEllipse(stats1, '#38bdf8');
+    drawEllipse(stats0, '#B6532B');
+    drawEllipse(stats1, '#C18C3B');
 
     // Draw points
     points.forEach(pt => {
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-      ctx.fillStyle = pt.label === 0 ? '#f43f5e' : '#38bdf8';
+      ctx.fillStyle = pt.label === 0 ? '#B6532B' : '#C18C3B';
       ctx.shadowBlur = 10;
       ctx.shadowColor = ctx.fillStyle;
       ctx.fill();
@@ -159,7 +163,7 @@ export const NaiveBayesSimulator: React.FC = () => {
       
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-      ctx.strokeStyle = '#ffffff';
+      ctx.strokeStyle = '#FAF6EE';
       ctx.lineWidth = 1.5;
       ctx.stroke();
     });
@@ -170,35 +174,35 @@ export const NaiveBayesSimulator: React.FC = () => {
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6">
       <div className="md:col-span-4 bg-[#FAF6EE] border border-[#E5DDD0] p-6 rounded-3xl flex flex-col justify-between shadow-xl">
         <div className="space-y-6">
-          <h4 className="text-slate-900 font-bold text-xl tracking-tight flex items-center gap-3">
-            <Database className="w-6 h-6 text-indigo-500" /> Gaussian Naive Bayes
+          <h4 className="text-[#2E251E] font-bold text-xl tracking-tight flex items-center gap-3">
+            <Database className="w-6 h-6 text-[#B6532B]" /> Gaussian Naive Bayes
           </h4>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            Naive Bayes assumes features are conditionally independent. Notice how the dashed ellipses representing the <span className="font-semibold text-indigo-500">Gaussian distributions</span> are always aligned to the X and Y axes, never tilted.
+          <p className="text-[#6E6257] text-sm leading-relaxed">
+            Naive Bayes assumes features are conditionally independent. Notice how the dashed ellipses representing the <span className="font-semibold text-[#B6532B]">Gaussian distributions</span> are always aligned to the X and Y axes, never tilted.
           </p>
 
           <div className="space-y-3">
-            <label className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Class Selector</label>
-            <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
-              <button onClick={() => setActiveLabel(0)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 0 ? 'bg-rose-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+            <label className="text-xs text-[#6E6257] font-bold uppercase tracking-wider block font-mono">Class Selector</label>
+            <div className="flex bg-[#FAF6EE] border border-[#E5DDD0] p-1 rounded-xl gap-1">
+              <button onClick={() => setActiveLabel(0)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 0 ? 'bg-[#B6532B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>
                 Class 0
               </button>
-              <button onClick={() => setActiveLabel(1)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 1 ? 'bg-sky-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+              <button onClick={() => setActiveLabel(1)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 1 ? 'bg-[#C18C3B] text-white shadow-md' : 'text-[#6E6257] hover:bg-[#F4EFE6]'}`}>
                 Class 1
               </button>
             </div>
           </div>
         </div>
 
-        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-sm font-bold transition-colors flex justify-center items-center gap-2">
+        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#B6532B] text-sm font-bold transition-colors flex justify-center items-center gap-2 shadow-sm">
           <Trash2 className="w-5 h-5" /> Clear Data
         </button>
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-[#2E251E] border border-[#4A3D31] p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-[#F4EFE6] border border-[#E5DDD0] p-2 rounded-3xl w-full flex justify-center shadow-md relative overflow-hidden group">
           <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-2xl cursor-crosshair w-full aspect-[3/2]" />
-          <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-xs font-mono text-white shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute top-6 left-6 bg-[#2E251E]/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#E5DDD0]/30 text-xs font-mono text-[#FAF6EE] shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
             Probability heatmaps via Bayes Theorem
           </div>
         </div>

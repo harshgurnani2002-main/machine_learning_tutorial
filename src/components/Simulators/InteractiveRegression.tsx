@@ -146,15 +146,15 @@ export const InteractiveRegression: React.FC = () => {
     const w = canvas.width = 600;
     const h = canvas.height = 400;
 
-    // Premium dark gradient background
+    // Warm cream gradient background
     const grad = ctx.createLinearGradient(0, 0, 0, h);
-    grad.addColorStop(0, '#0f172a');
-    grad.addColorStop(1, '#1e293b');
+    grad.addColorStop(0, '#FAF6EE');
+    grad.addColorStop(1, '#F4EFE6');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
-    // Subtle Grid
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    // Subtle warm grid
+    ctx.strokeStyle = 'rgba(110, 98, 87, 0.1)';
     ctx.lineWidth = 1;
     for (let x = 0; x < w; x += 50) {
       ctx.beginPath();
@@ -170,7 +170,7 @@ export const InteractiveRegression: React.FC = () => {
     }
 
     // Axes
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+    ctx.strokeStyle = 'rgba(46, 37, 30, 0.2)';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(50, 0); ctx.lineTo(50, h);
@@ -180,9 +180,9 @@ export const InteractiveRegression: React.FC = () => {
     if (points.length >= 2) {
       ctx.beginPath();
       ctx.lineWidth = 4;
-      ctx.strokeStyle = '#38bdf8'; // Sky blue
-      ctx.shadowColor = '#38bdf8';
-      ctx.shadowBlur = 15;
+      ctx.strokeStyle = '#B6532B'; // Terracotta brand color
+      ctx.shadowColor = '#B6532B';
+      ctx.shadowBlur = 8;
 
       if (fitType === 'linear') {
         const yStart = slope * 0 + intercept;
@@ -200,7 +200,7 @@ export const InteractiveRegression: React.FC = () => {
       ctx.shadowBlur = 0; // reset
       
       // Draw residual lines
-      ctx.strokeStyle = 'rgba(244, 63, 94, 0.5)'; // Rose 500
+      ctx.strokeStyle = 'rgba(193, 140, 59, 0.5)'; // Ochre brand color
       ctx.setLineDash([5, 5]);
       ctx.lineWidth = 2;
       points.forEach(pt => {
@@ -223,13 +223,13 @@ export const InteractiveRegression: React.FC = () => {
       // Glow effect
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 12, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(248, 113, 113, 0.2)';
+      ctx.fillStyle = 'rgba(182, 83, 43, 0.12)';
       ctx.fill();
 
       ctx.beginPath();
       ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
-      ctx.fillStyle = '#f87171'; // Red 400
-      ctx.strokeStyle = '#ffffff';
+      ctx.fillStyle = '#B6532B'; // Terracotta brand
+      ctx.strokeStyle = '#FAF6EE';
       ctx.lineWidth = 2;
       ctx.fill();
       ctx.stroke();
@@ -311,7 +311,7 @@ export const InteractiveRegression: React.FC = () => {
       </div>
 
       <div className="md:col-span-8 flex flex-col items-center justify-center">
-        <div className="bg-[#FAF6EE] border border-[#E5DDD0] p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-[#F4EFE6] border border-[#E5DDD0] p-2 rounded-3xl w-full flex justify-center shadow-md relative overflow-hidden group">
           <canvas
             ref={canvasRef}
             onMouseDown={handleMouseDown}
@@ -320,7 +320,7 @@ export const InteractiveRegression: React.FC = () => {
             onMouseLeave={handleMouseUp}
             className="rounded-2xl cursor-crosshair w-full aspect-[3/2] touch-none"
           />
-          <div className="absolute top-6 left-6 bg-[#2E251E]/90 backdrop-blur-md px-4 py-2 rounded-xl border border-[#E5DDD0]/20 text-xs font-mono text-[#FAF6EE] shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute top-6 left-6 bg-[#2E251E]/80 backdrop-blur-md px-4 py-2 rounded-xl border border-[#E5DDD0]/30 text-xs font-mono text-[#FAF6EE] shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
             Click to add • Drag to move
           </div>
         </div>
