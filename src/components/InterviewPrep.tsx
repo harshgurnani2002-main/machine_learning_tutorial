@@ -142,7 +142,7 @@ export const InterviewPrep: React.FC = () => {
                     <span className={`px-2 py-0.5 rounded-md text-[9px] font-mono uppercase font-bold border ${diffColor}`}>
                       {q.difficulty}
                     </span>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex flex-wrap items-center gap-1.5">
                       <Building2 className="w-3 h-3 text-[#B6532B]" />
                       {q.companyTags?.map(tag => (
                         <span key={tag} className="px-1.5 py-0.5 rounded bg-[#F4EFE6] border border-[#E5DDD0] text-[9px] font-mono text-[#2E251E] font-semibold">

@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { NeuralBackground } from './components/NeuralBackground';
 import { CodingPlayground } from './components/CodingPlayground';
@@ -21,6 +21,8 @@ import {
   Eye, 
   Brain, 
   Settings, 
+  Menu,
+  X,
 } from 'lucide-react';
 import katex from 'katex';
 
@@ -215,6 +217,8 @@ function MainAppContent() {
     resetProgress 
   } = useApp();
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const handleReset = () => {
     if (window.confirm("Are you sure you want to reset all your learning achievements and coding sandboxes? This cannot be undone.")) {
       resetProgress();
@@ -298,22 +302,33 @@ function MainAppContent() {
     <div className="relative min-h-screen flex flex-col z-10 bg-[#FAF6EE] text-[#2E251E]">
       <NeuralBackground />
 
-      <header className="sticky top-0 z-40 w-full px-6 py-4 bg-[#FAF6EE]/90 backdrop-blur-md border-b border-[#E5DDD0] shadow-sm">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <button 
-            onClick={() => setActiveModuleId(modulesData[0].id)}
-            className="flex items-center gap-2.5 group cursor-pointer"
-          >
-            <div className="w-8 h-8 rounded-lg bg-[#B6532B] flex items-center justify-center shadow-md shadow-[#B6532B]/10 group-hover:scale-105 transition-transform">
-              <Sparkles className="w-[18px] h-[18px] text-[#FAF6EE]" />
-            </div>
-            <span className="font-bold text-base text-[#2E251E] tracking-tight font-serif">
-              Latent<span className="text-[#B6532B] font-light">Academy</span>
-            </span>
-          </button>
+      <header className="sticky top-0 z-40 w-full px-4 sm:px-6 py-3.5 bg-[#FAF6EE]/90 backdrop-blur-md border-b border-[#E5DDD0] shadow-sm">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="lg:hidden p-2 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#2E251E] transition-all cursor-pointer flex items-center justify-center"
+              title="Open Syllabus"
+            >
+              <Menu className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={() => {
+                setActiveModuleId(modulesData[0].id);
+                setIsSidebarOpen(false);
+              }}
+              className="flex items-center gap-2 group cursor-pointer"
+            >
+              <div className="w-8 h-8 rounded-lg bg-[#B6532B] flex items-center justify-center shadow-md shadow-[#B6532B]/10 group-hover:scale-105 transition-transform">
+                <Sparkles className="w-[18px] h-[18px] text-[#FAF6EE]" />
+              </div>
+              <span className="font-bold text-base text-[#2E251E] tracking-tight font-serif">
+                Latent<span className="text-[#B6532B] font-light">Academy</span>
+              </span>
+            </button>
+          </div>
 
-          <div className="flex flex-wrap items-center gap-3 md:gap-5">
-
+          <div className="flex items-center gap-3">
             <button
               onClick={handleReset}
               className="px-3.5 py-1.5 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#2E251E] text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer font-mono"
@@ -325,18 +340,70 @@ function MainAppContent() {
         </div>
       </header>
 
+      {/* Sticky Mobile Tabs Bar */}
+      <div className="sticky top-[61px] z-30 lg:hidden w-full bg-[#FAF6EE]/90 backdrop-blur-md border-b border-[#E5DDD0] px-4 py-2 overflow-x-auto flex gap-1.5 scrollbar-none shadow-sm">
+        {(isKaggleModule
+          ? [
+              { id: 'theory' as const, label: 'Theory', icon: <BookOpen className="w-3.5 h-3.5" /> },
+              { id: 'sandbox' as const, label: 'Notebook', icon: <Code className="w-3.5 h-3.5" /> }
+            ]
+          : [
+              { id: 'theory' as const, label: 'Theory', icon: <BookOpen className="w-3.5 h-3.5" /> },
+              { id: 'visualizer' as const, label: 'Simulator', icon: <Activity className="w-3.5 h-3.5" /> },
+              { id: 'quiz' as const, label: 'Quiz', icon: <HelpCircle className="w-3.5 h-3.5" /> },
+              { id: 'sandbox' as const, label: 'Coding', icon: <Code className="w-3.5 h-3.5" /> },
+              { id: 'interview' as const, label: 'Interview', icon: <Award className="w-3.5 h-3.5" /> }
+            ]).map((tab) => {
+          const isActive = activeTab === tab.id;
+          let activeStyle = 'border-transparent bg-[#F4EFE6]/60 text-[#6E6257]';
+          if (isActive) {
+            activeStyle = 'border-[#B6532B] text-[#B6532B] font-semibold bg-[#FAF6EE] shadow-sm border';
+          }
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3.5 py-1.5 rounded-xl flex items-center gap-1.5 text-xs font-mono transition-all cursor-pointer whitespace-nowrap ${activeStyle}`}
+            >
+              {tab.icon}
+              <span>{tab.label}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Backdrop for mobile syllabus drawer */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 z-40 bg-[#2E251E]/40 backdrop-blur-sm lg:hidden transition-opacity duration-300"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6 flex flex-col lg:flex-row gap-6 relative">
-        <aside className="w-full lg:w-80 shrink-0 flex flex-col bg-[#F4EFE6] border border-[#E5DDD0] rounded-2xl max-h-[85vh] overflow-hidden">
-          <div className="p-4 border-b border-[#E5DDD0] bg-[#F4EFE6] sticky top-0 z-10">
-            <span className="text-[10px] text-[#B6532B] font-mono uppercase tracking-wider block font-bold">
-              Learning Syllabus
-            </span>
-            <div className="flex justify-between items-center mt-1">
-              <h2 className="text-[#2E251E] font-bold text-sm font-serif">{totalModules} Machine Learning Modules</h2>
-              <span className="text-[10px] font-mono bg-[#FAF6EE] border border-[#E5DDD0] px-1.5 py-0.5 rounded text-[#6E6257]">
-                {userStats.completedModules.length} / {totalModules} Done
+        <aside className={`
+          fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] flex flex-col bg-[#F4EFE6] border-r border-[#E5DDD0] shadow-2xl transition-transform duration-300 ease-in-out transform
+          ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          lg:relative lg:translate-x-0 lg:flex lg:w-80 lg:shrink-0 lg:border lg:rounded-2xl lg:max-h-[85vh] lg:overflow-hidden lg:shadow-none
+        `}>
+          <div className="p-4 border-b border-[#E5DDD0] bg-[#F4EFE6] sticky top-0 z-10 flex justify-between items-center">
+            <div>
+              <span className="text-[10px] text-[#B6532B] font-mono uppercase tracking-wider block font-bold">
+                Learning Syllabus
               </span>
+              <div className="flex justify-between items-center mt-1 gap-2">
+                <h2 className="text-[#2E251E] font-bold text-sm font-serif">{totalModules} ML Modules</h2>
+                <span className="text-[10px] font-mono bg-[#FAF6EE] border border-[#E5DDD0] px-1.5 py-0.5 rounded text-[#6E6257]">
+                  {userStats.completedModules.length}/{totalModules}
+                </span>
+              </div>
             </div>
+            <button
+              onClick={() => setIsSidebarOpen(false)}
+              className="lg:hidden p-2 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#6E6257] hover:text-[#2E251E] transition-all cursor-pointer flex items-center justify-center"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
           </div>
 
           <div className="flex-1 overflow-y-auto p-3 space-y-4 scroller scrollbar-thin">
@@ -371,7 +438,10 @@ function MainAppContent() {
                     return (
                       <button
                         key={m.id}
-                        onClick={() => setActiveModuleId(m.id)}
+                        onClick={() => {
+                          setActiveModuleId(m.id);
+                          setIsSidebarOpen(false);
+                        }}
                         className={`w-full text-left p-2.5 rounded-xl border flex items-center justify-between gap-2 text-xs font-mono transition-all cursor-pointer ${statusColor}`}
                       >
                         <div className="truncate pr-1">
@@ -439,7 +509,7 @@ function MainAppContent() {
               </div>
             </div>
 
-            <div className="flex border-b border-[#E5DDD0] pt-2 overflow-x-auto gap-1 scrollbar-thin">
+            <div className="hidden lg:flex border-b border-[#E5DDD0] pt-2 overflow-x-auto gap-1 scrollbar-thin">
               {(isKaggleModule
                 ? [
                     { id: 'theory' as const, label: 'Theory', icon: <BookOpen className="w-3.5 h-3.5" /> },

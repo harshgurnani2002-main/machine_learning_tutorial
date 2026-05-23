@@ -18,6 +18,7 @@ export const CodingPlayground: React.FC = () => {
   const [feedback, setFeedback] = useState<string>('');
   const [showSolution, setShowSolution] = useState<boolean>(false);
   const [showPseudo, setShowPseudo] = useState<boolean>(true);
+  const [isDescExpanded, setIsDescExpanded] = useState<boolean>(true);
 
   const plotCanvasRef = useRef<HTMLCanvasElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
@@ -272,7 +273,7 @@ export const CodingPlayground: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF6EE] min-h-screen p-4 md:p-5">
+    <div className="bg-[#FAF6EE] p-3 sm:p-4 md:p-5">
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-5">
         <aside className="xl:col-span-3 bg-[#FAF6EE] border border-[#E5DDD0] rounded-2xl p-4 md:p-5 space-y-4">
           <div>
@@ -280,7 +281,7 @@ export const CodingPlayground: React.FC = () => {
             <h3 className="text-[#2E251E] font-bold text-base mt-1 leading-tight">{activeStage.title}</h3>
           </div>
 
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-3 xl:grid-cols-1 gap-2">
             {stagesList.map((stg) => {
               const isActive = activeCodingStage === stg.id;
               const isDone = stageCompleted(stg.id);
@@ -288,17 +289,18 @@ export const CodingPlayground: React.FC = () => {
                 <button
                   key={stg.id}
                   onClick={() => setActiveCodingStage(stg.id)}
-                  className={`w-full text-left px-3 py-2.5 rounded-xl border text-sm flex items-center justify-between transition-all ${
+                  className={`w-full text-center xl:text-left px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl border text-[10px] sm:text-xs md:text-sm flex flex-col sm:flex-row xl:flex-row items-center justify-between gap-1 transition-all cursor-pointer ${
                     isActive
                       ? 'bg-[#F4EFE6] border-[#B6532B] text-[#2E251E]'
                       : 'bg-[#FAF6EE] border-[#E5DDD0] text-[#6E6257] hover:bg-[#F4EFE6]'
                   }`}
                 >
-                  <span className="flex items-center gap-2">
+                  <span className="flex items-center gap-1.5 sm:gap-2">
                     <span>{stg.icon}</span>
-                    <span className="font-semibold">{stg.label}</span>
+                    <span className="font-semibold hidden sm:inline">{stg.label}</span>
+                    <span className="font-semibold inline sm:hidden">{stg.label.substring(0, 4)}.</span>
                   </span>
-                  <span className={`text-xs font-mono ${isDone ? 'text-[#3B7A57]' : 'text-[#CFC5B4]'}`}>
+                  <span className={`text-[9px] sm:text-xs font-mono font-medium ${isDone ? 'text-[#3B7A57]' : 'text-[#CFC5B4]'}`}>
                     {isDone ? 'Done' : 'Open'}
                   </span>
                 </button>
@@ -307,23 +309,33 @@ export const CodingPlayground: React.FC = () => {
           </div>
 
           <div className="border border-[#E5DDD0] rounded-xl bg-[#F4EFE6] p-3">
-            <p className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#B6532B] mb-1">Problem Statement</p>
-            <p className="text-[#2E251E] text-xs leading-relaxed whitespace-pre-line">{activeStage.description}</p>
+            <button 
+              onClick={() => setIsDescExpanded(!isDescExpanded)}
+              className="w-full flex justify-between items-center text-[10px] uppercase font-mono font-bold tracking-wider text-[#B6532B] cursor-pointer outline-none"
+            >
+              <span>Problem Statement</span>
+              <span className="text-[10px] text-[#6E6257] font-semibold lowercase font-sans">
+                {isDescExpanded ? '[hide]' : '[show]'}
+              </span>
+            </button>
+            {isDescExpanded && (
+              <p className="text-[#2E251E] text-xs leading-relaxed whitespace-pre-line mt-2 transition-all">{activeStage.description}</p>
+            )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-2">
+          <div className="grid grid-cols-2 xl:grid-cols-1 gap-2">
             <button
               onClick={() => setHintIdx(prev => (prev + 1) % activeStage.hints.length)}
-              className="px-3 py-2.5 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#2E251E] text-sm flex items-center justify-center gap-2"
+              className="px-3 py-2 sm:py-2.5 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#2E251E] text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
             >
-              <Lightbulb className="w-4 h-4 text-[#C18C3B]" />
+              <Lightbulb className="w-3.5 h-3.5 text-[#C18C3B]" />
               Hint
             </button>
             <button
               onClick={() => setShowSolution(!showSolution)}
-              className="px-3 py-2.5 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#2E251E] text-sm flex items-center justify-center gap-2"
+              className="px-3 py-2 sm:py-2.5 rounded-xl border border-[#E5DDD0] bg-[#FAF6EE] hover:bg-[#F4EFE6] text-[#2E251E] text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
             >
-              <BookOpen className="w-4 h-4 text-[#B6532B]" />
+              <BookOpen className="w-3.5 h-3.5 text-[#B6532B]" />
               {showSolution ? 'Hide Solution' : 'View Solution'}
             </button>
           </div>
@@ -336,37 +348,55 @@ export const CodingPlayground: React.FC = () => {
           )}
         </aside>
 
-        <main className="xl:col-span-6 bg-[#2E251E] border border-[#4A3D31] rounded-2xl overflow-hidden min-h-[620px] flex flex-col">
-          <div className="px-4 py-3 bg-[#3A3027] border-b border-[#4A3D31] flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Code2 className="w-4 h-4 text-[#C18C3B]" />
-              <span className="text-xs font-mono text-[#E5DDD0]">main.py</span>
-              {showSolution && (
-                <span className="text-[10px] px-2 py-0.5 rounded bg-[#3B7A57]/20 text-[#B7D8C4] font-mono">SOLUTION</span>
-              )}
+        {/* Combined editor and feedback column */}
+        <div className="xl:col-span-6 flex flex-col gap-4">
+          <main className="bg-[#2E251E] border border-[#4A3D31] rounded-2xl overflow-hidden min-h-[380px] sm:min-h-[500px] xl:min-h-[620px] flex flex-col">
+            <div className="px-4 py-3 bg-[#3A3027] border-b border-[#4A3D31] flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Code2 className="w-4 h-4 text-[#C18C3B]" />
+                <span className="text-xs font-mono text-[#E5DDD0]">main.py</span>
+                {showSolution && (
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-[#3B7A57]/20 text-[#B7D8C4] font-mono">SOLUTION</span>
+                )}
+              </div>
+              <button
+                onClick={runCode}
+                disabled={status === 'compiling'}
+                className="px-4 py-2 rounded-lg bg-[#B6532B] hover:bg-[#9F4825] disabled:opacity-50 text-white text-xs font-bold flex items-center gap-2 cursor-pointer transition-colors"
+              >
+                <Play className="w-4 h-4" />
+                {status === 'compiling' ? 'Running...' : 'Run Code'}
+              </button>
             </div>
-            <button
-              onClick={runCode}
-              disabled={status === 'compiling'}
-              className="px-4 py-2 rounded-lg bg-[#B6532B] hover:bg-[#9F4825] disabled:opacity-50 text-white text-xs font-bold flex items-center gap-2"
-            >
-              <Play className="w-4 h-4" />
-              {status === 'compiling' ? 'Running...' : 'Run Code'}
-            </button>
-          </div>
 
-          <div className="flex-1 p-3">
-            <textarea
-              value={showSolution && activeStage.solution ? activeStage.solution : code}
-              onChange={(e) => {
-                if (!showSolution) setCode(e.target.value);
-              }}
-              readOnly={showSolution}
-              spellCheck={false}
-              className="w-full h-full min-h-[520px] p-4 bg-[#2A211A] border border-[#4A3D31] rounded-xl text-[#F4EFE6] font-mono text-sm leading-relaxed resize-none outline-none"
-            />
-          </div>
-        </main>
+            <div className="flex-1 p-3">
+              <textarea
+                value={showSolution && activeStage.solution ? activeStage.solution : code}
+                onChange={(e) => {
+                  if (!showSolution) setCode(e.target.value);
+                }}
+                readOnly={showSolution}
+                spellCheck={false}
+                className="w-full h-full min-h-[280px] sm:min-h-[400px] xl:min-h-[520px] p-4 bg-[#2A211A] border border-[#4A3D31] rounded-xl text-[#F4EFE6] font-mono text-xs sm:text-sm leading-relaxed resize-none outline-none"
+              />
+            </div>
+          </main>
+
+          {feedback && (
+            <div className={`p-4 rounded-xl border flex items-center gap-3 text-xs sm:text-sm ${
+              status === 'success'
+                ? 'border-[#B7D8C4] bg-[#E8F3EC] text-[#2A5D42]'
+                : 'border-[#E7D8B4] bg-[#F9F3E5] text-[#6E4F1F]'
+            }`}>
+              {status === 'success' ? (
+                <CheckCircle className="w-5 h-5 text-[#3B7A57] shrink-0" />
+              ) : (
+                <AlertCircle className="w-5 h-5 text-[#C18C3B] shrink-0" />
+              )}
+              <p>{feedback}</p>
+            </div>
+          )}
+        </div>
 
         <section className="xl:col-span-3 space-y-5">
           <div className="bg-[#FAF6EE] border border-[#E5DDD0] rounded-2xl p-4">
@@ -379,12 +409,12 @@ export const CodingPlayground: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-[#2E251E] border border-[#4A3D31] rounded-2xl overflow-hidden min-h-[240px] flex flex-col">
+          <div className="bg-[#2E251E] border border-[#4A3D31] rounded-2xl overflow-hidden min-h-[200px] sm:min-h-[240px] flex flex-col">
             <div className="bg-[#3A3027] border-b border-[#4A3D31] px-4 py-2 text-[#E5DDD0] text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2">
               <Terminal className="w-4 h-4 text-[#C18C3B]" />
               Terminal
             </div>
-            <div ref={terminalRef} className="flex-1 p-3 text-xs font-mono overflow-y-auto space-y-1.5 text-[#E5DDD0]">
+            <div ref={terminalRef} className="flex-1 p-3 text-[10px] sm:text-xs font-mono overflow-y-auto space-y-1.5 text-[#E5DDD0]">
               {terminalLogs.map((log, idx) => (
                 <div key={idx} className={`whitespace-pre-wrap break-words ${
                   log.startsWith('Error') || log.startsWith('Syntax') || log.startsWith('Assertion') || log.startsWith('File') || log.startsWith('NotImplementedError') || log.includes('[✗]')
@@ -400,7 +430,6 @@ export const CodingPlayground: React.FC = () => {
               ))}
             </div>
           </div>
-
         </section>
 
         {activeStage.pseudoCode && showPseudo && (
@@ -409,12 +438,12 @@ export const CodingPlayground: React.FC = () => {
               <p className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#C18C3B]">Algorithm Pseudocode</p>
               <button
                 onClick={() => setShowPseudo(false)}
-                className="text-xs text-[#E5DDD0] hover:text-white font-mono"
+                className="text-xs text-[#E5DDD0] hover:text-white font-mono cursor-pointer"
               >
                 Hide
               </button>
             </div>
-            <pre className="text-[#E5DDD0] text-xs font-mono leading-relaxed whitespace-pre-wrap">{activeStage.pseudoCode}</pre>
+            <pre className="text-[#E5DDD0] text-[10px] sm:text-xs font-mono leading-relaxed whitespace-pre-wrap">{activeStage.pseudoCode}</pre>
           </section>
         )}
 
@@ -422,27 +451,10 @@ export const CodingPlayground: React.FC = () => {
           <section className="xl:col-span-12">
             <button
               onClick={() => setShowPseudo(true)}
-              className="px-3 py-2 rounded-lg border border-[#E5DDD0] bg-[#FAF6EE] text-[#2E251E] text-xs font-mono"
+              className="px-3 py-2 rounded-lg border border-[#E5DDD0] bg-[#FAF6EE] text-[#2E251E] text-xs font-mono cursor-pointer hover:bg-[#F4EFE6]"
             >
               Show Pseudocode
             </button>
-          </section>
-        )}
-
-        {feedback && (
-          <section className="xl:col-span-12">
-            <div className={`p-4 rounded-xl border flex items-center gap-3 text-sm ${
-              status === 'success'
-                ? 'border-[#B7D8C4] bg-[#E8F3EC] text-[#2A5D42]'
-                : 'border-[#E7D8B4] bg-[#F9F3E5] text-[#6E4F1F]'
-            }`}>
-              {status === 'success' ? (
-                <CheckCircle className="w-5 h-5 text-[#3B7A57] shrink-0" />
-              ) : (
-                <AlertCircle className="w-5 h-5 text-[#C18C3B] shrink-0" />
-              )}
-              <p>{feedback}</p>
-            </div>
           </section>
         )}
       </div>
