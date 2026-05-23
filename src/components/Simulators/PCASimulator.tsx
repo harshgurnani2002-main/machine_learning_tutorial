@@ -108,15 +108,15 @@ export const PCASimulator: React.FC = () => {
       
       // Draw PC2 (shorter, orthogonal)
       ctx.beginPath();
-      ctx.moveTo(meanX - pc2.y * 100, meanY - pc2.x * 100);
-      ctx.lineTo(meanX + pc2.y * 100, meanY + pc2.x * 100);
+      ctx.moveTo(meanX - pc2.dx * 1000, meanY - pc2.dy * 1000);
+      ctx.lineTo(meanX + pc2.dx * 1000, meanY + pc2.dy * 1000);
       ctx.strokeStyle = '#C18C3B';
       ctx.shadowColor = '#C18C3B'; // Sky
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Draw Projections to PC1
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.strokeStyle = 'rgba(110, 98, 87, 0.3)';
       ctx.setLineDash([4, 4]);
       ctx.lineWidth = 1.5;
       points.forEach(p => {
