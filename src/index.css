@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-darker: #FAF6EE;      /* Cream Base */
+    --bg-deep: #FAF6EE;        /* Cream Base */
+    --bg-surface: #FAF6EE;
+    --bg-card: #F4EFE6;        /* Warm Sand Card Background */
+    --border-color: #E5DDD0;   /* Light Tactile Border */
+    --border-color-hover: #D5C9B8;
+    
+    --color-primary: #B6532B;   /* Terracotta / Rust */
+    --color-secondary: #C18C3B; /* Golden Ochre */
+    --color-accent: #2E251E;    /* Espresso Charcoal */
+    --color-success: #3B7A57;   /* Forest Green */
+    --color-warning: #C18C3B;   /* Ochre */
+    --color-error: #A63A2B;     /* Deep Brick Red */
+    
+    --text-main: #2E251E;      /* Espresso Text */
+    --text-muted: #6E6257;     /* Warm Slate / Bronze */
+    
+    /* Code Editor Dark Sepia theme variables */
+    --bg-code: #1F1A15;
+    --text-code: #E5E0D8;
+    --border-code: #352E27;
+    --code-keyword: #D98553;
+    --code-string: #9EBC72;
+    --code-comment: #827568;
+    --code-number: #D9B353;
+
+    --scrollbar-thumb: #D5C9B8;
+    --scrollbar-track: #F4EFE6;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbars applied globally with modern properties and supports fallback */
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C4B6A3;
+  }
+}
+
+/* Tactile Sand Panels & Editorial Styles */
+.glass-panel {
+  background: #F4EFE6;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(46, 37, 30, 0.03);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: 0 10px 25px rgba(46, 37, 30, 0.06);
+  transform: translateY(-1px);
+}
+
+.glow-text-blue {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(182, 83, 43, 0.15);
+}
+
+.glow-text-purple {
+  color: var(--color-secondary);
+  text-shadow: 0 0 10px rgba(193, 140, 59, 0.15);
+}
+
+.glow-text-cyan {
+  color: var(--text-main);
+  text-shadow: 0 0 10px rgba(46, 37, 30, 0.15);
+}
+
+/* Sepia Graph Grid Overlay background */
+.neural-grid {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(110, 98, 87, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(110, 98, 87, 0.04) 1px, transparent 1px);
+}
+
+/* Subtle Warm Vignette/Ambient overlays */
+.ambient-glow-1 {
+  background: radial-gradient(circle, rgba(182, 83, 43, 0.03) 0%, transparent 70%);
+}
+
+.ambient-glow-2 {
+  background: radial-gradient(circle, rgba(193, 140, 59, 0.03) 0%, transparent 70%);
+}
+
+.ambient-glow-3 {
+  background: radial-gradient(circle, rgba(46, 37, 30, 0.02) 0%, transparent 60%);
+}
+
+/* Editorial Serif Headings and Text Gradients */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-blue-purple {
+  background-image: linear-gradient(135deg, #B6532B 0%, #C18C3B 100%);
+}
+
+.gradient-purple-cyan {
+  background-image: linear-gradient(135deg, #C18C3B 0%, #2E251E 100%);
+}
+
+.gradient-orange-purple {
+  background-image: linear-gradient(135deg, #B6532B 0%, #2E251E 100%);
+}
+
+/* Premium tactile editorial buttons */
+.btn-neon {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(46, 37, 30, 0.04);
+}
+
+.btn-neon:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: 0 4px 12px rgba(46, 37, 30, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn-neon:active {
+  transform: translateY(0px);
+}
+
+/* Math formula animation styles */
+.math-fade-in {
+  animation: mathFade 6s ease-in-out infinite alternate;
+}
+
+@keyframes mathFade {
+  0% { opacity: 0.4; transform: scale(0.99) translateY(1px); }
+  50% { opacity: 0.85; transform: scale(1) translateY(0); }
+  100% { opacity: 0.4; transform: scale(1.01) translateY(-1px); }
+}
+
+/* Pulse keyframes for neural nodes */
+@keyframes nodePulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; box-shadow: 0 0 8px rgba(182, 83, 43, 0.2); }
+  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 16px rgba(182, 83, 43, 0.4); }
+}
+
+.node-pulse {
+  animation: nodePulse 2.5s infinite ease-in-out;
+}
+
+/* Custom styles for CodeMirror / Dark Sepia terminal simulations */
+.dark-sepia-editor {
+  background-color: var(--bg-code);
+  color: var(--text-code);
+  border: 1px solid var(--border-code);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.editor-keyword { color: var(--code-keyword); font-weight: 500; }
+.editor-string { color: var(--code-string); }
+.editor-number { color: var(--code-number); }
+.editor-comment { color: var(--code-comment); font-style: italic; }
+
+/* Custom styled range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--border-color);
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+

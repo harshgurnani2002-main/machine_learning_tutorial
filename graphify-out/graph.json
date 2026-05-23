@@ -1,0 +1,3052 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/eslint.config.js",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_eslint_config_js",
+      "community": 30,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/vite.config.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_vite_config_ts",
+      "community": 31,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "split.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/split.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_split_ts",
+      "community": 32,
+      "norm_label": "split.ts"
+    },
+    {
+      "label": "fix_types.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_types.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_fix_types_py",
+      "community": 19,
+      "norm_label": "fix_types.py"
+    },
+    {
+      "label": "replace_interview()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_types.py",
+      "source_location": "L7",
+      "id": "fix_types_replace_interview",
+      "community": 19,
+      "norm_label": "replace_interview()"
+    },
+    {
+      "label": "generate_gd.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_gd.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_gd_py",
+      "community": 33,
+      "norm_label": "generate_gd.py"
+    },
+    {
+      "label": "format_ts.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/format_ts.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_format_ts_py",
+      "community": 34,
+      "norm_label": "format_ts.py"
+    },
+    {
+      "label": "fix_lines.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_lines.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_fix_lines_py",
+      "community": 20,
+      "norm_label": "fix_lines.py"
+    },
+    {
+      "label": "fix_split()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_lines.py",
+      "source_location": "L10",
+      "id": "fix_lines_fix_split",
+      "community": 20,
+      "norm_label": "fix_split()"
+    },
+    {
+      "label": "generate_dt.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_dt.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_dt_py",
+      "community": 35,
+      "norm_label": "generate_dt.py"
+    },
+    {
+      "label": "generate_ml_modules.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "community": 0,
+      "norm_label": "generate_ml_modules.py"
+    },
+    {
+      "label": "get_rf_content()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L3",
+      "id": "generate_ml_modules_get_rf_content",
+      "community": 0,
+      "norm_label": "get_rf_content()"
+    },
+    {
+      "label": "get_kmeans_content()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L406",
+      "id": "generate_ml_modules_get_kmeans_content",
+      "community": 0,
+      "norm_label": "get_kmeans_content()"
+    },
+    {
+      "label": "get_svm_content()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L822",
+      "id": "generate_ml_modules_get_svm_content",
+      "community": 0,
+      "norm_label": "get_svm_content()"
+    },
+    {
+      "label": "# TODO: Select indices between 0 and num_samples-1 with replacement",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L184",
+      "community": 0,
+      "norm_label": "# todo: select indices between 0 and num_samples-1 with replacement",
+      "id": "generate_ml_modules_rationale_184"
+    },
+    {
+      "label": "# TODO: Initialize a RandomForestClassifier with 10 trees (estimators) and a ran",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L217",
+      "community": 0,
+      "norm_label": "# todo: initialize a randomforestclassifier with 10 trees (estimators) and a ran",
+      "id": "generate_ml_modules_rationale_217"
+    },
+    {
+      "label": "# TODO: Use cross_val_score with cv=3 to get the accuracy array",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L218",
+      "community": 0,
+      "norm_label": "# todo: use cross_val_score with cv=3 to get the accuracy array",
+      "id": "generate_ml_modules_rationale_218"
+    },
+    {
+      "label": "# TODO: Print the mean accuracy",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L219",
+      "community": 0,
+      "norm_label": "# todo: print the mean accuracy",
+      "id": "generate_ml_modules_rationale_219"
+    },
+    {
+      "label": "# TODO: Initialize RandomForestRegressor (n_estimators=20, random_state=42)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L256",
+      "community": 0,
+      "norm_label": "# todo: initialize randomforestregressor (n_estimators=20, random_state=42)",
+      "id": "generate_ml_modules_rationale_256"
+    },
+    {
+      "label": "# TODO: Fit the model on X, y",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L257",
+      "community": 0,
+      "norm_label": "# todo: fit the model on x, y",
+      "id": "generate_ml_modules_rationale_257"
+    },
+    {
+      "label": "# TODO: Retrieve and print the feature_importances_ array rounded to 3 decimal p",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L258",
+      "community": 0,
+      "norm_label": "# todo: retrieve and print the feature_importances_ array rounded to 3 decimal p",
+      "id": "generate_ml_modules_rationale_258"
+    },
+    {
+      "label": "# TODO: Calculate distances to each centroid",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L604",
+      "community": 0,
+      "norm_label": "# todo: calculate distances to each centroid",
+      "id": "generate_ml_modules_rationale_604"
+    },
+    {
+      "label": "# TODO: Initialize KMeans with n_clusters=3, n_init=10, random_state=42",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L637",
+      "community": 0,
+      "norm_label": "# todo: initialize kmeans with n_clusters=3, n_init=10, random_state=42",
+      "id": "generate_ml_modules_rationale_637"
+    },
+    {
+      "label": "# TODO: Fit the model to X and predict cluster labels",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L638",
+      "community": 0,
+      "norm_label": "# todo: fit the model to x and predict cluster labels",
+      "id": "generate_ml_modules_rationale_638"
+    },
+    {
+      "label": "# TODO: Print the resulting cluster labels",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L639",
+      "community": 0,
+      "norm_label": "# todo: print the resulting cluster labels",
+      "id": "generate_ml_modules_rationale_639"
+    },
+    {
+      "label": "# TODO: Fit a KMeans model (n_clusters=2, n_init=10, random_state=42)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L673",
+      "community": 0,
+      "norm_label": "# todo: fit a kmeans model (n_clusters=2, n_init=10, random_state=42)",
+      "id": "generate_ml_modules_rationale_673"
+    },
+    {
+      "label": "# TODO: Extract the cluster_centers_",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L674",
+      "community": 0,
+      "norm_label": "# todo: extract the cluster_centers_",
+      "id": "generate_ml_modules_rationale_674"
+    },
+    {
+      "label": "# TODO: Print the rounded centroids (round to 1 decimal place)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L675",
+      "community": 0,
+      "norm_label": "# todo: print the rounded centroids (round to 1 decimal place)",
+      "id": "generate_ml_modules_rationale_675"
+    },
+    {
+      "label": "# TODO: Calculate average hinge loss: max(0, 1 - y * f(x))",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1010",
+      "community": 0,
+      "norm_label": "# todo: calculate average hinge loss: max(0, 1 - y * f(x))",
+      "id": "generate_ml_modules_rationale_1010"
+    },
+    {
+      "label": "# TODO: Create a pipeline with StandardScaler and SVC(kernel='linear', C=1.0)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1047",
+      "community": 0,
+      "norm_label": "# todo: create a pipeline with standardscaler and svc(kernel='linear', c=1.0)",
+      "id": "generate_ml_modules_rationale_1047"
+    },
+    {
+      "label": "# TODO: Fit the pipeline to X and y",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1048",
+      "community": 0,
+      "norm_label": "# todo: fit the pipeline to x and y",
+      "id": "generate_ml_modules_rationale_1048"
+    },
+    {
+      "label": "# TODO: Predict on a new test point: [[3.0, 4000]]",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1049",
+      "community": 0,
+      "norm_label": "# todo: predict on a new test point: [[3.0, 4000]]",
+      "id": "generate_ml_modules_rationale_1049"
+    },
+    {
+      "label": "# TODO: Initialize SVC with kernel='rbf', C=1.0, gamma='scale'",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1090",
+      "community": 0,
+      "norm_label": "# todo: initialize svc with kernel='rbf', c=1.0, gamma='scale'",
+      "id": "generate_ml_modules_rationale_1090"
+    },
+    {
+      "label": "# TODO: Fit the model on X, y",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1091",
+      "community": 0,
+      "norm_label": "# todo: fit the model on x, y",
+      "id": "generate_ml_modules_rationale_1091"
+    },
+    {
+      "label": "# TODO: Print the accuracy score on the training data using .score()",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1092",
+      "community": 0,
+      "norm_label": "# todo: print the accuracy score on the training data using .score()",
+      "id": "generate_ml_modules_rationale_1092"
+    },
+    {
+      "label": "generate_lr.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_lr.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_lr_py",
+      "community": 36,
+      "norm_label": "generate_lr.py"
+    },
+    {
+      "label": "generate_logr.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_logr.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_logr_py",
+      "community": 37,
+      "norm_label": "generate_logr.py"
+    },
+    {
+      "label": "generate_gb.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_gb.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_gb_py",
+      "community": 38,
+      "norm_label": "generate_gb.py"
+    },
+    {
+      "label": "update_naive_bayes.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "community": 11,
+      "norm_label": "update_naive_bayes.py"
+    },
+    {
+      "label": "# TODO: Return prior probability array [P(y=0), P(y=1)]",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L329",
+      "community": 11,
+      "norm_label": "# todo: return prior probability array [p(y=0), p(y=1)]",
+      "id": "update_naive_bayes_rationale_329"
+    },
+    {
+      "label": "# TODO: Initialize vectorizer and model, fit them, and predict test_docs",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L358",
+      "community": 11,
+      "norm_label": "# todo: initialize vectorizer and model, fit them, and predict test_docs",
+      "id": "update_naive_bayes_rationale_358"
+    },
+    {
+      "label": "# TODO: Create Pipeline and evaluate with cross_val_score (cv=2)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L399",
+      "community": 11,
+      "norm_label": "# todo: create pipeline and evaluate with cross_val_score (cv=2)",
+      "id": "update_naive_bayes_rationale_399"
+    },
+    {
+      "label": "expand.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/expand.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_expand_ts",
+      "community": 39,
+      "norm_label": "expand.ts"
+    },
+    {
+      "label": "update_theory.js",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.js",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_update_theory_js",
+      "community": 21,
+      "norm_label": "update_theory.js"
+    },
+    {
+      "label": "replaceTheory()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.js",
+      "source_location": "L89",
+      "id": "update_theory_replacetheory",
+      "community": 21,
+      "norm_label": "replacetheory()"
+    },
+    {
+      "label": "generate_batch3.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "community": 5,
+      "norm_label": "generate_batch3.py"
+    },
+    {
+      "label": "write_file()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L3",
+      "id": "generate_batch3_write_file",
+      "community": 5,
+      "norm_label": "write_file()"
+    },
+    {
+      "label": "# TODO: Return prior probability array [P(y=0), P(y=1)]",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L335",
+      "community": 5,
+      "norm_label": "# todo: return prior probability array [p(y=0), p(y=1)]",
+      "id": "generate_batch3_rationale_335"
+    },
+    {
+      "label": "# TODO: Initialize vectorizer and model, fit them, and predict test_docs",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L364",
+      "community": 5,
+      "norm_label": "# todo: initialize vectorizer and model, fit them, and predict test_docs",
+      "id": "generate_batch3_rationale_364"
+    },
+    {
+      "label": "# TODO: Create Pipeline and evaluate with cross_val_score (cv=2)",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L405",
+      "community": 5,
+      "norm_label": "# todo: create pipeline and evaluate with cross_val_score (cv=2)",
+      "id": "generate_batch3_rationale_405"
+    },
+    {
+      "label": "update_modules.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_modules.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_update_modules_py",
+      "community": 22,
+      "norm_label": "update_modules.py"
+    },
+    {
+      "label": "update_file()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_modules.py",
+      "source_location": "L3",
+      "id": "update_modules_update_file",
+      "community": 22,
+      "norm_label": "update_file()"
+    },
+    {
+      "label": "update_theory.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_update_theory_py",
+      "community": 23,
+      "norm_label": "update_theory.py"
+    },
+    {
+      "label": "update_file()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.py",
+      "source_location": "L226",
+      "id": "update_theory_update_file",
+      "community": 23,
+      "norm_label": "update_file()"
+    },
+    {
+      "label": "generate_knn.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "community": 6,
+      "norm_label": "generate_knn.py"
+    },
+    {
+      "label": "write_file()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L3",
+      "id": "generate_knn_write_file",
+      "community": 6,
+      "norm_label": "write_file()"
+    },
+    {
+      "label": "# TODO: Calculate Minkowski distance",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L341",
+      "community": 6,
+      "norm_label": "# todo: calculate minkowski distance",
+      "id": "generate_knn_rationale_341"
+    },
+    {
+      "label": "# TODO: Initialize KNN with k=3, fit, and predict X_test",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L370",
+      "community": 6,
+      "norm_label": "# todo: initialize knn with k=3, fit, and predict x_test",
+      "id": "generate_knn_rationale_370"
+    },
+    {
+      "label": "# TODO: Create a pipeline with StandardScaler and KNeighborsClassifier(n_neighbo",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L403",
+      "community": 6,
+      "norm_label": "# todo: create a pipeline with standardscaler and kneighborsclassifier(n_neighbo",
+      "id": "generate_knn_rationale_403"
+    },
+    {
+      "label": "generate_pca.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "community": 7,
+      "norm_label": "generate_pca.py"
+    },
+    {
+      "label": "write_file()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L3",
+      "id": "generate_pca_write_file",
+      "community": 7,
+      "norm_label": "write_file()"
+    },
+    {
+      "label": "# TODO: Subtract column means from X",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L329",
+      "community": 7,
+      "norm_label": "# todo: subtract column means from x",
+      "id": "generate_pca_rationale_329"
+    },
+    {
+      "label": "# TODO: Apply PCA to reduce to 2 components",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L360",
+      "community": 7,
+      "norm_label": "# todo: apply pca to reduce to 2 components",
+      "id": "generate_pca_rationale_360"
+    },
+    {
+      "label": "# TODO: Create pipeline (Scaler -> PCA(2) -> LogReg), fit, and predict",
+      "file_type": "rationale",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L397",
+      "community": 7,
+      "norm_label": "# todo: create pipeline (scaler -> pca(2) -> logreg), fit, and predict",
+      "id": "generate_pca_rationale_397"
+    },
+    {
+      "label": "test.js",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/test.js",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_test_js",
+      "community": 40,
+      "norm_label": "test.js"
+    },
+    {
+      "label": "fix.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_fix_py",
+      "community": 41,
+      "norm_label": "fix.py"
+    },
+    {
+      "label": "fix_all.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_all.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_fix_all_py",
+      "community": 42,
+      "norm_label": "fix_all.py"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/main.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_main_tsx",
+      "community": 3,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/types.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_types_ts",
+      "community": 43,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "community": 3,
+      "norm_label": "app.tsx"
+    },
+    {
+      "label": "normalizeLatex()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L27",
+      "id": "app_normalizelatex",
+      "community": 3,
+      "norm_label": "normalizelatex()"
+    },
+    {
+      "label": "handleReset()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L218",
+      "id": "app_handlereset",
+      "community": 3,
+      "norm_label": "handlereset()"
+    },
+    {
+      "label": "getCategoryIcon()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L242",
+      "id": "app_getcategoryicon",
+      "community": 3,
+      "norm_label": "getcategoryicon()"
+    },
+    {
+      "label": "getModuleProgress()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L261",
+      "id": "app_getmoduleprogress",
+      "community": 3,
+      "norm_label": "getmoduleprogress()"
+    },
+    {
+      "label": "AppContext.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/context/AppContext.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_context_appcontext_tsx",
+      "community": 9,
+      "norm_label": "appcontext.tsx"
+    },
+    {
+      "label": "AppProvider()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/context/AppContext.tsx",
+      "source_location": "L24",
+      "id": "appcontext_appprovider",
+      "community": 9,
+      "norm_label": "appprovider()"
+    },
+    {
+      "label": "useApp()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/context/AppContext.tsx",
+      "source_location": "L177",
+      "id": "appcontext_useapp",
+      "community": 9,
+      "norm_label": "useapp()"
+    },
+    {
+      "label": "NeuralBackground.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/NeuralBackground.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_neuralbackground_tsx",
+      "community": 24,
+      "norm_label": "neuralbackground.tsx"
+    },
+    {
+      "label": "NeuralBackground()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/NeuralBackground.tsx",
+      "source_location": "L3",
+      "id": "neuralbackground_neuralbackground",
+      "community": 24,
+      "norm_label": "neuralbackground()"
+    },
+    {
+      "label": "CodingPlayground.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/CodingPlayground.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_codingplayground_tsx",
+      "community": 14,
+      "norm_label": "codingplayground.tsx"
+    },
+    {
+      "label": "runCode()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/CodingPlayground.tsx",
+      "source_location": "L67",
+      "id": "codingplayground_runcode",
+      "community": 14,
+      "norm_label": "runcode()"
+    },
+    {
+      "label": "stageCompleted()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/CodingPlayground.tsx",
+      "source_location": "L270",
+      "id": "codingplayground_stagecompleted",
+      "community": 14,
+      "norm_label": "stagecompleted()"
+    },
+    {
+      "label": "QuizEngine.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "community": 8,
+      "norm_label": "quizengine.tsx"
+    },
+    {
+      "label": "handleOptionSelect()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L24",
+      "id": "quizengine_handleoptionselect",
+      "community": 8,
+      "norm_label": "handleoptionselect()"
+    },
+    {
+      "label": "checkAnswer()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L29",
+      "id": "quizengine_checkanswer",
+      "community": 8,
+      "norm_label": "checkanswer()"
+    },
+    {
+      "label": "handleNext()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L40",
+      "id": "quizengine_handlenext",
+      "community": 8,
+      "norm_label": "handlenext()"
+    },
+    {
+      "label": "restartQuiz()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L53",
+      "id": "quizengine_restartquiz",
+      "community": 8,
+      "norm_label": "restartquiz()"
+    },
+    {
+      "label": "InterviewPrep.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/InterviewPrep.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_interviewprep_tsx",
+      "community": 15,
+      "norm_label": "interviewprep.tsx"
+    },
+    {
+      "label": "toggleExpand()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/InterviewPrep.tsx",
+      "source_location": "L23",
+      "id": "interviewprep_toggleexpand",
+      "community": 15,
+      "norm_label": "toggleexpand()"
+    },
+    {
+      "label": "handleComplete()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/InterviewPrep.tsx",
+      "source_location": "L27",
+      "id": "interviewprep_handlecomplete",
+      "community": 15,
+      "norm_label": "handlecomplete()"
+    },
+    {
+      "label": "KaggleNotebook.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/KaggleNotebook.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_kagglenotebook_tsx",
+      "community": 44,
+      "norm_label": "kagglenotebook.tsx"
+    },
+    {
+      "label": "GradientDescent.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientDescent.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientdescent_tsx",
+      "community": 25,
+      "norm_label": "gradientdescent.tsx"
+    },
+    {
+      "label": "GradientDescent()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientDescent.tsx",
+      "source_location": "L4",
+      "id": "gradientdescent_gradientdescent",
+      "community": 25,
+      "norm_label": "gradientdescent()"
+    },
+    {
+      "label": "NeuralNetSandbox.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "community": 1,
+      "norm_label": "neuralnetsandbox.tsx"
+    },
+    {
+      "label": "initializeNetwork()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L43",
+      "id": "neuralnetsandbox_initializenetwork",
+      "community": 1,
+      "norm_label": "initializenetwork()"
+    },
+    {
+      "label": "addHiddenLayer()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L80",
+      "id": "neuralnetsandbox_addhiddenlayer",
+      "community": 1,
+      "norm_label": "addhiddenlayer()"
+    },
+    {
+      "label": "removeHiddenLayer()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L85",
+      "id": "neuralnetsandbox_removehiddenlayer",
+      "community": 1,
+      "norm_label": "removehiddenlayer()"
+    },
+    {
+      "label": "changeNeurons()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L90",
+      "id": "neuralnetsandbox_changeneurons",
+      "community": 1,
+      "norm_label": "changeneurons()"
+    },
+    {
+      "label": "activate()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L102",
+      "id": "neuralnetsandbox_activate",
+      "community": 1,
+      "norm_label": "activate()"
+    },
+    {
+      "label": "activateDerivative()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L108",
+      "id": "neuralnetsandbox_activatederivative",
+      "community": 1,
+      "norm_label": "activatederivative()"
+    },
+    {
+      "label": "forward()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L115",
+      "id": "neuralnetsandbox_forward",
+      "community": 1,
+      "norm_label": "forward()"
+    },
+    {
+      "label": "trainStep()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L140",
+      "id": "neuralnetsandbox_trainstep",
+      "community": 1,
+      "norm_label": "trainstep()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L219",
+      "id": "neuralnetsandbox_run",
+      "community": 1,
+      "norm_label": "run()"
+    },
+    {
+      "label": "KMeansSandbox.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_kmeanssandbox_tsx",
+      "community": 16,
+      "norm_label": "kmeanssandbox.tsx"
+    },
+    {
+      "label": "initializeSimulation()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx",
+      "source_location": "L20",
+      "id": "kmeanssandbox_initializesimulation",
+      "community": 16,
+      "norm_label": "initializesimulation()"
+    },
+    {
+      "label": "executeStep()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx",
+      "source_location": "L64",
+      "id": "kmeanssandbox_executestep",
+      "community": 16,
+      "norm_label": "executestep()"
+    },
+    {
+      "label": "EmbeddingSpace.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_embeddingspace_tsx",
+      "community": 17,
+      "norm_label": "embeddingspace.tsx"
+    },
+    {
+      "label": "calculateVectorMath()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx",
+      "source_location": "L39",
+      "id": "embeddingspace_calculatevectormath",
+      "community": 17,
+      "norm_label": "calculatevectormath()"
+    },
+    {
+      "label": "toPixel()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx",
+      "source_location": "L121",
+      "id": "embeddingspace_topixel",
+      "community": 17,
+      "norm_label": "topixel()"
+    },
+    {
+      "label": "ModuleSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/ModuleSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_modulesimulator_tsx",
+      "community": 9,
+      "norm_label": "modulesimulator.tsx"
+    },
+    {
+      "label": "ModuleSimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/ModuleSimulator.tsx",
+      "source_location": "L21",
+      "id": "modulesimulator_modulesimulator",
+      "community": 9,
+      "norm_label": "modulesimulator()"
+    },
+    {
+      "label": "AttentionMap.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/AttentionMap.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_attentionmap_tsx",
+      "community": 45,
+      "norm_label": "attentionmap.tsx"
+    },
+    {
+      "label": "FeatureScalingSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/FeatureScalingSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_featurescalingsimulator_tsx",
+      "community": 26,
+      "norm_label": "featurescalingsimulator.tsx"
+    },
+    {
+      "label": "FeatureScalingSimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/FeatureScalingSimulator.tsx",
+      "source_location": "L4",
+      "id": "featurescalingsimulator_featurescalingsimulator",
+      "community": 26,
+      "norm_label": "featurescalingsimulator()"
+    },
+    {
+      "label": "TimeSeriesSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "community": 12,
+      "norm_label": "timeseriessimulator.tsx"
+    },
+    {
+      "label": "addRandomPoint()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L12",
+      "id": "timeseriessimulator_addrandompoint",
+      "community": 12,
+      "norm_label": "addrandompoint()"
+    },
+    {
+      "label": "getX()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L50",
+      "id": "timeseriessimulator_getx",
+      "community": 12,
+      "norm_label": "getx()"
+    },
+    {
+      "label": "getY()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L51",
+      "id": "timeseriessimulator_gety",
+      "community": 12,
+      "norm_label": "gety()"
+    },
+    {
+      "label": "DecisionTreeSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "community": 2,
+      "norm_label": "decisiontreesimulator.tsx"
+    },
+    {
+      "label": "clearPoints()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L20",
+      "id": "decisiontreesimulator_clearpoints",
+      "community": 2,
+      "norm_label": "clearpoints()"
+    },
+    {
+      "label": "handleCanvasClick()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L22",
+      "id": "decisiontreesimulator_handlecanvasclick",
+      "community": 2,
+      "norm_label": "handlecanvasclick()"
+    },
+    {
+      "label": "computeImpurity()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L45",
+      "id": "decisiontreesimulator_computeimpurity",
+      "community": 2,
+      "norm_label": "computeimpurity()"
+    },
+    {
+      "label": "buildTree()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L62",
+      "id": "decisiontreesimulator_buildtree",
+      "community": 2,
+      "norm_label": "buildtree()"
+    },
+    {
+      "label": "drawRegions()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L148",
+      "id": "decisiontreesimulator_drawregions",
+      "community": 2,
+      "norm_label": "drawregions()"
+    },
+    {
+      "label": "traverseStats()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L206",
+      "id": "decisiontreesimulator_traversestats",
+      "community": 2,
+      "norm_label": "traversestats()"
+    },
+    {
+      "label": "InteractiveRegression.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/InteractiveRegression.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_interactiveregression_tsx",
+      "community": 46,
+      "norm_label": "interactiveregression.tsx"
+    },
+    {
+      "label": "LogisticRegressionSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_logisticregressionsimulator_tsx",
+      "community": 18,
+      "norm_label": "logisticregressionsimulator.tsx"
+    },
+    {
+      "label": "drawLinearBoundary()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx",
+      "source_location": "L4",
+      "id": "logisticregressionsimulator_drawlinearboundary",
+      "community": 18,
+      "norm_label": "drawlinearboundary()"
+    },
+    {
+      "label": "LogisticRegressionSimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx",
+      "source_location": "L54",
+      "id": "logisticregressionsimulator_logisticregressionsimulator",
+      "community": 18,
+      "norm_label": "logisticregressionsimulator()"
+    },
+    {
+      "label": "RandomForestSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "community": 4,
+      "norm_label": "randomforestsimulator.tsx"
+    },
+    {
+      "label": "clearPoints()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L15",
+      "id": "randomforestsimulator_clearpoints",
+      "community": 4,
+      "norm_label": "clearpoints()"
+    },
+    {
+      "label": "handleCanvasClick()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L17",
+      "id": "randomforestsimulator_handlecanvasclick",
+      "community": 4,
+      "norm_label": "handlecanvasclick()"
+    },
+    {
+      "label": "computeGini()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L36",
+      "id": "randomforestsimulator_computegini",
+      "community": 4,
+      "norm_label": "computegini()"
+    },
+    {
+      "label": "buildTree()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L42",
+      "id": "randomforestsimulator_buildtree",
+      "community": 4,
+      "norm_label": "buildtree()"
+    },
+    {
+      "label": "predict()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L85",
+      "id": "randomforestsimulator_predict",
+      "community": 4,
+      "norm_label": "predict()"
+    },
+    {
+      "label": "SVMSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "community": 13,
+      "norm_label": "svmsimulator.tsx"
+    },
+    {
+      "label": "clearPoints()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L16",
+      "id": "svmsimulator_clearpoints",
+      "community": 13,
+      "norm_label": "clearpoints()"
+    },
+    {
+      "label": "handleCanvasClick()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L18",
+      "id": "svmsimulator_handlecanvasclick",
+      "community": 13,
+      "norm_label": "handlecanvasclick()"
+    },
+    {
+      "label": "computeDecisionValue()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L29",
+      "id": "svmsimulator_computedecisionvalue",
+      "community": 13,
+      "norm_label": "computedecisionvalue()"
+    },
+    {
+      "label": "KNNClassifierSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KNNClassifierSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_knnclassifiersimulator_tsx",
+      "community": 27,
+      "norm_label": "knnclassifiersimulator.tsx"
+    },
+    {
+      "label": "KNNClassifierSimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KNNClassifierSimulator.tsx",
+      "source_location": "L4",
+      "id": "knnclassifiersimulator_knnclassifiersimulator",
+      "community": 27,
+      "norm_label": "knnclassifiersimulator()"
+    },
+    {
+      "label": "NaiveBayesSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NaiveBayesSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_naivebayessimulator_tsx",
+      "community": 28,
+      "norm_label": "naivebayessimulator.tsx"
+    },
+    {
+      "label": "NaiveBayesSimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NaiveBayesSimulator.tsx",
+      "source_location": "L4",
+      "id": "naivebayessimulator_naivebayessimulator",
+      "community": 28,
+      "norm_label": "naivebayessimulator()"
+    },
+    {
+      "label": "PCASimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/PCASimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_pcasimulator_tsx",
+      "community": 29,
+      "norm_label": "pcasimulator.tsx"
+    },
+    {
+      "label": "PCASimulator()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/PCASimulator.tsx",
+      "source_location": "L4",
+      "id": "pcasimulator_pcasimulator",
+      "community": 29,
+      "norm_label": "pcasimulator()"
+    },
+    {
+      "label": "GradientBoostingSimulator.tsx",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "community": 10,
+      "norm_label": "gradientboostingsimulator.tsx"
+    },
+    {
+      "label": "clearPoints()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L15",
+      "id": "gradientboostingsimulator_clearpoints",
+      "community": 10,
+      "norm_label": "clearpoints()"
+    },
+    {
+      "label": "handleCanvasClick()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L17",
+      "id": "gradientboostingsimulator_handlecanvasclick",
+      "community": 10,
+      "norm_label": "handlecanvasclick()"
+    },
+    {
+      "label": "buildStump()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L34",
+      "id": "gradientboostingsimulator_buildstump",
+      "community": 10,
+      "norm_label": "buildstump()"
+    },
+    {
+      "label": "predictStump()",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L79",
+      "id": "gradientboostingsimulator_predictstump",
+      "community": 10,
+      "norm_label": "predictstump()"
+    },
+    {
+      "label": "modulesData.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modulesData.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modulesdata_ts",
+      "community": 47,
+      "norm_label": "modulesdata.ts"
+    },
+    {
+      "label": "linearRegression.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/linearRegression.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_linearregression_ts",
+      "community": 48,
+      "norm_label": "linearregression.ts"
+    },
+    {
+      "label": "logisticRegression.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/logisticRegression.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_logisticregression_ts",
+      "community": 49,
+      "norm_label": "logisticregression.ts"
+    },
+    {
+      "label": "decisionTrees.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/decisionTrees.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_decisiontrees_ts",
+      "community": 50,
+      "norm_label": "decisiontrees.ts"
+    },
+    {
+      "label": "randomForests.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/randomForests.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_randomforests_ts",
+      "community": 51,
+      "norm_label": "randomforests.ts"
+    },
+    {
+      "label": "kmeansClustering.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kmeansClustering.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kmeansclustering_ts",
+      "community": 52,
+      "norm_label": "kmeansclustering.ts"
+    },
+    {
+      "label": "naiveBayes.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/naiveBayes.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_naivebayes_ts",
+      "community": 53,
+      "norm_label": "naivebayes.ts"
+    },
+    {
+      "label": "knnClassification.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/knnClassification.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_knnclassification_ts",
+      "community": 54,
+      "norm_label": "knnclassification.ts"
+    },
+    {
+      "label": "pcaReduction.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/pcaReduction.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_pcareduction_ts",
+      "community": 55,
+      "norm_label": "pcareduction.ts"
+    },
+    {
+      "label": "gradientDescent.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/gradientDescent.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_gradientdescent_ts",
+      "community": 56,
+      "norm_label": "gradientdescent.ts"
+    },
+    {
+      "label": "decisionTreeAlgorithm.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/decisionTreeAlgorithm.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_decisiontreealgorithm_ts",
+      "community": 57,
+      "norm_label": "decisiontreealgorithm.ts"
+    },
+    {
+      "label": "gradientBoosting.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/gradientBoosting.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_gradientboosting_ts",
+      "community": 58,
+      "norm_label": "gradientboosting.ts"
+    },
+    {
+      "label": "multiLayerPerceptron.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/multiLayerPerceptron.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_multilayerperceptron_ts",
+      "community": 59,
+      "norm_label": "multilayerperceptron.ts"
+    },
+    {
+      "label": "convolutionalNetworks.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/convolutionalNetworks.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_convolutionalnetworks_ts",
+      "community": 60,
+      "norm_label": "convolutionalnetworks.ts"
+    },
+    {
+      "label": "recurrentNetworks.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/recurrentNetworks.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_recurrentnetworks_ts",
+      "community": 61,
+      "norm_label": "recurrentnetworks.ts"
+    },
+    {
+      "label": "transformerAttention.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/transformerAttention.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_transformerattention_ts",
+      "community": 62,
+      "norm_label": "transformerattention.ts"
+    },
+    {
+      "label": "wordEmbeddings.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/wordEmbeddings.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_wordembeddings_ts",
+      "community": 63,
+      "norm_label": "wordembeddings.ts"
+    },
+    {
+      "label": "qLearningRl.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/qLearningRl.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_qlearningrl_ts",
+      "community": 64,
+      "norm_label": "qlearningrl.ts"
+    },
+    {
+      "label": "generativeAdversarialNetworks.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/generativeAdversarialNetworks.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_generativeadversarialnetworks_ts",
+      "community": 65,
+      "norm_label": "generativeadversarialnetworks.ts"
+    },
+    {
+      "label": "variationalAutoencoders.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/variationalAutoencoders.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_variationalautoencoders_ts",
+      "community": 66,
+      "norm_label": "variationalautoencoders.ts"
+    },
+    {
+      "label": "tsneVisualization.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/tsneVisualization.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_tsnevisualization_ts",
+      "community": 67,
+      "norm_label": "tsnevisualization.ts"
+    },
+    {
+      "label": "neuralActivations.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/neuralActivations.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_neuralactivations_ts",
+      "community": 68,
+      "norm_label": "neuralactivations.ts"
+    },
+    {
+      "label": "optimizationAlgorithms.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/optimizationAlgorithms.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_optimizationalgorithms_ts",
+      "community": 69,
+      "norm_label": "optimizationalgorithms.ts"
+    },
+    {
+      "label": "generate_neural_activations.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/generate_neural_activations.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_generate_neural_activations_py",
+      "community": 70,
+      "norm_label": "generate_neural_activations.py"
+    },
+    {
+      "label": "generate_optimization.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/generate_optimization.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_generate_optimization_py",
+      "community": 71,
+      "norm_label": "generate_optimization.py"
+    },
+    {
+      "label": "singlePerceptron.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/singlePerceptron.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_singleperceptron_ts",
+      "community": 72,
+      "norm_label": "singleperceptron.ts"
+    },
+    {
+      "label": "dbscanClustering.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/dbscanClustering.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_dbscanclustering_ts",
+      "community": 73,
+      "norm_label": "dbscanclustering.ts"
+    },
+    {
+      "label": "ridgeLassoRegularization.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/ridgeLassoRegularization.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_ridgelassoregularization_ts",
+      "community": 74,
+      "norm_label": "ridgelassoregularization.ts"
+    },
+    {
+      "label": "biasVarianceTradeoff.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/biasVarianceTradeoff.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_biasvariancetradeoff_ts",
+      "community": 75,
+      "norm_label": "biasvariancetradeoff.ts"
+    },
+    {
+      "label": "supportVectorMachines.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/supportVectorMachines.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_supportvectormachines_ts",
+      "community": 76,
+      "norm_label": "supportvectormachines.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/index.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_index_ts",
+      "community": 77,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "featureEngineering.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/featureEngineering.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_featureengineering_ts",
+      "community": 78,
+      "norm_label": "featureengineering.ts"
+    },
+    {
+      "label": "gradientBoostingAdvanced.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/gradientBoostingAdvanced.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_gradientboostingadvanced_ts",
+      "community": 79,
+      "norm_label": "gradientboostingadvanced.ts"
+    },
+    {
+      "label": "timeSeriesAnalysis.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/timeSeriesAnalysis.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_timeseriesanalysis_ts",
+      "community": 80,
+      "norm_label": "timeseriesanalysis.ts"
+    },
+    {
+      "label": "kaggleTitanicProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleTitanicProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kaggletitanicproject_ts",
+      "community": 81,
+      "norm_label": "kaggletitanicproject.ts"
+    },
+    {
+      "label": "kaggleHousePricesProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleHousePricesProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kagglehousepricesproject_ts",
+      "community": 82,
+      "norm_label": "kagglehousepricesproject.ts"
+    },
+    {
+      "label": "kaggleCreditCardFraudProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleCreditCardFraudProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kagglecreditcardfraudproject_ts",
+      "community": 83,
+      "norm_label": "kagglecreditcardfraudproject.ts"
+    },
+    {
+      "label": "kaggleCustomerChurnProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleCustomerChurnProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kagglecustomerchurnproject_ts",
+      "community": 84,
+      "norm_label": "kagglecustomerchurnproject.ts"
+    },
+    {
+      "label": "kaggleStoreSalesForecastingProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleStoreSalesForecastingProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kagglestoresalesforecastingproject_ts",
+      "community": 85,
+      "norm_label": "kagglestoresalesforecastingproject.ts"
+    },
+    {
+      "label": "kaggleDigitRecognizerProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleDigitRecognizerProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kaggledigitrecognizerproject_ts",
+      "community": 86,
+      "norm_label": "kaggledigitrecognizerproject.ts"
+    },
+    {
+      "label": "kaggleDisasterTweetsProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleDisasterTweetsProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kaggledisastertweetsproject_ts",
+      "community": 87,
+      "norm_label": "kaggledisastertweetsproject.ts"
+    },
+    {
+      "label": "kaggleLoanDefaultRiskProject.ts",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/kaggleLoanDefaultRiskProject.ts",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_kaggleloandefaultriskproject_ts",
+      "community": 88,
+      "norm_label": "kaggleloandefaultriskproject.ts"
+    },
+    {
+      "label": "parse_modules.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/scratch/parse_modules.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_scratch_parse_modules_py",
+      "community": 89,
+      "norm_label": "parse_modules.py"
+    },
+    {
+      "label": "update_simulator_ids.py",
+      "file_type": "code",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/scratch/update_simulator_ids.py",
+      "source_location": "L1",
+      "id": "home_legion_fastapi_machine_learning_tutorial_scratch_update_simulator_ids_py",
+      "community": 90,
+      "norm_label": "update_simulator_ids.py"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_types.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_fix_types_py",
+      "_tgt": "fix_types_replace_interview",
+      "source": "home_legion_fastapi_machine_learning_tutorial_fix_types_py",
+      "target": "fix_types_replace_interview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/fix_lines.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_fix_lines_py",
+      "_tgt": "fix_lines_fix_split",
+      "source": "home_legion_fastapi_machine_learning_tutorial_fix_lines_py",
+      "target": "fix_lines_fix_split",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "_tgt": "generate_ml_modules_get_rf_content",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_get_rf_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L406",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "_tgt": "generate_ml_modules_get_kmeans_content",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_get_kmeans_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L822",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "_tgt": "generate_ml_modules_get_svm_content",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_get_svm_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L184",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_184",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_184",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L217",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_217",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_217",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L218",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_218",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_218",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L219",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_219",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_219",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L256",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_256",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_256",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_257",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_257",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_258",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_258",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L604",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_604",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_604",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L637",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_637",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_637",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L638",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_638",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_638",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L639",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_639",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_639",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L673",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_673",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_673",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L674",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_674",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_674",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L675",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_675",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_675",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1010",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1010",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1010",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1047",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1047",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1047",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1048",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1048",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1048",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1049",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1049",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1049",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1090",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1090",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1090",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1091",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1091",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1091",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_ml_modules.py",
+      "source_location": "L1092",
+      "weight": 1.0,
+      "_src": "generate_ml_modules_rationale_1092",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_ml_modules_py",
+      "target": "generate_ml_modules_rationale_1092",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "_src": "update_naive_bayes_rationale_329",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "target": "update_naive_bayes_rationale_329",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L358",
+      "weight": 1.0,
+      "_src": "update_naive_bayes_rationale_358",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "target": "update_naive_bayes_rationale_358",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_naive_bayes.py",
+      "source_location": "L399",
+      "weight": 1.0,
+      "_src": "update_naive_bayes_rationale_399",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_naive_bayes_py",
+      "target": "update_naive_bayes_rationale_399",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_update_theory_js",
+      "_tgt": "update_theory_replacetheory",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_theory_js",
+      "target": "update_theory_replacetheory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "_tgt": "generate_batch3_write_file",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "target": "generate_batch3_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L335",
+      "weight": 1.0,
+      "_src": "generate_batch3_rationale_335",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "target": "generate_batch3_rationale_335",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L364",
+      "weight": 1.0,
+      "_src": "generate_batch3_rationale_364",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "target": "generate_batch3_rationale_364",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_batch3.py",
+      "source_location": "L405",
+      "weight": 1.0,
+      "_src": "generate_batch3_rationale_405",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_batch3_py",
+      "target": "generate_batch3_rationale_405",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_modules.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_update_modules_py",
+      "_tgt": "update_modules_update_file",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_modules_py",
+      "target": "update_modules_update_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/update_theory.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_update_theory_py",
+      "_tgt": "update_theory_update_file",
+      "source": "home_legion_fastapi_machine_learning_tutorial_update_theory_py",
+      "target": "update_theory_update_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "_tgt": "generate_knn_write_file",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "target": "generate_knn_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L341",
+      "weight": 1.0,
+      "_src": "generate_knn_rationale_341",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "target": "generate_knn_rationale_341",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L370",
+      "weight": 1.0,
+      "_src": "generate_knn_rationale_370",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "target": "generate_knn_rationale_370",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_knn.py",
+      "source_location": "L403",
+      "weight": 1.0,
+      "_src": "generate_knn_rationale_403",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_knn_py",
+      "target": "generate_knn_rationale_403",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "_tgt": "generate_pca_write_file",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "target": "generate_pca_write_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "_src": "generate_pca_rationale_329",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "target": "generate_pca_rationale_329",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L360",
+      "weight": 1.0,
+      "_src": "generate_pca_rationale_360",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "target": "generate_pca_rationale_360",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/generate_pca.py",
+      "source_location": "L397",
+      "weight": 1.0,
+      "_src": "generate_pca_rationale_397",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "source": "home_legion_fastapi_machine_learning_tutorial_generate_pca_py",
+      "target": "generate_pca_rationale_397",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/main.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_main_tsx",
+      "_tgt": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_main_tsx",
+      "target": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "_tgt": "app_normalizelatex",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "target": "app_normalizelatex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L218",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "_tgt": "app_handlereset",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "target": "app_handlereset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "_tgt": "app_getcategoryicon",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "target": "app_getcategoryicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/App.tsx",
+      "source_location": "L261",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "_tgt": "app_getmoduleprogress",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_app_tsx",
+      "target": "app_getmoduleprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/context/AppContext.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_context_appcontext_tsx",
+      "_tgt": "appcontext_appprovider",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_context_appcontext_tsx",
+      "target": "appcontext_appprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/context/AppContext.tsx",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_context_appcontext_tsx",
+      "_tgt": "appcontext_useapp",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_context_appcontext_tsx",
+      "target": "appcontext_useapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/ModuleSimulator.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "appcontext_useapp",
+      "_tgt": "modulesimulator_modulesimulator",
+      "source": "appcontext_useapp",
+      "target": "modulesimulator_modulesimulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/NeuralBackground.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_neuralbackground_tsx",
+      "_tgt": "neuralbackground_neuralbackground",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_neuralbackground_tsx",
+      "target": "neuralbackground_neuralbackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/CodingPlayground.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_codingplayground_tsx",
+      "_tgt": "codingplayground_runcode",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_codingplayground_tsx",
+      "target": "codingplayground_runcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/CodingPlayground.tsx",
+      "source_location": "L270",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_codingplayground_tsx",
+      "_tgt": "codingplayground_stagecompleted",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_codingplayground_tsx",
+      "target": "codingplayground_stagecompleted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "_tgt": "quizengine_handleoptionselect",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "target": "quizengine_handleoptionselect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "_tgt": "quizengine_checkanswer",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "target": "quizengine_checkanswer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "_tgt": "quizengine_handlenext",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "target": "quizengine_handlenext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/QuizEngine.tsx",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "_tgt": "quizengine_restartquiz",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_quizengine_tsx",
+      "target": "quizengine_restartquiz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/InterviewPrep.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_interviewprep_tsx",
+      "_tgt": "interviewprep_toggleexpand",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_interviewprep_tsx",
+      "target": "interviewprep_toggleexpand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/InterviewPrep.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_interviewprep_tsx",
+      "_tgt": "interviewprep_handlecomplete",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_interviewprep_tsx",
+      "target": "interviewprep_handlecomplete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientDescent.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientdescent_tsx",
+      "_tgt": "gradientdescent_gradientdescent",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientdescent_tsx",
+      "target": "gradientdescent_gradientdescent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_initializenetwork",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_initializenetwork",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_addhiddenlayer",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_addhiddenlayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_removehiddenlayer",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_removehiddenlayer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_changeneurons",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_changeneurons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_activate",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_activate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_activatederivative",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_activatederivative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_forward",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_forward",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_trainstep",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_trainstep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L219",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "_tgt": "neuralnetsandbox_run",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_neuralnetsandbox_tsx",
+      "target": "neuralnetsandbox_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_src": "neuralnetsandbox_forward",
+      "_tgt": "neuralnetsandbox_activate",
+      "source": "neuralnetsandbox_activate",
+      "target": "neuralnetsandbox_forward",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L210",
+      "weight": 1.0,
+      "_src": "neuralnetsandbox_trainstep",
+      "_tgt": "neuralnetsandbox_forward",
+      "source": "neuralnetsandbox_forward",
+      "target": "neuralnetsandbox_trainstep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_src": "neuralnetsandbox_run",
+      "_tgt": "neuralnetsandbox_trainstep",
+      "source": "neuralnetsandbox_trainstep",
+      "target": "neuralnetsandbox_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_kmeanssandbox_tsx",
+      "_tgt": "kmeanssandbox_initializesimulation",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_kmeanssandbox_tsx",
+      "target": "kmeanssandbox_initializesimulation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_kmeanssandbox_tsx",
+      "_tgt": "kmeanssandbox_executestep",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_kmeanssandbox_tsx",
+      "target": "kmeanssandbox_executestep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_embeddingspace_tsx",
+      "_tgt": "embeddingspace_calculatevectormath",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_embeddingspace_tsx",
+      "target": "embeddingspace_calculatevectormath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_embeddingspace_tsx",
+      "_tgt": "embeddingspace_topixel",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_embeddingspace_tsx",
+      "target": "embeddingspace_topixel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/ModuleSimulator.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_modulesimulator_tsx",
+      "_tgt": "modulesimulator_modulesimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_modulesimulator_tsx",
+      "target": "modulesimulator_modulesimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/FeatureScalingSimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_featurescalingsimulator_tsx",
+      "_tgt": "featurescalingsimulator_featurescalingsimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_featurescalingsimulator_tsx",
+      "target": "featurescalingsimulator_featurescalingsimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "_tgt": "timeseriessimulator_addrandompoint",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "target": "timeseriessimulator_addrandompoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "_tgt": "timeseriessimulator_getx",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "target": "timeseriessimulator_getx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "_tgt": "timeseriessimulator_gety",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_timeseriessimulator_tsx",
+      "target": "timeseriessimulator_gety",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_clearpoints",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_clearpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_handlecanvasclick",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_handlecanvasclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_computeimpurity",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_computeimpurity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_buildtree",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_buildtree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_drawregions",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_drawregions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "_tgt": "decisiontreesimulator_traversestats",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_decisiontreesimulator_tsx",
+      "target": "decisiontreesimulator_traversestats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "decisiontreesimulator_buildtree",
+      "_tgt": "decisiontreesimulator_computeimpurity",
+      "source": "decisiontreesimulator_computeimpurity",
+      "target": "decisiontreesimulator_buildtree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_logisticregressionsimulator_tsx",
+      "_tgt": "logisticregressionsimulator_drawlinearboundary",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_logisticregressionsimulator_tsx",
+      "target": "logisticregressionsimulator_drawlinearboundary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_logisticregressionsimulator_tsx",
+      "_tgt": "logisticregressionsimulator_logisticregressionsimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_logisticregressionsimulator_tsx",
+      "target": "logisticregressionsimulator_logisticregressionsimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "_tgt": "randomforestsimulator_clearpoints",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "target": "randomforestsimulator_clearpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "_tgt": "randomforestsimulator_handlecanvasclick",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "target": "randomforestsimulator_handlecanvasclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "_tgt": "randomforestsimulator_computegini",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "target": "randomforestsimulator_computegini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "_tgt": "randomforestsimulator_buildtree",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "target": "randomforestsimulator_buildtree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "_tgt": "randomforestsimulator_predict",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_randomforestsimulator_tsx",
+      "target": "randomforestsimulator_predict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "randomforestsimulator_buildtree",
+      "_tgt": "randomforestsimulator_computegini",
+      "source": "randomforestsimulator_computegini",
+      "target": "randomforestsimulator_buildtree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "_tgt": "svmsimulator_clearpoints",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "target": "svmsimulator_clearpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "_tgt": "svmsimulator_handlecanvasclick",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "target": "svmsimulator_handlecanvasclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "_tgt": "svmsimulator_computedecisionvalue",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_svmsimulator_tsx",
+      "target": "svmsimulator_computedecisionvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/KNNClassifierSimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_knnclassifiersimulator_tsx",
+      "_tgt": "knnclassifiersimulator_knnclassifiersimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_knnclassifiersimulator_tsx",
+      "target": "knnclassifiersimulator_knnclassifiersimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/NaiveBayesSimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_naivebayessimulator_tsx",
+      "_tgt": "naivebayessimulator_naivebayessimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_naivebayessimulator_tsx",
+      "target": "naivebayessimulator_naivebayessimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/PCASimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_pcasimulator_tsx",
+      "_tgt": "pcasimulator_pcasimulator",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_pcasimulator_tsx",
+      "target": "pcasimulator_pcasimulator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "_tgt": "gradientboostingsimulator_clearpoints",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "target": "gradientboostingsimulator_clearpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "_tgt": "gradientboostingsimulator_handlecanvasclick",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "target": "gradientboostingsimulator_handlecanvasclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "_tgt": "gradientboostingsimulator_buildstump",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "target": "gradientboostingsimulator_buildstump",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_src": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "_tgt": "gradientboostingsimulator_predictstump",
+      "source": "home_legion_fastapi_machine_learning_tutorial_src_components_simulators_gradientboostingsimulator_tsx",
+      "target": "gradientboostingsimulator_predictstump",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

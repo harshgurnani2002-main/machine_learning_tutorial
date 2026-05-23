@@ -1,0 +1,208 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { Database, Trash2 } from 'lucide-react';
+
+export const NaiveBayesSimulator: React.FC = () => {
+  const [points, setPoints] = useState<Array<{ x: number; y: number; label: 0 | 1 }>>([
+    { x: 200, y: 150, label: 0 }, { x: 220, y: 180, label: 0 }, { x: 180, y: 160, label: 0 }, { x: 210, y: 140, label: 0 },
+    { x: 400, y: 250, label: 1 }, { x: 420, y: 280, label: 1 }, { x: 380, y: 260, label: 1 }, { x: 410, y: 240, label: 1 }
+  ]);
+  const [activeLabel, setActiveLabel] = useState<0 | 1>(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const clearPoints = () => setPoints([]);
+
+  const handleCanvasClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setPoints(prev => [...prev, { x, y, label: activeLabel }]);
+  };
+
+  const computeStats = (label: 0 | 1) => {
+    const classPoints = points.filter(p => p.label === label);
+    const n = classPoints.length;
+    if (n === 0) return { meanX: 0, meanY: 0, varX: 1, varY: 1, prior: 0 };
+    
+    const prior = n / points.length;
+    
+    let sumX = 0, sumY = 0;
+    classPoints.forEach(p => { sumX += p.x; sumY += p.y; });
+    const meanX = sumX / n;
+    const meanY = sumY / n;
+    
+    let sumSqX = 0, sumSqY = 0;
+    classPoints.forEach(p => {
+      sumSqX += (p.x - meanX) ** 2;
+      sumSqY += (p.y - meanY) ** 2;
+    });
+    
+    // Add small epsilon to variance to prevent division by zero
+    const varX = Math.max(100, sumSqX / n); 
+    const varY = Math.max(100, sumSqY / n);
+    
+    return { meanX, meanY, varX, varY, prior };
+  };
+
+  const gaussianPdf = (x: number, mean: number, variance: number) => {
+    const exponent = Math.exp(-((x - mean) ** 2) / (2 * variance));
+    return (1 / Math.sqrt(2 * Math.PI * variance)) * exponent;
+  };
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const w = canvas.width = 600;
+    const h = canvas.height = 400;
+
+    ctx.fillStyle = '#0f172a';
+    ctx.fillRect(0, 0, w, h);
+
+    const stats0 = computeStats(0);
+    const stats1 = computeStats(1);
+
+    if (points.length > 0) {
+      const step = 8;
+      for (let x = 0; x < w; x += step) {
+        for (let y = 0; y < h; y += step) {
+          const cx = x + step/2;
+          const cy = y + step/2;
+          
+          let prob0 = 0;
+          let prob1 = 0;
+
+          if (stats0.prior > 0) {
+            const likelihoodX = gaussianPdf(cx, stats0.meanX, stats0.varX);
+            const likelihoodY = gaussianPdf(cy, stats0.meanY, stats0.varY);
+            // Naive assumption: P(X,Y|C) = P(X|C) * P(Y|C)
+            prob0 = stats0.prior * likelihoodX * likelihoodY;
+          }
+
+          if (stats1.prior > 0) {
+            const likelihoodX = gaussianPdf(cx, stats1.meanX, stats1.varX);
+            const likelihoodY = gaussianPdf(cy, stats1.meanY, stats1.varY);
+            prob1 = stats1.prior * likelihoodX * likelihoodY;
+          }
+
+          if (prob0 === 0 && prob1 === 0) continue;
+
+          // Normalize
+          const totalProb = prob0 + prob1;
+          const normProb1 = prob1 / totalProb;
+
+          const r = Math.floor(244 * (1 - normProb1) + 56 * normProb1);
+          const g = Math.floor(63 * (1 - normProb1) + 189 * normProb1);
+          const bCol = Math.floor(94 * (1 - normProb1) + 248 * normProb1);
+          
+          // Calculate intensity based on total probability density (how "confident" or close to the cluster)
+          // Scale it up so it's visible
+          const maxProbApprox = 1 / (2 * Math.PI * Math.sqrt(Math.min(stats0.varX, stats1.varX) * Math.min(stats0.varY, stats1.varY)));
+          const intensity = Math.min(0.5, (totalProb / maxProbApprox) * 2);
+
+          ctx.fillStyle = `rgba(${r}, ${g}, ${bCol}, ${intensity + 0.1})`;
+          ctx.fillRect(x, y, step, step);
+          
+          // Draw Decision Boundary (approx)
+          if (Math.abs(normProb1 - 0.5) < 0.05 && totalProb > maxProbApprox * 0.001) {
+            ctx.fillStyle = 'rgba(255,255,255,0.5)';
+            ctx.fillRect(x, y, step, step);
+          }
+        }
+      }
+    }
+
+    // Grid Overlay
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 50) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+    }
+    for (let y = 0; y < h; y += 50) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+    }
+
+    // Draw Covariance Ellipses approx (since we assume independence, axes are aligned to x/y)
+    const drawEllipse = (stats: any, color: string) => {
+      if (stats.prior === 0) return;
+      ctx.beginPath();
+      // 2 std deviations
+      ctx.ellipse(stats.meanX, stats.meanY, Math.sqrt(stats.varX) * 2, Math.sqrt(stats.varY) * 2, 0, 0, 2 * Math.PI);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([5, 5]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // Center
+      ctx.beginPath();
+      ctx.arc(stats.meanX, stats.meanY, 4, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    };
+
+    drawEllipse(stats0, '#f43f5e');
+    drawEllipse(stats1, '#38bdf8');
+
+    // Draw points
+    points.forEach(pt => {
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
+      ctx.fillStyle = pt.label === 0 ? '#f43f5e' : '#38bdf8';
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = ctx.fillStyle;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, 6, 0, Math.PI * 2);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    });
+
+  }, [points]);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6">
+      <div className="md:col-span-4 bg-[#FAF6EE] border border-[#E5DDD0] p-6 rounded-3xl flex flex-col justify-between shadow-xl">
+        <div className="space-y-6">
+          <h4 className="text-slate-900 font-bold text-xl tracking-tight flex items-center gap-3">
+            <Database className="w-6 h-6 text-indigo-500" /> Gaussian Naive Bayes
+          </h4>
+          <p className="text-slate-500 text-sm leading-relaxed">
+            Naive Bayes assumes features are conditionally independent. Notice how the dashed ellipses representing the <span className="font-semibold text-indigo-500">Gaussian distributions</span> are always aligned to the X and Y axes, never tilted.
+          </p>
+
+          <div className="space-y-3">
+            <label className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Class Selector</label>
+            <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
+              <button onClick={() => setActiveLabel(0)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 0 ? 'bg-rose-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+                Class 0
+              </button>
+              <button onClick={() => setActiveLabel(1)} className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 ${activeLabel === 1 ? 'bg-sky-500 text-white shadow-md' : 'text-slate-500 hover:bg-slate-200'}`}>
+                Class 1
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button onClick={clearPoints} className="w-full py-3 mt-6 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-sm font-bold transition-colors flex justify-center items-center gap-2">
+          <Trash2 className="w-5 h-5" /> Clear Data
+        </button>
+      </div>
+
+      <div className="md:col-span-8 flex flex-col items-center justify-center">
+        <div className="bg-[#2E251E] border border-[#4A3D31] p-2 rounded-3xl w-full flex justify-center shadow-2xl relative overflow-hidden group">
+          <canvas ref={canvasRef} onClick={handleCanvasClick} className="rounded-2xl cursor-crosshair w-full aspect-[3/2]" />
+          <div className="absolute top-6 left-6 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-xs font-mono text-white shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+            Probability heatmaps via Bayes Theorem
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
