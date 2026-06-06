@@ -5,7 +5,7 @@ export const randomForests: MLModule = {
     title: 'Random Forests',
     category: 'Supervised Learning',
     description: 'Ensemble deep decision trees using bagging and random feature selection.',
-    formula: 'f(x) = \frac{1}{B} \sum_{b=1}^{B} f_b(x)',
+    formula: 'f(x) = \frac{1}{B} \\sum_{b=1}^{B} f_b(x)',
     interactiveSummary: "This interactive simulator shows how a Random Forest creates an ensemble of decision trees, each trained on a different random bootstrap of your data. You can click the canvas to add new data points labeled as Class 0 or Class 1, then drag the 'Number of Trees' slider to see how the combined decision boundary shifts and stabilizes as more trees are added — notice how a single tree produces a jagged, unstable boundary that smooths out into a confident, robust region as the forest grows. Each tree independently votes for a class, and the shaded background regions show the majority-vote result across the entire feature space. This directly demonstrates the core strength of bagging: individual trees may disagree on edge cases, but their collective vote cancels out noise and produces a far more reliable prediction than any single model could.",
     theory: `### Random Forests & Ensemble Learning Theory
 
@@ -58,15 +58,15 @@ This leads to a much more stable and accurate overall prediction.
 #### The Math Behind It
 The theoretical foundation of Random Forests relies on the variance of the average of random variables.
 Let $\rho$ be the pairwise correlation between any two trees.
-Let $\sigma^2$ be the variance of a single tree. 
+Let $\\sigma^2$ be the variance of a single tree. 
 The variance of the ensemble average of $B$ trees is given by:
 
 $$
-\text{Var}\left(\frac{1}{B} \sum_{b=1}^{B} f_b(x)\right) = \rho \sigma^2 + \frac{1 - \rho}{B} \sigma^2
+\text{Var}\\left(\frac{1}{B} \\sum_{b=1}^{B} f_b(x)\right) = \rho \\sigma^2 + \frac{1 - \rho}{B} \\sigma^2
 $$
 
-As the number of trees $B \to \infty$, the second term vanishes.
-The overall variance is therefore bounded by $\rho \sigma^2$. 
+As the number of trees $B \to \\infty$, the second term vanishes.
+The overall variance is therefore bounded by $\rho \\sigma^2$. 
 Random feature selection specifically aims to reduce the correlation $\rho$ between trees.
 This directly drives down the overall ensemble variance.
 
@@ -76,30 +76,30 @@ The probability of a sample *not* being selected in a single draw is $1 - 1/N$.
 After $N$ draws, the probability is:
 
 $$
-\lim_{N \to \infty} \left(1 - \frac{1}{N}\right)^N = \frac{1}{e} \approx 0.368
+\\lim_{N \to \\infty} \\left(1 - \frac{1}{N}\right)^N = \frac{1}{e} \\approx 0.368
 $$
 
-Thus, about $63.2\%$ of unique records are used for training a given tree.
-The remaining $36.8\%$ form the **Out-Of-Bag (OOB)** samples.
+Thus, about $63.2\\%$ of unique records are used for training a given tree.
+The remaining $36.8\\%$ form the **Out-Of-Bag (OOB)** samples.
 These OOB samples act as a free validation set.
 
 2. **Feature Subsampling**: 
-To decorrelate the trees, we search only a random subset of features $m \ll d$.
+To decorrelate the trees, we search only a random subset of features $m \\ll d$.
 Here, $d$ is the total number of features. 
 Typical heuristics used are:
 - For Classification: 
-$$m = \sqrt{d}$$
+$$m = \\sqrt{d}$$
 - For Regression: 
 $$m = \frac{d}{3}$$
 
 3. **Aggregation**: 
 - **Regression**: Average individual tree predictions: 
 $$
-\hat{y} = \frac{1}{B} \sum_{b=1}^{B} f_b(x)
+\\hat{y} = \frac{1}{B} \\sum_{b=1}^{B} f_b(x)
 $$
 - **Classification**: Majority vote (mode) selection: 
 $$
-\hat{y} = \arg\max_c \sum_{b=1}^{B} I(f_b(x) = c)
+\\hat{y} = \\arg\\max_c \\sum_{b=1}^{B} I(f_b(x) = c)
 $$
 where $I$ is the indicator function.
 
@@ -110,7 +110,7 @@ You have 10,000 user profiles and 16 features (Age, Income, Browsing History, De
 - You decide to train a Random Forest with 500 trees.
 - **Tree 1** receives a bootstrapped sample of 10,000 rows.
   This sample contains ~6,320 unique users, with some duplicated. 
-  At the root node, it randomly selects $\sqrt{16} = 4$ features.
+  At the root node, it randomly selects $\\sqrt{16} = 4$ features.
   For example: Age, Device Type, Time of Day, Location. 
   It finds that Device Type offers the best split and grows to its maximum depth.
 - **Tree 2** receives a *different* bootstrapped sample. 

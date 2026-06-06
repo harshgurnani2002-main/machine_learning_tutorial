@@ -5,7 +5,7 @@ export const kmeansClustering: MLModule = {
     title: 'K-Means Clustering',
     category: 'Unsupervised Learning',
     description: 'Group unlabeled data into K dense geometric clusters using distance minimizations.',
-    formula: 'J = \sum \|x_i - \mu_k\|^2',
+    formula: 'J = \\sum \\|x_i - \\mu_k\\|^2',
     interactiveSummary: "This interactive simulator visualizes Lloyd\'s algorithm step-by-step on a live canvas. Click anywhere on the plot to add new data points and immediately watch the clusters reassign in real time. Use the K slider to change the number of clusters from 1 to 10 — observe how the Elbow curve updates and the silhouette score changes with each new value. Hit the Animate button to replay the full centroid convergence animation: the centroids drift iteration-by-iteration toward the mean of their assigned group until the assignment boundaries stabilize. You can also drag individual data points to explore how outlier positions pull centroids away from the cluster core.",
     theory: `### K-Means Clustering Theory
 
@@ -61,27 +61,27 @@ This metric is also known as the inertia.
 It is a measure of how internally coherent the clusters are.
 
 $$
-J = \sum_{k=1}^{K} \sum_{x^{(i)} \in C_k} \left\| x^{(i)} - \mu_k \right\|^2
+J = \\sum_{k=1}^{K} \\sum_{x^{(i)} \\in C_k} \\left\\| x^{(i)} - \\mu_k \right\\|^2
 $$
 
 where:
 - $C_k$ is the set of points in the $k$-th cluster.
 - $x^{(i)}$ is a data point vector.
-- $\mu_k$ is the mean vector (centroid) of cluster $C_k$.
+- $\\mu_k$ is the mean vector (centroid) of cluster $C_k$.
 
 The Assignment Step mathematically minimizes $J$ with respect to the assignments.
 It does this while keeping the centroids fixed:
 
 $$
-c^{(i)} = \arg\min_{k} \left\| x^{(i)} - \mu_k \right\|^2
+c^{(i)} = \\arg\\min_{k} \\left\\| x^{(i)} - \\mu_k \right\\|^2
 $$
 
 The Update Step mathematically minimizes $J$ with respect to the centroids.
 It does this while keeping the assignments fixed. 
-Setting the derivative of $J$ with respect to $\mu_k$ to zero yields:
+Setting the derivative of $J$ with respect to $\\mu_k$ to zero yields:
 
 $$
-\mu_k = \frac{1}{|C_k|} \sum_{x^{(i)} \in C_k} x^{(i)}
+\\mu_k = \frac{1}{|C_k|} \\sum_{x^{(i)} \\in C_k} x^{(i)}
 $$
 
 Because both steps strictly decrease the objective function $J$, the algorithm is guaranteed to converge.

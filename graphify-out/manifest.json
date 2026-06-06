@@ -1,0 +1,527 @@
+{
+  ".gemini/settings.json": {
+    "mtime": 1780737076.9704375,
+    "ast_hash": "f080aabf772e803c9e24b9ad0acbf2b6",
+    "semantic_hash": ""
+  },
+  "eslint.config.js": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
+    "semantic_hash": ""
+  },
+  "fix.py": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "a376e6db6bcc418ecb3d20ab0ad2ff62",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "9a618a7a2fae53910e0545c3c6a7a2be",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1780736695.0289836,
+    "ast_hash": "535309cd7a85f4a3c028172e1cbc51ce",
+    "semantic_hash": ""
+  },
+  "src/components/CodingPlayground.tsx": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "b1f56335be26b613c443c3a40b1e9904",
+    "semantic_hash": ""
+  },
+  "src/components/InterviewPrep.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "a34665bc250cb4ee2e8d2428c219dc91",
+    "semantic_hash": ""
+  },
+  "src/components/KaggleNotebook.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "07faa84727f741e26a1da2b8d76904f3",
+    "semantic_hash": ""
+  },
+  "src/components/NeuralBackground.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "b3ce86304a7b014911d354d32f39d4c5",
+    "semantic_hash": ""
+  },
+  "src/components/QuizEngine.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "0023846493a7c0bc78ccebeef80637da",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/ActivationsSimulator.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "cf0dd55d8c2400ab2a7dab7df3fa36ed",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/AnomalyDetectionSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "83953d13d0a35047db914ddeb96365fc",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/AttentionMap.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "bf4caddd8bc6699cbbf4b804a1495ae8",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/BiasVarianceSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "f6799c9155abf663334c0eca095cd7e2",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/CNNSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "9514b43c332b9c26171d91617cb4b6ac",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/DecisionTreeSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "b19fff69d04e55f038cd6ee898660eb3",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/EmbeddingSpace.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "5e839c2f1aec1462a3c5275f1ca9bd2c",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/EnsembleSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "e0a92d5ea26baabe35bd03066e39b83b",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/FeatureScalingSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "985b9a5a1681acea302c2e3d00422550",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/GANSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "363b17e81cbf91335ca48ee074a74a0d",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/GradientBoostingSimulator.tsx": {
+    "mtime": 1780737592.3959513,
+    "ast_hash": "05122e748e1d50466d159c1b4799afb0",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/GradientDescent.tsx": {
+    "mtime": 1780737569.108723,
+    "ast_hash": "cc8d08ef58e3f08fcc6c7ed80b7aeaa8",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/ImbalancedDataSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "5a637ae50b2ffe14173482a9058af17a",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/InteractiveRegression.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "278be53b8d89143dcafbc1d4b1b7ea53",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/KMeansSandbox.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "767afb258ab5a82203912987226b45d4",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/KNNClassifierSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "04a318caee855a0dbbd35fa61d90268d",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/LogisticRegressionSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "43255654cbbb05479221dc43ae1869b3",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/ModuleSimulator.tsx": {
+    "mtime": 1780737575.0397813,
+    "ast_hash": "1d641c45e19a12377a71d8327961fa64",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/NaiveBayesSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "604faae20c87a8e93a5d32785bd50ffe",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/NeuralNetSandbox.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "9f1b89cb40b171a3b58b40e75c97e49d",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/PCASimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "956164bbce277b75dbaa7040448157cf",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/PerceptronSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "0f0114d6c8548396469ba94ea751b251",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/QLearningSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "26cf2852c9e54aa0fe44037940efaa0d",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/RNNSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "80eac06fd7311c72c99d8b4094e2ff1f",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/RandomForestSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "2b41de078d7be87ff3513fcdfa417588",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/RegularizationSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "c5d572a74d15457cf819240360d9864f",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/SVMSimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "1bb209100140c146fc403ea459878d8c",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/TSNESimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "c91d025630864c5a484d9e061acbe1b4",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/TimeSeriesSimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "59b6032a079af7f9b4fa53478c3a8107",
+    "semantic_hash": ""
+  },
+  "src/components/Simulators/VAESimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "e14746f4642ce47acbfe44a1eb887712",
+    "semantic_hash": ""
+  },
+  "src/context/AppContext.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "4a2bcf4b9f63e1a8d98a7ae6cb75ee7c",
+    "semantic_hash": ""
+  },
+  "src/data/modules/anomalyDetection.ts": {
+    "mtime": 1780736695.0343494,
+    "ast_hash": "666986900d303a49d38f427fe6fbeb15",
+    "semantic_hash": ""
+  },
+  "src/data/modules/biasVarianceTradeoff.ts": {
+    "mtime": 1780736695.0345724,
+    "ast_hash": "860f6741abb6250c66d47b1892e73855",
+    "semantic_hash": ""
+  },
+  "src/data/modules/convolutionalNetworks.ts": {
+    "mtime": 1780736695.0345724,
+    "ast_hash": "a9228762b763ceea6ad48418c3ac724a",
+    "semantic_hash": ""
+  },
+  "src/data/modules/dbscanClustering.ts": {
+    "mtime": 1780736695.0345724,
+    "ast_hash": "5ffa40a65cc1b588bfa381be3754e10d",
+    "semantic_hash": ""
+  },
+  "src/data/modules/decisionTreeAlgorithm.ts": {
+    "mtime": 1780736695.0345724,
+    "ast_hash": "9f5dd5fc7aba40db5ce8912d2ab886b3",
+    "semantic_hash": ""
+  },
+  "src/data/modules/decisionTrees.ts": {
+    "mtime": 1780736695.0345724,
+    "ast_hash": "998223148203aff35e604894de5b1212",
+    "semantic_hash": ""
+  },
+  "src/data/modules/ensembleTechniquesBaggingBoosting.ts": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "46b9c618a915ec4e2922d8bea9e543a1",
+    "semantic_hash": ""
+  },
+  "src/data/modules/featureEngineering.ts": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "75fbd3debf746fcf7edfad7d45172af5",
+    "semantic_hash": ""
+  },
+  "src/data/modules/generate_neural_activations.py": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "4146e68032ef897d94e8c04252512743",
+    "semantic_hash": ""
+  },
+  "src/data/modules/generate_optimization.py": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "c013d0805c60000b943a1b5ef8c790f9",
+    "semantic_hash": ""
+  },
+  "src/data/modules/generativeAdversarialNetworks.ts": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "d559ec15409b605f719916d84851b852",
+    "semantic_hash": ""
+  },
+  "src/data/modules/gradientBoosting.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "5d9907c44e07802ca187f7a1da9082e8",
+    "semantic_hash": ""
+  },
+  "src/data/modules/gradientBoostingAdvanced.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "b64997492113422995c1f39ce1c7585e",
+    "semantic_hash": ""
+  },
+  "src/data/modules/gradientDescent.ts": {
+    "mtime": 1780737555.6154313,
+    "ast_hash": "67c250adfaa2cd98a2d2789cb3ff24c1",
+    "semantic_hash": ""
+  },
+  "src/data/modules/imbalancedDatasets.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "08e9d358e2a981331bcaa942f92689cc",
+    "semantic_hash": ""
+  },
+  "src/data/modules/index.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "850c80be38317aec0f8e057ae2e8cb3f",
+    "semantic_hash": ""
+  },
+  "src/data/modules/introductionToMl.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "cbda358d1cba24f53bb96d6b9dfc0d82",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleCreditCardFraudProject.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "382e8a579baaf131b0ff5569f575cbd7",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleCustomerChurnProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "ce4bafcc8b6866841e5079ed0c9d8c7a",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleDigitRecognizerProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "9460177c2262258c00ec03987d7ed0bb",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleDisasterTweetsProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "498c2319f388ef985fb11cec086d6f2e",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleEdaProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "59fdd86797193a01c9c5f30100d08f4f",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleHousePricesProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "fd64d2bc9cb68f0889b5b07706eb41c6",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleLoanDefaultRiskProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "c0b276558cea6cda057fc07b759878dd",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleStoreSalesForecastingProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "87c6ae533f1eca577bf5e695af73f256",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kaggleTitanicProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "dd9e6553d36fa312c429c3c646f1cf69",
+    "semantic_hash": ""
+  },
+  "src/data/modules/kmeansClustering.ts": {
+    "mtime": 1780736695.0382028,
+    "ast_hash": "7db2ef4dba10317d852d652cca49aef6",
+    "semantic_hash": ""
+  },
+  "src/data/modules/knnClassification.ts": {
+    "mtime": 1780736695.0382028,
+    "ast_hash": "4cd84448a70e430009931d981c5ea646",
+    "semantic_hash": ""
+  },
+  "src/data/modules/linearRegression.ts": {
+    "mtime": 1780737546.2934854,
+    "ast_hash": "7e14ab49a138b85518e62ef9d2bb5525",
+    "semantic_hash": ""
+  },
+  "src/data/modules/logisticRegression.ts": {
+    "mtime": 1780736695.0382028,
+    "ast_hash": "645f33591af0229160dc1c2204921e0d",
+    "semantic_hash": ""
+  },
+  "src/data/modules/multiLayerPerceptron.ts": {
+    "mtime": 1780736695.0392027,
+    "ast_hash": "fa9bca3bec09d58e9eafdb5ea000e814",
+    "semantic_hash": ""
+  },
+  "src/data/modules/naiveBayes.ts": {
+    "mtime": 1780736695.0392027,
+    "ast_hash": "a16aa35b2de4ee0291d4aad87e7ad926",
+    "semantic_hash": ""
+  },
+  "src/data/modules/neuralActivations.ts": {
+    "mtime": 1780736695.0392027,
+    "ast_hash": "f54c2ac436c719b410b61da7b1167c7d",
+    "semantic_hash": ""
+  },
+  "src/data/modules/optimizationAlgorithms.ts": {
+    "mtime": 1780737536.2456412,
+    "ast_hash": "e89aa27cc6ec70b3ab0a685580cc420f",
+    "semantic_hash": ""
+  },
+  "src/data/modules/pcaReduction.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "ee198688bb546ce040280e9781a95e14",
+    "semantic_hash": ""
+  },
+  "src/data/modules/qLearningRl.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "279de3c536b0967dd25686bee85eb3cd",
+    "semantic_hash": ""
+  },
+  "src/data/modules/randomForests.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "f0fb99e8cc9a1d18654ad6920bc46181",
+    "semantic_hash": ""
+  },
+  "src/data/modules/recurrentNetworks.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "af5272f7d9030719db2d1d299825c875",
+    "semantic_hash": ""
+  },
+  "src/data/modules/ridgeLassoRegularization.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "5834855b9a8fa54f5f58e47976be6426",
+    "semantic_hash": ""
+  },
+  "src/data/modules/singlePerceptron.ts": {
+    "mtime": 1780736695.0402029,
+    "ast_hash": "3a9aa71e4a0ceeb430790a8227d4dd3d",
+    "semantic_hash": ""
+  },
+  "src/data/modules/supportVectorMachines.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "57c9ba1e07c66444f9b875d27c83e976",
+    "semantic_hash": ""
+  },
+  "src/data/modules/timeSeriesAnalysis.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "9dcaf625043943639b37d119f7e0dc0d",
+    "semantic_hash": ""
+  },
+  "src/data/modules/transformerAttention.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "8f8d560c0de007f98ab302fac020a670",
+    "semantic_hash": ""
+  },
+  "src/data/modules/tsneVisualization.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "efb1ec7c0f7847f206185f7c5524f18c",
+    "semantic_hash": ""
+  },
+  "src/data/modules/variationalAutoencoders.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "6895360dd0346b3845e3b647dfbd5edb",
+    "semantic_hash": ""
+  },
+  "src/data/modules/wordEmbeddings.ts": {
+    "mtime": 1780736695.0412028,
+    "ast_hash": "1e059d76aa8febd4befb052e02b8d3f5",
+    "semantic_hash": ""
+  },
+  "src/data/modulesData.ts": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "30494f778566e4732fab4765bf7660ed",
+    "semantic_hash": ""
+  },
+  "src/main.tsx": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "787e5a07efeb2bf6209d5937195f2f68",
+    "semantic_hash": ""
+  },
+  "src/types.ts": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "36d4e6ab927863131512829192e9cf6c",
+    "semantic_hash": ""
+  },
+  "test.js": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "92a18c03650fa6fe757c44420727fd88",
+    "semantic_hash": ""
+  },
+  "tsconfig.app.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "136630b5accce1ca50663df229534a26",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": ""
+  },
+  "tsconfig.node.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "70bdd0a673bcfc0e828080b306e7c680",
+    "semantic_hash": ""
+  },
+  "update_theory.js": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "c6ef9c791d39fd3ac970e05dcd63134e",
+    "semantic_hash": ""
+  },
+  "vite.config.ts": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "d281d66c4390899f561fa3db9b8e9eac",
+    "semantic_hash": ""
+  },
+  "GEMINI.md": {
+    "mtime": 1780737076.9702694,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "f6e3faf55d738cf2affe1b44195f27cf",
+    "semantic_hash": ""
+  },
+  "fixes.md": {
+    "mtime": 1780736695.016203,
+    "ast_hash": "fb2eaa676d06eeab9b4be03bd8f743d3",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "f5699b55d922b66ae3039dbd95ef0846",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1780736695.0282028,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1780736695.0289836,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/react.svg": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}

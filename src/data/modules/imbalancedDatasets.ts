@@ -5,7 +5,7 @@ export const imbalancedDatasets: MLModule = {
   title: 'Imbalanced Datasets',
   category: 'Advanced & MLOps',
   description: 'Master techniques to handle skewed class distributions — SMOTE, class weighting, undersampling, and the right evaluation metrics for imbalanced problems.',
-  formula: 'F_1 = \\frac{2 \\cdot \\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}',
+  formula: 'F_1 = \frac{2 \\cdot \text{Precision} \\cdot \text{Recall}}{\text{Precision} + \text{Recall}}',
   interactiveSummary: 'Use the interactive SMOTE simulator to visualize how synthetic minority samples are generated through interpolation. Watch as the class distribution balances and the decision boundary shifts to properly classify the minority class.',
   simulatorId: 'imbalanced-simulator',
   theory: `### Handling Imbalanced Datasets
@@ -18,7 +18,7 @@ A dataset is imbalanced when the number of samples in one class (the minority) i
 
 The imbalance ratio (IR) is defined as:
 
-$$IR = \\frac{N_{majority}}{N_{minority}}$$
+$$IR = \frac{N_{majority}}{N_{minority}}$$
 
 An IR above 10 is considered moderately imbalanced; above 100 is severely imbalanced.
 
@@ -27,7 +27,7 @@ This is the most critical concept: **accuracy is a misleading metric for imbalan
 
 Consider a fraud dataset with 9,900 legitimate and 100 fraudulent transactions. A model that predicts "Legitimate" for **every single sample** achieves:
 
-$$\\text{Accuracy} = \\frac{9900}{10000} = 99\\%$$
+$$\text{Accuracy} = \frac{9900}{10000} = 99\\%$$
 
 Despite being completely useless! This is called the **accuracy paradox**. You need better metrics.
 
@@ -40,13 +40,13 @@ Despite being completely useless! This is called the **accuracy paradox**. You n
 - **False Negative (FN)**: Fraud missed and called legitimate (Type II Error — often the most costly!)
 
 **Precision**: Of all predicted positives, how many are actually positive?
-$$\\text{Precision} = \\frac{TP}{TP + FP}$$
+$$\text{Precision} = \frac{TP}{TP + FP}$$
 
 **Recall (Sensitivity)**: Of all actual positives, how many did we catch?
-$$\\text{Recall} = \\frac{TP}{TP + FN}$$
+$$\text{Recall} = \frac{TP}{TP + FN}$$
 
 **F1 Score**: The harmonic mean of Precision and Recall. Balances both:
-$$F_1 = \\frac{2 \\cdot \\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}$$
+$$F_1 = \frac{2 \\cdot \text{Precision} \\cdot \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
 **ROC-AUC**: Measures the model's ability to discriminate between classes at all thresholds. Robust to class imbalance.
 
@@ -72,7 +72,7 @@ The algorithm for each minority sample $x_i$:
 2. Randomly select one neighbor $x_{zi}$
 3. Generate a new synthetic sample on the line connecting them:
 
-$$x_{new} = x_i + \\lambda \\cdot (x_{zi} - x_i), \\quad \\lambda \\sim \\text{Uniform}(0, 1)$$
+$$x_{new} = x_i + \\lambda \\cdot (x_{zi} - x_i), \\quad \\lambda \\sim \text{Uniform}(0, 1)$$
 
 - ✅ Creates diverse, realistic synthetic samples (not exact duplicates)
 - ✅ Proven to outperform random oversampling in most settings
@@ -102,7 +102,7 @@ $$L = -\\sum_i w_{y_i} \\cdot [y_i \\log(\\hat{p}_i) + (1 - y_i) \\log(1 - \\hat
 With $w_{minority} \\gg w_{majority}$.
 
 In scikit-learn, set **class_weight='balanced'** to automatically compute:
-$$w_j = \\frac{n_{samples}}{n_{classes} \\cdot n_{samples_j}}$$
+$$w_j = \frac{n_{samples}}{n_{classes} \\cdot n_{samples_j}}$$
 
 This is the simplest and most computationally efficient solution — no resampling needed.
 
@@ -307,7 +307,7 @@ rf2 = RandomForestClassifier(n_estimators=100, random_state=42)
 rf2.fit(X_res, y_res)
 pred2 = rf2.predict(X_test)
 print("F1 With SMOTE:", f1_score(y_test, pred2, average='binary'))
-print("\\nDetailed Report:")
+print("\nDetailed Report:")
 print(classification_report(y_test, pred2, target_names=['Legit', 'Fraud']))`,
       hints: [
         'Apply SMOTE ONLY to training data — never to test data (that would be leakage)',

@@ -21,13 +21,13 @@ A CNN consists of three main types of layers:
 
 ### The Math Behind It
 1. **Convolution Operation:**
-For a 2D image $I$ and a 2D kernel $K$ of size $m \\times n$, the discrete convolution is defined as:
+For a 2D image $I$ and a 2D kernel $K$ of size $m \times n$, the discrete convolution is defined as:
 $$S(i, j) = (I * K)(i, j) = \\sum_{m} \\sum_{n} I(i-m, j-n) K(m, n)$$
 In deep learning, we typically compute the cross-correlation (no kernel flipping) but call it convolution.
 
 2. **Output Size Calculation:**
 Given input size $W$, filter size $F$, padding $P$, and stride $S$, the output dimension is:
-$$O = \\lfloor \\frac{W - F + 2P}{S} \\rfloor + 1$$
+$$O = \\lfloor \frac{W - F + 2P}{S} \rfloor + 1$$
 
 3. **Max Pooling:**
 Given a region $R_{i,j}$ of the feature map, max pooling outputs:
@@ -39,8 +39,8 @@ Suppose we have a 5x5 input image and a 3x3 filter (kernel) with stride 1 and no
 - Filter size $F = 3$
 - Padding $P = 0$
 - Stride $S = 1$
-The output size will be $\\lfloor (5 - 3 + 0)/1 \\rfloor + 1 = 3$. So the result is a 3x3 feature map.
-If the top-left 3x3 patch of the image is all 1s, and the filter is all 1s, the top-left pixel of the feature map will be the sum of $1 \\times 1$ nine times, which is 9. This sliding window process repeats for all 9 valid positions.
+The output size will be $\\lfloor (5 - 3 + 0)/1 \rfloor + 1 = 3$. So the result is a 3x3 feature map.
+If the top-left 3x3 patch of the image is all 1s, and the filter is all 1s, the top-left pixel of the feature map will be the sum of $1 \times 1$ nine times, which is 9. This sliding window process repeats for all 9 valid positions.
 
 ### Common Pitfalls
 1. **Ignoring Receptive Field:** If a CNN is not deep enough or lacks pooling, the neurons in the final layer might only "see" a small portion of the input image, missing the global context needed for classification.
@@ -62,7 +62,7 @@ If the top-left 3x3 patch of the image is all 1s, and the filter is all 1s, the 
 ### Key Takeaways
 - CNNs drastically reduce parameters via weight sharing and sparse connectivity.
 - They are built by stacking Conv, ReLU, and Pooling layers, culminating in Dense or GAP layers.
-- They automatically learn a hierarchy of features: edges $\\rightarrow$ shapes $\\rightarrow$ objects.
+- They automatically learn a hierarchy of features: edges $\rightarrow$ shapes $\rightarrow$ objects.
 - ResNets (with skip connections) and MobileNets (with depthwise separable convolutions) represent significant modern advancements in CNN architecture.
 `,
     simulatorId: 'cnn',

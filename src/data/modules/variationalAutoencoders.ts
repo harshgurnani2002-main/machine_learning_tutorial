@@ -23,17 +23,17 @@ VAEs were designed to solve this exact problem. By enforcing a continuous, regul
 #### How does it work?
 A VAE architecture consists of two symmetric neural networks:
 1. **Encoder (Inference Network, $q_\\phi(z|x)$):** It maps the input data $x$ to a latent distribution. Instead of outputting a single vector, the Encoder outputs two vectors: a mean vector $\\mu$ and a variance vector $\\sigma^2$ (typically parameterized as $\\log(\\sigma^2)$ for numerical stability).
-2. **Decoder (Generative Network, $p_\\theta(x|z)$):** During training, we sample a random point $z$ from the distribution defined by $\\mu$ and $\\sigma^2$. The Decoder then takes this sampled vector and reconstructs the original input data $x'$.
+2. **Decoder (Generative Network, $p_\theta(x|z)$):** During training, we sample a random point $z$ from the distribution defined by $\\mu$ and $\\sigma^2$. The Decoder then takes this sampled vector and reconstructs the original input data $x'$.
 To generate brand new data after training, we simply discard the Encoder, sample a random point $z$ from a Standard Normal distribution $\\mathcal{N}(0, I)$, and pass it through the Decoder.
 
 #### The Math Behind It
 The VAE loss function, known as the Evidence Lower Bound (ELBO), balances two competing objectives. We want to maximize the ELBO, which is equivalent to minimizing the negative ELBO:
-$$ \\mathcal{L}_{VAE}(\\theta, \\phi) = -\\mathbb{E}_{q_\\phi(z|x)} [\\log p_\\theta(x|z)] + D_{KL}(q_\\phi(z|x) \\parallel p(z)) $$
+$$ \\mathcal{L}_{VAE}(\theta, \\phi) = -\\mathbb{E}_{q_\\phi(z|x)} [\\log p_\theta(x|z)] + D_{KL}(q_\\phi(z|x) \\parallel p(z)) $$
 
 Breaking it down:
-- **Reconstruction Loss ($-\\mathbb{E}[\\log p_\\theta(x|z)]$):** Measures how well the decoder reconstructed the input. For images, this is often implemented as Mean Squared Error (MSE) or Binary Cross Entropy (BCE). It forces the network to retain essential information.
+- **Reconstruction Loss ($-\\mathbb{E}[\\log p_\theta(x|z)]$):** Measures how well the decoder reconstructed the input. For images, this is often implemented as Mean Squared Error (MSE) or Binary Cross Entropy (BCE). It forces the network to retain essential information.
 - **KL Divergence ($D_{KL}$):** This acts as a regularizer. It penalizes the encoder if its learned distributions $\\mathcal{N}(\\mu, \\sigma^2)$ deviate too far from a standard normal prior $\\mathcal{N}(0, I)$. This forces the distributions to heavily overlap near the origin, ensuring continuity.
-$$ D_{KL} = -\\frac{1}{2} \\sum_{j=1}^{J} \\left( 1 + \\log(\\sigma_j^2) - \\mu_j^2 - \\sigma_j^2 \\right) $$
+$$ D_{KL} = -\frac{1}{2} \\sum_{j=1}^{J} \\left( 1 + \\log(\\sigma_j^2) - \\mu_j^2 - \\sigma_j^2 \right) $$
 
 **The Reparameterization Trick:**
 To train the network using backpropagation, we must take derivatives through the sampling process. However, random sampling is a non-differentiable operation. VAEs elegantly solve this using the reparameterization trick:
@@ -44,7 +44,7 @@ By shifting the randomness to a constant external noise variable $\\epsilon$, th
 Let's walk through an image of a handwritten digit '7' passing through a VAE:
 1. The Encoder receives the '7' and outputs $\\mu = [0.5, -0.2]$ and $\\log(\\sigma^2)$ mapping to $\\sigma = [0.1, 0.5]$.
 2. The network generates a random noise vector $\\epsilon = [0.05, -0.01]$ from a standard normal distribution.
-3. We compute the latent vector: $z = [0.5, -0.2] + [0.1, 0.5] \\times [0.05, -0.01] = [0.505, -0.205]$.
+3. We compute the latent vector: $z = [0.5, -0.2] + [0.1, 0.5] \times [0.05, -0.01] = [0.505, -0.205]$.
 4. The Decoder receives $z$ and attempts to recreate the digit '7'.
 5. The loss is calculated: MSE tells it how close the output pixels are to '7', and KL Divergence penalizes $\\mu$ and $\\sigma$ for being different from 0 and 1, respectively.
 6. The weights are updated via backpropagation.

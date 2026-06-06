@@ -5,7 +5,7 @@ export const tsneVisualization: MLModule = {
     title: 't-SNE Dimensionality Reduction',
     category: 'Unsupervised Learning',
     description: 'Visualize high-dimensional clusters by matching local probability distributions.',
-    formula: 'p_{j|i} = \\frac{\\exp(-\\|x_i-x_j\\|^2 / 2\\sigma_i^2)}{\\sum \\exp(-\\|x_i-x_k\\|^2 / 2\\sigma_i^2)}',
+    formula: 'p_{j|i} = \frac{\\exp(-\\|x_i-x_j\\|^2 / 2\\sigma_i^2)}{\\sum \\exp(-\\|x_i-x_k\\|^2 / 2\\sigma_i^2)}',
     theory: `### t-SNE Dimensionality Reduction Theory
 
 **What is it?**
@@ -27,17 +27,17 @@ t-SNE works by converting distances between data points into probabilities. It d
 
 - **High-Dimensional Probabilities ($P$)**:
 The conditional probability $p_{j|i}$ that $x_i$ picks $x_j$ as its neighbor is:
-$$p_{j|i} = \frac{\exp(-\|x_i - x_j\|^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-\|x_i - x_k\|^2 / 2\sigma_i^2)}$$
-The variance $\sigma_i$ is determined dynamically based on a hyperparameter called **Perplexity**, which acts as a smooth measure of the effective number of neighbors. The joint probability is symmetrized: $p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}$.
+$$p_{j|i} = \frac{\\exp(-\\|x_i - x_j\\|^2 / 2\\sigma_i^2)}{\\sum_{k \neq i} \\exp(-\\|x_i - x_k\\|^2 / 2\\sigma_i^2)}$$
+The variance $\\sigma_i$ is determined dynamically based on a hyperparameter called **Perplexity**, which acts as a smooth measure of the effective number of neighbors. The joint probability is symmetrized: $p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}$.
 
 - **Low-Dimensional Probabilities ($Q$)**:
 The joint probability $q_{ij}$ for points $y_i$ and $y_j$ in the low-dimensional map uses a Student-t distribution with one degree of freedom:
-$$q_{ij} = \frac{(1 + \|y_i - y_j\|^2)^{-1}}{\sum_{k} \sum_{l \neq k} (1 + \|y_k - y_l\|^2)^{-1}}$$
+$$q_{ij} = \frac{(1 + \\|y_i - y_j\\|^2)^{-1}}{\\sum_{k} \\sum_{l \neq k} (1 + \\|y_k - y_l\\|^2)^{-1}}$$
 The use of the heavy-tailed t-distribution solves the **"Crowding Problem"**, allowing points that are moderately far apart in high dimensions to be placed much further apart in the 2D map, preventing everything from collapsing into the center.
 
 - **Objective Function (KL Divergence)**:
 The cost function minimized using gradient descent is:
-$$C = KL(P \parallel Q) = \sum_{i} \sum_{j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$
+$$C = KL(P \\parallel Q) = \\sum_{i} \\sum_{j} p_{ij} \\log \frac{p_{ij}}{q_{ij}}$$
 Because $p_{ij}$ is in the numerator, the algorithm heavily penalizes placing points far apart in 2D if they were close in high dimensions (large $p$, small $q$). However, it barely penalizes placing points close together in 2D if they were far in high dimensions (small $p$, large $q$). This fundamentally drives t-SNE to prioritize local cluster preservation.
 
 **Worked Example**
@@ -51,7 +51,7 @@ Imagine applying t-SNE to the famous MNIST dataset of handwritten digits (784 di
 
 **Common Pitfalls**
 1. **Misinterpreting Global Geometry**: The distance between distinct clusters in a t-SNE plot is largely meaningless. Just because cluster A is closer to cluster B than cluster C does NOT mean A and B are more similar in high-dimensional space.
-2. **Misinterpreting Cluster Size**: Because t-SNE dynamically adjusts its local variance ($\sigma_i$) based on data density, dense clusters expand and sparse clusters contract. The visual size of a cluster in a t-SNE plot does not reflect its true variance or dispersion.
+2. **Misinterpreting Cluster Size**: Because t-SNE dynamically adjusts its local variance ($\\sigma_i$) based on data density, dense clusters expand and sparse clusters contract. The visual size of a cluster in a t-SNE plot does not reflect its true variance or dispersion.
 3. **Ignoring Hyperparameters**: Perplexity makes or breaks the algorithm. If it's too low (e.g., 2), the plot will splinter into meaningless micro-clusters. If it's too high (e.g., equal to the dataset size), the plot will collapse into a single blob. Standard values are between 5 and 50.
 4. **Stochasticity**: The KL divergence cost function is highly non-convex. Two runs of t-SNE on the exact same data will produce different plots (clusters might be rotated or placed in different corners). 
 

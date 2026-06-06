@@ -5,7 +5,7 @@ export const featureEngineering: MLModule = {
   title: 'Feature Engineering',
   category: 'Foundations & Math',
   description: 'Clean, transform, encode, and select features to maximize machine learning model performance.',
-  formula: 'x_{scaled} = \\frac{x - x_{min}}{x_{max} - x_{min}}',
+  formula: 'x_{scaled} = \frac{x - x_{min}}{x_{max} - x_{min}}',
   theory: `### Feature Engineering: The Kaggle & Industry Secret Weapon
 
 #### What is it?
@@ -33,21 +33,21 @@ Feature engineering is an iterative pipeline:
 #### The Math Behind It
 
 **MinMax Scaling (Normalization):**
-$$x_{scaled} = \\frac{x - x_{min}}{x_{max} - x_{min}}$$
+$$x_{scaled} = \frac{x - x_{min}}{x_{max} - x_{min}}$$
 
 **Standardization (Z-score Normalization):**
-$$x_{std} = \\frac{x - \\mu}{\\sigma}$$
+$$x_{std} = \frac{x - \\mu}{\\sigma}$$
 
 **Target Encoding with Smoothing:**
 To prevent overfitting on low-frequency categories, we smooth the category mean with the global target mean:
-$$S_i = \\lambda(n_i) \\cdot \\bar{y}_i + (1 - \\lambda(n_i)) \\cdot \\bar{y}_{global}$$
-where $n_i$ is count of category $i$, $\\bar{y}_i$ is category mean, and $\\lambda(n_i) \\in [0, 1]$ is a weight function based on frequency.
+$$S_i = \\lambda(n_i) \\cdot \bar{y}_i + (1 - \\lambda(n_i)) \\cdot \bar{y}_{global}$$
+where $n_i$ is count of category $i$, $\bar{y}_i$ is category mean, and $\\lambda(n_i) \\in [0, 1]$ is a weight function based on frequency.
 
 #### Worked Example: Feature Scaling
 Suppose we have a feature vector of housing sizes in sq ft: $X = [1000, 1500, 3000]$.
 - $x_{min} = 1000$, $x_{max} = 3000$.
 - For $x = 1500$, the MinMax scaled value is:
-  $$x_{scaled} = \\frac{1500 - 1000}{3000 - 1000} = \\frac{500}{2000} = 0.25$$
+  $$x_{scaled} = \frac{1500 - 1000}{3000 - 1000} = \frac{500}{2000} = 0.25$$
 
 #### Common Pitfalls
 1. **Data Leakage:** Scaling or computing imputation statistics on the *entire* dataset before splitting into train/test. Test metrics must be computed strictly on training folds and applied to test.
@@ -142,7 +142,7 @@ def minmax_scaler(X):
 X_val = np.array([[10.0, 100.0],
                   [20.0, 300.0],
                   [30.0, 200.0]])
-print("Scaled:\\n", np.round(minmax_scaler(X_val), 2))`,
+print("Scaled:\n", np.round(minmax_scaler(X_val), 2))`,
       expectedOutput: 'Scaled:\n [[0.  0. ]\n [0.5 1. ]\n [1.  0.5]]',
       solution: `import numpy as np
 
@@ -154,7 +154,7 @@ def minmax_scaler(X):
 X_val = np.array([[10.0, 100.0],
                   [20.0, 300.0],
                   [30.0, 200.0]])
-print("Scaled:\\n", np.round(minmax_scaler(X_val), 2))`,
+print("Scaled:\n", np.round(minmax_scaler(X_val), 2))`,
       hints: [
         'Use X.min(axis=0) and X.max(axis=0) to calculate bounds per feature column.',
         'Apply elements subtraction and division.'

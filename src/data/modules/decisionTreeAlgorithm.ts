@@ -29,32 +29,32 @@ The "best" split is determined using an impurity metric. The objective at each n
 
 #### 1. Entropy
 Entropy is a concept borrowed from information theory that measures the amount of uncertainty, unpredictability, or impurity in a set of examples $D$. For a binary classification task with proportions of positive $p_+$ and negative $p_-$ examples:
-$$H(D) = -p_+ \log_2(p_+) - p_- \log_2(p_-)$$
+$$H(D) = -p_+ \\log_2(p_+) - p_- \\log_2(p_-)$$
 
 #### 2. Information Gain
 Information Gain is the expected reduction in entropy achieved by partitioning the examples according to a given attribute $A$. It is essentially the entropy of the parent node minus the weighted sum of the entropies of the child nodes:
-$$IG(D, A) = H(D) - \sum_{v \in Values(A)} \frac{|D_v|}{|D|} H(D_v)$$
+$$IG(D, A) = H(D) - \\sum_{v \\in Values(A)} \frac{|D_v|}{|D|} H(D_v)$$
 Where $D_v$ is the subset of $D$ for which attribute $A$ has value $v$. The algorithm greedily chooses the split that maximizes $IG$.
 
 #### 3. Gini Impurity
 Predominantly used by the CART (Classification and Regression Trees) algorithm, Gini measures how often a randomly chosen element from the set would be incorrectly labeled if it were randomly labeled according to the distribution of labels in the subset. It is computationally faster than entropy because it avoids logarithmic calculations.
-$$Gini(D) = 1 - \sum_{i=1}^C (p_i)^2$$
+$$Gini(D) = 1 - \\sum_{i=1}^C (p_i)^2$$
 Where $C$ is the total number of classes and $p_i$ is the probability of an item belonging to class $i$.
 
 ### Worked Example
 
 Imagine you possess a dataset of 10 people (6 enjoy Apples, 4 enjoy Oranges).
 The initial Gini impurity of the parent node is:
-$$Gini_{parent} = 1 - \left(\left(\frac{6}{10}\right)^2 + \left(\frac{4}{10}\right)^2\right) = 1 - (0.36 + 0.16) = 1 - 0.52 = 0.48$$
+$$Gini_{parent} = 1 - \\left(\\left(\frac{6}{10}\right)^2 + \\left(\frac{4}{10}\right)^2\right) = 1 - (0.36 + 0.16) = 1 - 0.52 = 0.48$$
 
 You evaluate a split based on the feature "Gender":
 - **Left Node (Male):** Contains 5 people (4 like Apples, 1 likes Oranges).
-  $$Gini_L = 1 - \left(\left(\frac{4}{5}\right)^2 + \left(\frac{1}{5}\right)^2\right) = 1 - (0.64 + 0.04) = 1 - 0.68 = 0.32$$
+  $$Gini_L = 1 - \\left(\\left(\frac{4}{5}\right)^2 + \\left(\frac{1}{5}\right)^2\right) = 1 - (0.64 + 0.04) = 1 - 0.68 = 0.32$$
 - **Right Node (Female):** Contains 5 people (2 like Apples, 3 like Oranges).
-  $$Gini_R = 1 - \left(\left(\frac{2}{5}\right)^2 + \left(\frac{3}{5}\right)^2\right) = 1 - (0.16 + 0.36) = 1 - 0.52 = 0.48$$
+  $$Gini_R = 1 - \\left(\\left(\frac{2}{5}\right)^2 + \\left(\frac{3}{5}\right)^2\right) = 1 - (0.16 + 0.36) = 1 - 0.52 = 0.48$$
 
 The weighted average Gini of the child nodes after the split is:
-$$Gini_{split} = \left(\frac{5}{10}\right) \times 0.32 + \left(\frac{5}{10}\right) \times 0.48 = 0.16 + 0.24 = 0.40$$
+$$Gini_{split} = \\left(\frac{5}{10}\right) \times 0.32 + \\left(\frac{5}{10}\right) \times 0.48 = 0.16 + 0.24 = 0.40$$
 
 Because $0.40 < 0.48$, this specific split effectively reduces impurity. The tree evaluates all features and thresholds, choosing the one that yields the lowest split impurity.
 

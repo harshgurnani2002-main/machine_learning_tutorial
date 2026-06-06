@@ -1428,7 +1428,7 @@ def center_data(X):
     return X
 
 X = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
-print("Centered:\\n", center_data(X))`,
+print("Centered:\n", center_data(X))`,
         expectedOutput: 'Centered:\n [[-2. -2.]\n [ 0.  0.]\n [ 2.  2.]]',
         solution: `import numpy as np
 
@@ -1453,7 +1453,7 @@ def compute_covariance(X_centered):
     return cov
 
 X_c = np.array([[-1.0, -1.0], [1.0, 1.0]])
-print("Covariance:\\n", compute_covariance(X_c))`,
+print("Covariance:\n", compute_covariance(X_c))`,
         expectedOutput: 'Covariance:\n [[1. 1.]\n [1. 1.]]',
         solution: `import numpy as np
 
@@ -1483,7 +1483,7 @@ def pca_project(X, k):
     return np.array([])
 
 X = np.array([[1.0, 2.0], [3.0, 3.2], [5.0, 4.0]])
-print("Projected:\\n", np.round(pca_project(X, 1), 2))`,
+print("Projected:\n", np.round(pca_project(X, 1), 2))`,
         expectedOutput: 'Projected:\n [[-2.18]\n [ 0.05]\n [ 2.12]]',
         solution: `import numpy as np
 
@@ -1911,7 +1911,7 @@ print("Final predictions:", gbm_predict(base, trees, lr))`,
 The Perceptron is a simple model for binary classification of linearly separable patterns.
 
 #### Activation Function (Heaviside Step Function)
-$$f(z) = \\begin{cases} 1 & z \\ge 0 \\\\ 0 & z < 0 \\end{cases}$$
+$$f(z) = \\begin{cases} 1 & z \\ge 0 \\ 0 & z < 0 \\end{cases}$$
 
 #### The Perceptron Convergence Theorem
 If the training dataset is linearly separable, the Perceptron learning rule is guaranteed to find a separating hyperplane in a finite number of steps.
@@ -2568,7 +2568,7 @@ print(np.round(neg_loss(t, p, n), 3))`,
     title: 'Q-Learning',
     category: 'Advanced & MLOps',
     description: 'Train agents to navigate environments using state-action value iterations.',
-    formula: 'Q(s,a) \\leftarrow Q(s,a) + \\alpha [r + \\gamma \\max Q(s\',a\') - Q(s,a)]',
+    formula: 'Q(s,a) \\leftarrow Q(s,a) + \\alpha [r + \\gamma \\max Q(s\', a\') - Q(s,a)]',
     theory: `### Q-Learning & Temporal Difference Updates
 
 Q-learning is a model-free reinforcement learning algorithm that computes optimal state-action values.
@@ -2776,7 +2776,7 @@ The objective function balances reconstruction loss and latent space organizatio
 $$\\mathcal{L}_{VAE}(\\theta, \\phi) = \\mathbb{E}_{q_\\phi(z|x)} [\\log p_\\theta(x|z)] - D_{KL}(q_\\phi(z|x) \\parallel p(z))$$
 
 #### Kullback-Leibler (KL) Divergence Penalty
-Forces the encoder\'s predicted latent distributions $q(z|x)$ to align with a standard normal distribution prior $P(z) = \\mathcal{N}(0, I)$, preventing coordinate grouping separation:
+Forces the encoder\\'s predicted latent distributions $q(z|x)$ to align with a standard normal distribution prior $P(z) = \\mathcal{N}(0, I)$, preventing coordinate grouping separation:
 $$D_{KL} = -\\frac{1}{2} \\sum_{j=1}^{J} \\left( 1 + \\log(\\sigma_j^2) - \\mu_j^2 - \\sigma_j^2 \\right)$$
 
 #### The Reparameterization Trick

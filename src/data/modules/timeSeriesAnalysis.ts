@@ -33,7 +33,7 @@ where $\\epsilon_t$ is white noise.
 
 **Rolling Average:**
 A simple rolling average of window size $w$:
-$$\\text{MA}_t(w) = \\frac{1}{w} \\sum_{i=0}^{w-1} y_{t-i}$$
+$$\text{MA}_t(w) = \frac{1}{w} \\sum_{i=0}^{w-1} y_{t-i}$$
 
 **Stationarity:**
 For time-series models to generalize, the data must be stationary—meaning its statistical properties (mean, variance, autocorrelation) do not change over time. Non-stationary data is transformed using **differencing**:

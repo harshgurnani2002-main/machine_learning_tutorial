@@ -27,19 +27,19 @@ The operational mechanics of Gradient Boosting follow a logical, step-by-step se
 
 #### General Boosting Equation
 An ensemble consisting of $M$ estimators formulates its final prediction as:
-$$F_M(x) = F_0(x) + \sum_{m=1}^{M} \gamma_m h_m(x)$$
-Where $F_0(x)$ acts as the initial guess, $h_m(x)$ denotes the $m$-th weak learner (tree), and $\gamma_m$ is the learning rate governing the tree's contribution.
+$$F_M(x) = F_0(x) + \\sum_{m=1}^{M} \\gamma_m h_m(x)$$
+Where $F_0(x)$ acts as the initial guess, $h_m(x)$ denotes the $m$-th weak learner (tree), and $\\gamma_m$ is the learning rate governing the tree's contribution.
 
 #### Residual Fitting (Gradient Descent in Function Space)
 In any given step $m$, the objective is to find a tree $h_m$ that minimizes the overall loss $L$:
-$$h_m = \arg\min_h \sum_{i=1}^n L(y_i, F_{m-1}(x_i) + h(x_i))$$
+$$h_m = \\arg\\min_h \\sum_{i=1}^n L(y_i, F_{m-1}(x_i) + h(x_i))$$
 By employing a first-order Taylor approximation, fitting $h_m$ becomes mathematically equivalent to training the tree on the pseudo-residuals, which represent the negative gradient of the loss function:
-$$r_{im} = -\left[ \frac{\partial L(y_i, F(x_i))}{\partial F(x_i)} \right]_{F(x) = F_{m-1}(x)}$$
+$$r_{im} = -\\left[ \frac{\\partial L(y_i, F(x_i))}{\\partial F(x_i)} \right]_{F(x) = F_{m-1}(x)}$$
 
 #### XGBoost Optimizations (Newton Boosting)
 XGBoost significantly advances standard Gradient Boosting by utilizing a second-order Taylor expansion—incorporating both gradients (first derivatives) and Hessians (second derivatives)—to optimize node splits vastly faster and with greater precision:
-$$\mathcal{L}^{(t)} \approx \sum_{i=1}^{n} \left[ g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i) \right] + \Omega(f_t)$$
-Where $g_i$ represents the gradient, $h_i$ represents the Hessian, and $\Omega(f_t) = \gamma T + \frac{1}{2} \lambda \sum w_j^2$ acts as a stringent regularization term. This term actively penalizes excessive tree complexity ($T$ leaves and $w$ leaf weights) to strictly prevent the model from overfitting the noise in the training data.
+$$\\mathcal{L}^{(t)} \\approx \\sum_{i=1}^{n} \\left[ g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i) \right] + \\Omega(f_t)$$
+Where $g_i$ represents the gradient, $h_i$ represents the Hessian, and $\\Omega(f_t) = \\gamma T + \frac{1}{2} \\lambda \\sum w_j^2$ acts as a stringent regularization term. This term actively penalizes excessive tree complexity ($T$ leaves and $w$ leaf weights) to strictly prevent the model from overfitting the noise in the training data.
 
 ### Worked Example
 
