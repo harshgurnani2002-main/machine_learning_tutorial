@@ -29,18 +29,18 @@ Imagine you are throwing darts at a dartboard. The bullseye represents the true,
 As you sequentially increase model complexity (e.g., moving from a linear regression to a 15th-degree polynomial, or increasing the maximum depth of a decision tree from 2 to 20), bias decreases because the model gains the mathematical flexibility to represent more complex, nuanced patterns. However, variance increases simultaneously because the model gains enough flexibility to start memorizing the noise and randomness inherent in the training sample.
 
 **The Math Behind It**
-The expected squared error (Mean Squared Error) of a model \(\hat{f}(x)\) attempting to predict a true underlying function \(f(x)\) with some inherent noise \(\epsilon\) can be mathematically decomposed into three distinct parts.
+The expected squared error (Mean Squared Error) of a model \\(\\hat{f}(x)\\) attempting to predict a true underlying function \\(f(x)\\) with some inherent noise \\(\\epsilon\\) can be mathematically decomposed into three distinct parts.
 
-Given the true relationship \(y = f(x) + \epsilon\), where the noise \(\epsilon \sim \mathcal{N}(0, \sigma^2)\),
-The expected error at an unseen test point \(x\) is:
-$$E[(y - \hat{f}(x))^2] = (Bias[\hat{f}(x)])^2 + Variance[\hat{f}(x)] + \sigma^2$$
+Given the true relationship \\(y = f(x) + \\epsilon\\), where the noise \\(\\epsilon \\sim \\mathcal{N}(0, \\sigma^2)\\),
+The expected error at an unseen test point \\(x\\) is:
+$$E[(y - \\hat{f}(x))^2] = (Bias[\\hat{f}(x)])^2 + Variance[\\hat{f}(x)] + \\sigma^2$$
 
 Let's break down each term:
 - **Bias**: The difference between the average, expected prediction of our model (across many training sets) and the correct value.
-  $$Bias[\hat{f}(x)] = E[\hat{f}(x)] - f(x)$$
+  $$Bias[\\hat{f}(x)] = E[\\hat{f}(x)] - f(x)$$
 - **Variance**: The variability of the model prediction for a given data point. It measures how much the predictions would jump around if we trained the model on a slightly different dataset.
-  $$Variance[\hat{f}(x)] = E[\hat{f}(x)^2] - (E[\hat{f}(x)])^2$$
-- **Irreducible Error (\(\sigma^2\))**: The noise inherent in the data itself. No model, no matter how powerful or complex, can ever reduce the error below this theoretical limit. It represents the limits of our feature set.
+  $$Variance[\\hat{f}(x)] = E[\\hat{f}(x)^2] - (E[\\hat{f}(x)])^2$$
+- **Irreducible Error (\\(\\sigma^2\\))**: The noise inherent in the data itself. No model, no matter how powerful or complex, can ever reduce the error below this theoretical limit. It represents the limits of our feature set.
 
 **Worked Example & Visualizing Complexity**
 Imagine trying to predict house prices based purely on square footage. The true underlying relationship is slightly curved (prices plateau for enormous houses).

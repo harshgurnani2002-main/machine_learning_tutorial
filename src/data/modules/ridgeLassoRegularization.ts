@@ -22,12 +22,12 @@ Regularization acts as the ultimate cure for these issues. It mathematically gua
 **How does it work?**
 Regularization alters the core objective function that the training algorithm (like Gradient Descent) attempts to minimize. 
 Normally, we minimize just the empirical loss (e.g., Mean Squared Error):
-$$J(w) = \\text{Loss}(w)$$
+$$J(w) = \text{Loss}(w)$$
 With regularization, we minimize the loss *plus* a penalty scaled by a hyperparameter:
-$$J(w) = \\text{Loss}(w) + \\lambda \\times \\text{Penalty}(w)$$
+$$J(w) = \text{Loss}(w) + \\lambda \times \text{Penalty}(w)$$
 The hyperparameter $\\lambda$ (lambda, or sometimes $\\alpha$ in libraries like scikit-learn) strictly controls the strength of the regularization constraint.
 - If $\\lambda = 0$, the penalty completely disappears, leaving standard, unregularized OLS.
-- If $\\lambda \\to \\infty$, the penalty absolutely dominates the loss, forcing all model weights to exactly $0$.
+- If $\\lambda \to \\infty$, the penalty absolutely dominates the loss, forcing all model weights to exactly $0$.
 Finding the "Goldilocks" optimal $\\lambda$ via cross-validation is the absolute crux of regularized modeling.
 
 **The Math Behind It**
@@ -42,11 +42,11 @@ The addition of $\\lambda I$ (the identity matrix multiplied by lambda) to the d
 **Lasso Regression ($L_1$ Regularization)**
 Lasso (Least Absolute Shrinkage and Selection Operator) adds an absolute magnitude penalty. This seemingly small mathematical change has profound, almost magical consequences: it possesses a unique geometric property that drives some weights to exactly zero, thus performing automatic, algorithmic feature selection.
 $$J(w) = MSE(w) + \\lambda \\|w\\|_1 = MSE(w) + \\lambda \\sum_{j=1}^{d} |w_j|$$
-Because the absolute value function $|w_j|$ has a sharp "V" shape at exactly zero, its derivative involves the sign function: $\\frac{\\partial}{\\partial w_j} |w_j| = \\text{sign}(w_j)$. The derivative is technically undefined exactly at zero. Therefore, there is no simple closed-form solution. Lasso must be solved using iterative numerical algorithms like Coordinate Descent or Subgradient methods.
+Because the absolute value function $|w_j|$ has a sharp "V" shape at exactly zero, its derivative involves the sign function: $\frac{\\partial}{\\partial w_j} |w_j| = \text{sign}(w_j)$. The derivative is technically undefined exactly at zero. Therefore, there is no simple closed-form solution. Lasso must be solved using iterative numerical algorithms like Coordinate Descent or Subgradient methods.
 
 **Elastic Net**
 Elastic Net combines both $L_1$ and $L_2$ penalties, bringing the absolute best of both worlds:
-$$J(w) = MSE(w) + r \\lambda \\sum_{j=1}^{d} |w_j| + \\frac{1-r}{2} \\lambda \\sum_{j=1}^{d} w_j^2$$
+$$J(w) = MSE(w) + r \\lambda \\sum_{j=1}^{d} |w_j| + \frac{1-r}{2} \\lambda \\sum_{j=1}^{d} w_j^2$$
 Here, $r$ is the mixing ratio (if $r=1$, it's pure Lasso; if $r=0$, it's pure Ridge). This allows strict feature selection (thanks to $L_1$) while maintaining the group-selection properties of Ridge (keeping correlated features together, thanks to $L_2$).
 
 **Bayesian Interpretation**

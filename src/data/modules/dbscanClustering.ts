@@ -66,7 +66,7 @@ Imagine a 2D spatial dataset representing GPS coordinates of people in a park. W
 - **Curse of Dimensionality**: Like all algorithms relying on Euclidean distance (e.g., KNN), DBSCAN suffers heavily in high-dimensional spaces (e.g., $D > 50$). In high dimensions, the distance between the nearest and farthest neighbors mathematically converges, making the concept of an $\\epsilon$-neighborhood entirely meaningless. 
   - *Solution*: Dimensionality reduction (PCA, t-SNE, UMAP) is mandatory before applying DBSCAN to high-dimensional data like text or images.
 - **Choosing Hyperparameters**: Guessing $\\epsilon$ blindly almost never works.
-  - *Heuristic for MinPts*: A common rule of thumb is $MinPts \\ge D + 1$ (where $D$ is the number of dimensions). For larger datasets, $MinPts = 2 \\times D$ is strongly preferred.
+  - *Heuristic for MinPts*: A common rule of thumb is $MinPts \\ge D + 1$ (where $D$ is the number of dimensions). For larger datasets, $MinPts = 2 \times D$ is strongly preferred.
   - *Heuristic for $\\epsilon$*: Use the K-distance graph. Plot the distance to the k-th nearest neighbor (where $k = MinPts$) for all points, sorted descending. Look for the sharp "knee" or "elbow" in the curve; the y-value at this knee is the mathematically optimal starting point for $\\epsilon$.
 
 **When to Use vs Not Use**

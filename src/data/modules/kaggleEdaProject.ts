@@ -5,7 +5,7 @@ export const kaggleEdaProject: MLModule = {
   title: 'Kaggle EDA & Data Preprocessing',
   category: 'Kaggle Real-World Projects',
   description: 'Master Exploratory Data Analysis — the single most critical step in any Kaggle competition. Learn systematic pipelines for missing values, distributions, correlations, and feature insights.',
-  formula: '\\text{Corr}(X,Y) = \\frac{\\text{Cov}(X,Y)}{\\sigma_X \\cdot \\sigma_Y}',
+  formula: '\text{Corr}(X,Y) = \frac{\text{Cov}(X,Y)}{\\sigma_X \\cdot \\sigma_Y}',
   interactiveSummary: 'Work through an interactive Kaggle-style notebook to perform EDA on a dataset. Execute each cell to reveal insights — distributions, correlations, missing values, and feature engineering opportunities.',
   simulatorId: 'kaggle-notebook',
   theory: `### Exploratory Data Analysis (EDA) — The Most Critical ML Step
@@ -54,7 +54,7 @@ Imputation strategies:
 - **Target variable**: Always analyze the target distribution first! Is it balanced? Skewed? Multimodal?
 
 Detecting skewness — if skewness > 0.5, consider a log transformation:
-$$\\text{Skewness} = \\frac{E[(X-\\mu)^3]}{\\sigma^3}$$
+$$\text{Skewness} = \frac{E[(X-\\mu)^3]}{\\sigma^3}$$
 
 For highly skewed positive features: apply $\\log(1 + x)$ transformation to normalize distribution.
 
@@ -73,7 +73,7 @@ df.groupby('target')['feature'].describe()  # Different distributions?
 \`\`\`
 
 **Pearson Correlation** measures linear relationship strength:
-$$r = \\frac{\\sum_i (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum_i (x_i - \\bar{x})^2 \\sum_i (y_i - \\bar{y})^2}}$$
+$$r = \frac{\\sum_i (x_i - \bar{x})(y_i - \bar{y})}{\\sqrt{\\sum_i (x_i - \bar{x})^2 \\sum_i (y_i - \bar{y})^2}}$$
 
 Values: -1 (perfect negative), 0 (no linear relationship), +1 (perfect positive).
 
@@ -88,7 +88,7 @@ High inter-feature correlation (|r| > 0.9) suggests multicollinearity — consid
 **Step 6: Outlier Detection**
 Two standard methods:
 - **Z-Score**: Flag points where $|z| > 3$
-- **IQR Method**: Flag points outside $[Q1 - 1.5 \\times IQR, Q3 + 1.5 \\times IQR]$
+- **IQR Method**: Flag points outside $[Q1 - 1.5 \times IQR, Q3 + 1.5 \times IQR]$
 
 \`\`\`python
 Q1 = df['feature'].quantile(0.25)
@@ -141,7 +141,7 @@ Before modeling, categorical variables must be encoded:
 #### Variance Inflation Factor (VIF) for Multicollinearity
 VIF measures how much a feature's variance is inflated by its correlation with other features:
 
-$$VIF_j = \\frac{1}{1 - R_j^2}$$
+$$VIF_j = \frac{1}{1 - R_j^2}$$
 
 where $R_j^2$ is the R-squared from regressing feature $j$ on all other features.
 - VIF = 1: No collinearity
@@ -255,16 +255,16 @@ df['Survived'] = (np.random.rand(n) < survive_prob).astype(int)
 print("=== 1. SHAPE ===")
 # TODO: Print shape
 
-print("\\n=== 2. MISSING VALUES ===")
+print("\n=== 2. MISSING VALUES ===")
 # TODO: Print count and percentage of missing values for columns with any missing
 
-print("\\n=== 3. DESCRIPTIVE STATISTICS ===")
+print("\n=== 3. DESCRIPTIVE STATISTICS ===")
 # TODO: Print describe() for numeric columns (exclude PassengerId)
 
-print("\\n=== 4. CORRELATION WITH TARGET ===")
+print("\n=== 4. CORRELATION WITH TARGET ===")
 # TODO: Print Pearson correlation of all numeric features with 'Survived', sorted descending
 
-print("\\n=== 5. SURVIVAL RATE BY CLASS ===")
+print("\n=== 5. SURVIVAL RATE BY CLASS ===")
 # TODO: Print mean 'Survived' grouped by 'Pclass'`,
       expectedOutput: `=== 1. SHAPE ===
 (891, 10)`,
@@ -290,20 +290,20 @@ df['Survived'] = (np.random.rand(n) < survive_prob).astype(int)
 print("=== 1. SHAPE ===")
 print(df.shape)
 
-print("\\n=== 2. MISSING VALUES ===")
+print("\n=== 2. MISSING VALUES ===")
 missing = df.isnull().sum()
 missing_pct = (missing / len(df)) * 100
 missing_report = pd.DataFrame({'Count': missing, 'Percent': missing_pct})
 print(missing_report[missing_report['Count'] > 0].sort_values('Percent', ascending=False))
 
-print("\\n=== 3. DESCRIPTIVE STATISTICS ===")
+print("\n=== 3. DESCRIPTIVE STATISTICS ===")
 print(df.drop('PassengerId', axis=1).describe().round(2))
 
-print("\\n=== 4. CORRELATION WITH TARGET ===")
+print("\n=== 4. CORRELATION WITH TARGET ===")
 numeric_cols = df.select_dtypes(include='number').drop(columns=['PassengerId', 'Survived'])
 print(numeric_cols.corrwith(df['Survived']).sort_values(ascending=False).round(4))
 
-print("\\n=== 5. SURVIVAL RATE BY CLASS ===")
+print("\n=== 5. SURVIVAL RATE BY CLASS ===")
 print(df.groupby('Pclass')['Survived'].mean().round(3))`,
       hints: [
         'df.isnull().sum() counts nulls per column',
@@ -374,19 +374,19 @@ print("log(SalePrice) skewness:", np.log1p(df['SalePrice']).skew().round(3))
 
 numeric_df = df.select_dtypes(include='number')
 corr = numeric_df.corrwith(df['SalePrice']).sort_values(ascending=False)
-print("\\nTop 10 correlations with SalePrice:")
+print("\nTop 10 correlations with SalePrice:")
 print(corr.head(10).round(4))
 
 Q1 = df['SalePrice'].quantile(0.25)
 Q3 = df['SalePrice'].quantile(0.75)
 IQR = Q3 - Q1
 outliers = df[(df['SalePrice'] < Q1 - 1.5*IQR) | (df['SalePrice'] > Q3 + 1.5*IQR)]
-print(f"\\nOutliers in SalePrice (IQR method): {len(outliers)} ({100*len(outliers)/n:.1f}%)")
+print(f"\nOutliers in SalePrice (IQR method): {len(outliers)} ({100*len(outliers)/n:.1f}%)")
 
 df['TotalSF'] = df['GrLivArea'] + df['TotalBsmtSF']
 total_sf_corr = df['TotalSF'].corr(df['SalePrice'])
 orig_corr = df['GrLivArea'].corr(df['SalePrice'])
-print(f"\\nGrLivArea correlation with SalePrice: {orig_corr:.4f}")
+print(f"\nGrLivArea correlation with SalePrice: {orig_corr:.4f}")
 print(f"TotalSF correlation with SalePrice: {total_sf_corr:.4f}")
 print(f"Feature engineering improved correlation by: {total_sf_corr - orig_corr:.4f}")`,
       hints: [

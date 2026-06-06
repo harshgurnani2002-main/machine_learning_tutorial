@@ -5,7 +5,7 @@ export const pcaReduction: MLModule = {
     title: 'Principal Component Analysis',
     category: 'Unsupervised Learning',
     description: 'Project high-dimensional vectors onto orthogonal axes of maximal variance.',
-    formula: 'Sigma = \\frac{1}{m} X^T X',
+    formula: 'Sigma = \frac{1}{m} X^T X',
     theory: `### Principal Component Analysis (PCA)
 
 #### What is it?
@@ -31,7 +31,7 @@ $$X_{centered} = X - \\mu$$
 *(Note: It\'s also highly recommended to standardize the variance to 1).*
 
 2. **Covariance Matrix Calculation**: Compute the covariance matrix $\\Sigma$ to understand how variables change together:
-$$\\Sigma = \\frac{1}{m} X_{centered}^T X_{centered}$$
+$$\\Sigma = \frac{1}{m} X_{centered}^T X_{centered}$$
 
 3. **Eigendecomposition**: Calculate the eigenvectors $W$ and eigenvalues $\\lambda$ of the covariance matrix $\\Sigma$:
 $$\\Sigma v = \\lambda v$$
@@ -50,7 +50,7 @@ Since "Overall Size" explains 95% of the variance, we can drop the 2nd component
 #### Common Pitfalls
 - **Ignoring Feature Scaling**: PCA is highly sensitive to the scale of features. If 'Salary' ranges up to 100,000 and 'Age' to 100, PCA will align almost entirely with 'Salary'. Always standardize data (mean 0, variance 1) first.
 - **Assuming Non-Linear Relationships**: PCA only captures linear correlations. If the data is shaped like a Swiss Roll, PCA will collapse it into a meaningless blob. (Use t-SNE or Kernel PCA instead).
-- **Interpretability Loss**: Principal components are linear combinations of original features (e.g., $0.5 \\times \text{Age} + 0.8 \\times \text{Salary}$). They rarely have intuitive human meanings.
+- **Interpretability Loss**: Principal components are linear combinations of original features (e.g., $0.5 \times \text{Age} + 0.8 \times \text{Salary}$). They rarely have intuitive human meanings.
 
 #### When to Use vs Not Use
 **Use When:**

@@ -22,7 +22,7 @@ The goal is to strictly separate the data into distinct, non-overlapping classes
 Many linear classification algorithms (like Perceptrons) just search for *any* boundary that separates classes. 
 If the classes are easily separable, an infinite number of such boundaries exist. 
 
-SVM is conceptually superior because it doesn\'t just find *any* boundary.
+SVM is conceptually superior because it doesn\\'t just find *any* boundary.
 It finds the *optimal* boundary. 
 This optimal hyperplane is the one with the maximum margin (distance) between the classes. 
 
@@ -48,7 +48,7 @@ The SVM algorithm seeks to maximize the width of this street.
 These are the critical, pivotal data points that lie exactly on the edges of the margin. 
 They "support" the entire structural boundary of the model. 
 If you removed all other non-support training points, the hyperplane would not move. 
-The model\'s complexity is defined by the number of support vectors, not the number of features.
+The model\\'s complexity is defined by the number of support vectors, not the number of features.
 
 4. **The Kernel Trick**: 
 Real-world data is rarely linearly separable. 
@@ -73,7 +73,7 @@ $$
 $$
 
 Subject to the strict classification constraint: 
-$$y_i(w^T x_i + b) \\ge 1 \\quad \\text{for all } i=1, \dots, n$$
+$$y_i(w^T x_i + b) \\ge 1 \\quad \\text{for all } i=1, \\dots, n$$
 
 **Soft Margin SVM**:
 Real data contains noise and overlapping classes. 

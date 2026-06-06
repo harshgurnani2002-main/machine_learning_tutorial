@@ -74,17 +74,17 @@ A real ML project is never just about training a model. It follows a structured 
 - **Generalization**: The ability of a model to perform well on data it has never seen.
 
 #### The Math Behind Learning
-At its core, ML is an optimization problem. We want to find parameters $\\theta$ that minimize a **loss function** $L$:
+At its core, ML is an optimization problem. We want to find parameters $\theta$ that minimize a **loss function** $L$:
 
-$$\\theta^* = \\arg\\min_{\\theta} L(y, f_{\\theta}(x))$$
+$$\theta^* = \\arg\\min_{\theta} L(y, f_{\theta}(x))$$
 
 For regression, the most common loss is **Mean Squared Error (MSE)**:
 
-$$L_{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2$$
+$$L_{MSE} = \frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2$$
 
 For classification, we commonly use **Cross-Entropy Loss**:
 
-$$L_{CE} = -\\frac{1}{n} \\sum_{i=1}^{n} [y_i \\log(\\hat{p}_i) + (1-y_i) \\log(1 - \\hat{p}_i)]$$
+$$L_{CE} = -\frac{1}{n} \\sum_{i=1}^{n} [y_i \\log(\\hat{p}_i) + (1-y_i) \\log(1 - \\hat{p}_i)]$$
 
 The optimization is typically performed using **Gradient Descent** — repeatedly nudging parameters in the direction that reduces the loss.
 
@@ -284,7 +284,7 @@ print(df.head())
 print(df.describe())
 print("Missing values:")
 print(df.isnull().sum())
-print("\\nClass distribution:")
+print("\nClass distribution:")
 print(df['target'].value_counts())`,
       hints: [
         'pd.DataFrame(iris.data, columns=iris.feature_names) creates the DataFrame',

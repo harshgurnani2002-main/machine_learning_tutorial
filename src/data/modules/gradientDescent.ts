@@ -5,7 +5,7 @@ export const gradientDescent: MLModule = {
   "title": "Gradient Descent & Optimizers",
   "category": "Foundations & Math",
   "description": "Navigate loss landscapes iteratively using derivatives, momentum, and adaptive scales.",
-  "formula": "w_{t+1} = w_t - \\eta \\nabla L(w_t)",
+  "formula": "w_{t+1} = w_t - \\eta \nabla L(w_t)",
   "theory": `### What is Gradient Descent?
 
 Gradient Descent is a fundamental, first-order iterative optimization algorithm used universally across machine learning and deep learning to find the local or global minimum of a differentiable function. In the context of machine learning, this function is the loss (or cost) function, which measures the discrepancy between the model\'s predictions and the actual target values. By iteratively adjusting the model\'s parameters (weights and biases) in the direction of the steepest descent—given by the negative of the gradient—the algorithm systematically reduces the prediction error until it converges to an optimal or near-optimal state.
@@ -22,19 +22,19 @@ In mathematical optimization terms, the algorithm follows these precise steps:
 1. **Initialization:** Start with random values for the parameters (weights $w$ and biases $b$).
 2. **Forward Pass:** Compute the model\'s predictions using the current parameters and evaluate the overall loss $L$.
 3. **Backward Pass (Gradient Computation):** Calculate the gradient of the loss function with respect to each parameter, $\nabla L(w)$. This gradient vector points in the direction of steepest ascent.
-4. **Parameter Update:** Move the parameters in the opposite direction of the gradient, scaled by a hyperparameter called the learning rate ($\eta$).
+4. **Parameter Update:** Move the parameters in the opposite direction of the gradient, scaled by a hyperparameter called the learning rate ($\\eta$).
 5. **Iteration:** Repeat steps 2-4 for multiple epochs or until the gradients approach zero and the loss plateaus (convergence).
 
 ### The Math Behind It
 
 #### 1. Vanilla Gradient Descent Update Rule
-The fundamental update rule for a parameter vector $w$ at iteration $t$ with learning rate $\eta$ and loss $L(w)$ is:
-$$w_{t+1} = w_t - \eta \nabla L(w_t)$$
-The learning rate $\eta$ controls the step size. If $\eta$ is too large, the updates can overshoot the minimum; if too small, convergence is agonizingly slow.
+The fundamental update rule for a parameter vector $w$ at iteration $t$ with learning rate $\\eta$ and loss $L(w)$ is:
+$$w_{t+1} = w_t - \\eta \nabla L(w_t)$$
+The learning rate $\\eta$ controls the step size. If $\\eta$ is too large, the updates can overshoot the minimum; if too small, convergence is agonizingly slow.
 
 #### 2. Momentum (Accelerated Gradient)
 In regions of the loss landscape that resemble long, narrow ravines, vanilla gradient descent oscillates inefficiently across the ravine walls. Momentum introduces a velocity term $v_t$ that acts like physical momentum, accumulating the gradient of past steps with a decay factor $\beta$ (typically 0.9):
-$$v_t = \beta v_{t-1} + \eta \nabla L(w_t)$$
+$$v_t = \beta v_{t-1} + \\eta \nabla L(w_t)$$
 $$w_{t+1} = w_t - v_t$$
 This dampens perpendicular oscillations and accelerates progress along the ravine floor.
 
@@ -45,17 +45,17 @@ $$m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t$$
 $$v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$$
 
 Because $m_0$ and $v_0$ are initialized to zeros, they are biased toward zero during the initial steps. Adam applies a bias correction:
-$$\hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$$
+$$\\hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \\quad \\hat{v}_t = \frac{v_t}{1 - \beta_2^t}$$
 
 Finally, the parameter update utilizes these corrected moments:
-$$w_{t+1} = w_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t$$
-where $\epsilon$ is a small smoothing term (e.g., $10^{-8}$) to prevent division by zero.
+$$w_{t+1} = w_t - \frac{\\eta}{\\sqrt{\\hat{v}_t} + \\epsilon} \\hat{m}_t$$
+where $\\epsilon$ is a small smoothing term (e.g., $10^{-8}$) to prevent division by zero.
 
 ### Worked Example
 
 Consider a simple quadratic loss function representing a single weight $w$: $L(w) = w^2$. 
 The derivative (gradient) is $\nabla L(w) = 2w$.
-Let's initialize $w_0 = 10$ and set the learning rate $\eta = 0.1$.
+Let's initialize $w_0 = 10$ and set the learning rate $\\eta = 0.1$.
 
 - **Iteration 1:**
   - Gradient $g_0 = 2 \times 10 = 20$
@@ -95,7 +95,7 @@ With each iteration, the gradient decreases, and the step size naturally shrinks
 
 ### Key Takeaways
 - Gradient descent iteratively minimizes a loss function by taking steps proportional to the negative gradient.
-- The Learning Rate ($\eta$) dictates step size and is the most critical hyperparameter to tune.
+- The Learning Rate ($\\eta$) dictates step size and is the most critical hyperparameter to tune.
 - Mini-batch GD balances the noisy, rapid updates of SGD with the stable, slow updates of Batch GD.
 - Advanced optimizers (Momentum, RMSProp, Adam) solve the inherent flaws of standard SGD by dampening oscillations and independently adapting learning rates for each parameter.`,
   "interactiveSummary": "In this interactive simulator, you can visualize the loss landscape and observe how changing the learning rate, momentum, and optimizer type (SGD vs Adam) affects the trajectory of the weights towards the global minimum. Experiment with different starting points to see how optimizers handle local minima and saddle points.",

@@ -418,7 +418,7 @@ for c in contamination_values:
     if f > best_f1:
         best_f1, best_c = f, c
 
-print(f"\\nBest contamination: {best_c} with F1 = {best_f1:.4f}")`,
+print(f"\nBest contamination: {best_c} with F1 = {best_f1:.4f}")`,
       hints: [
         'precision_score(..., pos_label=-1) tells sklearn the anomaly class is -1',
         'Loop over contamination values and store results',
