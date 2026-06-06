@@ -30,7 +30,7 @@ Other metrics include:
 - **Manhattan Distance** ($L_1$ norm): useful for grid-like data or high-dimensional spaces.
 $$d(x, x') = \\sum_{j=1}^{d} |x_j - x'_j|$$
 - **Minkowski Distance**: a generalization of both Euclidean and Manhattan distances.
-$$d(x, x') = \\left( \\sum_{j=1}^{d} |x_j - x'_j|^p \\right)^{1/p}$$
+$$d(x, x') = \\left( \\sum_{j=1}^{d} |x_j - x'_j|^p \right)^{1/p}$$
 
 Once the $K$ closest neighbors (denoted as $N_K(x)$) are found, the predicted class $\\hat{y}$ is:
 $$\\hat{y} = \\arg\\max_{c} \\sum_{i \\in N_K(x)} \\mathbb{I}(y^{(i)} = c)$$
@@ -59,7 +59,7 @@ Prediction: Apple.
 - **Feature Scaling:** Distance metrics are extremely sensitive to the scale of features. If one feature ranges from 0 to 1000 and another from 0 to 1, the former will dominate the distance calculation. Always standardize or normalize features.
 - **Curse of Dimensionality:** In high-dimensional spaces, the distance between any two points converges. All points appear equally far away, ruining the concept of "nearest".
 - **Choosing an Even K:** For binary classification, choosing an even $K$ can lead to ties. Always pick an odd $K$ to break ties.
-- **Computational Cost:** Since it evaluates the distance to every single training point, prediction is $O(N \\times D)$, which is slow for massive datasets.
+- **Computational Cost:** Since it evaluates the distance to every single training point, prediction is $O(N \times D)$, which is slow for massive datasets.
 
 #### When to Use vs Not Use
 **Use When:**

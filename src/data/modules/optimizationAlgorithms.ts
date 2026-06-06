@@ -5,7 +5,7 @@ export const optimizationAlgorithms: MLModule = {
   "title": "Optimization Algorithms",
   "category": "Foundations & Math",
   "description": "Compare learning behaviors of Adam, RMSprop, and Momentum optimizers.",
-  "formula": "\\theta_{t+1} = \\theta_t - \\eta \\cdot \\text{update}",
+  "formula": "\theta_{t+1} = \theta_t - \\eta \\cdot \text{update}",
   "theory": `### Optimization Algorithms Theory
 
 **What is it?**
@@ -31,50 +31,50 @@ Over the years, the basic Gradient Descent has evolved. We moved to **Stochastic
 
 1. **Vanilla Stochastic Gradient Descent (SGD)**:
 The simplest form of gradient descent.
-$$\theta_{t+1} = \theta_t - \eta \cdot g_t$$
+$$\theta_{t+1} = \theta_t - \\eta \\cdot g_t$$
 Where:
 - $\theta_t$ represents the model parameters at time step $t$.
-- $\eta$ (eta) is the learning rate (step size).
+- $\\eta$ (eta) is the learning rate (step size).
 - $g_t = \nabla_{\theta} J(\theta; x^{(i)}, y^{(i)})$ is the gradient of the loss function $J$ with respect to the parameters for a specific mini-batch.
 
 2. **SGD with Momentum**:
 Momentum addresses SGD's tendency to oscillate in ravines by adding a fraction of the previous update to the current one.
-$$v_t = \gamma v_{t-1} + \eta g_t$$
+$$v_t = \\gamma v_{t-1} + \\eta g_t$$
 $$\theta_{t+1} = \theta_t - v_t$$
-Where $\gamma$ is the momentum term (usually 0.9), and $v_t$ is the velocity vector.
+Where $\\gamma$ is the momentum term (usually 0.9), and $v_t$ is the velocity vector.
 
 3. **Nesterov Accelerated Gradient (NAG)**:
 A slight tweak to momentum that calculates the gradient *after* applying the momentum, providing a "lookahead" correction.
-$$v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta_t - \gamma v_{t-1})$$
+$$v_t = \\gamma v_{t-1} + \\eta \nabla_{\theta} J(\theta_t - \\gamma v_{t-1})$$
 $$\theta_{t+1} = \theta_t - v_t$$
 
 4. **RMSprop (Root Mean Square Propagation)**:
 Adapts the learning rate by dividing the gradient by a moving average of its recent magnitude, helping to navigate varying topologies.
 $$E[g^2]_t = \beta E[g^2]_{t-1} + (1 - \beta) g_t^2$$
-$$\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{E[g^2]_t + \epsilon}} g_t$$
-Where $\beta$ is the decay rate, and $\epsilon$ is a small smoothing term to prevent division by zero.
+$$\theta_{t+1} = \theta_t - \frac{\\eta}{\\sqrt{E[g^2]_t + \\epsilon}} g_t$$
+Where $\beta$ is the decay rate, and $\\epsilon$ is a small smoothing term to prevent division by zero.
 
 5. **Adam (Adaptive Moment Estimation)**:
 The industry standard. It combines the benefits of both Momentum (first moment) and RMSprop (second moment).
 - Calculate first moment (mean): $m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t$
 - Calculate second moment (uncentered variance): $v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$
-- Apply bias correction: $\hat{m}_t = \frac{m_t}{1 - \beta_1^t}$ and $\hat{v}_t = \frac{v_t}{1 - \beta_2^t}$
-- Update parameters: $\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t$
+- Apply bias correction: $\\hat{m}_t = \frac{m_t}{1 - \beta_1^t}$ and $\\hat{v}_t = \frac{v_t}{1 - \beta_2^t}$
+- Update parameters: $\theta_{t+1} = \theta_t - \frac{\\eta}{\\sqrt{\\hat{v}_t} + \\epsilon} \\hat{m}_t$
 
 **Worked Example**
 Let's trace one step of basic SGD for a single weight.
 - Current weight: $\theta_0 = 0.8$
-- Learning rate: $\eta = 0.05$
+- Learning rate: $\\eta = 0.05$
 - We run a forward pass and calculate the loss.
 - We run backpropagation and find the gradient with respect to this weight: $g_0 = 2.4$ (The error is increasing sharply in the positive direction).
 - Update calculation: 
-  $$\theta_1 = \theta_0 - (\eta \times g_0)$$
+  $$\theta_1 = \theta_0 - (\\eta \times g_0)$$
   $$\theta_1 = 0.8 - (0.05 \times 2.4)$$
   $$\theta_1 = 0.8 - 0.12 = 0.68$$
 The weight has been updated to $0.68$, moving in the opposite direction of the positive gradient to reduce the overall loss.
 
 **Common Pitfalls**
-1. **Poor Learning Rate Selection**: If $\eta$ is too high, the model will take massive steps, overshooting the minimum and diverging entirely (loss goes to NaN). If $\eta$ is too low, training will take forever and likely get stuck in a shallow local minimum.
+1. **Poor Learning Rate Selection**: If $\\eta$ is too high, the model will take massive steps, overshooting the minimum and diverging entirely (loss goes to NaN). If $\\eta$ is too low, training will take forever and likely get stuck in a shallow local minimum.
 2. **Ignoring Learning Rate Schedules**: Using a static learning rate for all 100 epochs is rarely optimal. You need to decay the learning rate as you approach the minimum to allow the model to "settle" in.
 3. **Exploding/Vanishing Gradients**: In deep networks (especially RNNs), gradients can multiply exponentially. If they explode, weights are destroyed. If they vanish, the optimizer effectively stops updating the weights.
 4. **Over-relying on Adam**: While Adam converges incredibly fast, recent research shows that carefully tuned SGD with Momentum can sometimes generalize better on unseen data by finding flatter, wider minima.

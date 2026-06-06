@@ -15,14 +15,14 @@ Activation functions are mathematical equations that determine the output of a n
 A neural network without activation functions is mathematically equivalent to a single-layer linear regression model, regardless of how many hidden layers it has. This is because the composition of multiple linear functions is simply another linear function. The real world is rarely linear; relationships in images, text, and sound are highly complex and non-linear. Activation functions introduce this crucial **non-linearity** into the network, allowing it to learn and approximate complex functional mappings (as stated by the Universal Approximation Theorem).
 
 **How does it work?**
-A neuron first calculates a linear combination of its inputs. If the inputs are $x$, the weights are $w$, and the bias is $b$, it computes $z = \sum w_i x_i + b$. Then, an activation function $f$ is applied to this raw sum $z$ to produce the final output (or "activation") of the neuron: $a = f(z)$. This output $a$ is then passed forward to the neurons in the subsequent layer.
+A neuron first calculates a linear combination of its inputs. If the inputs are $x$, the weights are $w$, and the bias is $b$, it computes $z = \\sum w_i x_i + b$. Then, an activation function $f$ is applied to this raw sum $z$ to produce the final output (or "activation") of the neuron: $a = f(z)$. This output $a$ is then passed forward to the neurons in the subsequent layer.
 
 **The Math Behind It**
 
 1. **Sigmoid (Logistic) Function**:
 Squashes any real-valued number into a range between 0 and 1.
-$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
-- **Derivative**: $\sigma'(z) = \sigma(z)(1 - \sigma(z))$
+$$\\sigma(z) = \frac{1}{1 + e^{-z}}$$
+- **Derivative**: $\\sigma'(z) = \\sigma(z)(1 - \\sigma(z))$
 - **Pros**: Clear probabilistic interpretation.
 - **Cons**: Suffers heavily from vanishing gradients. Outputs are not zero-centered.
 
@@ -35,31 +35,31 @@ $$\tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
 
 3. **Rectified Linear Unit (ReLU)**:
 The breakthrough activation function that enabled deep learning. It returns the input if positive, otherwise zero.
-$$\text{ReLU}(z) = \max(0, z)$$
+$$\text{ReLU}(z) = \\max(0, z)$$
 - **Derivative**: $1$ if $z > 0$, else $0$.
 - **Pros**: Solves the vanishing gradient problem for positive values. Extremely computationally efficient.
 - **Cons**: The "Dying ReLU" problem, where neurons permanently output 0 and stop learning.
 
 4. **Leaky ReLU**:
 A fix for the Dying ReLU problem. It allows a small, non-zero gradient when the unit is inactive.
-$$\text{Leaky ReLU}(z) = \max(0.01z, z)$$
+$$\text{Leaky ReLU}(z) = \\max(0.01z, z)$$
 - **Derivative**: $1$ if $z > 0$, else $0.01$.
 
 5. **Gaussian Error Linear Unit (GeLU)**:
 The activation function of choice for modern Transformer architectures (like BERT and GPT). It weights inputs by their value, multiplied by the cumulative distribution function of the standard normal distribution.
-$$\text{GeLU}(z) = z \cdot \Phi(z)$$
-where $\Phi(z) = \frac{1}{2} \left[ 1 + \text{erf}\left(\frac{z}{\sqrt{2}}\right) \right]$.
+$$\text{GeLU}(z) = z \\cdot \\Phi(z)$$
+where $\\Phi(z) = \frac{1}{2} \\left[ 1 + \text{erf}\\left(\frac{z}{\\sqrt{2}}\right) \right]$.
 - **Pros**: Smooth, non-monotonic curve that empirically performs better in deep NLP models.
 
 **Worked Example**
 Imagine a neuron in a hidden layer receives inputs $x = [2.0, -1.0, 3.0]$ with corresponding weights $w = [0.5, -2.0, 0.1]$ and a bias $b = -0.5$.
 1. **Linear combination**: 
-   $z = (2.0 \cdot 0.5) + (-1.0 \cdot -2.0) + (3.0 \cdot 0.1) - 0.5$
+   $z = (2.0 \\cdot 0.5) + (-1.0 \\cdot -2.0) + (3.0 \\cdot 0.1) - 0.5$
    $z = 1.0 + 2.0 + 0.3 - 0.5 = 2.8$
 2. **Apply Activation**:
-   - If using **ReLU**: $a = \max(0, 2.8) = 2.8$
-   - If using **Sigmoid**: $a = \frac{1}{1 + e^{-2.8}} \approx 0.942$
-   - If using **Tanh**: $a = \tanh(2.8) \approx 0.992$
+   - If using **ReLU**: $a = \\max(0, 2.8) = 2.8$
+   - If using **Sigmoid**: $a = \frac{1}{1 + e^{-2.8}} \\approx 0.942$
+   - If using **Tanh**: $a = \tanh(2.8) \\approx 0.992$
 The resulting value $a$ is passed to the next layer.
 
 **Common Pitfalls**

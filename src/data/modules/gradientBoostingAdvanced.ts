@@ -36,18 +36,18 @@ In GBDT, we iteratively add trees to minimize the loss. Given a loss function $L
 
 **1. Residual Estimation:**
 At iteration $m$, we compute the negative gradient (pseudo-residuals) with respect to the previous ensemble $F_{m-1}(x)$:
-$$r_{im} = - \\left[ \\frac{\\partial L(y_i, F(x_i))}{\\partial F(x_i)} \\right]_{F(x) = F_{m-1}(x)}$$
+$$r_{im} = - \\left[ \frac{\\partial L(y_i, F(x_i))}{\\partial F(x_i)} \right]_{F(x) = F_{m-1}(x)}$$
 
 **2. XGBoost Objective Function (Second-Order Taylor Approximation):**
 Instead of just first-order gradients, XGBoost uses second-order gradients (Hessians) to compute optimal leaf values:
-$$\\mathcal{L}^{(m)} \\approx \\sum_{i=1}^n \\left[ L(y_i, F_{m-1}(x_i)) + g_i f_m(x_i) + \\frac{1}{2} h_i f_m^2(x_i) \\right] + \\Omega(f_m)$$
+$$\\mathcal{L}^{(m)} \\approx \\sum_{i=1}^n \\left[ L(y_i, F_{m-1}(x_i)) + g_i f_m(x_i) + \frac{1}{2} h_i f_m^2(x_i) \right] + \\Omega(f_m)$$
 where:
-- $g_i = \\frac{\\partial L(y_i, F_{m-1}(x_i))}{\\partial F_{m-1}(x_i)}$ (Gradient)
-- $h_i = \\frac{\\partial^2 L(y_i, F_{m-1}(x_i))}{\\partial F_{m-1}^2(x_i)}$ (Hessian)
-- $\\Omega(f_m) = \\gamma T + \\frac{1}{2} \\lambda \\sum_{j=1}^T w_j^2$ is the regularization penalty on $T$ leaves and $w_j$ leaf weights.
+- $g_i = \frac{\\partial L(y_i, F_{m-1}(x_i))}{\\partial F_{m-1}(x_i)}$ (Gradient)
+- $h_i = \frac{\\partial^2 L(y_i, F_{m-1}(x_i))}{\\partial F_{m-1}^2(x_i)}$ (Hessian)
+- $\\Omega(f_m) = \\gamma T + \frac{1}{2} \\lambda \\sum_{j=1}^T w_j^2$ is the regularization penalty on $T$ leaves and $w_j$ leaf weights.
 
 The optimal weight $w_j^*$ for leaf $j$ containing sample indices $I_j$ is:
-$$w_j^* = - \\frac{\\sum_{i \\in I_j} g_i}{\\sum_{i \\in I_j} h_i + \\lambda}$$
+$$w_j^* = - \frac{\\sum_{i \\in I_j} g_i}{\\sum_{i \\in I_j} h_i + \\lambda}$$
 
 #### Hyperparameter Cheat Sheet
 - **num_leaves:** (LightGBM) Max leaves per tree. Set $< 2^{max\\_depth}$ to prevent overfitting.
@@ -68,7 +68,7 @@ Suppose we are predicting salary residuals.
 2. **Ignoring Categorical Indices:** Standard libraries treat integers as ordered numerical values. You must explicitly mark categorical columns using categorical features parameters.
 `,
   interactiveSummary: 'This simulator lets you visualize advanced tree boosting. See how individual shallow decision trees are added sequentially to target residuals of previous trees. Change model parameters to see how learning rate and tree depth control model variance.',
-  simulatorId: 'gradient-boosting',
+  simulatorId: 'gradient-boosting-advanced',
   quiz: [
     {
       id: 'gb_q1',
@@ -134,7 +134,7 @@ Suppose we are predicting salary residuals.
   coding: {
     tutorial: {
       title: 'Pseudo-Residual Computation',
-      description: 'Implement a vectorized function to compute pseudo-residuals for regression under squared error loss ($L = \\frac{1}{2}(y - \\hat{y})^2$).',
+      description: 'Implement a vectorized function to compute pseudo-residuals for regression under squared error loss ($L = \frac{1}{2}(y - \\hat{y})^2$).',
       pseudoCode: '1. Accept true values y and predictions y_pred\n2. Compute derivative dL/dy_pred = (y_pred - y)\n3. Residual is -dL/dy_pred = (y - y_pred)\n4. Return residuals',
       starterCode: `import numpy as np
 

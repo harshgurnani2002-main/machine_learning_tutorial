@@ -9,6 +9,7 @@ import { NaiveBayesSimulator } from './NaiveBayesSimulator';
 import { KNNClassifierSimulator } from './KNNClassifierSimulator';
 import { PCASimulator } from './PCASimulator';
 import { GradientBoostingSimulator } from './GradientBoostingSimulator';
+import { BasicGBSimulator } from './BasicGBSimulator';
 import { KMeansSandbox } from './KMeansSandbox';
 import { NeuralNetSandbox } from './NeuralNetSandbox';
 import { GradientDescent } from './GradientDescent';
@@ -54,6 +55,8 @@ export const ModuleSimulator: React.FC = () => {
       case 'pca':
         return <PCASimulator />;
       case 'gradient-boosting':
+        return <BasicGBSimulator />;
+      case 'gradient-boosting-advanced':
         return <GradientBoostingSimulator />;
       case 'kmeans':
       case 'dbscan':
@@ -73,8 +76,9 @@ export const ModuleSimulator: React.FC = () => {
       case 'bias-variance':
         return <BiasVarianceSimulator />;
       case 'mlp':
-      case 'optimizers':
         return <NeuralNetSandbox />;
+      case 'optimizers':
+        return <GradientDescent />;
       case 'tsne':
         return <TSNESimulator />;
       case 'perceptron':

@@ -21,7 +21,7 @@ Given an input vector $x \\in \\mathbb{R}^n$, weight vector $w \\in \\mathbb{R}^
 1. Compute the linear combination (activation potential):
 $$z = w^T x + b = \\sum_{i=1}^n w_i x_i + b$$
 2. Apply the step activation function:
-$$f(z) = \\begin{cases} 1 & z \\ge 0 \\\\ 0 & z < 0 \\end{cases}$$
+$$f(z) = \begin{cases} 1 & z \\ge 0 \\ 0 & z < 0 \\end{cases}$$
 3. The learning rule updates parameters for each training example $(x^{(i)}, y^{(i)})$ with prediction $\\hat{y}^{(i)}$ and learning rate $\\eta$:
 $$w \\leftarrow w + \\eta (y^{(i)} - \\hat{y}^{(i)}) x^{(i)}$$
 $$b \\leftarrow b + \\eta (y^{(i)} - \\hat{y}^{(i)})$$

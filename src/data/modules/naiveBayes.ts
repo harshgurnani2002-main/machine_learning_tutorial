@@ -27,14 +27,14 @@ $$P(y|x) = \frac{P(x|y) P(y)}{P(x)}$$
 - $P(x)$ is the **prior probability** of the predictor.
 
 Using the naive conditional independence assumption, we can decompose the likelihood:
-$$P(x_1, x_2, \dots, x_n | y) = \prod_{i=1}^{n} P(x_i | y)$$
+$$P(x_1, x_2, \\dots, x_n | y) = \\prod_{i=1}^{n} P(x_i | y)$$
 
 This simplifies the posterior calculation. Since $P(x)$ is constant for all classes, we can drop the denominator:
-$$P(y | x) \propto P(y) \prod_{i=1}^{n} P(x_i | y)$$
+$$P(y | x) \\propto P(y) \\prod_{i=1}^{n} P(x_i | y)$$
 
 To prevent zero probabilities for features unseen during training, we use **Laplace Smoothing**:
-$$P(x_i | y) = \frac{count(x_i, y) + \alpha}{count(y) + \alpha \cdot |V|}$$
-where $\alpha$ is the smoothing parameter (usually 1.0) and $|V|$ is the number of unique features.
+$$P(x_i | y) = \frac{count(x_i, y) + \\alpha}{count(y) + \\alpha \\cdot |V|}$$
+where $\\alpha$ is the smoothing parameter (usually 1.0) and $|V|$ is the number of unique features.
 
 #### Worked Example
 Consider a dataset classifying emails as "Spam" or "Not Spam" based on words.
@@ -49,7 +49,7 @@ Not Spam: $0.6 \times 0.05 \times 0.01 = 0.0003$
 Since $0.024 > 0.0003$, the email is classified as Spam.
 
 #### Common Pitfalls
-- **Numeric Underflow**: Multiplying many small probabilities results in floating-point underflow. Work around this by summing log probabilities instead: $\log P(y|x) \propto \log P(y) + \sum \log P(x_i|y)$.
+- **Numeric Underflow**: Multiplying many small probabilities results in floating-point underflow. Work around this by summing log probabilities instead: $\\log P(y|x) \\propto \\log P(y) + \\sum \\log P(x_i|y)$.
 - **Correlated Features**: The independence assumption is violated if features are highly correlated, degrading probability estimation (though the ranking of classes may remain correct).
 - **Zero Frequency**: Handled via Laplace Smoothing, otherwise unseen words zero out the entire product.
 - **Continuous Data Assumptions**: Gaussian Naive Bayes assumes features follow a normal distribution. If they don\'t, transformations (like log or Box-Cox) may be needed.

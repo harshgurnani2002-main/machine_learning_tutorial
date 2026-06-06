@@ -31,7 +31,7 @@ The core of Q-learning is based on the Bellman Optimality Equation, which define
 $$ Q^*(s, a) = \\mathbb{E}[R(s, a) + \\gamma \\max_{a'} Q^*(s', a')] $$
 
 In practice, the Q-table is updated iteratively using the Temporal Difference (TD) target:
-$$ Q(s, a) \\leftarrow Q(s, a) + \\alpha \\left[ r + \\gamma \\max_{a'} Q(s', a') - Q(s, a) \\right] $$
+$$ Q(s, a) \\leftarrow Q(s, a) + \\alpha \\left[ r + \\gamma \\max_{a'} Q(s', a') - Q(s, a) \right] $$
 
 Breaking down the update rule:
 - **$\\alpha$ (Learning Rate):** Determines to what extent newly acquired information overrides old information (0 = learn nothing, 1 = consider only the most recent information).
@@ -47,9 +47,9 @@ Consider an agent navigating a grid.
 3. Assume hyperparameters are $\\alpha = 0.1$, $\\gamma = 0.9$. 
 4. The agent checks its table: Current $Q(s_1, a_1) = 5$.
 5. The agent checks the table for the new state $s_2$. The maximum Q-value for any action in $s_2$ is $\\max Q(s_2, a') = 8$.
-6. Calculate TD Target = $10 + 0.9 \\times 8 = 17.2$.
+6. Calculate TD Target = $10 + 0.9 \times 8 = 17.2$.
 7. Calculate TD Error = $17.2 - 5 = 12.2$.
-8. Update Q-value: $Q(s_1, a_1) = 5 + 0.1 \\times 12.2 = 6.22$.
+8. Update Q-value: $Q(s_1, a_1) = 5 + 0.1 \times 12.2 = 6.22$.
 
 #### Common Pitfalls
 - **Exploration vs. Exploitation Dilemma:** If the agent exploits known rewards too early, it will get stuck in suboptimal policies. An $\\epsilon$-greedy strategy is required to force exploration, decaying the randomness over time.
