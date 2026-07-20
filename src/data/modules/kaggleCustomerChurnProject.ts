@@ -5,7 +5,7 @@ export const kaggleCustomerChurnProject: MLModule = {
   title: 'Kaggle Project: Customer Churn Prediction',
   category: 'Kaggle Real-World Projects',
   description: 'Predict customer churn and translate model outputs into retention actions using explainable features.',
-  formula: 'lift = P(churn | top risk decile) / P(churn overall)',
+  formula: '\\text{lift} = \\frac{P(\\text{churn} \\mid \\text{top risk decile})}{P(\\text{churn overall})}',
   theory: `### Real-World Problem
 Predict which customers are likely to leave so retention teams can intervene proactively.
 

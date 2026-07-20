@@ -5,7 +5,7 @@ export const kaggleDigitRecognizerProject: MLModule = {
   title: 'Kaggle Project: Digit Recognizer (MNIST)',
   category: 'Kaggle Real-World Projects',
   description: 'Classify handwritten digits using strong baselines and a lightweight neural network.',
-  formula: 'softmax(z_i) = exp(z_i) / Σ_j exp(z_j)',
+  formula: '\\text{softmax}(z_i) = \\frac{\\exp(z_i)}{\\sum_j \\exp(z_j)}',
   theory: `### Real-World Problem
 Recognize handwritten digits (0-9) from grayscale pixel grids.
 

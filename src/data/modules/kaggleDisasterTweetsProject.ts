@@ -5,7 +5,7 @@ export const kaggleDisasterTweetsProject: MLModule = {
   title: 'Kaggle Project: Disaster Tweets Classification',
   category: 'Kaggle Real-World Projects',
   description: 'Classify tweets as disaster-related using text preprocessing, TF-IDF, and linear models.',
-  formula: 'F1 = 2 * (precision * recall) / (precision + recall)',
+  formula: 'F_1 = 2 \\cdot \\frac{\\text{precision} \\cdot \\text{recall}}{\\text{precision} + \\text{recall}}',
   theory: `### Real-World Problem
 Detect disaster-related tweets to aid crisis response teams.
 

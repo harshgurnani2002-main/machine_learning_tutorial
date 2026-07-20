@@ -5,7 +5,7 @@ export const imbalancedDatasets: MLModule = {
   title: 'Imbalanced Datasets',
   category: 'Advanced & MLOps',
   description: 'Master techniques to handle skewed class distributions — SMOTE, class weighting, undersampling, and the right evaluation metrics for imbalanced problems.',
-  formula: 'F_1 = \frac{2 \\cdot \text{Precision} \\cdot \text{Recall}}{\text{Precision} + \text{Recall}}',
+  formula: 'F_1 = \\frac{2 \\cdot \\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}',
   interactiveSummary: 'Use the interactive SMOTE simulator to visualize how synthetic minority samples are generated through interpolation. Watch as the class distribution balances and the decision boundary shifts to properly classify the minority class.',
   simulatorId: 'imbalanced-simulator',
   theory: `### Handling Imbalanced Datasets

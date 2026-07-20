@@ -37,6 +37,15 @@ export const ModuleSimulator: React.FC = () => {
 
   const renderSimulator = () => {
     switch (activeModule.simulatorId) {
+      case 'intro-simulator':
+      case 'kaggle-notebook':
+        return (
+          <div className="flex flex-col items-center justify-center h-full p-12 text-center text-[#6E6257]">
+            <Database className="w-16 h-16 mb-4 text-[#CFC5B4]" />
+            <h3 className="text-xl font-bold text-[#2E251E] mb-2">Conceptual Overview</h3>
+            <p>This module is designed for reading and reflection rather than interactive simulation. Explore the theory tab for a deep dive.</p>
+          </div>
+        );
       case 'lin-reg':
         return <InteractiveRegression />;
       case 'log-reg':
@@ -59,8 +68,15 @@ export const ModuleSimulator: React.FC = () => {
       case 'gradient-boosting-advanced':
         return <GradientBoostingSimulator />;
       case 'kmeans':
-      case 'dbscan':
         return <KMeansSandbox />;
+      case 'dbscan':
+        return (
+          <div className="flex flex-col items-center justify-center h-full p-12 text-center text-[#6E6257]">
+            <Database className="w-16 h-16 mb-4 text-[#CFC5B4]" />
+            <h3 className="text-xl font-bold text-[#2E251E] mb-2">DBSCAN Simulator Coming Soon</h3>
+            <p>DBSCAN is a density-based clustering algorithm. The K-Means simulator is available for comparison in the meantime.</p>
+          </div>
+        );
       case 'gradient-descent':
         return <GradientDescent />;
       case 'attention':

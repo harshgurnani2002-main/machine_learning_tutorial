@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import katex from 'katex';
 
+/* eslint-disable no-control-regex */
 const normalizeLatex = (raw: string) =>
   raw
     .replace(/\u0007/g, '\\a')
@@ -36,6 +37,7 @@ const normalizeLatex = (raw: string) =>
     .replace(/\t/g, '\\t')
     .replace(/\u0000/g, '')
     .replace(/[\u0001-\u0006\u000e-\u001f]/g, '');
+/* eslint-enable no-control-regex */
 
 // Math theory notation parser and visual viewer
 const TheoryView: React.FC<{ module: MLModule }> = ({ module }) => {
@@ -118,7 +120,7 @@ const TheoryView: React.FC<{ module: MLModule }> = ({ module }) => {
   // Inline styling for inline formulas ($ ... $) and bold text (** ... **)
   const formatText = (text: string) => {
     const formatted: React.ReactNode[] = [];
-    const parts = text.split(/(\$[^\$]+\$|\*\*[^\*]+\*\*)/);
+    const parts = text.split(/(\$[^$]+\$|\*\*[^*]+\*\*)/);
     
     parts.forEach((part, idx) => {
       if (part.startsWith('$') && part.endsWith('$')) {
@@ -126,7 +128,7 @@ const TheoryView: React.FC<{ module: MLModule }> = ({ module }) => {
         try {
           const html = katex.renderToString(math, { displayMode: false, throwOnError: false });
           formatted.push(<span key={idx} dangerouslySetInnerHTML={{ __html: html }} />);
-        } catch (e) {
+        } catch {
           formatted.push(<span key={idx}>{part}</span>);
         }
       } else if (part.startsWith('**') && part.endsWith('**')) {
@@ -225,7 +227,7 @@ function MainAppContent() {
     }
   };
 
-  const categories = ['Foundations & Math', 'Supervised Learning', 'Unsupervised Learning', 'Deep Learning', 'Advanced & MLOps', 'Kaggle Real-World Projects'] as const;
+  const categories = useMemo(() => ['Foundations & Math', 'Supervised Learning', 'Unsupervised Learning', 'Deep Learning', 'Advanced & MLOps', 'Kaggle Real-World Projects'] as const, []);
   const totalModules = modulesData.length;
   const isKaggleModule = activeModule.category === 'Kaggle Real-World Projects';
 
@@ -235,7 +237,7 @@ function MainAppContent() {
       groups[cat] = modulesData.filter(m => m.category === cat);
     });
     return groups;
-  }, []);
+  }, [categories]);
 
   useEffect(() => {
     if (isKaggleModule && activeTab !== 'theory' && activeTab !== 'sandbox') {
@@ -587,7 +589,7 @@ function MainAppContent() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
           <span>© 2026 Latent Academy — Interactive Machine Learning Education</span>
           <div className="flex gap-4">
-            <span className="text-[#B6532B] font-semibold">{totalModules} Modules · 285 Quiz Questions · 549 FAANG Q&As</span>
+            <span className="text-[#B6532B] font-semibold">{totalModules} Modules · {modulesData.reduce((s, m) => s + m.quiz.length, 0)} Quiz Questions · {modulesData.reduce((s, m) => s + m.interviewQuestions.length, 0)} FAANG Q&amp;As</span>
           </div>
         </div>
       </footer>

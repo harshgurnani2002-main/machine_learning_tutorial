@@ -5,7 +5,7 @@ export const featureEngineering: MLModule = {
   title: 'Feature Engineering',
   category: 'Foundations & Math',
   description: 'Clean, transform, encode, and select features to maximize machine learning model performance.',
-  formula: 'x_{scaled} = \frac{x - x_{min}}{x_{max} - x_{min}}',
+  formula: 'x_{\\text{scaled}} = \\frac{x - x_{\\min}}{x_{\\max} - x_{\\min}}',
   theory: `### Feature Engineering: The Kaggle & Industry Secret Weapon
 
 #### What is it?

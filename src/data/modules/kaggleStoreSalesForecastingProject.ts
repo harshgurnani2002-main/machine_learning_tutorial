@@ -5,7 +5,7 @@ export const kaggleStoreSalesForecastingProject: MLModule = {
   title: 'Kaggle Project: Store Sales Forecasting',
   category: 'Kaggle Real-World Projects',
   description: 'Forecast daily store sales using time-series features, holiday effects, and leakage-safe temporal validation.',
-  formula: 'y_t = f(lag_1, lag_7, rolling_mean_7, promo_t, dow_t)',
+  formula: 'y_t = f(\\text{lag}_1, \\text{lag}_7, \\text{rolling\\_mean}_7, \\text{promo}_t, \\text{dow}_t)',
   theory: `### Real-World Problem
 Forecast short-term demand for retail operations planning (inventory, staffing, logistics).
 

@@ -6,7 +6,7 @@ export const biasVarianceTradeoff: MLModule = {
     title: 'Bias-Variance Tradeoff',
     category: 'Foundations & Math',
     description: 'Balance model capacity to avoid underfitting and overfitting.',
-    formula: 'Error = Bias^2 + Variance + IrreducibleError',
+    formula: '\\text{Error} = \\text{Bias}^2 + \\text{Variance} + \\text{IrreducibleError}',
     theory: `### Bias-Variance Tradeoff Theory
 
 **What is it?**

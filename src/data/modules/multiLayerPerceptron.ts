@@ -5,7 +5,7 @@ export const multiLayerPerceptron: MLModule = {
     title: 'Multi-Layer Perceptron (MLP)',
     category: 'Deep Learning',
     description: 'Stack multiple layers of perceptrons with non-linear activations to solve complex tasks.',
-    formula: 'y = \\sigma(W_2 \\cdot \text{ReLU}(W_1 x + b_1) + b_2)',
+    formula: 'y = \\sigma(W_2 \\cdot \\text{ReLU}(W_1 x + b_1) + b_2)',
     interactiveSummary: 'This simulator visualizes a live Multi-Layer Perceptron architecture, letting you add or remove hidden layers and tune the neuron count per layer in real time. Watch as forward-pass activations light up neuron by neuron across the network, and observe how ReLU vs. Sigmoid activation functions change the gradient flow during backpropagation. The loss curve updates dynamically after each training epoch, showing how deeper architectures converge faster on complex non-linear tasks. Toggle different weight initialization schemes to see how symmetry-breaking affects which features each hidden layer learns to detect.',
     theory: `### What is it?
 A Multi-Layer Perceptron (MLP) is a fully connected class of feedforward artificial neural network (ANN). It consists of at least three layers of nodes: an input layer, one or more hidden layers, and an output layer. Except for the input nodes, each node is a neuron that uses a nonlinear activation function.

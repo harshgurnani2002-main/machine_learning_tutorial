@@ -5,7 +5,7 @@ export const kaggleCreditCardFraudProject: MLModule = {
   title: 'Kaggle Project: Credit Card Fraud Detection',
   category: 'Kaggle Real-World Projects',
   description: 'Detect rare fraud events with imbalanced-learning techniques, threshold tuning, and precision-recall evaluation.',
-  formula: 'F1 = 2 * (precision * recall) / (precision + recall)',
+  formula: 'F_1 = 2 \\cdot \\frac{\\text{precision} \\cdot \\text{recall}}{\\text{precision} + \\text{recall}}',
   theory: `### Real-World Problem
 Identify fraudulent card transactions while minimizing false alarms and missed fraud.
 

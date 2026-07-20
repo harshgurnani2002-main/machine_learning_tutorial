@@ -523,5 +523,550 @@
     "mtime": 1780736695.0293438,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": ""
+  },
+  "/home/harsh/git/machine_learning_tutorial/.gemini/settings.json": {
+    "mtime": 1780737076.9704375,
+    "ast_hash": "f080aabf772e803c9e24b9ad0acbf2b6",
+    "semantic_hash": "f080aabf772e803c9e24b9ad0acbf2b6"
+  },
+  "/home/harsh/git/machine_learning_tutorial/.opencode/opencode.json": {
+    "mtime": 1784544678.7963657,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": "e5f74d14a81702b55bdf53b33ec991d7"
+  },
+  "/home/harsh/git/machine_learning_tutorial/.opencode/package.json": {
+    "mtime": 1784544681.3978045,
+    "ast_hash": "4562eda78748a8d5b29a235003b16c03",
+    "semantic_hash": "4562eda78748a8d5b29a235003b16c03"
+  },
+  "/home/harsh/git/machine_learning_tutorial/.opencode/plugins/graphify.js": {
+    "mtime": 1784544672.6883833,
+    "ast_hash": "64ccd3c03dbfe0980b6095766f5c4e52",
+    "semantic_hash": "64ccd3c03dbfe0980b6095766f5c4e52"
+  },
+  "/home/harsh/git/machine_learning_tutorial/eslint.config.js": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
+    "semantic_hash": "0355276bc79439afe3c53e3a2470ca1e"
+  },
+  "/home/harsh/git/machine_learning_tutorial/fix.py": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "a376e6db6bcc418ecb3d20ab0ad2ff62",
+    "semantic_hash": "a376e6db6bcc418ecb3d20ab0ad2ff62"
+  },
+  "/home/harsh/git/machine_learning_tutorial/package.json": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "9a618a7a2fae53910e0545c3c6a7a2be",
+    "semantic_hash": "9a618a7a2fae53910e0545c3c6a7a2be"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/App.tsx": {
+    "mtime": 1780736695.0289836,
+    "ast_hash": "535309cd7a85f4a3c028172e1cbc51ce",
+    "semantic_hash": "535309cd7a85f4a3c028172e1cbc51ce"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/CodingPlayground.tsx": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "b1f56335be26b613c443c3a40b1e9904",
+    "semantic_hash": "b1f56335be26b613c443c3a40b1e9904"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/InterviewPrep.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "a34665bc250cb4ee2e8d2428c219dc91",
+    "semantic_hash": "a34665bc250cb4ee2e8d2428c219dc91"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/KaggleNotebook.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "07faa84727f741e26a1da2b8d76904f3",
+    "semantic_hash": "07faa84727f741e26a1da2b8d76904f3"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/NeuralBackground.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "b3ce86304a7b014911d354d32f39d4c5",
+    "semantic_hash": "b3ce86304a7b014911d354d32f39d4c5"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/QuizEngine.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "0023846493a7c0bc78ccebeef80637da",
+    "semantic_hash": "0023846493a7c0bc78ccebeef80637da"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/ActivationsSimulator.tsx": {
+    "mtime": 1780736695.0298727,
+    "ast_hash": "cf0dd55d8c2400ab2a7dab7df3fa36ed",
+    "semantic_hash": "cf0dd55d8c2400ab2a7dab7df3fa36ed"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/AnomalyDetectionSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "83953d13d0a35047db914ddeb96365fc",
+    "semantic_hash": "83953d13d0a35047db914ddeb96365fc"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/AttentionMap.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "bf4caddd8bc6699cbbf4b804a1495ae8",
+    "semantic_hash": "bf4caddd8bc6699cbbf4b804a1495ae8"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/BasicGBSimulator.tsx": {
+    "mtime": 1780739984.3712966,
+    "ast_hash": "e59a74b999ba57ef0d35c0de5dac0014",
+    "semantic_hash": "e59a74b999ba57ef0d35c0de5dac0014"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/BiasVarianceSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "f6799c9155abf663334c0eca095cd7e2",
+    "semantic_hash": "f6799c9155abf663334c0eca095cd7e2"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/CNNSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "9514b43c332b9c26171d91617cb4b6ac",
+    "semantic_hash": "9514b43c332b9c26171d91617cb4b6ac"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/DecisionTreeSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "b19fff69d04e55f038cd6ee898660eb3",
+    "semantic_hash": "b19fff69d04e55f038cd6ee898660eb3"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/EmbeddingSpace.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "5e839c2f1aec1462a3c5275f1ca9bd2c",
+    "semantic_hash": "5e839c2f1aec1462a3c5275f1ca9bd2c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/EnsembleSimulator.tsx": {
+    "mtime": 1780749205.865244,
+    "ast_hash": "bbf37ffd90b273e5c84b8e9c873dfb90",
+    "semantic_hash": "bbf37ffd90b273e5c84b8e9c873dfb90"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/FeatureScalingSimulator.tsx": {
+    "mtime": 1780736695.0304585,
+    "ast_hash": "985b9a5a1681acea302c2e3d00422550",
+    "semantic_hash": "985b9a5a1681acea302c2e3d00422550"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/GANSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "363b17e81cbf91335ca48ee074a74a0d",
+    "semantic_hash": "363b17e81cbf91335ca48ee074a74a0d"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/GradientBoostingSimulator.tsx": {
+    "mtime": 1780739227.998105,
+    "ast_hash": "4e2f5bcc6d7be51ae473324cd1b42bde",
+    "semantic_hash": "4e2f5bcc6d7be51ae473324cd1b42bde"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/GradientDescent.tsx": {
+    "mtime": 1780737569.108723,
+    "ast_hash": "cc8d08ef58e3f08fcc6c7ed80b7aeaa8",
+    "semantic_hash": "cc8d08ef58e3f08fcc6c7ed80b7aeaa8"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/ImbalancedDataSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "5a637ae50b2ffe14173482a9058af17a",
+    "semantic_hash": "5a637ae50b2ffe14173482a9058af17a"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/InteractiveRegression.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "278be53b8d89143dcafbc1d4b1b7ea53",
+    "semantic_hash": "278be53b8d89143dcafbc1d4b1b7ea53"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/KMeansSandbox.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "767afb258ab5a82203912987226b45d4",
+    "semantic_hash": "767afb258ab5a82203912987226b45d4"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/KNNClassifierSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "04a318caee855a0dbbd35fa61d90268d",
+    "semantic_hash": "04a318caee855a0dbbd35fa61d90268d"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/LogisticRegressionSimulator.tsx": {
+    "mtime": 1780736695.0312028,
+    "ast_hash": "43255654cbbb05479221dc43ae1869b3",
+    "semantic_hash": "43255654cbbb05479221dc43ae1869b3"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/ModuleSimulator.tsx": {
+    "mtime": 1780739237.7421837,
+    "ast_hash": "f467e9b7dcf7296712d702a1c322fd1c",
+    "semantic_hash": "f467e9b7dcf7296712d702a1c322fd1c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/NaiveBayesSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "604faae20c87a8e93a5d32785bd50ffe",
+    "semantic_hash": "604faae20c87a8e93a5d32785bd50ffe"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/NeuralNetSandbox.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "9f1b89cb40b171a3b58b40e75c97e49d",
+    "semantic_hash": "9f1b89cb40b171a3b58b40e75c97e49d"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/PCASimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "956164bbce277b75dbaa7040448157cf",
+    "semantic_hash": "956164bbce277b75dbaa7040448157cf"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/PerceptronSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "0f0114d6c8548396469ba94ea751b251",
+    "semantic_hash": "0f0114d6c8548396469ba94ea751b251"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/QLearningSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "26cf2852c9e54aa0fe44037940efaa0d",
+    "semantic_hash": "26cf2852c9e54aa0fe44037940efaa0d"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/RNNSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "80eac06fd7311c72c99d8b4094e2ff1f",
+    "semantic_hash": "80eac06fd7311c72c99d8b4094e2ff1f"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/RandomForestSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "2b41de078d7be87ff3513fcdfa417588",
+    "semantic_hash": "2b41de078d7be87ff3513fcdfa417588"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/RegularizationSimulator.tsx": {
+    "mtime": 1780736695.0322027,
+    "ast_hash": "c5d572a74d15457cf819240360d9864f",
+    "semantic_hash": "c5d572a74d15457cf819240360d9864f"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/SVMSimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "1bb209100140c146fc403ea459878d8c",
+    "semantic_hash": "1bb209100140c146fc403ea459878d8c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/TSNESimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "c91d025630864c5a484d9e061acbe1b4",
+    "semantic_hash": "c91d025630864c5a484d9e061acbe1b4"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/TimeSeriesSimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "59b6032a079af7f9b4fa53478c3a8107",
+    "semantic_hash": "59b6032a079af7f9b4fa53478c3a8107"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/components/Simulators/VAESimulator.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "e14746f4642ce47acbfe44a1eb887712",
+    "semantic_hash": "e14746f4642ce47acbfe44a1eb887712"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/context/AppContext.tsx": {
+    "mtime": 1780736695.033203,
+    "ast_hash": "4a2bcf4b9f63e1a8d98a7ae6cb75ee7c",
+    "semantic_hash": "4a2bcf4b9f63e1a8d98a7ae6cb75ee7c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/anomalyDetection.ts": {
+    "mtime": 1780739918.4982073,
+    "ast_hash": "65053432199b06e92ecd7fe295c7912b",
+    "semantic_hash": "65053432199b06e92ecd7fe295c7912b"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/biasVarianceTradeoff.ts": {
+    "mtime": 1780739548.347688,
+    "ast_hash": "554adfa99d07061029d9520902f763bc",
+    "semantic_hash": "554adfa99d07061029d9520902f763bc"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/convolutionalNetworks.ts": {
+    "mtime": 1780739529.7905383,
+    "ast_hash": "8d49c9b6a535847d9eec705255c76772",
+    "semantic_hash": "8d49c9b6a535847d9eec705255c76772"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/dbscanClustering.ts": {
+    "mtime": 1780739529.7995384,
+    "ast_hash": "c4a04789838422a6801dc16d483e3cd2",
+    "semantic_hash": "c4a04789838422a6801dc16d483e3cd2"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/decisionTreeAlgorithm.ts": {
+    "mtime": 1780739548.356688,
+    "ast_hash": "2c9cf257d7b6845a034f929c8172b8e3",
+    "semantic_hash": "2c9cf257d7b6845a034f929c8172b8e3"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/decisionTrees.ts": {
+    "mtime": 1780739529.8075385,
+    "ast_hash": "a44cc4563f5ec812d91e5dda92a5b286",
+    "semantic_hash": "a44cc4563f5ec812d91e5dda92a5b286"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/ensembleTechniquesBaggingBoosting.ts": {
+    "mtime": 1780739918.4989736,
+    "ast_hash": "46b9c618a915ec4e2922d8bea9e543a1",
+    "semantic_hash": "46b9c618a915ec4e2922d8bea9e543a1"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/featureEngineering.ts": {
+    "mtime": 1780739529.8125386,
+    "ast_hash": "6b26904f0e3869671dc591e80d8db8f2",
+    "semantic_hash": "6b26904f0e3869671dc591e80d8db8f2"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/generate_neural_activations.py": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "4146e68032ef897d94e8c04252512743",
+    "semantic_hash": "4146e68032ef897d94e8c04252512743"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/generate_optimization.py": {
+    "mtime": 1780736695.0352027,
+    "ast_hash": "c013d0805c60000b943a1b5ef8c790f9",
+    "semantic_hash": "c013d0805c60000b943a1b5ef8c790f9"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/generativeAdversarialNetworks.ts": {
+    "mtime": 1780739529.8185387,
+    "ast_hash": "d559ec15409b605f719916d84851b852",
+    "semantic_hash": "d559ec15409b605f719916d84851b852"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/gradientBoosting.ts": {
+    "mtime": 1780739529.8255386,
+    "ast_hash": "d68ef4f5d9319e4f3836656f46b62d29",
+    "semantic_hash": "d68ef4f5d9319e4f3836656f46b62d29"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/gradientBoostingAdvanced.ts": {
+    "mtime": 1780744418.6735005,
+    "ast_hash": "e24f5a175c6929b431d907522a3514d1",
+    "semantic_hash": "e24f5a175c6929b431d907522a3514d1"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/gradientDescent.ts": {
+    "mtime": 1780739529.8325386,
+    "ast_hash": "24e42ceed19611f97c40a7046c89ccdc",
+    "semantic_hash": "24e42ceed19611f97c40a7046c89ccdc"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/imbalancedDatasets.ts": {
+    "mtime": 1780739529.8365388,
+    "ast_hash": "66683441acd9ab23904c37b7c49cf97f",
+    "semantic_hash": "66683441acd9ab23904c37b7c49cf97f"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/index.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "850c80be38317aec0f8e057ae2e8cb3f",
+    "semantic_hash": "850c80be38317aec0f8e057ae2e8cb3f"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/introductionToMl.ts": {
+    "mtime": 1780739529.8415387,
+    "ast_hash": "ccb2abf20f7c9c17a709830c1ec6c1ae",
+    "semantic_hash": "ccb2abf20f7c9c17a709830c1ec6c1ae"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleCreditCardFraudProject.ts": {
+    "mtime": 1780736695.036203,
+    "ast_hash": "382e8a579baaf131b0ff5569f575cbd7",
+    "semantic_hash": "382e8a579baaf131b0ff5569f575cbd7"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleCustomerChurnProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "ce4bafcc8b6866841e5079ed0c9d8c7a",
+    "semantic_hash": "ce4bafcc8b6866841e5079ed0c9d8c7a"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleDigitRecognizerProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "9460177c2262258c00ec03987d7ed0bb",
+    "semantic_hash": "9460177c2262258c00ec03987d7ed0bb"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleDisasterTweetsProject.ts": {
+    "mtime": 1780739529.8425388,
+    "ast_hash": "498c2319f388ef985fb11cec086d6f2e",
+    "semantic_hash": "498c2319f388ef985fb11cec086d6f2e"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleEdaProject.ts": {
+    "mtime": 1780739529.8475387,
+    "ast_hash": "2956716f8c524fb5a0b4408d8eca2d1b",
+    "semantic_hash": "2956716f8c524fb5a0b4408d8eca2d1b"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleHousePricesProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "fd64d2bc9cb68f0889b5b07706eb41c6",
+    "semantic_hash": "fd64d2bc9cb68f0889b5b07706eb41c6"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleLoanDefaultRiskProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "c0b276558cea6cda057fc07b759878dd",
+    "semantic_hash": "c0b276558cea6cda057fc07b759878dd"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleStoreSalesForecastingProject.ts": {
+    "mtime": 1780736695.0372028,
+    "ast_hash": "87c6ae533f1eca577bf5e695af73f256",
+    "semantic_hash": "87c6ae533f1eca577bf5e695af73f256"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kaggleTitanicProject.ts": {
+    "mtime": 1780739529.8485389,
+    "ast_hash": "dd9e6553d36fa312c429c3c646f1cf69",
+    "semantic_hash": "dd9e6553d36fa312c429c3c646f1cf69"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/kmeansClustering.ts": {
+    "mtime": 1780739548.366688,
+    "ast_hash": "2a817b560af8572072d4eb18bcdd1aed",
+    "semantic_hash": "2a817b560af8572072d4eb18bcdd1aed"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/knnClassification.ts": {
+    "mtime": 1780739529.851539,
+    "ast_hash": "d276c2de7db0bea50603375f557f392b",
+    "semantic_hash": "d276c2de7db0bea50603375f557f392b"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/linearRegression.ts": {
+    "mtime": 1780739548.3706882,
+    "ast_hash": "9cdaed9fe0244863b1bbb33a1d136737",
+    "semantic_hash": "9cdaed9fe0244863b1bbb33a1d136737"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/logisticRegression.ts": {
+    "mtime": 1780739548.372688,
+    "ast_hash": "7f7090aaa904c93b2a07240fbb7a5e2c",
+    "semantic_hash": "7f7090aaa904c93b2a07240fbb7a5e2c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/multiLayerPerceptron.ts": {
+    "mtime": 1780739529.8555388,
+    "ast_hash": "9bcd0b15d5069d40f7522d65696d5c32",
+    "semantic_hash": "9bcd0b15d5069d40f7522d65696d5c32"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/naiveBayes.ts": {
+    "mtime": 1780739529.860539,
+    "ast_hash": "39d0dad5c31113d3b086fb2c365c81c4",
+    "semantic_hash": "39d0dad5c31113d3b086fb2c365c81c4"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/neuralActivations.ts": {
+    "mtime": 1780739529.8625388,
+    "ast_hash": "15d32f7efa0b101022a33bd9061ebbd2",
+    "semantic_hash": "15d32f7efa0b101022a33bd9061ebbd2"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/optimizationAlgorithms.ts": {
+    "mtime": 1780739529.8715389,
+    "ast_hash": "43093859d20dcb1d62781aba2a2f4cd6",
+    "semantic_hash": "43093859d20dcb1d62781aba2a2f4cd6"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/pcaReduction.ts": {
+    "mtime": 1780739529.875539,
+    "ast_hash": "fe15aed486ab6e3ef01ef9f244bdf3a9",
+    "semantic_hash": "fe15aed486ab6e3ef01ef9f244bdf3a9"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/qLearningRl.ts": {
+    "mtime": 1780739529.876539,
+    "ast_hash": "abd739ea6b012124bcb8c085e863654e",
+    "semantic_hash": "abd739ea6b012124bcb8c085e863654e"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/randomForests.ts": {
+    "mtime": 1780739548.3746881,
+    "ast_hash": "c87129ef013854733c80321992918bbe",
+    "semantic_hash": "c87129ef013854733c80321992918bbe"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/recurrentNetworks.ts": {
+    "mtime": 1780739529.8805392,
+    "ast_hash": "2efb594ba91322d9ac3bfbda482d803d",
+    "semantic_hash": "2efb594ba91322d9ac3bfbda482d803d"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/ridgeLassoRegularization.ts": {
+    "mtime": 1780739529.882539,
+    "ast_hash": "be8c2e9d51d17c4bc6bb2f4dc4e06389",
+    "semantic_hash": "be8c2e9d51d17c4bc6bb2f4dc4e06389"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/singlePerceptron.ts": {
+    "mtime": 1780739529.888539,
+    "ast_hash": "38e5330e276aa68f5e03df257d56e951",
+    "semantic_hash": "38e5330e276aa68f5e03df257d56e951"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/supportVectorMachines.ts": {
+    "mtime": 1780739918.4997206,
+    "ast_hash": "f9203c10e84db8f893da620e74e961f2",
+    "semantic_hash": "f9203c10e84db8f893da620e74e961f2"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/timeSeriesAnalysis.ts": {
+    "mtime": 1780739529.9185393,
+    "ast_hash": "68a73ed1f7ff0b274989d1de048e9a0a",
+    "semantic_hash": "68a73ed1f7ff0b274989d1de048e9a0a"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/transformerAttention.ts": {
+    "mtime": 1780739529.9335394,
+    "ast_hash": "ce781e20cb9561011c01319246d07b40",
+    "semantic_hash": "ce781e20cb9561011c01319246d07b40"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/tsneVisualization.ts": {
+    "mtime": 1780739529.9385395,
+    "ast_hash": "b2d610fa6f20e41ae200f53470de8836",
+    "semantic_hash": "b2d610fa6f20e41ae200f53470de8836"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/variationalAutoencoders.ts": {
+    "mtime": 1780739529.9445395,
+    "ast_hash": "cf8c5d22c280e78036276536f4500e43",
+    "semantic_hash": "cf8c5d22c280e78036276536f4500e43"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modules/wordEmbeddings.ts": {
+    "mtime": 1780739529.9465396,
+    "ast_hash": "dacd52579bb2bf50a587d25713928041",
+    "semantic_hash": "dacd52579bb2bf50a587d25713928041"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/data/modulesData.ts": {
+    "mtime": 1780739957.7910745,
+    "ast_hash": "3b50077ab5567088fc3fe7b27b45a569",
+    "semantic_hash": "3b50077ab5567088fc3fe7b27b45a569"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/main.tsx": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "787e5a07efeb2bf6209d5937195f2f68",
+    "semantic_hash": "787e5a07efeb2bf6209d5937195f2f68"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/types.ts": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "36d4e6ab927863131512829192e9cf6c",
+    "semantic_hash": "36d4e6ab927863131512829192e9cf6c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/test.js": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "92a18c03650fa6fe757c44420727fd88",
+    "semantic_hash": "92a18c03650fa6fe757c44420727fd88"
+  },
+  "/home/harsh/git/machine_learning_tutorial/tsconfig.app.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "136630b5accce1ca50663df229534a26",
+    "semantic_hash": "136630b5accce1ca50663df229534a26"
+  },
+  "/home/harsh/git/machine_learning_tutorial/tsconfig.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "/home/harsh/git/machine_learning_tutorial/tsconfig.node.json": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "70bdd0a673bcfc0e828080b306e7c680",
+    "semantic_hash": "70bdd0a673bcfc0e828080b306e7c680"
+  },
+  "/home/harsh/git/machine_learning_tutorial/update_theory.js": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "c6ef9c791d39fd3ac970e05dcd63134e",
+    "semantic_hash": "c6ef9c791d39fd3ac970e05dcd63134e"
+  },
+  "/home/harsh/git/machine_learning_tutorial/vite.config.ts": {
+    "mtime": 1780736695.0422027,
+    "ast_hash": "d281d66c4390899f561fa3db9b8e9eac",
+    "semantic_hash": "d281d66c4390899f561fa3db9b8e9eac"
+  },
+  "/home/harsh/git/machine_learning_tutorial/GEMINI.md": {
+    "mtime": 1780737076.9702694,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": "82efb97a359f5c7290bf2513d14686be"
+  },
+  "/home/harsh/git/machine_learning_tutorial/README.md": {
+    "mtime": 1780736695.0153139,
+    "ast_hash": "f6e3faf55d738cf2affe1b44195f27cf",
+    "semantic_hash": "f6e3faf55d738cf2affe1b44195f27cf"
+  },
+  "/home/harsh/git/machine_learning_tutorial/fixes.md": {
+    "mtime": 1780736695.016203,
+    "ast_hash": "fb2eaa676d06eeab9b4be03bd8f743d3",
+    "semantic_hash": "fb2eaa676d06eeab9b4be03bd8f743d3"
+  },
+  "/home/harsh/git/machine_learning_tutorial/index.html": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "f5699b55d922b66ae3039dbd95ef0846",
+    "semantic_hash": "f5699b55d922b66ae3039dbd95ef0846"
+  },
+  "/home/harsh/git/machine_learning_tutorial/public/favicon.svg": {
+    "mtime": 1780736695.0272028,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "/home/harsh/git/machine_learning_tutorial/public/icons.svg": {
+    "mtime": 1780736695.0282028,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/assets/hero.png": {
+    "mtime": 1780736695.0289836,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": "aead493361b27e7510691c5d7072dfc1"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/assets/react.svg": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "/home/harsh/git/machine_learning_tutorial/src/assets/vite.svg": {
+    "mtime": 1780736695.0293438,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": "9960a24288958394ac50e57ff638b036"
   }
 }

@@ -1,56 +1,51 @@
-# Graph Report - machine_learning_tutorial  (2026-06-06)
+# Graph Report - .  (2026-07-20)
 
 ## Corpus Check
-- 99 files · ~208,845 words
+- 109 files · ~211,794 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 379 nodes · 567 edges · 60 communities (25 shown, 35 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 375 nodes · 565 edges · 70 communities (26 shown, 44 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
-## Graph Freshness
-- Built from commit: `242ad71b`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
-
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Community 0|Community 0]]
-- [[_COMMUNITY_Community 1|Community 1]]
-- [[_COMMUNITY_Community 2|Community 2]]
-- [[_COMMUNITY_Community 3|Community 3]]
-- [[_COMMUNITY_Community 4|Community 4]]
-- [[_COMMUNITY_Community 5|Community 5]]
-- [[_COMMUNITY_Community 6|Community 6]]
-- [[_COMMUNITY_Community 7|Community 7]]
-- [[_COMMUNITY_Community 8|Community 8]]
-- [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
-- [[_COMMUNITY_Community 11|Community 11]]
-- [[_COMMUNITY_Community 12|Community 12]]
-- [[_COMMUNITY_Community 13|Community 13]]
-- [[_COMMUNITY_Community 14|Community 14]]
-- [[_COMMUNITY_Community 15|Community 15]]
-- [[_COMMUNITY_Community 16|Community 16]]
-- [[_COMMUNITY_Community 17|Community 17]]
-- [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Community 19|Community 19]]
-- [[_COMMUNITY_Community 20|Community 20]]
-- [[_COMMUNITY_Community 21|Community 21]]
-- [[_COMMUNITY_Community 22|Community 22]]
-- [[_COMMUNITY_Community 23|Community 23]]
-- [[_COMMUNITY_Community 24|Community 24]]
-- [[_COMMUNITY_Community 25|Community 25]]
-- [[_COMMUNITY_Community 26|Community 26]]
-- [[_COMMUNITY_Community 27|Community 27]]
-- [[_COMMUNITY_Community 28|Community 28]]
-- [[_COMMUNITY_Community 29|Community 29]]
-- [[_COMMUNITY_Community 30|Community 30]]
-- [[_COMMUNITY_Community 31|Community 31]]
-- [[_COMMUNITY_Community 32|Community 32]]
-- [[_COMMUNITY_Community 33|Community 33]]
-- [[_COMMUNITY_Community 34|Community 34]]
-- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Package Config & Dependencies|Package Config & Dependencies]]
+- [[_COMMUNITY_Core UI Components|Core UI Components]]
+- [[_COMMUNITY_ML Module Content|ML Module Content]]
+- [[_COMMUNITY_Simulator Framework|Simulator Framework]]
+- [[_COMMUNITY_TypeScript App Config|TypeScript App Config]]
+- [[_COMMUNITY_TypeScript Node Config|TypeScript Node Config]]
+- [[_COMMUNITY_Gradient Boosting Simulator|Gradient Boosting Simulator]]
+- [[_COMMUNITY_Bug Fixes & Issues|Bug Fixes & Issues]]
+- [[_COMMUNITY_Kaggle Projects & PCA|Kaggle Projects & PCA]]
+- [[_COMMUNITY_Module Data & Decision Trees|Module Data & Decision Trees]]
+- [[_COMMUNITY_Basic GB Simulator|Basic GB Simulator]]
+- [[_COMMUNITY_Decision Tree & Ensemble Sims|Decision Tree & Ensemble Sims]]
+- [[_COMMUNITY_t-SNE Simulator|t-SNE Simulator]]
+- [[_COMMUNITY_Social Icons|Social Icons]]
+- [[_COMMUNITY_Regularization Simulator|Regularization Simulator]]
+- [[_COMMUNITY_Bias-Variance Simulator|Bias-Variance Simulator]]
+- [[_COMMUNITY_Anomaly Detection Simulator|Anomaly Detection Simulator]]
+- [[_COMMUNITY_CNN Simulator|CNN Simulator]]
+- [[_COMMUNITY_Gradient Descent Simulator|Gradient Descent Simulator]]
+- [[_COMMUNITY_Imbalanced Data Simulator|Imbalanced Data Simulator]]
+- [[_COMMUNITY_Perceptron Simulator|Perceptron Simulator]]
+- [[_COMMUNITY_RNN Simulator|RNN Simulator]]
+- [[_COMMUNITY_Gemini Settings|Gemini Settings]]
+- [[_COMMUNITY_Site Index & README|Site Index & README]]
+- [[_COMMUNITY_OpenCode Config|OpenCode Config]]
+- [[_COMMUNITY_OpenCode Plugin|OpenCode Plugin]]
+- [[_COMMUNITY_Activations Simulator|Activations Simulator]]
+- [[_COMMUNITY_Embedding Space Simulator|Embedding Space Simulator]]
+- [[_COMMUNITY_Logistic Regression Simulator|Logistic Regression Simulator]]
+- [[_COMMUNITY_Q-Learning Simulator|Q-Learning Simulator]]
+- [[_COMMUNITY_Test Files|Test Files]]
+- [[_COMMUNITY_TypeScript Config Ref|TypeScript Config Ref]]
+- [[_COMMUNITY_Update Theory Script|Update Theory Script]]
+- [[_COMMUNITY_React Framework Assets|React Framework Assets]]
+- [[_COMMUNITY_Vite Assets|Vite Assets]]
+- [[_COMMUNITY_Gemini Graphify|Gemini Graphify]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
 - [[_COMMUNITY_Community 38|Community 38]]
@@ -70,22 +65,31 @@
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 68|Community 68]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `MLModule` - 49 edges
-2. `PART 6 — COMPLETE SKLEARN SOLUTIONS FOR ALL 27 MODULES` - 28 edges
-3. `compilerOptions` - 17 edges
-4. `compilerOptions` - 16 edges
-5. `useApp()` - 15 edges
-6. `Latent Academy — Comprehensive Fix & Enhancement Report` - 10 edges
-7. `GROUP B — Mixed sklearn + PyTorch modules` - 9 edges
-8. `scripts` - 5 edges
-9. `BiasVarianceSimulator()` - 4 edges
-10. `GradientBoostingSimulator()` - 4 edges
+2. `compilerOptions` - 17 edges
+3. `compilerOptions` - 16 edges
+4. `useApp()` - 13 edges
+5. `Latent Academy Fix Report` - 10 edges
+6. `Icons SVG Sprite Sheet` - 6 edges
+7. `scripts` - 5 edges
+8. `trainModel()` - 5 edges
+9. `Sklearn For Project PyTorch For Assignment Convention` - 5 edges
+10. `BiasVarianceSimulator()` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `GradientBoostingSimulator()` --calls--> `useApp()`  [EXTRACTED]
-  src/components/Simulators/GradientBoostingSimulator.tsx → src/context/AppContext.tsx
+- `DecisionTreeSimulator()` --calls--> `buildTree()`  [INFERRED]
+  src/components/Simulators/DecisionTreeSimulator.tsx → src/components/Simulators/EnsembleSimulator.tsx
 - `AppContextType` --references--> `MLModule`  [EXTRACTED]
   src/context/AppContext.tsx → src/types.ts
 - `MainAppContent()` --calls--> `useApp()`  [EXTRACTED]
@@ -98,107 +102,110 @@
 ## Import Cycles
 - None detected.
 
-## Communities (60 total, 35 thin omitted)
+## Hyperedges (group relationships)
+- **Sklearn PyTorch Module Classification Groups** — fixes_sklearn_group_a, fixes_sklearn_pytorch_group_b, fixes_pytorch_only_group_c [EXTRACTED 1.00]
 
-### Community 0 - "Community 0"
+## Communities (70 total, 44 thin omitted)
+
+### Community 0 - "Package Config & Dependencies"
 Cohesion: 0.06
 Nodes (33): dependencies, katex, lucide-react, prismjs, react, react-dom, react-simple-code-editor, tailwindcss (+25 more)
 
-### Community 1 - "Community 1"
-Cohesion: 0.07
-Nodes (28): 🔴 BUG-1 — `multiLayerPerceptron.ts` simulatorId mismatch, 🔴 BUG-2 — `generativeAdversarialNetworks.ts` missing `simulatorId`, 🔴 BUG-3 — `variationalAutoencoders.ts` missing `simulatorId`, 🔴 BUG-4 — `lucide-react` version `^1.16.0` does not exist, 🟡 BUG-5 — `w-4.5 h-4.5` are not valid Tailwind classes, 🟢 CLEAN-1 — `biasVarianceTradeoff.ts.draft` orphan file, 🟢 CLEAN-2 — Scratch/generator scripts in project root, `generativeAdversarialNetworks.ts` — Project uses `sklearn.neural_network.MLPClassifier` as discriminator proxy ✅ (+20 more)
-
-### Community 2 - "Community 2"
-Cohesion: 0.07
-Nodes (28): 10. Gradient Descent — project solution (sklearn), 11. Decision Tree Algorithm (Tree Splits) — project solution (sklearn), 12. Gradient Boosting — project solution (sklearn), 13. Single Perceptron — project solution (sklearn), 14. Multi-Layer Perceptron — project solution (sklearn), 15. CNN — project solution (sklearn — new, see Part 5 above), 16. RNN — project solution (sklearn — text classification proxy), 17. Transformer Attention — project solution (sklearn + numpy) (+20 more)
-
-### Community 3 - "Community 3"
-Cohesion: 0.11
-Nodes (14): AttentionMap(), DecisionTreeSimulator(), FeatureScalingSimulator(), GANSimulator(), InteractiveRegression(), KMeansSandbox(), KNNClassifierSimulator(), NaiveBayesSimulator() (+6 more)
-
-### Community 4 - "Community 4"
+### Community 1 - "Core UI Components"
 Cohesion: 0.15
 Nodes (16): CodingPlayground(), DIFFICULTY_COLORS, InterviewPrep(), KaggleNotebook(), stageLabels, NeuralBackground(), QuizEngine(), AppContext (+8 more)
 
-### Community 5 - "Community 5"
+### Community 2 - "ML Module Content"
 Cohesion: 0.13
 Nodes (11): anomalyDetection, gradientBoosting, introductionToMl, kaggleDigitRecognizerProject, kaggleDisasterTweetsProject, kaggleEdaProject, kaggleLoanDefaultRiskProject, kaggleStoreSalesForecastingProject (+3 more)
 
-### Community 6 - "Community 6"
+### Community 3 - "Simulator Framework"
+Cohesion: 0.14
+Nodes (10): FeatureScalingSimulator(), GANSimulator(), KMeansSandbox(), KNNClassifierSimulator(), NaiveBayesSimulator(), NeuralNetSandbox(), PCASimulator(), RandomForestSimulator() (+2 more)
+
+### Community 4 - "TypeScript App Config"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, jsx, lib, module, moduleDetection, moduleResolution (+10 more)
 
-### Community 7 - "Community 7"
+### Community 5 - "TypeScript Node Config"
 Cohesion: 0.11
 Nodes (17): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection, moduleResolution, noEmit (+9 more)
 
-### Community 8 - "Community 8"
-Cohesion: 0.14
-Nodes (9): linearRegression, pcaReduction, supportVectorMachines, tsneVisualization, CodingStage, InterviewQA, ModuleCoding, NotebookCell (+1 more)
-
-### Community 9 - "Community 9"
+### Community 6 - "Gradient Boosting Simulator"
 Cohesion: 0.15
-Nodes (7): modulesData, decisionTreeAlgorithm, decisionTrees, gradientDescent, kaggleTitanicProject, recurrentNetworks, MLModule
+Nodes (15): ALGO, AlgoMode, buildCatTree(), buildLGBTree(), buildXGBTree(), defaultPoints, drawCanvas(), GradientBoostingSimulator() (+7 more)
 
-### Community 10 - "Community 10"
+### Community 7 - "Bug Fixes & Issues"
+Cohesion: 0.19
+Nodes (14): Latent Academy Fix Report, 27 Curriculum Modules, CNN Sklearn Alternative Gap, Interactive Simulator System, Latent Academy Project, Lucide React Version Bug, Orphan And Scratch Files, Group C CNN Only Pytorch (+6 more)
+
+### Community 8 - "Kaggle Projects & PCA"
+Cohesion: 0.14
+Nodes (9): kaggleTitanicProject, pcaReduction, recurrentNetworks, tsneVisualization, CodingStage, InterviewQA, ModuleCoding, NotebookCell (+1 more)
+
+### Community 9 - "Module Data & Decision Trees"
+Cohesion: 0.15
+Nodes (7): modulesData, decisionTreeAlgorithm, decisionTrees, gradientDescent, linearRegression, supportVectorMachines, MLModule
+
+### Community 10 - "Basic GB Simulator"
+Cohesion: 0.21
+Nodes (9): BasicGBSimulator(), buildStump(), defaultPoints, drawCanvas(), Point, predictStump(), sigmoid(), Stump (+1 more)
+
+### Community 11 - "Decision Tree & Ensemble Sims"
 Cohesion: 0.17
-Nodes (6): computeAccuracy(), defaultPoints, GradientBoostingSimulator(), LightGBMLeaf, Point, TreeNode
+Nodes (7): DecisionTreeSimulator(), buildTree(), ClassType, DataPoint, EnsembleSimulator(), Mode, TreeNode
 
-### Community 11 - "Community 11"
+### Community 12 - "t-SNE Simulator"
 Cohesion: 0.29
 Nodes (5): CLUSTER_COLORS, CLUSTER_LABELS, generateHDClusters(), Point2D, TSNESimulator()
 
-### Community 12 - "Community 12"
+### Community 13 - "Social Icons"
 Cohesion: 0.29
-Nodes (4): BoundaryCell, DataPoint, EnsembleSimulator(), ModelType
+Nodes (7): Bluesky Icon, Discord Icon, Documentation Icon, GitHub Icon, Social Sharing Icon, Icons SVG Sprite Sheet, X/Twitter Icon
 
-### Community 13 - "Community 13"
+### Community 14 - "Regularization Simulator"
 Cohesion: 0.38
 Nodes (6): computeCoefficients(), computeLoss(), FEATURE_NAMES, RegType, RegularizationSimulator(), TRUE_COEFFICIENTS
 
-### Community 14 - "Community 14"
+### Community 15 - "Bias-Variance Simulator"
 Cohesion: 0.47
 Nodes (3): BiasVarianceSimulator(), fitPolynomial(), generateDataset()
 
-### Community 15 - "Community 15"
-Cohesion: 0.50
-Nodes (3): Expanding the ESLint configuration, React Compiler, React + TypeScript + Vite
-
-### Community 17 - "Community 17"
+### Community 17 - "CNN Simulator"
 Cohesion: 0.50
 Nodes (3): CNNSimulator(), defaultImage, filters
 
-### Community 18 - "Community 18"
+### Community 18 - "Gradient Descent Simulator"
 Cohesion: 0.50
 Nodes (3): GradientDescent(), OptState, Point
 
-### Community 20 - "Community 20"
+### Community 20 - "Perceptron Simulator"
 Cohesion: 0.50
 Nodes (3): datasets, DatasetType, PerceptronSimulator()
 
-### Community 22 - "Community 22"
+### Community 21 - "RNN Simulator"
 Cohesion: 0.50
 Nodes (3): embeddings, RNNSimulator(), sequence
 
 ## Knowledge Gaps
-- **155 isolated node(s):** `BeforeTool`, `name`, `private`, `version`, `type` (+150 more)
+- **134 isolated node(s):** `BeforeTool`, `$schema`, `plugin`, `@opencode-ai/plugin`, `name` (+129 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **44 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MLModule` connect `Community 9` to `Community 4`, `Community 5`, `Community 8`, `Community 30`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 48`, `Community 49`, `Community 50`, `Community 51`, `Community 52`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `PART 6 — COMPLETE SKLEARN SOLUTIONS FOR ALL 27 MODULES` connect `Community 2` to `Community 1`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Latent Academy — Comprehensive Fix & Enhancement Report` connect `Community 1` to `Community 2`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **What connects `BeforeTool`, `name`, `private` to the rest of the system?**
-  _155 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Community 0` be split into smaller, more focused modules?**
+- **Why does `MLModule` connect `Module Data & Decision Trees` to `Core UI Components`, `ML Module Content`, `Kaggle Projects & PCA`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 48`, `Community 49`, `Community 50`, `Community 51`, `Community 52`, `Community 53`, `Community 54`, `Community 55`, `Community 56`, `Community 57`, `Community 58`?**
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `useApp()` connect `Core UI Components` to `Simulator Framework`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **What connects `BeforeTool`, `$schema`, `plugin` to the rest of the system?**
+  _134 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Package Config & Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
-- **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
+- **Should `ML Module Content` be split into smaller, more focused modules?**
+  _Cohesion score 0.13043478260869565 - nodes in this community are weakly interconnected._
+- **Should `Simulator Framework` be split into smaller, more focused modules?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **Should `TypeScript App Config` be split into smaller, more focused modules?**
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

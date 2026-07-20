@@ -5,7 +5,7 @@ export const kaggleLoanDefaultRiskProject: MLModule = {
   title: 'Kaggle Project: Loan Default Risk',
   category: 'Kaggle Real-World Projects',
   description: 'Predict loan default risk with imbalanced data, categorical encoding, and gradient boosting models.',
-  formula: 'AUC = ∫ TPR(FPR) dFPR',
+  formula: '\\text{AUC} = \\int \\text{TPR}(\\text{FPR}) \\, d\\text{FPR}',
   theory: `### Real-World Problem
 Estimate probability of loan default so credit teams can price risk appropriately.
 
