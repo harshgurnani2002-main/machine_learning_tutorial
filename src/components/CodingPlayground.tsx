@@ -26,8 +26,11 @@ export const CodingPlayground: React.FC = () => {
   // Set code when stage or module changes
   useEffect(() => {
     if (activeStage) {
-      const initialCode = activeStage.starterCode;
-      setCode(initialCode); // eslint-disable-line react-hooks/set-state-in-effect
+      const initialCode =
+        activeCodingStage === 'project' && activeStage.solution
+          ? activeStage.solution
+          : activeStage.starterCode;
+      setCode(initialCode);
       setTerminalLogs([
         `[env] Python 3.11 sandbox initialized`,
         `[env] Libraries: NumPy, Pandas, Scikit-Learn, Matplotlib`,
@@ -39,143 +42,7 @@ export const CodingPlayground: React.FC = () => {
       setShowSolution(false);
       setShowPseudo(true);
     }
-  }, [activeModule.id, activeCodingStage, activeStage]);
-
-  // Auto-scroll terminal
-  useEffect(() => {
-    if (terminalRef.current) {
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
-    }
-  }, [terminalLogs]);
-
-  // Render visualization canvas
-  useEffect(() => {
-    const canvas = plotCanvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const w = canvas.width = 300;
-    const h = canvas.height = 200;
-
-    const grad = ctx.createLinearGradient(0, 0, 0, h);
-    grad.addColorStop(0, '#2E251E');
-    grad.addColorStop(1, '#3A3027');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, w, h);
-
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
-    ctx.lineWidth = 1;
-    for (let x = 0; x < w; x += 30) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
-    }
-    for (let y = 0; y < h; y += 30) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
-    }
-
-    const isSuccess = status === 'success';
-    const isCompiling = status === 'compiling';
-
-    if (activeModule.id === 'linear-regression') {
-      const pts = [{ x: 50, y: 150 }, { x: 100, y: 120 }, { x: 150, y: 90 }, { x: 210, y: 60 }, { x: 250, y: 40 }];
-      
-      pts.forEach(p => {
-        ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI * 2); 
-        ctx.fillStyle = '#C18C3B';
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = '#C18C3B';
-        ctx.fill();
-        ctx.shadowBlur = 0;
-      });
-
-      ctx.beginPath();
-      ctx.strokeStyle = isSuccess ? '#3B7A57' : isCompiling ? '#C18C3B' : '#B6532B';
-      ctx.lineWidth = 3;
-      if (isSuccess) {
-        ctx.moveTo(30, 165); ctx.lineTo(270, 30);
-      } else {
-        ctx.moveTo(30, 110); ctx.lineTo(270, 110);
-      }
-      ctx.stroke();
-      
-      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
-      ctx.fillText('MSE', 10, 20);
-      ctx.fillText('Fit \u2192', w - 45, h - 10);
-
-    } else if (activeModule.id === 'logistic-regression' || activeModule.id === 'activation-functions') {
-      ctx.beginPath();
-      ctx.strokeStyle = isSuccess ? '#3B7A57' : '#CFC5B4';
-      ctx.lineWidth = 3;
-      ctx.lineJoin = 'round';
-      for (let x = 0; x < w; x++) {
-        const z = ((x / w) - 0.5) * 10;
-        const sig = 1 / (1 + Math.exp(-z));
-        const py = h - sig * (h - 40) - 20;
-        if (x === 0) ctx.moveTo(x, py);
-        else ctx.lineTo(x, py);
-      }
-      ctx.stroke();
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
-      ctx.setLineDash([4, 4]);
-      ctx.beginPath();
-      ctx.moveTo(0, 20); ctx.lineTo(w, 20);
-      ctx.moveTo(0, h - 20); ctx.lineTo(w, h - 20);
-      ctx.stroke();
-      ctx.setLineDash([]);
-      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
-      ctx.fillText('\u03c3(z)', 10, 15);
-
-    } else if (activeModule.id === 'kmeans-clustering' || activeModule.id === 'dbscan-clustering') {
-      const clusters = [{ x: 80, y: 70, col: '#B6532B' }, { x: 220, y: 65, col: '#C18C3B' }, { x: 150, y: 140, col: '#3B7A57' }];
-      clusters.forEach((c) => {
-        for (let i = 0; i < 8; i++) {
-          const a = (i / 8) * Math.PI * 2;
-          const r = 20 + Math.sin(i * 1.5) * 10;
-          ctx.beginPath();
-          ctx.arc(c.x + Math.cos(a) * r, c.y + Math.sin(a) * r, 4, 0, Math.PI * 2);
-          ctx.fillStyle = c.col + 'AA';
-          ctx.fill();
-        }
-        ctx.beginPath();
-        ctx.arc(c.x, c.y, 8, 0, Math.PI * 2);
-        ctx.fillStyle = c.col;
-        ctx.shadowBlur = 15;
-        ctx.shadowColor = c.col;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-        if (isSuccess) {
-          ctx.beginPath();
-          ctx.arc(c.x, c.y, 35, 0, Math.PI * 2);
-          ctx.strokeStyle = c.col + '88';
-          ctx.lineWidth = 2;
-          ctx.stroke();
-        }
-      });
-
-    } else {
-      ctx.beginPath();
-      ctx.strokeStyle = isSuccess ? '#3B7A57' : isCompiling ? '#C18C3B' : '#B6532B';
-      ctx.lineWidth = 3;
-      ctx.lineJoin = 'round';
-      for (let x = 0; x < w; x += 3) {
-        const progress = x / w;
-        let yVal;
-        if (isSuccess) {
-          yVal = h - 30 - (h - 60) * Math.exp(-progress * 6);
-        } else if (isCompiling) {
-          yVal = h/2 + 25 * Math.sin(progress * 20);
-        } else {
-          yVal = h - 120 + 40 * Math.sin(progress * 12) * Math.exp(-progress * 1.5);
-        }
-        if (x === 0) ctx.moveTo(x, yVal);
-        else ctx.lineTo(x, yVal);
-      }
-      ctx.stroke();
-      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
-      ctx.fillText('LOSS', 10, 20);
-      ctx.fillText('EPOCHS \u2192', w - 70, h - 10);
-    }
-  }, [activeModule.id, status]);
+  }, [activeModule.id, activeCodingStage]);
 
   if (!hasAllStages || !activeStage) {
     return (
@@ -189,6 +56,13 @@ export const CodingPlayground: React.FC = () => {
       </div>
     );
   }
+
+  // Auto-scroll terminal
+  useEffect(() => {
+    if (terminalRef.current) {
+      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+    }
+  }, [terminalLogs]);
 
   // Run simulated script compiler
   const runCode = () => {
@@ -208,7 +82,7 @@ export const CodingPlayground: React.FC = () => {
       
       lines.forEach((line, i) => {
         const trimmed = line.trim();
-        if (trimmed.startsWith('#')) return;
+        if (trimmed.startsWith('#') && !trimmed.toUpperCase().includes('TODO')) return;
 
         if (!hasTodo && (line.toUpperCase().includes('TODO') || line.includes('placeholder') || trimmed === 'pass' || trimmed === '...')) {
           hasTodo = true;
@@ -254,6 +128,139 @@ export const CodingPlayground: React.FC = () => {
       }
     }, 1000);
   };
+
+  // Render visualization canvas
+  useEffect(() => {
+    const canvas = plotCanvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const w = canvas.width = 300;
+    const h = canvas.height = 200;
+
+    // Background gradient
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, '#2E251E');
+    grad.addColorStop(1, '#3A3027');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 30) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+    }
+    for (let y = 0; y < h; y += 30) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+    }
+
+    const isSuccess = status === 'success';
+    const isCompiling = status === 'compiling';
+
+    if (activeModule.id === 'linear-regression') {
+      const pts = [{ x: 50, y: 150 }, { x: 100, y: 120 }, { x: 150, y: 90 }, { x: 210, y: 60 }, { x: 250, y: 40 }];
+      
+      pts.forEach(p => {
+        ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI * 2); 
+        ctx.fillStyle = '#C18C3B';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#C18C3B';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      });
+
+      ctx.beginPath();
+      ctx.strokeStyle = isSuccess ? '#3B7A57' : isCompiling ? '#C18C3B' : '#B6532B';
+      ctx.lineWidth = 3;
+      if (isSuccess) {
+        ctx.moveTo(30, 165); ctx.lineTo(270, 30);
+      } else {
+        ctx.moveTo(30, 110); ctx.lineTo(270, 110);
+      }
+      ctx.stroke();
+      
+      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
+      ctx.fillText('MSE', 10, 20);
+      ctx.fillText('Fit →', w - 45, h - 10);
+
+    } else if (activeModule.id === 'logistic-regression' || activeModule.id === 'activation-functions') {
+      ctx.beginPath();
+      ctx.strokeStyle = isSuccess ? '#3B7A57' : '#CFC5B4';
+      ctx.lineWidth = 3;
+      ctx.lineJoin = 'round';
+      for (let x = 0; x < w; x++) {
+        const z = ((x / w) - 0.5) * 10;
+        const sig = 1 / (1 + Math.exp(-z));
+        const py = h - sig * (h - 40) - 20;
+        if (x === 0) ctx.moveTo(x, py);
+        else ctx.lineTo(x, py);
+      }
+      ctx.stroke();
+      // Asymptotes
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(0, 20); ctx.lineTo(w, 20);
+      ctx.moveTo(0, h - 20); ctx.lineTo(w, h - 20);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
+      ctx.fillText('σ(z)', 10, 15);
+
+    } else if (activeModule.id === 'kmeans-clustering' || activeModule.id === 'dbscan-clustering') {
+      const clusters = [{ x: 80, y: 70, col: '#B6532B' }, { x: 220, y: 65, col: '#C18C3B' }, { x: 150, y: 140, col: '#3B7A57' }];
+      clusters.forEach((c) => {
+        for (let i = 0; i < 8; i++) {
+          const a = (i / 8) * Math.PI * 2;
+          const r = 20 + Math.sin(i * 1.5) * 10;
+          ctx.beginPath();
+          ctx.arc(c.x + Math.cos(a) * r, c.y + Math.sin(a) * r, 4, 0, Math.PI * 2);
+          ctx.fillStyle = c.col + 'AA';
+          ctx.fill();
+        }
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, 8, 0, Math.PI * 2);
+        ctx.fillStyle = c.col;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = c.col;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        if (isSuccess) {
+          ctx.beginPath();
+          ctx.arc(c.x, c.y, 35, 0, Math.PI * 2);
+          ctx.strokeStyle = c.col + '88';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      });
+
+    } else {
+      // Default: training loss curve
+      ctx.beginPath();
+      ctx.strokeStyle = isSuccess ? '#3B7A57' : isCompiling ? '#C18C3B' : '#B6532B';
+      ctx.lineWidth = 3;
+      ctx.lineJoin = 'round';
+      for (let x = 0; x < w; x += 3) {
+        const progress = x / w;
+        let yVal;
+        if (isSuccess) {
+          yVal = h - 30 - (h - 60) * Math.exp(-progress * 6);
+        } else if (isCompiling) {
+          yVal = h/2 + 25 * Math.sin(progress * 20);
+        } else {
+          yVal = h - 120 + 40 * Math.sin(progress * 12) * Math.exp(-progress * 1.5);
+        }
+        if (x === 0) ctx.moveTo(x, yVal);
+        else ctx.lineTo(x, yVal);
+      }
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '10px monospace';
+      ctx.fillText('LOSS', 10, 20);
+      ctx.fillText('EPOCHS →', w - 70, h - 10);
+    }
+  }, [activeModule.id, status]);
 
   const stagesList = [
     { id: 'tutorial', label: 'Tutorial', icon: '📖' },

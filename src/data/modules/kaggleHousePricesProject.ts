@@ -5,7 +5,7 @@ export const kaggleHousePricesProject: MLModule = {
   title: 'Kaggle Project: House Price Regression',
   category: 'Kaggle Real-World Projects',
   description: 'Predict house sale prices with robust feature handling, log-target modeling, and tree-based ensembles.',
-  formula: '\\hat{y} = f(x), \\; \\text{optimize RMSE}(\\log(y), \\log(\\hat{y}))',
+  formula: 'y_hat = f(x), optimize RMSE(log(y), log(y_hat))',
   theory: `### Real-World Problem
 Predict residential sale prices from mixed numerical and categorical housing attributes.
 

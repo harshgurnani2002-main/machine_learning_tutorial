@@ -5,7 +5,7 @@ export const kaggleEdaProject: MLModule = {
   title: 'Kaggle EDA & Data Preprocessing',
   category: 'Kaggle Real-World Projects',
   description: 'Master Exploratory Data Analysis — the single most critical step in any Kaggle competition. Learn systematic pipelines for missing values, distributions, correlations, and feature insights.',
-  formula: '\\text{Corr}(X,Y) = \\frac{\\text{Cov}(X,Y)}{\\sigma_X \\cdot \\sigma_Y}',
+  formula: '\text{Corr}(X,Y) = \frac{\text{Cov}(X,Y)}{\\sigma_X \\cdot \\sigma_Y}',
   interactiveSummary: 'Work through an interactive Kaggle-style notebook to perform EDA on a dataset. Execute each cell to reveal insights — distributions, correlations, missing values, and feature engineering opportunities.',
   simulatorId: 'kaggle-notebook',
   theory: `### Exploratory Data Analysis (EDA) — The Most Critical ML Step

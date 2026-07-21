@@ -14,19 +14,9 @@ export const QuizEngine: React.FC = () => {
   const [showResult, setShowResult] = useState<boolean>(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
 
-  const restartQuiz = () => {
-    setActiveIdx(0);
-    setSelectedAns('');
-    setIsAnswered(false);
-    setIsCorrect(false);
-    setScore(0);
-    setShowResult(false);
-    setAnswers([]);
-  };
-
   // Restart quiz when active module changes
   useEffect(() => {
-    restartQuiz(); // eslint-disable-line react-hooks/set-state-in-effect
+    restartQuiz();
   }, [activeModule.id]);
 
   const activeQuestion = quizQuestions[activeIdx];
@@ -48,17 +38,26 @@ export const QuizEngine: React.FC = () => {
   };
 
   const handleNext = () => {
-    const updatedScore = score + (isCorrect ? 1 : 0);
     setIsAnswered(false);
     setSelectedAns('');
     if (activeIdx + 1 < quizQuestions.length) {
       setActiveIdx(prev => prev + 1);
     } else {
       setShowResult(true);
-      if (updatedScore >= Math.ceil(quizQuestions.length * 0.7)) {
+      if (score >= Math.ceil(quizQuestions.length * 0.7)) {
         completeQuiz(activeModule.id);
       }
     }
+  };
+
+  const restartQuiz = () => {
+    setActiveIdx(0);
+    setSelectedAns('');
+    setIsAnswered(false);
+    setIsCorrect(false);
+    setScore(0);
+    setShowResult(false);
+    setAnswers([]);
   };
 
   if (quizQuestions.length === 0) {

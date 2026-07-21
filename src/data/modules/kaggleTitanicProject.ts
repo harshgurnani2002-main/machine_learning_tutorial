@@ -5,7 +5,7 @@ export const kaggleTitanicProject: MLModule = {
   title: 'Kaggle Project: Titanic Survival Prediction',
   category: 'Kaggle Real-World Projects',
   description: 'Build a full binary classification workflow on the Titanic dataset with feature engineering, validation, and submission generation.',
-  formula: 'P(y=1 \\mid x) = \\sigma(w^T x + b)',
+  formula: 'P(y=1|x) = sigma(w^T x + b)',
   theory: `### Real-World Problem
 Predict whether a passenger survived the Titanic disaster using structured passenger data.
 

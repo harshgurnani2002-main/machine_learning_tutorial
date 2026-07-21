@@ -1,23 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "module_classification_groups",
-        "label": "Sklearn PyTorch Module Classification Groups",
-        "nodes": [
-          "fixes_sklearn_group_a",
-          "fixes_sklearn_pytorch_group_b",
-          "fixes_pytorch_only_group_c"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "fixes.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "settings.json",
@@ -25,7 +9,7 @@
       "source_file": ".gemini/settings.json",
       "source_location": "L1",
       "id": "gemini_settings",
-      "community": null,
+      "community": 23,
       "norm_label": "settings.json"
     },
     {
@@ -34,7 +18,7 @@
       "source_file": ".gemini/settings.json",
       "source_location": "L2",
       "id": "gemini_settings_hooks",
-      "community": null,
+      "community": 23,
       "norm_label": "hooks"
     },
     {
@@ -43,80 +27,8 @@
       "source_file": ".gemini/settings.json",
       "source_location": "L3",
       "id": "gemini_settings_hooks_beforetool",
-      "community": null,
+      "community": 23,
       "norm_label": "beforetool"
-    },
-    {
-      "label": "opencode.json",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L1",
-      "id": "opencode_opencode",
-      "community": null,
-      "norm_label": "opencode.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "id": "opencode_opencode_schema",
-      "community": null,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "plugin",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L3",
-      "id": "opencode_opencode_plugin",
-      "community": null,
-      "norm_label": "plugin"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L1",
-      "id": "opencode_package",
-      "community": null,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L2",
-      "id": "opencode_package_dependencies",
-      "community": null,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@opencode-ai/plugin",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L3",
-      "id": "opencode_package_dependencies_opencode_ai_plugin",
-      "community": null,
-      "norm_label": "@opencode-ai/plugin"
-    },
-    {
-      "label": "graphify.js",
-      "file_type": "code",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L1",
-      "id": "plugins_graphify",
-      "community": null,
-      "norm_label": "graphify.js"
-    },
-    {
-      "label": "GraphifyPlugin()",
-      "file_type": "code",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L6",
-      "id": "plugins_graphify_graphifyplugin",
-      "community": null,
-      "norm_label": "graphifyplugin()"
     },
     {
       "label": "eslint.config.js",
@@ -124,7 +36,7 @@
       "source_file": "eslint.config.js",
       "source_location": "L1",
       "id": "eslint_config",
-      "community": null,
+      "community": 55,
       "norm_label": "eslint.config.js"
     },
     {
@@ -133,7 +45,7 @@
       "source_file": "fix.py",
       "source_location": "L1",
       "id": "fix",
-      "community": null,
+      "community": 56,
       "norm_label": "fix.py"
     },
     {
@@ -142,7 +54,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package",
-      "community": null,
+      "community": 0,
       "norm_label": "package.json"
     },
     {
@@ -151,7 +63,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "package_name",
-      "community": null,
+      "community": 0,
       "norm_label": "name"
     },
     {
@@ -160,7 +72,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "package_private",
-      "community": null,
+      "community": 0,
       "norm_label": "private"
     },
     {
@@ -169,7 +81,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "package_version",
-      "community": null,
+      "community": 0,
       "norm_label": "version"
     },
     {
@@ -178,7 +90,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "package_type",
-      "community": null,
+      "community": 0,
       "norm_label": "type"
     },
     {
@@ -187,7 +99,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "package_scripts",
-      "community": null,
+      "community": 0,
       "norm_label": "scripts"
     },
     {
@@ -196,7 +108,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "package_scripts_dev",
-      "community": null,
+      "community": 0,
       "norm_label": "dev"
     },
     {
@@ -205,7 +117,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "package_scripts_build",
-      "community": null,
+      "community": 0,
       "norm_label": "build"
     },
     {
@@ -214,7 +126,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "package_scripts_lint",
-      "community": null,
+      "community": 0,
       "norm_label": "lint"
     },
     {
@@ -223,7 +135,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "package_scripts_preview",
-      "community": null,
+      "community": 0,
       "norm_label": "preview"
     },
     {
@@ -232,7 +144,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "package_dependencies",
-      "community": null,
+      "community": 0,
       "norm_label": "dependencies"
     },
     {
@@ -241,7 +153,7 @@
       "source_file": "package.json",
       "source_location": "L13",
       "id": "package_dependencies_tailwindcss_vite",
-      "community": null,
+      "community": 0,
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -250,7 +162,7 @@
       "source_file": "package.json",
       "source_location": "L14",
       "id": "package_dependencies_types_prismjs",
-      "community": null,
+      "community": 0,
       "norm_label": "@types/prismjs"
     },
     {
@@ -259,7 +171,7 @@
       "source_file": "package.json",
       "source_location": "L15",
       "id": "package_dependencies_katex",
-      "community": null,
+      "community": 0,
       "norm_label": "katex"
     },
     {
@@ -268,7 +180,7 @@
       "source_file": "package.json",
       "source_location": "L16",
       "id": "package_dependencies_lucide_react",
-      "community": null,
+      "community": 0,
       "norm_label": "lucide-react"
     },
     {
@@ -277,7 +189,7 @@
       "source_file": "package.json",
       "source_location": "L17",
       "id": "package_dependencies_prismjs",
-      "community": null,
+      "community": 0,
       "norm_label": "prismjs"
     },
     {
@@ -286,7 +198,7 @@
       "source_file": "package.json",
       "source_location": "L18",
       "id": "package_dependencies_react",
-      "community": null,
+      "community": 0,
       "norm_label": "react"
     },
     {
@@ -295,7 +207,7 @@
       "source_file": "package.json",
       "source_location": "L19",
       "id": "package_dependencies_react_dom",
-      "community": null,
+      "community": 0,
       "norm_label": "react-dom"
     },
     {
@@ -304,7 +216,7 @@
       "source_file": "package.json",
       "source_location": "L20",
       "id": "package_dependencies_react_simple_code_editor",
-      "community": null,
+      "community": 0,
       "norm_label": "react-simple-code-editor"
     },
     {
@@ -313,7 +225,7 @@
       "source_file": "package.json",
       "source_location": "L21",
       "id": "package_dependencies_tailwindcss",
-      "community": null,
+      "community": 0,
       "norm_label": "tailwindcss"
     },
     {
@@ -322,7 +234,7 @@
       "source_file": "package.json",
       "source_location": "L23",
       "id": "package_devdependencies",
-      "community": null,
+      "community": 0,
       "norm_label": "devdependencies"
     },
     {
@@ -331,7 +243,7 @@
       "source_file": "package.json",
       "source_location": "L24",
       "id": "package_devdependencies_eslint_js",
-      "community": null,
+      "community": 0,
       "norm_label": "@eslint/js"
     },
     {
@@ -340,7 +252,7 @@
       "source_file": "package.json",
       "source_location": "L25",
       "id": "package_devdependencies_types_node",
-      "community": null,
+      "community": 0,
       "norm_label": "@types/node"
     },
     {
@@ -349,7 +261,7 @@
       "source_file": "package.json",
       "source_location": "L26",
       "id": "package_devdependencies_types_react",
-      "community": null,
+      "community": 0,
       "norm_label": "@types/react"
     },
     {
@@ -358,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L27",
       "id": "package_devdependencies_types_react_dom",
-      "community": null,
+      "community": 0,
       "norm_label": "@types/react-dom"
     },
     {
@@ -367,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L28",
       "id": "package_devdependencies_vitejs_plugin_react",
-      "community": null,
+      "community": 0,
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -376,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L29",
       "id": "package_devdependencies_eslint",
-      "community": null,
+      "community": 0,
       "norm_label": "eslint"
     },
     {
@@ -385,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L30",
       "id": "package_devdependencies_eslint_plugin_react_hooks",
-      "community": null,
+      "community": 0,
       "norm_label": "eslint-plugin-react-hooks"
     },
     {
@@ -394,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L31",
       "id": "package_devdependencies_eslint_plugin_react_refresh",
-      "community": null,
+      "community": 0,
       "norm_label": "eslint-plugin-react-refresh"
     },
     {
@@ -403,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L32",
       "id": "package_devdependencies_globals",
-      "community": null,
+      "community": 0,
       "norm_label": "globals"
     },
     {
@@ -412,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L33",
       "id": "package_devdependencies_ts_morph",
-      "community": null,
+      "community": 0,
       "norm_label": "ts-morph"
     },
     {
@@ -421,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L34",
       "id": "package_devdependencies_typescript",
-      "community": null,
+      "community": 0,
       "norm_label": "typescript"
     },
     {
@@ -430,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L35",
       "id": "package_devdependencies_typescript_eslint",
-      "community": null,
+      "community": 0,
       "norm_label": "typescript-eslint"
     },
     {
@@ -439,7 +351,7 @@
       "source_file": "package.json",
       "source_location": "L36",
       "id": "package_devdependencies_vite",
-      "community": null,
+      "community": 0,
       "norm_label": "vite"
     },
     {
@@ -448,7 +360,7 @@
       "source_file": "src/App.tsx",
       "source_location": "L1",
       "id": "src_app",
-      "community": null,
+      "community": 4,
       "norm_label": "app.tsx"
     },
     {
@@ -457,7 +369,7 @@
       "source_file": "src/App.tsx",
       "source_location": "L29",
       "id": "src_app_normalizelatex",
-      "community": null,
+      "community": 4,
       "norm_label": "normalizelatex()"
     },
     {
@@ -466,7 +378,7 @@
       "source_file": "src/App.tsx",
       "source_location": "L41",
       "id": "src_app_theoryview",
-      "community": null,
+      "community": 4,
       "norm_label": "theoryview()"
     },
     {
@@ -475,7 +387,7 @@
       "source_file": "src/App.tsx",
       "source_location": "L209",
       "id": "src_app_mainappcontent",
-      "community": null,
+      "community": 4,
       "norm_label": "mainappcontent()"
     },
     {
@@ -484,7 +396,7 @@
       "source_file": "src/App.tsx",
       "source_location": "L598",
       "id": "src_app_app",
-      "community": null,
+      "community": 4,
       "norm_label": "app()"
     },
     {
@@ -493,7 +405,7 @@
       "source_file": "src/components/CodingPlayground.tsx",
       "source_location": "L1",
       "id": "components_codingplayground",
-      "community": null,
+      "community": 4,
       "norm_label": "codingplayground.tsx"
     },
     {
@@ -502,7 +414,7 @@
       "source_file": "src/components/CodingPlayground.tsx",
       "source_location": "L5",
       "id": "components_codingplayground_codingplayground",
-      "community": null,
+      "community": 4,
       "norm_label": "codingplayground()"
     },
     {
@@ -511,7 +423,7 @@
       "source_file": "src/components/InterviewPrep.tsx",
       "source_location": "L1",
       "id": "components_interviewprep",
-      "community": null,
+      "community": 4,
       "norm_label": "interviewprep.tsx"
     },
     {
@@ -520,7 +432,7 @@
       "source_file": "src/components/InterviewPrep.tsx",
       "source_location": "L5",
       "id": "components_interviewprep_difficulty_colors",
-      "community": null,
+      "community": 4,
       "norm_label": "difficulty_colors"
     },
     {
@@ -529,7 +441,7 @@
       "source_file": "src/components/InterviewPrep.tsx",
       "source_location": "L13",
       "id": "components_interviewprep_interviewprep",
-      "community": null,
+      "community": 4,
       "norm_label": "interviewprep()"
     },
     {
@@ -538,7 +450,7 @@
       "source_file": "src/components/KaggleNotebook.tsx",
       "source_location": "L1",
       "id": "components_kagglenotebook",
-      "community": null,
+      "community": 4,
       "norm_label": "kagglenotebook.tsx"
     },
     {
@@ -547,7 +459,7 @@
       "source_file": "src/components/KaggleNotebook.tsx",
       "source_location": "L5",
       "id": "components_kagglenotebook_stagelabels",
-      "community": null,
+      "community": 4,
       "norm_label": "stagelabels"
     },
     {
@@ -556,7 +468,7 @@
       "source_file": "src/components/KaggleNotebook.tsx",
       "source_location": "L11",
       "id": "components_kagglenotebook_kagglenotebook",
-      "community": null,
+      "community": 4,
       "norm_label": "kagglenotebook()"
     },
     {
@@ -565,7 +477,7 @@
       "source_file": "src/components/NeuralBackground.tsx",
       "source_location": "L1",
       "id": "components_neuralbackground",
-      "community": null,
+      "community": 4,
       "norm_label": "neuralbackground.tsx"
     },
     {
@@ -574,7 +486,7 @@
       "source_file": "src/components/NeuralBackground.tsx",
       "source_location": "L3",
       "id": "components_neuralbackground_neuralbackground",
-      "community": null,
+      "community": 4,
       "norm_label": "neuralbackground()"
     },
     {
@@ -583,7 +495,7 @@
       "source_file": "src/components/QuizEngine.tsx",
       "source_location": "L1",
       "id": "components_quizengine",
-      "community": null,
+      "community": 4,
       "norm_label": "quizengine.tsx"
     },
     {
@@ -592,7 +504,7 @@
       "source_file": "src/components/QuizEngine.tsx",
       "source_location": "L5",
       "id": "components_quizengine_quizengine",
-      "community": null,
+      "community": 4,
       "norm_label": "quizengine()"
     },
     {
@@ -601,7 +513,7 @@
       "source_file": "src/components/Simulators/ActivationsSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_activationssimulator",
-      "community": null,
+      "community": 24,
       "norm_label": "activationssimulator.tsx"
     },
     {
@@ -610,7 +522,7 @@
       "source_file": "src/components/Simulators/ActivationsSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_activationssimulator_activationtype",
-      "community": null,
+      "community": 24,
       "norm_label": "activationtype"
     },
     {
@@ -619,7 +531,7 @@
       "source_file": "src/components/Simulators/ActivationsSimulator.tsx",
       "source_location": "L6",
       "id": "simulators_activationssimulator_activationssimulator",
-      "community": null,
+      "community": 24,
       "norm_label": "activationssimulator()"
     },
     {
@@ -628,7 +540,7 @@
       "source_file": "src/components/Simulators/AnomalyDetectionSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_anomalydetectionsimulator",
-      "community": null,
+      "community": 16,
       "norm_label": "anomalydetectionsimulator.tsx"
     },
     {
@@ -637,7 +549,7 @@
       "source_file": "src/components/Simulators/AnomalyDetectionSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_anomalydetectionsimulator_seededrng",
-      "community": null,
+      "community": 16,
       "norm_label": "seededrng()"
     },
     {
@@ -646,7 +558,7 @@
       "source_file": "src/components/Simulators/AnomalyDetectionSimulator.tsx",
       "source_location": "L14",
       "id": "simulators_anomalydetectionsimulator_point",
-      "community": null,
+      "community": 16,
       "norm_label": "point"
     },
     {
@@ -655,7 +567,7 @@
       "source_file": "src/components/Simulators/AnomalyDetectionSimulator.tsx",
       "source_location": "L23",
       "id": "simulators_anomalydetectionsimulator_anomalydetectionsimulator",
-      "community": null,
+      "community": 16,
       "norm_label": "anomalydetectionsimulator()"
     },
     {
@@ -664,7 +576,7 @@
       "source_file": "src/components/Simulators/AttentionMap.tsx",
       "source_location": "L1",
       "id": "simulators_attentionmap",
-      "community": null,
+      "community": 3,
       "norm_label": "attentionmap.tsx"
     },
     {
@@ -673,116 +585,8 @@
       "source_file": "src/components/Simulators/AttentionMap.tsx",
       "source_location": "L5",
       "id": "simulators_attentionmap_attentionmap",
-      "community": null,
+      "community": 3,
       "norm_label": "attentionmap()"
-    },
-    {
-      "label": "BasicGBSimulator.tsx",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L1",
-      "id": "simulators_basicgbsimulator",
-      "community": null,
-      "norm_label": "basicgbsimulator.tsx"
-    },
-    {
-      "label": "Point",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L7",
-      "id": "simulators_basicgbsimulator_point",
-      "community": null,
-      "norm_label": "point"
-    },
-    {
-      "label": "Stump",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L8",
-      "id": "simulators_basicgbsimulator_stump",
-      "community": null,
-      "norm_label": "stump"
-    },
-    {
-      "label": "defaultPoints",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L18",
-      "id": "simulators_basicgbsimulator_defaultpoints",
-      "community": null,
-      "norm_label": "defaultpoints"
-    },
-    {
-      "label": "sigmoid()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L32",
-      "id": "simulators_basicgbsimulator_sigmoid",
-      "community": null,
-      "norm_label": "sigmoid()"
-    },
-    {
-      "label": "buildStump()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L34",
-      "id": "simulators_basicgbsimulator_buildstump",
-      "community": null,
-      "norm_label": "buildstump()"
-    },
-    {
-      "label": "predictStump()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L64",
-      "id": "simulators_basicgbsimulator_predictstump",
-      "community": null,
-      "norm_label": "predictstump()"
-    },
-    {
-      "label": "trainGB()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L67",
-      "id": "simulators_basicgbsimulator_traingb",
-      "community": null,
-      "norm_label": "traingb()"
-    },
-    {
-      "label": "drawCanvas()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L99",
-      "id": "simulators_basicgbsimulator_drawcanvas",
-      "community": null,
-      "norm_label": "drawcanvas()"
-    },
-    {
-      "label": "MiniChart()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L135",
-      "id": "simulators_basicgbsimulator_minichart",
-      "community": null,
-      "norm_label": "minichart()"
-    },
-    {
-      "label": "ResidualBars()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L173",
-      "id": "simulators_basicgbsimulator_residualbars",
-      "community": null,
-      "norm_label": "residualbars()"
-    },
-    {
-      "label": "BasicGBSimulator()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L216",
-      "id": "simulators_basicgbsimulator_basicgbsimulator",
-      "community": null,
-      "norm_label": "basicgbsimulator()"
     },
     {
       "label": "BiasVarianceSimulator.tsx",
@@ -790,7 +594,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_biasvariancesimulator",
-      "community": null,
+      "community": 14,
       "norm_label": "biasvariancesimulator.tsx"
     },
     {
@@ -799,7 +603,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L5",
       "id": "simulators_biasvariancesimulator_generatedataset",
-      "community": null,
+      "community": 14,
       "norm_label": "generatedataset()"
     },
     {
@@ -808,7 +612,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L22",
       "id": "simulators_biasvariancesimulator_polyfeatures",
-      "community": null,
+      "community": 14,
       "norm_label": "polyfeatures()"
     },
     {
@@ -817,7 +621,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L29",
       "id": "simulators_biasvariancesimulator_fitpolynomial",
-      "community": null,
+      "community": 14,
       "norm_label": "fitpolynomial()"
     },
     {
@@ -826,7 +630,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L73",
       "id": "simulators_biasvariancesimulator_predictpoly",
-      "community": null,
+      "community": 14,
       "norm_label": "predictpoly()"
     },
     {
@@ -835,7 +639,7 @@
       "source_file": "src/components/Simulators/BiasVarianceSimulator.tsx",
       "source_location": "L77",
       "id": "simulators_biasvariancesimulator_biasvariancesimulator",
-      "community": null,
+      "community": 14,
       "norm_label": "biasvariancesimulator()"
     },
     {
@@ -844,7 +648,7 @@
       "source_file": "src/components/Simulators/CNNSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_cnnsimulator",
-      "community": null,
+      "community": 17,
       "norm_label": "cnnsimulator.tsx"
     },
     {
@@ -853,7 +657,7 @@
       "source_file": "src/components/Simulators/CNNSimulator.tsx",
       "source_location": "L5",
       "id": "simulators_cnnsimulator_filters",
-      "community": null,
+      "community": 17,
       "norm_label": "filters"
     },
     {
@@ -862,7 +666,7 @@
       "source_file": "src/components/Simulators/CNNSimulator.tsx",
       "source_location": "L41",
       "id": "simulators_cnnsimulator_defaultimage",
-      "community": null,
+      "community": 17,
       "norm_label": "defaultimage"
     },
     {
@@ -871,7 +675,7 @@
       "source_file": "src/components/Simulators/CNNSimulator.tsx",
       "source_location": "L49",
       "id": "simulators_cnnsimulator_cnnsimulator",
-      "community": null,
+      "community": 17,
       "norm_label": "cnnsimulator()"
     },
     {
@@ -880,7 +684,7 @@
       "source_file": "src/components/Simulators/DecisionTreeSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_decisiontreesimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "decisiontreesimulator.tsx"
     },
     {
@@ -889,7 +693,7 @@
       "source_file": "src/components/Simulators/DecisionTreeSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_decisiontreesimulator_decisiontreesimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "decisiontreesimulator()"
     },
     {
@@ -898,7 +702,7 @@
       "source_file": "src/components/Simulators/EmbeddingSpace.tsx",
       "source_location": "L1",
       "id": "simulators_embeddingspace",
-      "community": null,
+      "community": 25,
       "norm_label": "embeddingspace.tsx"
     },
     {
@@ -907,7 +711,7 @@
       "source_file": "src/components/Simulators/EmbeddingSpace.tsx",
       "source_location": "L5",
       "id": "simulators_embeddingspace_wordvector",
-      "community": null,
+      "community": 25,
       "norm_label": "wordvector"
     },
     {
@@ -916,7 +720,7 @@
       "source_file": "src/components/Simulators/EmbeddingSpace.tsx",
       "source_location": "L12",
       "id": "simulators_embeddingspace_embeddingspace",
-      "community": null,
+      "community": 25,
       "norm_label": "embeddingspace()"
     },
     {
@@ -925,88 +729,61 @@
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_ensemblesimulator",
-      "community": null,
+      "community": 12,
       "norm_label": "ensemblesimulator.tsx"
+    },
+    {
+      "label": "seededRng()",
+      "file_type": "code",
+      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
+      "source_location": "L4",
+      "id": "simulators_ensemblesimulator_seededrng",
+      "community": 12,
+      "norm_label": "seededrng()"
+    },
+    {
+      "label": "ModelType",
+      "file_type": "code",
+      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
+      "source_location": "L14",
+      "id": "simulators_ensemblesimulator_modeltype",
+      "community": 12,
+      "norm_label": "modeltype"
     },
     {
       "label": "DataPoint",
       "file_type": "code",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L5",
+      "source_location": "L16",
       "id": "simulators_ensemblesimulator_datapoint",
-      "community": null,
+      "community": 12,
       "norm_label": "datapoint"
     },
     {
-      "label": "TreeNode",
+      "label": "BoundaryCell",
       "file_type": "code",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L7",
-      "id": "simulators_ensemblesimulator_treenode",
-      "community": null,
-      "norm_label": "treenode"
+      "source_location": "L19",
+      "id": "simulators_ensemblesimulator_boundarycell",
+      "community": 12,
+      "norm_label": "boundarycell"
     },
     {
-      "label": "calculateVariance()",
+      "label": "computeBoundary()",
       "file_type": "code",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L16",
-      "id": "simulators_ensemblesimulator_calculatevariance",
-      "community": null,
-      "norm_label": "calculatevariance()"
-    },
-    {
-      "label": "buildTree()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L23",
-      "id": "simulators_ensemblesimulator_buildtree",
-      "community": null,
-      "norm_label": "buildtree()"
-    },
-    {
-      "label": "predictTree()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L72",
-      "id": "simulators_ensemblesimulator_predicttree",
-      "community": null,
-      "norm_label": "predicttree()"
-    },
-    {
-      "label": "seededRandom()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L80",
-      "id": "simulators_ensemblesimulator_seededrandom",
-      "community": null,
-      "norm_label": "seededrandom()"
-    },
-    {
-      "label": "Mode",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L90",
-      "id": "simulators_ensemblesimulator_mode",
-      "community": null,
-      "norm_label": "mode"
-    },
-    {
-      "label": "ClassType",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L91",
-      "id": "simulators_ensemblesimulator_classtype",
-      "community": null,
-      "norm_label": "classtype"
+      "source_location": "L22",
+      "id": "simulators_ensemblesimulator_computeboundary",
+      "community": 12,
+      "norm_label": "computeboundary()"
     },
     {
       "label": "EnsembleSimulator()",
       "file_type": "code",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L93",
+      "source_location": "L80",
       "id": "simulators_ensemblesimulator_ensemblesimulator",
-      "community": null,
+      "community": 12,
       "norm_label": "ensemblesimulator()"
     },
     {
@@ -1015,7 +792,7 @@
       "source_file": "src/components/Simulators/FeatureScalingSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_featurescalingsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "featurescalingsimulator.tsx"
     },
     {
@@ -1024,7 +801,7 @@
       "source_file": "src/components/Simulators/FeatureScalingSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_featurescalingsimulator_featurescalingsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "featurescalingsimulator()"
     },
     {
@@ -1033,7 +810,7 @@
       "source_file": "src/components/Simulators/GANSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_gansimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "gansimulator.tsx"
     },
     {
@@ -1042,7 +819,7 @@
       "source_file": "src/components/Simulators/GANSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_gansimulator_gansimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "gansimulator()"
     },
     {
@@ -1051,151 +828,115 @@
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_gradientboostingsimulator",
-      "community": null,
+      "community": 10,
       "norm_label": "gradientboostingsimulator.tsx"
     },
     {
       "label": "Point",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L7",
+      "source_location": "L5",
       "id": "simulators_gradientboostingsimulator_point",
-      "community": null,
+      "community": 10,
       "norm_label": "point"
     },
     {
       "label": "TreeNode",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L8",
+      "source_location": "L11",
       "id": "simulators_gradientboostingsimulator_treenode",
-      "community": null,
+      "community": 10,
       "norm_label": "treenode"
-    },
-    {
-      "label": "TrainedModel",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L13",
-      "id": "simulators_gradientboostingsimulator_trainedmodel",
-      "community": null,
-      "norm_label": "trainedmodel"
-    },
-    {
-      "label": "AlgoMode",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L14",
-      "id": "simulators_gradientboostingsimulator_algomode",
-      "community": null,
-      "norm_label": "algomode"
     },
     {
       "label": "defaultPoints",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L19",
+      "source_location": "L22",
       "id": "simulators_gradientboostingsimulator_defaultpoints",
-      "community": null,
+      "community": 10,
       "norm_label": "defaultpoints"
-    },
-    {
-      "label": "ALGO",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L33",
-      "id": "simulators_gradientboostingsimulator_algo",
-      "community": null,
-      "norm_label": "algo"
-    },
-    {
-      "label": "sigmoid()",
-      "file_type": "code",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L42",
-      "id": "simulators_gradientboostingsimulator_sigmoid",
-      "community": null,
-      "norm_label": "sigmoid()"
     },
     {
       "label": "predictTree()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L44",
+      "source_location": "L38",
       "id": "simulators_gradientboostingsimulator_predicttree",
-      "community": null,
+      "community": 10,
       "norm_label": "predicttree()"
     },
     {
-      "label": "buildXGBTree()",
+      "label": "buildLevelWiseTree()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L52",
-      "id": "simulators_gradientboostingsimulator_buildxgbtree",
-      "community": null,
-      "norm_label": "buildxgbtree()"
+      "source_location": "L54",
+      "id": "simulators_gradientboostingsimulator_buildlevelwisetree",
+      "community": 10,
+      "norm_label": "buildlevelwisetree()"
     },
     {
-      "label": "LGBMLeaf",
+      "label": "LightGBMLeaf",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L84",
-      "id": "simulators_gradientboostingsimulator_lgbmleaf",
-      "community": null,
-      "norm_label": "lgbmleaf"
+      "source_location": "L145",
+      "id": "simulators_gradientboostingsimulator_lightgbmleaf",
+      "community": 10,
+      "norm_label": "lightgbmleaf"
     },
     {
-      "label": "buildLGBTree()",
+      "label": "buildLeafWiseTree()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L89",
-      "id": "simulators_gradientboostingsimulator_buildlgbtree",
-      "community": null,
-      "norm_label": "buildlgbtree()"
+      "source_location": "L160",
+      "id": "simulators_gradientboostingsimulator_buildleafwisetree",
+      "community": 10,
+      "norm_label": "buildleafwisetree()"
     },
     {
-      "label": "buildCatTree()",
+      "label": "buildCatBoostSymmetricTree()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L122",
-      "id": "simulators_gradientboostingsimulator_buildcattree",
-      "community": null,
-      "norm_label": "buildcattree()"
+      "source_location": "L294",
+      "id": "simulators_gradientboostingsimulator_buildcatboostsymmetrictree",
+      "community": 10,
+      "norm_label": "buildcatboostsymmetrictree()"
     },
     {
-      "label": "trainModel()",
+      "label": "drawModelToCanvas()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L158",
-      "id": "simulators_gradientboostingsimulator_trainmodel",
-      "community": null,
-      "norm_label": "trainmodel()"
+      "source_location": "L382",
+      "id": "simulators_gradientboostingsimulator_drawmodeltocanvas",
+      "community": 10,
+      "norm_label": "drawmodeltocanvas()"
     },
     {
-      "label": "drawCanvas()",
+      "label": "computeAccuracy()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L188",
-      "id": "simulators_gradientboostingsimulator_drawcanvas",
-      "community": null,
-      "norm_label": "drawcanvas()"
+      "source_location": "L453",
+      "id": "simulators_gradientboostingsimulator_computeaccuracy",
+      "community": 10,
+      "norm_label": "computeaccuracy()"
     },
     {
-      "label": "AccChart()",
+      "label": "TreeVisualizer()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L215",
-      "id": "simulators_gradientboostingsimulator_accchart",
-      "community": null,
-      "norm_label": "accchart()"
+      "source_location": "L478",
+      "id": "simulators_gradientboostingsimulator_treevisualizer",
+      "community": 10,
+      "norm_label": "treevisualizer()"
     },
     {
       "label": "GradientBoostingSimulator()",
       "file_type": "code",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L255",
+      "source_location": "L587",
       "id": "simulators_gradientboostingsimulator_gradientboostingsimulator",
-      "community": null,
+      "community": 10,
       "norm_label": "gradientboostingsimulator()"
     },
     {
@@ -1204,7 +945,7 @@
       "source_file": "src/components/Simulators/GradientDescent.tsx",
       "source_location": "L1",
       "id": "simulators_gradientdescent",
-      "community": null,
+      "community": 18,
       "norm_label": "gradientdescent.tsx"
     },
     {
@@ -1213,7 +954,7 @@
       "source_file": "src/components/Simulators/GradientDescent.tsx",
       "source_location": "L4",
       "id": "simulators_gradientdescent_point",
-      "community": null,
+      "community": 18,
       "norm_label": "point"
     },
     {
@@ -1222,7 +963,7 @@
       "source_file": "src/components/Simulators/GradientDescent.tsx",
       "source_location": "L10",
       "id": "simulators_gradientdescent_optstate",
-      "community": null,
+      "community": 18,
       "norm_label": "optstate"
     },
     {
@@ -1231,7 +972,7 @@
       "source_file": "src/components/Simulators/GradientDescent.tsx",
       "source_location": "L25",
       "id": "simulators_gradientdescent_gradientdescent",
-      "community": null,
+      "community": 18,
       "norm_label": "gradientdescent()"
     },
     {
@@ -1240,7 +981,7 @@
       "source_file": "src/components/Simulators/ImbalancedDataSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_imbalanceddatasimulator",
-      "community": null,
+      "community": 19,
       "norm_label": "imbalanceddatasimulator.tsx"
     },
     {
@@ -1249,7 +990,7 @@
       "source_file": "src/components/Simulators/ImbalancedDataSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_imbalanceddatasimulator_datapoint",
-      "community": null,
+      "community": 19,
       "norm_label": "datapoint"
     },
     {
@@ -1258,7 +999,7 @@
       "source_file": "src/components/Simulators/ImbalancedDataSimulator.tsx",
       "source_location": "L12",
       "id": "simulators_imbalanceddatasimulator_seededrandom",
-      "community": null,
+      "community": 19,
       "norm_label": "seededrandom()"
     },
     {
@@ -1267,7 +1008,7 @@
       "source_file": "src/components/Simulators/ImbalancedDataSimulator.tsx",
       "source_location": "L21",
       "id": "simulators_imbalanceddatasimulator_imbalanceddatasimulator",
-      "community": null,
+      "community": 19,
       "norm_label": "imbalanceddatasimulator()"
     },
     {
@@ -1276,7 +1017,7 @@
       "source_file": "src/components/Simulators/InteractiveRegression.tsx",
       "source_location": "L1",
       "id": "simulators_interactiveregression",
-      "community": null,
+      "community": 3,
       "norm_label": "interactiveregression.tsx"
     },
     {
@@ -1285,7 +1026,7 @@
       "source_file": "src/components/Simulators/InteractiveRegression.tsx",
       "source_location": "L4",
       "id": "simulators_interactiveregression_interactiveregression",
-      "community": null,
+      "community": 3,
       "norm_label": "interactiveregression()"
     },
     {
@@ -1294,7 +1035,7 @@
       "source_file": "src/components/Simulators/KMeansSandbox.tsx",
       "source_location": "L1",
       "id": "simulators_kmeanssandbox",
-      "community": null,
+      "community": 3,
       "norm_label": "kmeanssandbox.tsx"
     },
     {
@@ -1303,7 +1044,7 @@
       "source_file": "src/components/Simulators/KMeansSandbox.tsx",
       "source_location": "L4",
       "id": "simulators_kmeanssandbox_kmeanssandbox",
-      "community": null,
+      "community": 3,
       "norm_label": "kmeanssandbox()"
     },
     {
@@ -1312,7 +1053,7 @@
       "source_file": "src/components/Simulators/KNNClassifierSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_knnclassifiersimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "knnclassifiersimulator.tsx"
     },
     {
@@ -1321,7 +1062,7 @@
       "source_file": "src/components/Simulators/KNNClassifierSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_knnclassifiersimulator_knnclassifiersimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "knnclassifiersimulator()"
     },
     {
@@ -1330,7 +1071,7 @@
       "source_file": "src/components/Simulators/LogisticRegressionSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_logisticregressionsimulator",
-      "community": null,
+      "community": 26,
       "norm_label": "logisticregressionsimulator.tsx"
     },
     {
@@ -1339,7 +1080,7 @@
       "source_file": "src/components/Simulators/LogisticRegressionSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_logisticregressionsimulator_drawlinearboundary",
-      "community": null,
+      "community": 26,
       "norm_label": "drawlinearboundary()"
     },
     {
@@ -1348,7 +1089,7 @@
       "source_file": "src/components/Simulators/LogisticRegressionSimulator.tsx",
       "source_location": "L54",
       "id": "simulators_logisticregressionsimulator_logisticregressionsimulator",
-      "community": null,
+      "community": 26,
       "norm_label": "logisticregressionsimulator()"
     },
     {
@@ -1357,16 +1098,16 @@
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_modulesimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "modulesimulator.tsx"
     },
     {
       "label": "ModuleSimulator()",
       "file_type": "code",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L35",
+      "source_location": "L34",
       "id": "simulators_modulesimulator_modulesimulator",
-      "community": null,
+      "community": 4,
       "norm_label": "modulesimulator()"
     },
     {
@@ -1375,7 +1116,7 @@
       "source_file": "src/components/Simulators/NaiveBayesSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_naivebayessimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "naivebayessimulator.tsx"
     },
     {
@@ -1384,7 +1125,7 @@
       "source_file": "src/components/Simulators/NaiveBayesSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_naivebayessimulator_naivebayessimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "naivebayessimulator()"
     },
     {
@@ -1393,7 +1134,7 @@
       "source_file": "src/components/Simulators/NeuralNetSandbox.tsx",
       "source_location": "L1",
       "id": "simulators_neuralnetsandbox",
-      "community": null,
+      "community": 3,
       "norm_label": "neuralnetsandbox.tsx"
     },
     {
@@ -1402,7 +1143,7 @@
       "source_file": "src/components/Simulators/NeuralNetSandbox.tsx",
       "source_location": "L4",
       "id": "simulators_neuralnetsandbox_neuralnetsandbox",
-      "community": null,
+      "community": 3,
       "norm_label": "neuralnetsandbox()"
     },
     {
@@ -1411,7 +1152,7 @@
       "source_file": "src/components/Simulators/PCASimulator.tsx",
       "source_location": "L1",
       "id": "simulators_pcasimulator",
-      "community": null,
+      "community": 53,
       "norm_label": "pcasimulator.tsx"
     },
     {
@@ -1420,7 +1161,7 @@
       "source_file": "src/components/Simulators/PCASimulator.tsx",
       "source_location": "L4",
       "id": "simulators_pcasimulator_pcasimulator",
-      "community": null,
+      "community": 53,
       "norm_label": "pcasimulator()"
     },
     {
@@ -1429,7 +1170,7 @@
       "source_file": "src/components/Simulators/PerceptronSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_perceptronsimulator",
-      "community": null,
+      "community": 20,
       "norm_label": "perceptronsimulator.tsx"
     },
     {
@@ -1438,7 +1179,7 @@
       "source_file": "src/components/Simulators/PerceptronSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_perceptronsimulator_datasettype",
-      "community": null,
+      "community": 20,
       "norm_label": "datasettype"
     },
     {
@@ -1447,7 +1188,7 @@
       "source_file": "src/components/Simulators/PerceptronSimulator.tsx",
       "source_location": "L6",
       "id": "simulators_perceptronsimulator_datasets",
-      "community": null,
+      "community": 20,
       "norm_label": "datasets"
     },
     {
@@ -1456,7 +1197,7 @@
       "source_file": "src/components/Simulators/PerceptronSimulator.tsx",
       "source_location": "L27",
       "id": "simulators_perceptronsimulator_perceptronsimulator",
-      "community": null,
+      "community": 20,
       "norm_label": "perceptronsimulator()"
     },
     {
@@ -1465,7 +1206,7 @@
       "source_file": "src/components/Simulators/QLearningSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_qlearningsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "qlearningsimulator.tsx"
     },
     {
@@ -1474,7 +1215,7 @@
       "source_file": "src/components/Simulators/QLearningSimulator.tsx",
       "source_location": "L5",
       "id": "simulators_qlearningsimulator_actions",
-      "community": null,
+      "community": 3,
       "norm_label": "actions"
     },
     {
@@ -1483,7 +1224,7 @@
       "source_file": "src/components/Simulators/QLearningSimulator.tsx",
       "source_location": "L12",
       "id": "simulators_qlearningsimulator_qlearningsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "qlearningsimulator()"
     },
     {
@@ -1492,7 +1233,7 @@
       "source_file": "src/components/Simulators/RNNSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_rnnsimulator",
-      "community": null,
+      "community": 22,
       "norm_label": "rnnsimulator.tsx"
     },
     {
@@ -1501,7 +1242,7 @@
       "source_file": "src/components/Simulators/RNNSimulator.tsx",
       "source_location": "L5",
       "id": "simulators_rnnsimulator_sequence",
-      "community": null,
+      "community": 22,
       "norm_label": "sequence"
     },
     {
@@ -1510,7 +1251,7 @@
       "source_file": "src/components/Simulators/RNNSimulator.tsx",
       "source_location": "L7",
       "id": "simulators_rnnsimulator_embeddings",
-      "community": null,
+      "community": 22,
       "norm_label": "embeddings"
     },
     {
@@ -1519,7 +1260,7 @@
       "source_file": "src/components/Simulators/RNNSimulator.tsx",
       "source_location": "L9",
       "id": "simulators_rnnsimulator_rnnsimulator",
-      "community": null,
+      "community": 22,
       "norm_label": "rnnsimulator()"
     },
     {
@@ -1528,7 +1269,7 @@
       "source_file": "src/components/Simulators/RandomForestSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_randomforestsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "randomforestsimulator.tsx"
     },
     {
@@ -1537,7 +1278,7 @@
       "source_file": "src/components/Simulators/RandomForestSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_randomforestsimulator_randomforestsimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "randomforestsimulator()"
     },
     {
@@ -1546,7 +1287,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_regularizationsimulator",
-      "community": null,
+      "community": 13,
       "norm_label": "regularizationsimulator.tsx"
     },
     {
@@ -1555,7 +1296,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_regularizationsimulator_regtype",
-      "community": null,
+      "community": 13,
       "norm_label": "regtype"
     },
     {
@@ -1564,7 +1305,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L7",
       "id": "simulators_regularizationsimulator_true_coefficients",
-      "community": null,
+      "community": 13,
       "norm_label": "true_coefficients"
     },
     {
@@ -1573,7 +1314,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L8",
       "id": "simulators_regularizationsimulator_feature_names",
-      "community": null,
+      "community": 13,
       "norm_label": "feature_names"
     },
     {
@@ -1582,7 +1323,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L10",
       "id": "simulators_regularizationsimulator_computecoefficients",
-      "community": null,
+      "community": 13,
       "norm_label": "computecoefficients()"
     },
     {
@@ -1591,7 +1332,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L30",
       "id": "simulators_regularizationsimulator_computeloss",
-      "community": null,
+      "community": 13,
       "norm_label": "computeloss()"
     },
     {
@@ -1600,7 +1341,7 @@
       "source_file": "src/components/Simulators/RegularizationSimulator.tsx",
       "source_location": "L43",
       "id": "simulators_regularizationsimulator_regularizationsimulator",
-      "community": null,
+      "community": 13,
       "norm_label": "regularizationsimulator()"
     },
     {
@@ -1609,7 +1350,7 @@
       "source_file": "src/components/Simulators/SVMSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_svmsimulator",
-      "community": null,
+      "community": 54,
       "norm_label": "svmsimulator.tsx"
     },
     {
@@ -1618,7 +1359,7 @@
       "source_file": "src/components/Simulators/SVMSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_svmsimulator_svmsimulator",
-      "community": null,
+      "community": 54,
       "norm_label": "svmsimulator()"
     },
     {
@@ -1627,7 +1368,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L1",
       "id": "simulators_tsnesimulator",
-      "community": null,
+      "community": 11,
       "norm_label": "tsnesimulator.tsx"
     },
     {
@@ -1636,7 +1377,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L4",
       "id": "simulators_tsnesimulator_point2d",
-      "community": null,
+      "community": 11,
       "norm_label": "point2d"
     },
     {
@@ -1645,7 +1386,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L11",
       "id": "simulators_tsnesimulator_generatehdclusters",
-      "community": null,
+      "community": 11,
       "norm_label": "generatehdclusters()"
     },
     {
@@ -1654,7 +1395,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L36",
       "id": "simulators_tsnesimulator_projectpca",
-      "community": null,
+      "community": 11,
       "norm_label": "projectpca()"
     },
     {
@@ -1663,7 +1404,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L45",
       "id": "simulators_tsnesimulator_tsnestep",
-      "community": null,
+      "community": 11,
       "norm_label": "tsnestep()"
     },
     {
@@ -1672,7 +1413,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L82",
       "id": "simulators_tsnesimulator_cluster_colors",
-      "community": null,
+      "community": 11,
       "norm_label": "cluster_colors"
     },
     {
@@ -1681,7 +1422,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L83",
       "id": "simulators_tsnesimulator_cluster_labels",
-      "community": null,
+      "community": 11,
       "norm_label": "cluster_labels"
     },
     {
@@ -1690,7 +1431,7 @@
       "source_file": "src/components/Simulators/TSNESimulator.tsx",
       "source_location": "L85",
       "id": "simulators_tsnesimulator_tsnesimulator",
-      "community": null,
+      "community": 11,
       "norm_label": "tsnesimulator()"
     },
     {
@@ -1699,7 +1440,7 @@
       "source_file": "src/components/Simulators/TimeSeriesSimulator.tsx",
       "source_location": "L1",
       "id": "simulators_timeseriessimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "timeseriessimulator.tsx"
     },
     {
@@ -1708,7 +1449,7 @@
       "source_file": "src/components/Simulators/TimeSeriesSimulator.tsx",
       "source_location": "L4",
       "id": "simulators_timeseriessimulator_timeseriessimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "timeseriessimulator()"
     },
     {
@@ -1717,7 +1458,7 @@
       "source_file": "src/components/Simulators/VAESimulator.tsx",
       "source_location": "L1",
       "id": "simulators_vaesimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "vaesimulator.tsx"
     },
     {
@@ -1726,7 +1467,7 @@
       "source_file": "src/components/Simulators/VAESimulator.tsx",
       "source_location": "L4",
       "id": "simulators_vaesimulator_vaesimulator",
-      "community": null,
+      "community": 3,
       "norm_label": "vaesimulator()"
     },
     {
@@ -1735,7 +1476,7 @@
       "source_file": "src/context/AppContext.tsx",
       "source_location": "L1",
       "id": "context_appcontext",
-      "community": null,
+      "community": 4,
       "norm_label": "appcontext.tsx"
     },
     {
@@ -1744,7 +1485,7 @@
       "source_file": "src/context/AppContext.tsx",
       "source_location": "L5",
       "id": "context_appcontext_appcontexttype",
-      "community": null,
+      "community": 4,
       "norm_label": "appcontexttype"
     },
     {
@@ -1753,7 +1494,7 @@
       "source_file": "src/context/AppContext.tsx",
       "source_location": "L22",
       "id": "context_appcontext_appcontext",
-      "community": null,
+      "community": 4,
       "norm_label": "appcontext"
     },
     {
@@ -1762,7 +1503,7 @@
       "source_file": "src/context/AppContext.tsx",
       "source_location": "L24",
       "id": "context_appcontext_appprovider",
-      "community": null,
+      "community": 4,
       "norm_label": "appprovider()"
     },
     {
@@ -1771,7 +1512,7 @@
       "source_file": "src/context/AppContext.tsx",
       "source_location": "L177",
       "id": "context_appcontext_useapp",
-      "community": null,
+      "community": 4,
       "norm_label": "useapp()"
     },
     {
@@ -1780,7 +1521,7 @@
       "source_file": "src/data/modules/anomalyDetection.ts",
       "source_location": "L1",
       "id": "modules_anomalydetection",
-      "community": null,
+      "community": 5,
       "norm_label": "anomalydetection.ts"
     },
     {
@@ -1789,7 +1530,7 @@
       "source_file": "src/data/modules/anomalyDetection.ts",
       "source_location": "L3",
       "id": "modules_anomalydetection_anomalydetection",
-      "community": null,
+      "community": 5,
       "norm_label": "anomalydetection"
     },
     {
@@ -1798,7 +1539,7 @@
       "source_file": "src/data/modules/biasVarianceTradeoff.ts",
       "source_location": "L1",
       "id": "modules_biasvariancetradeoff",
-      "community": null,
+      "community": 30,
       "norm_label": "biasvariancetradeoff.ts"
     },
     {
@@ -1807,7 +1548,7 @@
       "source_file": "src/data/modules/biasVarianceTradeoff.ts",
       "source_location": "L4",
       "id": "modules_biasvariancetradeoff_biasvariancetradeoff",
-      "community": null,
+      "community": 30,
       "norm_label": "biasvariancetradeoff"
     },
     {
@@ -1816,7 +1557,7 @@
       "source_file": "src/data/modules/convolutionalNetworks.ts",
       "source_location": "L1",
       "id": "modules_convolutionalnetworks",
-      "community": null,
+      "community": 31,
       "norm_label": "convolutionalnetworks.ts"
     },
     {
@@ -1825,7 +1566,7 @@
       "source_file": "src/data/modules/convolutionalNetworks.ts",
       "source_location": "L3",
       "id": "modules_convolutionalnetworks_convolutionalnetworks",
-      "community": null,
+      "community": 31,
       "norm_label": "convolutionalnetworks"
     },
     {
@@ -1834,7 +1575,7 @@
       "source_file": "src/data/modules/dbscanClustering.ts",
       "source_location": "L1",
       "id": "modules_dbscanclustering",
-      "community": null,
+      "community": 32,
       "norm_label": "dbscanclustering.ts"
     },
     {
@@ -1843,7 +1584,7 @@
       "source_file": "src/data/modules/dbscanClustering.ts",
       "source_location": "L4",
       "id": "modules_dbscanclustering_dbscanclustering",
-      "community": null,
+      "community": 32,
       "norm_label": "dbscanclustering"
     },
     {
@@ -1852,7 +1593,7 @@
       "source_file": "src/data/modules/decisionTreeAlgorithm.ts",
       "source_location": "L1",
       "id": "modules_decisiontreealgorithm",
-      "community": null,
+      "community": 9,
       "norm_label": "decisiontreealgorithm.ts"
     },
     {
@@ -1861,7 +1602,7 @@
       "source_file": "src/data/modules/decisionTreeAlgorithm.ts",
       "source_location": "L3",
       "id": "modules_decisiontreealgorithm_decisiontreealgorithm",
-      "community": null,
+      "community": 9,
       "norm_label": "decisiontreealgorithm"
     },
     {
@@ -1870,7 +1611,7 @@
       "source_file": "src/data/modules/decisionTrees.ts",
       "source_location": "L1",
       "id": "modules_decisiontrees",
-      "community": null,
+      "community": 9,
       "norm_label": "decisiontrees.ts"
     },
     {
@@ -1879,7 +1620,7 @@
       "source_file": "src/data/modules/decisionTrees.ts",
       "source_location": "L3",
       "id": "modules_decisiontrees_decisiontrees",
-      "community": null,
+      "community": 9,
       "norm_label": "decisiontrees"
     },
     {
@@ -1888,7 +1629,7 @@
       "source_file": "src/data/modules/ensembleTechniquesBaggingBoosting.ts",
       "source_location": "L1",
       "id": "modules_ensembletechniquesbaggingboosting",
-      "community": null,
+      "community": 33,
       "norm_label": "ensembletechniquesbaggingboosting.ts"
     },
     {
@@ -1897,7 +1638,7 @@
       "source_file": "src/data/modules/ensembleTechniquesBaggingBoosting.ts",
       "source_location": "L3",
       "id": "modules_ensembletechniquesbaggingboosting_ensembletechniquesbaggingboosting",
-      "community": null,
+      "community": 33,
       "norm_label": "ensembletechniquesbaggingboosting"
     },
     {
@@ -1906,7 +1647,7 @@
       "source_file": "src/data/modules/featureEngineering.ts",
       "source_location": "L1",
       "id": "modules_featureengineering",
-      "community": null,
+      "community": 34,
       "norm_label": "featureengineering.ts"
     },
     {
@@ -1915,7 +1656,7 @@
       "source_file": "src/data/modules/featureEngineering.ts",
       "source_location": "L3",
       "id": "modules_featureengineering_featureengineering",
-      "community": null,
+      "community": 34,
       "norm_label": "featureengineering"
     },
     {
@@ -1924,7 +1665,7 @@
       "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/generate_neural_activations.py",
       "source_location": "L1",
       "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_generate_neural_activations_py",
-      "community": null,
+      "community": 70,
       "norm_label": "generate_neural_activations.py"
     },
     {
@@ -1933,7 +1674,7 @@
       "source_file": "/home/legion/fastapi/machine_learning_tutorial/src/data/modules/generate_optimization.py",
       "source_location": "L1",
       "id": "home_legion_fastapi_machine_learning_tutorial_src_data_modules_generate_optimization_py",
-      "community": null,
+      "community": 71,
       "norm_label": "generate_optimization.py"
     },
     {
@@ -1942,7 +1683,7 @@
       "source_file": "src/data/modules/generativeAdversarialNetworks.ts",
       "source_location": "L1",
       "id": "modules_generativeadversarialnetworks",
-      "community": null,
+      "community": 35,
       "norm_label": "generativeadversarialnetworks.ts"
     },
     {
@@ -1951,7 +1692,7 @@
       "source_file": "src/data/modules/generativeAdversarialNetworks.ts",
       "source_location": "L3",
       "id": "modules_generativeadversarialnetworks_generativeadversarialnetworks",
-      "community": null,
+      "community": 35,
       "norm_label": "generativeadversarialnetworks"
     },
     {
@@ -1960,7 +1701,7 @@
       "source_file": "src/data/modules/gradientBoosting.ts",
       "source_location": "L1",
       "id": "modules_gradientboosting",
-      "community": null,
+      "community": 5,
       "norm_label": "gradientboosting.ts"
     },
     {
@@ -1969,7 +1710,7 @@
       "source_file": "src/data/modules/gradientBoosting.ts",
       "source_location": "L3",
       "id": "modules_gradientboosting_gradientboosting",
-      "community": null,
+      "community": 5,
       "norm_label": "gradientboosting"
     },
     {
@@ -1978,7 +1719,7 @@
       "source_file": "src/data/modules/gradientBoostingAdvanced.ts",
       "source_location": "L1",
       "id": "modules_gradientboostingadvanced",
-      "community": null,
+      "community": 36,
       "norm_label": "gradientboostingadvanced.ts"
     },
     {
@@ -1987,7 +1728,7 @@
       "source_file": "src/data/modules/gradientBoostingAdvanced.ts",
       "source_location": "L3",
       "id": "modules_gradientboostingadvanced_gradientboostingadvanced",
-      "community": null,
+      "community": 36,
       "norm_label": "gradientboostingadvanced"
     },
     {
@@ -1996,7 +1737,7 @@
       "source_file": "src/data/modules/gradientDescent.ts",
       "source_location": "L1",
       "id": "modules_gradientdescent",
-      "community": null,
+      "community": 9,
       "norm_label": "gradientdescent.ts"
     },
     {
@@ -2005,7 +1746,7 @@
       "source_file": "src/data/modules/gradientDescent.ts",
       "source_location": "L3",
       "id": "modules_gradientdescent_gradientdescent",
-      "community": null,
+      "community": 9,
       "norm_label": "gradientdescent"
     },
     {
@@ -2014,7 +1755,7 @@
       "source_file": "src/data/modules/imbalancedDatasets.ts",
       "source_location": "L1",
       "id": "modules_imbalanceddatasets",
-      "community": null,
+      "community": 37,
       "norm_label": "imbalanceddatasets.ts"
     },
     {
@@ -2023,7 +1764,7 @@
       "source_file": "src/data/modules/imbalancedDatasets.ts",
       "source_location": "L3",
       "id": "modules_imbalanceddatasets_imbalanceddatasets",
-      "community": null,
+      "community": 37,
       "norm_label": "imbalanceddatasets"
     },
     {
@@ -2032,7 +1773,7 @@
       "source_file": "src/data/modules/index.ts",
       "source_location": "L1",
       "id": "modules_index",
-      "community": null,
+      "community": 5,
       "norm_label": "index.ts"
     },
     {
@@ -2041,7 +1782,7 @@
       "source_file": "src/data/modules/index.ts",
       "source_location": "L51",
       "id": "modules_index_modulesdata",
-      "community": null,
+      "community": 4,
       "norm_label": "modulesdata"
     },
     {
@@ -2050,7 +1791,7 @@
       "source_file": "src/data/modules/introductionToMl.ts",
       "source_location": "L1",
       "id": "modules_introductiontoml",
-      "community": null,
+      "community": 5,
       "norm_label": "introductiontoml.ts"
     },
     {
@@ -2059,7 +1800,7 @@
       "source_file": "src/data/modules/introductionToMl.ts",
       "source_location": "L3",
       "id": "modules_introductiontoml_introductiontoml",
-      "community": null,
+      "community": 5,
       "norm_label": "introductiontoml"
     },
     {
@@ -2068,7 +1809,7 @@
       "source_file": "src/data/modules/kaggleCreditCardFraudProject.ts",
       "source_location": "L1",
       "id": "modules_kagglecreditcardfraudproject",
-      "community": null,
+      "community": 38,
       "norm_label": "kagglecreditcardfraudproject.ts"
     },
     {
@@ -2077,7 +1818,7 @@
       "source_file": "src/data/modules/kaggleCreditCardFraudProject.ts",
       "source_location": "L3",
       "id": "modules_kagglecreditcardfraudproject_kagglecreditcardfraudproject",
-      "community": null,
+      "community": 38,
       "norm_label": "kagglecreditcardfraudproject"
     },
     {
@@ -2086,7 +1827,7 @@
       "source_file": "src/data/modules/kaggleCustomerChurnProject.ts",
       "source_location": "L1",
       "id": "modules_kagglecustomerchurnproject",
-      "community": null,
+      "community": 39,
       "norm_label": "kagglecustomerchurnproject.ts"
     },
     {
@@ -2095,7 +1836,7 @@
       "source_file": "src/data/modules/kaggleCustomerChurnProject.ts",
       "source_location": "L3",
       "id": "modules_kagglecustomerchurnproject_kagglecustomerchurnproject",
-      "community": null,
+      "community": 39,
       "norm_label": "kagglecustomerchurnproject"
     },
     {
@@ -2104,7 +1845,7 @@
       "source_file": "src/data/modules/kaggleDigitRecognizerProject.ts",
       "source_location": "L1",
       "id": "modules_kaggledigitrecognizerproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggledigitrecognizerproject.ts"
     },
     {
@@ -2113,7 +1854,7 @@
       "source_file": "src/data/modules/kaggleDigitRecognizerProject.ts",
       "source_location": "L3",
       "id": "modules_kaggledigitrecognizerproject_kaggledigitrecognizerproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggledigitrecognizerproject"
     },
     {
@@ -2122,7 +1863,7 @@
       "source_file": "src/data/modules/kaggleDisasterTweetsProject.ts",
       "source_location": "L1",
       "id": "modules_kaggledisastertweetsproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggledisastertweetsproject.ts"
     },
     {
@@ -2131,7 +1872,7 @@
       "source_file": "src/data/modules/kaggleDisasterTweetsProject.ts",
       "source_location": "L3",
       "id": "modules_kaggledisastertweetsproject_kaggledisastertweetsproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggledisastertweetsproject"
     },
     {
@@ -2140,7 +1881,7 @@
       "source_file": "src/data/modules/kaggleEdaProject.ts",
       "source_location": "L1",
       "id": "modules_kaggleedaproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggleedaproject.ts"
     },
     {
@@ -2149,7 +1890,7 @@
       "source_file": "src/data/modules/kaggleEdaProject.ts",
       "source_location": "L3",
       "id": "modules_kaggleedaproject_kaggleedaproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggleedaproject"
     },
     {
@@ -2158,7 +1899,7 @@
       "source_file": "src/data/modules/kaggleHousePricesProject.ts",
       "source_location": "L1",
       "id": "modules_kagglehousepricesproject",
-      "community": null,
+      "community": 40,
       "norm_label": "kagglehousepricesproject.ts"
     },
     {
@@ -2167,7 +1908,7 @@
       "source_file": "src/data/modules/kaggleHousePricesProject.ts",
       "source_location": "L3",
       "id": "modules_kagglehousepricesproject_kagglehousepricesproject",
-      "community": null,
+      "community": 40,
       "norm_label": "kagglehousepricesproject"
     },
     {
@@ -2176,7 +1917,7 @@
       "source_file": "src/data/modules/kaggleLoanDefaultRiskProject.ts",
       "source_location": "L1",
       "id": "modules_kaggleloandefaultriskproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggleloandefaultriskproject.ts"
     },
     {
@@ -2185,7 +1926,7 @@
       "source_file": "src/data/modules/kaggleLoanDefaultRiskProject.ts",
       "source_location": "L3",
       "id": "modules_kaggleloandefaultriskproject_kaggleloandefaultriskproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kaggleloandefaultriskproject"
     },
     {
@@ -2194,7 +1935,7 @@
       "source_file": "src/data/modules/kaggleStoreSalesForecastingProject.ts",
       "source_location": "L1",
       "id": "modules_kagglestoresalesforecastingproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kagglestoresalesforecastingproject.ts"
     },
     {
@@ -2203,7 +1944,7 @@
       "source_file": "src/data/modules/kaggleStoreSalesForecastingProject.ts",
       "source_location": "L3",
       "id": "modules_kagglestoresalesforecastingproject_kagglestoresalesforecastingproject",
-      "community": null,
+      "community": 5,
       "norm_label": "kagglestoresalesforecastingproject"
     },
     {
@@ -2212,7 +1953,7 @@
       "source_file": "src/data/modules/kaggleTitanicProject.ts",
       "source_location": "L1",
       "id": "modules_kaggletitanicproject",
-      "community": null,
+      "community": 9,
       "norm_label": "kaggletitanicproject.ts"
     },
     {
@@ -2221,7 +1962,7 @@
       "source_file": "src/data/modules/kaggleTitanicProject.ts",
       "source_location": "L3",
       "id": "modules_kaggletitanicproject_kaggletitanicproject",
-      "community": null,
+      "community": 9,
       "norm_label": "kaggletitanicproject"
     },
     {
@@ -2230,7 +1971,7 @@
       "source_file": "src/data/modules/kmeansClustering.ts",
       "source_location": "L1",
       "id": "modules_kmeansclustering",
-      "community": null,
+      "community": 41,
       "norm_label": "kmeansclustering.ts"
     },
     {
@@ -2239,7 +1980,7 @@
       "source_file": "src/data/modules/kmeansClustering.ts",
       "source_location": "L3",
       "id": "modules_kmeansclustering_kmeansclustering",
-      "community": null,
+      "community": 41,
       "norm_label": "kmeansclustering"
     },
     {
@@ -2248,7 +1989,7 @@
       "source_file": "src/data/modules/knnClassification.ts",
       "source_location": "L1",
       "id": "modules_knnclassification",
-      "community": null,
+      "community": 42,
       "norm_label": "knnclassification.ts"
     },
     {
@@ -2257,7 +1998,7 @@
       "source_file": "src/data/modules/knnClassification.ts",
       "source_location": "L3",
       "id": "modules_knnclassification_knnclassification",
-      "community": null,
+      "community": 42,
       "norm_label": "knnclassification"
     },
     {
@@ -2266,7 +2007,7 @@
       "source_file": "src/data/modules/linearRegression.ts",
       "source_location": "L1",
       "id": "modules_linearregression",
-      "community": null,
+      "community": 8,
       "norm_label": "linearregression.ts"
     },
     {
@@ -2275,7 +2016,7 @@
       "source_file": "src/data/modules/linearRegression.ts",
       "source_location": "L3",
       "id": "modules_linearregression_linearregression",
-      "community": null,
+      "community": 8,
       "norm_label": "linearregression"
     },
     {
@@ -2284,7 +2025,7 @@
       "source_file": "src/data/modules/logisticRegression.ts",
       "source_location": "L1",
       "id": "modules_logisticregression",
-      "community": null,
+      "community": 43,
       "norm_label": "logisticregression.ts"
     },
     {
@@ -2293,7 +2034,7 @@
       "source_file": "src/data/modules/logisticRegression.ts",
       "source_location": "L3",
       "id": "modules_logisticregression_logisticregression",
-      "community": null,
+      "community": 43,
       "norm_label": "logisticregression"
     },
     {
@@ -2302,7 +2043,7 @@
       "source_file": "src/data/modules/multiLayerPerceptron.ts",
       "source_location": "L1",
       "id": "modules_multilayerperceptron",
-      "community": null,
+      "community": 44,
       "norm_label": "multilayerperceptron.ts"
     },
     {
@@ -2311,7 +2052,7 @@
       "source_file": "src/data/modules/multiLayerPerceptron.ts",
       "source_location": "L3",
       "id": "modules_multilayerperceptron_multilayerperceptron",
-      "community": null,
+      "community": 44,
       "norm_label": "multilayerperceptron"
     },
     {
@@ -2320,7 +2061,7 @@
       "source_file": "src/data/modules/naiveBayes.ts",
       "source_location": "L1",
       "id": "modules_naivebayes",
-      "community": null,
+      "community": 45,
       "norm_label": "naivebayes.ts"
     },
     {
@@ -2329,7 +2070,7 @@
       "source_file": "src/data/modules/naiveBayes.ts",
       "source_location": "L3",
       "id": "modules_naivebayes_naivebayes",
-      "community": null,
+      "community": 45,
       "norm_label": "naivebayes"
     },
     {
@@ -2338,7 +2079,7 @@
       "source_file": "src/data/modules/neuralActivations.ts",
       "source_location": "L1",
       "id": "modules_neuralactivations",
-      "community": null,
+      "community": 5,
       "norm_label": "neuralactivations.ts"
     },
     {
@@ -2347,7 +2088,7 @@
       "source_file": "src/data/modules/neuralActivations.ts",
       "source_location": "L3",
       "id": "modules_neuralactivations_neuralactivations",
-      "community": null,
+      "community": 5,
       "norm_label": "neuralactivations"
     },
     {
@@ -2356,7 +2097,7 @@
       "source_file": "src/data/modules/optimizationAlgorithms.ts",
       "source_location": "L1",
       "id": "modules_optimizationalgorithms",
-      "community": null,
+      "community": 46,
       "norm_label": "optimizationalgorithms.ts"
     },
     {
@@ -2365,7 +2106,7 @@
       "source_file": "src/data/modules/optimizationAlgorithms.ts",
       "source_location": "L3",
       "id": "modules_optimizationalgorithms_optimizationalgorithms",
-      "community": null,
+      "community": 46,
       "norm_label": "optimizationalgorithms"
     },
     {
@@ -2374,7 +2115,7 @@
       "source_file": "src/data/modules/pcaReduction.ts",
       "source_location": "L1",
       "id": "modules_pcareduction",
-      "community": null,
+      "community": 8,
       "norm_label": "pcareduction.ts"
     },
     {
@@ -2383,7 +2124,7 @@
       "source_file": "src/data/modules/pcaReduction.ts",
       "source_location": "L3",
       "id": "modules_pcareduction_pcareduction",
-      "community": null,
+      "community": 8,
       "norm_label": "pcareduction"
     },
     {
@@ -2392,7 +2133,7 @@
       "source_file": "src/data/modules/qLearningRl.ts",
       "source_location": "L1",
       "id": "modules_qlearningrl",
-      "community": null,
+      "community": 47,
       "norm_label": "qlearningrl.ts"
     },
     {
@@ -2401,7 +2142,7 @@
       "source_file": "src/data/modules/qLearningRl.ts",
       "source_location": "L3",
       "id": "modules_qlearningrl_qlearningrl",
-      "community": null,
+      "community": 47,
       "norm_label": "qlearningrl"
     },
     {
@@ -2410,7 +2151,7 @@
       "source_file": "src/data/modules/randomForests.ts",
       "source_location": "L1",
       "id": "modules_randomforests",
-      "community": null,
+      "community": 48,
       "norm_label": "randomforests.ts"
     },
     {
@@ -2419,7 +2160,7 @@
       "source_file": "src/data/modules/randomForests.ts",
       "source_location": "L3",
       "id": "modules_randomforests_randomforests",
-      "community": null,
+      "community": 48,
       "norm_label": "randomforests"
     },
     {
@@ -2428,7 +2169,7 @@
       "source_file": "src/data/modules/recurrentNetworks.ts",
       "source_location": "L1",
       "id": "modules_recurrentnetworks",
-      "community": null,
+      "community": 9,
       "norm_label": "recurrentnetworks.ts"
     },
     {
@@ -2437,7 +2178,7 @@
       "source_file": "src/data/modules/recurrentNetworks.ts",
       "source_location": "L3",
       "id": "modules_recurrentnetworks_recurrentnetworks",
-      "community": null,
+      "community": 9,
       "norm_label": "recurrentnetworks"
     },
     {
@@ -2446,7 +2187,7 @@
       "source_file": "src/data/modules/ridgeLassoRegularization.ts",
       "source_location": "L1",
       "id": "modules_ridgelassoregularization",
-      "community": null,
+      "community": 49,
       "norm_label": "ridgelassoregularization.ts"
     },
     {
@@ -2455,7 +2196,7 @@
       "source_file": "src/data/modules/ridgeLassoRegularization.ts",
       "source_location": "L4",
       "id": "modules_ridgelassoregularization_ridgelassoregularization",
-      "community": null,
+      "community": 49,
       "norm_label": "ridgelassoregularization"
     },
     {
@@ -2464,7 +2205,7 @@
       "source_file": "src/data/modules/singlePerceptron.ts",
       "source_location": "L1",
       "id": "modules_singleperceptron",
-      "community": null,
+      "community": 5,
       "norm_label": "singleperceptron.ts"
     },
     {
@@ -2473,7 +2214,7 @@
       "source_file": "src/data/modules/singlePerceptron.ts",
       "source_location": "L3",
       "id": "modules_singleperceptron_singleperceptron",
-      "community": null,
+      "community": 5,
       "norm_label": "singleperceptron"
     },
     {
@@ -2482,7 +2223,7 @@
       "source_file": "src/data/modules/supportVectorMachines.ts",
       "source_location": "L1",
       "id": "modules_supportvectormachines",
-      "community": null,
+      "community": 8,
       "norm_label": "supportvectormachines.ts"
     },
     {
@@ -2491,7 +2232,7 @@
       "source_file": "src/data/modules/supportVectorMachines.ts",
       "source_location": "L3",
       "id": "modules_supportvectormachines_supportvectormachines",
-      "community": null,
+      "community": 8,
       "norm_label": "supportvectormachines"
     },
     {
@@ -2500,7 +2241,7 @@
       "source_file": "src/data/modules/timeSeriesAnalysis.ts",
       "source_location": "L1",
       "id": "modules_timeseriesanalysis",
-      "community": null,
+      "community": 50,
       "norm_label": "timeseriesanalysis.ts"
     },
     {
@@ -2509,7 +2250,7 @@
       "source_file": "src/data/modules/timeSeriesAnalysis.ts",
       "source_location": "L3",
       "id": "modules_timeseriesanalysis_timeseriesanalysis",
-      "community": null,
+      "community": 50,
       "norm_label": "timeseriesanalysis"
     },
     {
@@ -2518,7 +2259,7 @@
       "source_file": "src/data/modules/transformerAttention.ts",
       "source_location": "L1",
       "id": "modules_transformerattention",
-      "community": null,
+      "community": 5,
       "norm_label": "transformerattention.ts"
     },
     {
@@ -2527,7 +2268,7 @@
       "source_file": "src/data/modules/transformerAttention.ts",
       "source_location": "L3",
       "id": "modules_transformerattention_transformerattention",
-      "community": null,
+      "community": 5,
       "norm_label": "transformerattention"
     },
     {
@@ -2536,7 +2277,7 @@
       "source_file": "src/data/modules/tsneVisualization.ts",
       "source_location": "L1",
       "id": "modules_tsnevisualization",
-      "community": null,
+      "community": 8,
       "norm_label": "tsnevisualization.ts"
     },
     {
@@ -2545,7 +2286,7 @@
       "source_file": "src/data/modules/tsneVisualization.ts",
       "source_location": "L3",
       "id": "modules_tsnevisualization_tsnevisualization",
-      "community": null,
+      "community": 8,
       "norm_label": "tsnevisualization"
     },
     {
@@ -2554,7 +2295,7 @@
       "source_file": "src/data/modules/variationalAutoencoders.ts",
       "source_location": "L1",
       "id": "modules_variationalautoencoders",
-      "community": null,
+      "community": 51,
       "norm_label": "variationalautoencoders.ts"
     },
     {
@@ -2563,7 +2304,7 @@
       "source_file": "src/data/modules/variationalAutoencoders.ts",
       "source_location": "L3",
       "id": "modules_variationalautoencoders_variationalautoencoders",
-      "community": null,
+      "community": 51,
       "norm_label": "variationalautoencoders"
     },
     {
@@ -2572,7 +2313,7 @@
       "source_file": "src/data/modules/wordEmbeddings.ts",
       "source_location": "L1",
       "id": "modules_wordembeddings",
-      "community": null,
+      "community": 52,
       "norm_label": "wordembeddings.ts"
     },
     {
@@ -2581,7 +2322,7 @@
       "source_file": "src/data/modules/wordEmbeddings.ts",
       "source_location": "L3",
       "id": "modules_wordembeddings_wordembeddings",
-      "community": null,
+      "community": 52,
       "norm_label": "wordembeddings"
     },
     {
@@ -2590,7 +2331,7 @@
       "source_file": "src/data/modulesData.ts",
       "source_location": "L1",
       "id": "data_modulesdata",
-      "community": null,
+      "community": 9,
       "norm_label": "modulesdata.ts"
     },
     {
@@ -2599,7 +2340,7 @@
       "source_file": "src/data/modulesData.ts",
       "source_location": "L3",
       "id": "data_modulesdata_modulesdata",
-      "community": null,
+      "community": 9,
       "norm_label": "modulesdata"
     },
     {
@@ -2608,7 +2349,7 @@
       "source_file": "src/main.tsx",
       "source_location": "L1",
       "id": "src_main",
-      "community": null,
+      "community": 4,
       "norm_label": "main.tsx"
     },
     {
@@ -2617,7 +2358,7 @@
       "source_file": "src/types.ts",
       "source_location": "L1",
       "id": "src_types",
-      "community": null,
+      "community": 8,
       "norm_label": "types.ts"
     },
     {
@@ -2626,7 +2367,7 @@
       "source_file": "src/types.ts",
       "source_location": "L1",
       "id": "src_types_userstats",
-      "community": null,
+      "community": 4,
       "norm_label": "userstats"
     },
     {
@@ -2635,7 +2376,7 @@
       "source_file": "src/types.ts",
       "source_location": "L8",
       "id": "src_types_quizquestion",
-      "community": null,
+      "community": 8,
       "norm_label": "quizquestion"
     },
     {
@@ -2644,7 +2385,7 @@
       "source_file": "src/types.ts",
       "source_location": "L16",
       "id": "src_types_codingstage",
-      "community": null,
+      "community": 8,
       "norm_label": "codingstage"
     },
     {
@@ -2653,7 +2394,7 @@
       "source_file": "src/types.ts",
       "source_location": "L27",
       "id": "src_types_notebookcell",
-      "community": null,
+      "community": 8,
       "norm_label": "notebookcell"
     },
     {
@@ -2662,7 +2403,7 @@
       "source_file": "src/types.ts",
       "source_location": "L37",
       "id": "src_types_modulecoding",
-      "community": null,
+      "community": 8,
       "norm_label": "modulecoding"
     },
     {
@@ -2671,7 +2412,7 @@
       "source_file": "src/types.ts",
       "source_location": "L43",
       "id": "src_types_interviewqa",
-      "community": null,
+      "community": 8,
       "norm_label": "interviewqa"
     },
     {
@@ -2680,7 +2421,7 @@
       "source_file": "src/types.ts",
       "source_location": "L50",
       "id": "src_types_mlmodule",
-      "community": null,
+      "community": 9,
       "norm_label": "mlmodule"
     },
     {
@@ -2689,7 +2430,7 @@
       "source_file": "test.js",
       "source_location": "L1",
       "id": "test",
-      "community": null,
+      "community": 27,
       "norm_label": "test.js"
     },
     {
@@ -2698,7 +2439,7 @@
       "source_file": "test.js",
       "source_location": "L1",
       "id": "test_fs",
-      "community": null,
+      "community": 27,
       "norm_label": "fs"
     },
     {
@@ -2707,7 +2448,7 @@
       "source_file": "test.js",
       "source_location": "L2",
       "id": "test_content",
-      "community": null,
+      "community": 27,
       "norm_label": "content"
     },
     {
@@ -2716,7 +2457,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L1",
       "id": "tsconfig_app",
-      "community": null,
+      "community": 6,
       "norm_label": "tsconfig.app.json"
     },
     {
@@ -2725,7 +2466,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L2",
       "id": "tsconfig_app_compileroptions",
-      "community": null,
+      "community": 6,
       "norm_label": "compileroptions"
     },
     {
@@ -2734,7 +2475,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L3",
       "id": "tsconfig_app_compileroptions_tsbuildinfofile",
-      "community": null,
+      "community": 6,
       "norm_label": "tsbuildinfofile"
     },
     {
@@ -2743,7 +2484,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L4",
       "id": "tsconfig_app_compileroptions_target",
-      "community": null,
+      "community": 6,
       "norm_label": "target"
     },
     {
@@ -2752,7 +2493,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L5",
       "id": "tsconfig_app_compileroptions_lib",
-      "community": null,
+      "community": 6,
       "norm_label": "lib"
     },
     {
@@ -2761,7 +2502,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L6",
       "id": "tsconfig_app_compileroptions_module",
-      "community": null,
+      "community": 6,
       "norm_label": "module"
     },
     {
@@ -2770,7 +2511,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L7",
       "id": "tsconfig_app_compileroptions_types",
-      "community": null,
+      "community": 6,
       "norm_label": "types"
     },
     {
@@ -2779,7 +2520,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L8",
       "id": "tsconfig_app_compileroptions_skiplibcheck",
-      "community": null,
+      "community": 6,
       "norm_label": "skiplibcheck"
     },
     {
@@ -2788,7 +2529,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L11",
       "id": "tsconfig_app_compileroptions_moduleresolution",
-      "community": null,
+      "community": 6,
       "norm_label": "moduleresolution"
     },
     {
@@ -2797,7 +2538,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L12",
       "id": "tsconfig_app_compileroptions_allowimportingtsextensions",
-      "community": null,
+      "community": 6,
       "norm_label": "allowimportingtsextensions"
     },
     {
@@ -2806,7 +2547,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L13",
       "id": "tsconfig_app_compileroptions_verbatimmodulesyntax",
-      "community": null,
+      "community": 6,
       "norm_label": "verbatimmodulesyntax"
     },
     {
@@ -2815,7 +2556,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L14",
       "id": "tsconfig_app_compileroptions_moduledetection",
-      "community": null,
+      "community": 6,
       "norm_label": "moduledetection"
     },
     {
@@ -2824,7 +2565,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L15",
       "id": "tsconfig_app_compileroptions_noemit",
-      "community": null,
+      "community": 6,
       "norm_label": "noemit"
     },
     {
@@ -2833,7 +2574,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L16",
       "id": "tsconfig_app_compileroptions_jsx",
-      "community": null,
+      "community": 6,
       "norm_label": "jsx"
     },
     {
@@ -2842,7 +2583,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L19",
       "id": "tsconfig_app_compileroptions_nounusedlocals",
-      "community": null,
+      "community": 6,
       "norm_label": "nounusedlocals"
     },
     {
@@ -2851,7 +2592,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L20",
       "id": "tsconfig_app_compileroptions_nounusedparameters",
-      "community": null,
+      "community": 6,
       "norm_label": "nounusedparameters"
     },
     {
@@ -2860,7 +2601,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L21",
       "id": "tsconfig_app_compileroptions_erasablesyntaxonly",
-      "community": null,
+      "community": 6,
       "norm_label": "erasablesyntaxonly"
     },
     {
@@ -2869,7 +2610,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L22",
       "id": "tsconfig_app_compileroptions_nofallthroughcasesinswitch",
-      "community": null,
+      "community": 6,
       "norm_label": "nofallthroughcasesinswitch"
     },
     {
@@ -2878,7 +2619,7 @@
       "source_file": "tsconfig.app.json",
       "source_location": "L24",
       "id": "tsconfig_app_include",
-      "community": null,
+      "community": 6,
       "norm_label": "include"
     },
     {
@@ -2887,7 +2628,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L1",
       "id": "tsconfig",
-      "community": null,
+      "community": 28,
       "norm_label": "tsconfig.json"
     },
     {
@@ -2896,7 +2637,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "id": "tsconfig_files",
-      "community": null,
+      "community": 28,
       "norm_label": "files"
     },
     {
@@ -2905,7 +2646,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L3",
       "id": "tsconfig_references",
-      "community": null,
+      "community": 28,
       "norm_label": "references"
     },
     {
@@ -2914,7 +2655,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L1",
       "id": "tsconfig_node",
-      "community": null,
+      "community": 7,
       "norm_label": "tsconfig.node.json"
     },
     {
@@ -2923,7 +2664,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L2",
       "id": "tsconfig_node_compileroptions",
-      "community": null,
+      "community": 7,
       "norm_label": "compileroptions"
     },
     {
@@ -2932,7 +2673,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L3",
       "id": "tsconfig_node_compileroptions_tsbuildinfofile",
-      "community": null,
+      "community": 7,
       "norm_label": "tsbuildinfofile"
     },
     {
@@ -2941,7 +2682,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L4",
       "id": "tsconfig_node_compileroptions_target",
-      "community": null,
+      "community": 7,
       "norm_label": "target"
     },
     {
@@ -2950,7 +2691,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L5",
       "id": "tsconfig_node_compileroptions_lib",
-      "community": null,
+      "community": 7,
       "norm_label": "lib"
     },
     {
@@ -2959,7 +2700,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L6",
       "id": "tsconfig_node_compileroptions_module",
-      "community": null,
+      "community": 7,
       "norm_label": "module"
     },
     {
@@ -2968,7 +2709,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L7",
       "id": "tsconfig_node_compileroptions_types",
-      "community": null,
+      "community": 7,
       "norm_label": "types"
     },
     {
@@ -2977,7 +2718,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L8",
       "id": "tsconfig_node_compileroptions_skiplibcheck",
-      "community": null,
+      "community": 7,
       "norm_label": "skiplibcheck"
     },
     {
@@ -2986,7 +2727,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L11",
       "id": "tsconfig_node_compileroptions_moduleresolution",
-      "community": null,
+      "community": 7,
       "norm_label": "moduleresolution"
     },
     {
@@ -2995,7 +2736,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L12",
       "id": "tsconfig_node_compileroptions_allowimportingtsextensions",
-      "community": null,
+      "community": 7,
       "norm_label": "allowimportingtsextensions"
     },
     {
@@ -3004,7 +2745,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L13",
       "id": "tsconfig_node_compileroptions_verbatimmodulesyntax",
-      "community": null,
+      "community": 7,
       "norm_label": "verbatimmodulesyntax"
     },
     {
@@ -3013,7 +2754,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L14",
       "id": "tsconfig_node_compileroptions_moduledetection",
-      "community": null,
+      "community": 7,
       "norm_label": "moduledetection"
     },
     {
@@ -3022,7 +2763,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L15",
       "id": "tsconfig_node_compileroptions_noemit",
-      "community": null,
+      "community": 7,
       "norm_label": "noemit"
     },
     {
@@ -3031,7 +2772,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L18",
       "id": "tsconfig_node_compileroptions_nounusedlocals",
-      "community": null,
+      "community": 7,
       "norm_label": "nounusedlocals"
     },
     {
@@ -3040,7 +2781,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L19",
       "id": "tsconfig_node_compileroptions_nounusedparameters",
-      "community": null,
+      "community": 7,
       "norm_label": "nounusedparameters"
     },
     {
@@ -3049,7 +2790,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L20",
       "id": "tsconfig_node_compileroptions_erasablesyntaxonly",
-      "community": null,
+      "community": 7,
       "norm_label": "erasablesyntaxonly"
     },
     {
@@ -3058,7 +2799,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L21",
       "id": "tsconfig_node_compileroptions_nofallthroughcasesinswitch",
-      "community": null,
+      "community": 7,
       "norm_label": "nofallthroughcasesinswitch"
     },
     {
@@ -3067,7 +2808,7 @@
       "source_file": "tsconfig.node.json",
       "source_location": "L23",
       "id": "tsconfig_node_include",
-      "community": null,
+      "community": 7,
       "norm_label": "include"
     },
     {
@@ -3076,7 +2817,7 @@
       "source_file": "update_theory.js",
       "source_location": "L1",
       "id": "update_theory",
-      "community": null,
+      "community": 21,
       "norm_label": "update_theory.js"
     },
     {
@@ -3085,7 +2826,7 @@
       "source_file": "update_theory.js",
       "source_location": "L1",
       "id": "update_theory_fs",
-      "community": null,
+      "community": 21,
       "norm_label": "fs"
     },
     {
@@ -3094,7 +2835,7 @@
       "source_file": "update_theory.js",
       "source_location": "L89",
       "id": "update_theory_replacetheory",
-      "community": null,
+      "community": 21,
       "norm_label": "replacetheory()"
     },
     {
@@ -3103,424 +2844,575 @@
       "source_file": "vite.config.ts",
       "source_location": "L1",
       "id": "vite_config",
-      "community": null,
+      "community": 57,
       "norm_label": "vite.config.ts"
-    },
-    {
-      "label": "Latent Academy Fix Report",
-      "file_type": "document",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes",
-      "community": null,
-      "norm_label": "latent academy fix report"
-    },
-    {
-      "label": "Latent Academy Project",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_latent_academy",
-      "community": null,
-      "norm_label": "latent academy project"
-    },
-    {
-      "label": "Sklearn For Project PyTorch For Assignment Convention",
-      "file_type": "rationale",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_sklearn_pytorch_convention",
-      "community": null,
-      "norm_label": "sklearn for project pytorch for assignment convention"
-    },
-    {
-      "label": "27 Curriculum Modules",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_27_modules",
-      "community": null,
-      "norm_label": "27 curriculum modules"
-    },
-    {
-      "label": "Interactive Simulator System",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_interactive_simulator_system",
-      "community": null,
-      "norm_label": "interactive simulator system"
-    },
-    {
-      "label": "Simulator ID Bugs",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_simulator_id_bugs",
-      "community": null,
-      "norm_label": "simulator id bugs"
-    },
-    {
-      "label": "Lucide React Version Bug",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_lucide_version_bug",
-      "community": null,
-      "norm_label": "lucide react version bug"
-    },
-    {
-      "label": "Invalid Tailwind Class Bug",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_tailwind_class_bug",
-      "community": null,
-      "norm_label": "invalid tailwind class bug"
-    },
-    {
-      "label": "CNN Sklearn Alternative Gap",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_cnn_sklearn_gap",
-      "community": null,
-      "norm_label": "cnn sklearn alternative gap"
-    },
-    {
-      "label": "Orphan And Scratch Files",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_orphan_files",
-      "community": null,
-      "norm_label": "orphan and scratch files"
-    },
-    {
-      "label": "Severity Rating System",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_severity_system",
-      "community": null,
-      "norm_label": "severity rating system"
-    },
-    {
-      "label": "Group A Pure Sklearn Modules",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_sklearn_group_a",
-      "community": null,
-      "norm_label": "group a pure sklearn modules"
-    },
-    {
-      "label": "Group B Mixed Sklearn Pytorch Modules",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_sklearn_pytorch_group_b",
-      "community": null,
-      "norm_label": "group b mixed sklearn pytorch modules"
-    },
-    {
-      "label": "Group C CNN Only Pytorch",
-      "file_type": "concept",
-      "source_file": "fixes.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "fixes_pytorch_only_group_c",
-      "community": null,
-      "norm_label": "group c cnn only pytorch"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme",
-      "community": null,
-      "norm_label": "readme.md"
-    },
-    {
-      "label": "React TypeScript Vite Template",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_vite_template",
-      "community": null,
-      "norm_label": "react typescript vite template"
-    },
-    {
-      "label": "index.html",
-      "file_type": "document",
-      "source_file": "index.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "index",
-      "community": null,
-      "norm_label": "index.html"
     },
     {
       "label": "GEMINI.md",
       "file_type": "document",
       "source_file": "GEMINI.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
+      "source_location": "L1",
       "id": "gemini",
-      "community": null,
+      "community": 29,
       "norm_label": "gemini.md"
     },
     {
-      "label": "Graphify Knowledge Graph System",
-      "file_type": "concept",
+      "label": "graphify",
+      "file_type": "document",
       "source_file": "GEMINI.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
+      "source_location": "L1",
       "id": "gemini_graphify",
-      "community": null,
-      "norm_label": "graphify knowledge graph system"
+      "community": 29,
+      "norm_label": "graphify"
     },
     {
-      "label": "Favicon SVG Logo",
-      "file_type": "image",
-      "source_file": "public/favicon.svg",
-      "source_location": 1,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_favicon",
-      "community": null,
-      "norm_label": "favicon svg logo"
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 15,
+      "norm_label": "readme.md"
     },
     {
-      "label": "Icons SVG Sprite Sheet",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_svg",
-      "community": null,
-      "norm_label": "icons svg sprite sheet"
+      "label": "React + TypeScript + Vite",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_react_typescript_vite",
+      "community": 15,
+      "norm_label": "react + typescript + vite"
     },
     {
-      "label": "Bluesky Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 2",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_bluesky_icon",
-      "community": null,
-      "norm_label": "bluesky icon"
+      "label": "React Compiler",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "id": "readme_react_compiler",
+      "community": 15,
+      "norm_label": "react compiler"
     },
     {
-      "label": "Discord Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 6",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_discord_icon",
-      "community": null,
-      "norm_label": "discord icon"
+      "label": "Expanding the ESLint configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "id": "readme_expanding_the_eslint_configuration",
+      "community": 15,
+      "norm_label": "expanding the eslint configuration"
     },
     {
-      "label": "Documentation Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 9",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_documentation_icon",
-      "community": null,
-      "norm_label": "documentation icon"
+      "label": "fixes.md",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L1",
+      "id": "fixes",
+      "community": 1,
+      "norm_label": "fixes.md"
     },
     {
-      "label": "GitHub Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 14",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_github_icon",
-      "community": null,
-      "norm_label": "github icon"
+      "label": "Latent Academy \u2014 Comprehensive Fix & Enhancement Report",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L1",
+      "id": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "community": 1,
+      "norm_label": "latent academy \u2014 comprehensive fix & enhancement report"
     },
     {
-      "label": "Social Sharing Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 17",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_social_icon",
-      "community": null,
-      "norm_label": "social sharing icon"
+      "label": "SEVERITY LEGEND",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L8",
+      "id": "fixes_severity_legend",
+      "community": 1,
+      "norm_label": "severity legend"
     },
     {
-      "label": "X/Twitter Icon",
-      "file_type": "image",
-      "source_file": "public/icons.svg",
-      "source_location": "line 21",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "public_icons_x_icon",
-      "community": null,
-      "norm_label": "x/twitter icon"
+      "label": "PART 1 \u2014 SIMULATOR BUGS (Interactive Simulator tab broken for 3 modules)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L18",
+      "id": "fixes_part_1_simulator_bugs_interactive_simulator_tab_broken_for_3_modules",
+      "community": 1,
+      "norm_label": "part 1 \u2014 simulator bugs (interactive simulator tab broken for 3 modules)"
     },
     {
-      "label": "Latent Academy Hero Image",
-      "file_type": "image",
-      "source_file": "src/assets/hero.png",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "assets_hero",
-      "community": null,
-      "norm_label": "latent academy hero image"
+      "label": "\ud83d\udd34 BUG-1 \u2014 `multiLayerPerceptron.ts` simulatorId mismatch",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L20",
+      "id": "fixes_bug_1_multilayerperceptron_ts_simulatorid_mismatch",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 bug-1 \u2014 `multilayerperceptron.ts` simulatorid mismatch"
     },
     {
-      "label": "React Logo SVG",
-      "file_type": "image",
-      "source_file": "src/assets/react.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "assets_react_react_logo",
-      "community": null,
-      "norm_label": "react logo svg"
+      "label": "\ud83d\udd34 BUG-2 \u2014 `generativeAdversarialNetworks.ts` missing `simulatorId`",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L41",
+      "id": "fixes_bug_2_generativeadversarialnetworks_ts_missing_simulatorid",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 bug-2 \u2014 `generativeadversarialnetworks.ts` missing `simulatorid`"
     },
     {
-      "label": "React Framework",
-      "file_type": "concept",
-      "source_file": "src/assets/react.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "assets_react_react_framework",
-      "community": null,
-      "norm_label": "react framework"
+      "label": "\ud83d\udd34 BUG-3 \u2014 `variationalAutoencoders.ts` missing `simulatorId`",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L54",
+      "id": "fixes_bug_3_variationalautoencoders_ts_missing_simulatorid",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 bug-3 \u2014 `variationalautoencoders.ts` missing `simulatorid`"
     },
     {
-      "label": "Vite Logo",
-      "file_type": "image",
-      "source_file": "src/assets/vite.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "assets_vite_vite_logo",
-      "community": null,
-      "norm_label": "vite logo"
+      "label": "PART 2 \u2014 DEPENDENCY ISSUES",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L67",
+      "id": "fixes_part_2_dependency_issues",
+      "community": 1,
+      "norm_label": "part 2 \u2014 dependency issues"
     },
     {
-      "label": "Vite Build Tool",
-      "file_type": "concept",
-      "source_file": "src/assets/vite.svg",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "assets_vite_vite",
-      "community": null,
-      "norm_label": "vite build tool"
+      "label": "\ud83d\udd34 BUG-4 \u2014 `lucide-react` version `^1.16.0` does not exist",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L69",
+      "id": "fixes_bug_4_lucide_react_version_1_16_0_does_not_exist",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 bug-4 \u2014 `lucide-react` version `^1.16.0` does not exist"
+    },
+    {
+      "label": "\ud83d\udfe1 WARN-1 \u2014 `framer-motion` installed but never imported",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L86",
+      "id": "fixes_warn_1_framer_motion_installed_but_never_imported",
+      "community": 1,
+      "norm_label": "\ud83d\udfe1 warn-1 \u2014 `framer-motion` installed but never imported"
+    },
+    {
+      "label": "PART 3 \u2014 TAILWIND / CSS BUGS",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L99",
+      "id": "fixes_part_3_tailwind_css_bugs",
+      "community": 1,
+      "norm_label": "part 3 \u2014 tailwind / css bugs"
+    },
+    {
+      "label": "\ud83d\udfe1 BUG-5 \u2014 `w-4.5 h-4.5` are not valid Tailwind classes",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L101",
+      "id": "fixes_bug_5_w_4_5_h_4_5_are_not_valid_tailwind_classes",
+      "community": 1,
+      "norm_label": "\ud83d\udfe1 bug-5 \u2014 `w-4.5 h-4.5` are not valid tailwind classes"
+    },
+    {
+      "label": "PART 4 \u2014 ORPHAN / JUNK FILES",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L117",
+      "id": "fixes_part_4_orphan_junk_files",
+      "community": 1,
+      "norm_label": "part 4 \u2014 orphan / junk files"
+    },
+    {
+      "label": "\ud83d\udfe2 CLEAN-1 \u2014 `biasVarianceTradeoff.ts.draft` orphan file",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L119",
+      "id": "fixes_clean_1_biasvariancetradeoff_ts_draft_orphan_file",
+      "community": 1,
+      "norm_label": "\ud83d\udfe2 clean-1 \u2014 `biasvariancetradeoff.ts.draft` orphan file"
+    },
+    {
+      "label": "\ud83d\udfe2 CLEAN-2 \u2014 Scratch/generator scripts in project root",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L137",
+      "id": "fixes_clean_2_scratch_generator_scripts_in_project_root",
+      "community": 1,
+      "norm_label": "\ud83d\udfe2 clean-2 \u2014 scratch/generator scripts in project root"
+    },
+    {
+      "label": "PART 5 \u2014 CODING SANDBOX \u2014 SKLEARN PROJECT & ASSIGNMENT AUDIT",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L156",
+      "id": "fixes_part_5_coding_sandbox_sklearn_project_assignment_audit",
+      "community": 1,
+      "norm_label": "part 5 \u2014 coding sandbox \u2014 sklearn project & assignment audit"
+    },
+    {
+      "label": "GROUP A \u2014 Pure sklearn modules (project + assignment use sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L164",
+      "id": "fixes_group_a_pure_sklearn_modules_project_assignment_use_sklearn",
+      "community": 1,
+      "norm_label": "group a \u2014 pure sklearn modules (project + assignment use sklearn)"
+    },
+    {
+      "label": "GROUP B \u2014 Mixed sklearn + PyTorch modules",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L190",
+      "id": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "community": 1,
+      "norm_label": "group b \u2014 mixed sklearn + pytorch modules"
+    },
+    {
+      "label": "`multiLayerPerceptron.ts` \u2014 Project uses `sklearn.neural_network.MLPClassifier` \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L194",
+      "id": "fixes_multilayerperceptron_ts_project_uses_sklearn_neural_network_mlpclassifier",
+      "community": 1,
+      "norm_label": "`multilayerperceptron.ts` \u2014 project uses `sklearn.neural_network.mlpclassifier` \u2705"
+    },
+    {
+      "label": "`singlePerceptron.ts` \u2014 Project uses `sklearn.linear_model.Perceptron` \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L208",
+      "id": "fixes_singleperceptron_ts_project_uses_sklearn_linear_model_perceptron",
+      "community": 1,
+      "norm_label": "`singleperceptron.ts` \u2014 project uses `sklearn.linear_model.perceptron` \u2705"
+    },
+    {
+      "label": "`recurrentNetworks.ts` \u2014 Project uses `sklearn` sequence classification proxy \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L214",
+      "id": "fixes_recurrentnetworks_ts_project_uses_sklearn_sequence_classification_proxy",
+      "community": 1,
+      "norm_label": "`recurrentnetworks.ts` \u2014 project uses `sklearn` sequence classification proxy \u2705"
+    },
+    {
+      "label": "`wordEmbeddings.ts` \u2014 Project uses `sklearn` cosine similarity \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L221",
+      "id": "fixes_wordembeddings_ts_project_uses_sklearn_cosine_similarity",
+      "community": 1,
+      "norm_label": "`wordembeddings.ts` \u2014 project uses `sklearn` cosine similarity \u2705"
+    },
+    {
+      "label": "`transformerAttention.ts` \u2014 Project uses `sklearn` attention approximation \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L227",
+      "id": "fixes_transformerattention_ts_project_uses_sklearn_attention_approximation",
+      "community": 1,
+      "norm_label": "`transformerattention.ts` \u2014 project uses `sklearn` attention approximation \u2705"
+    },
+    {
+      "label": "`qLearningRl.ts` \u2014 Project uses numpy-only Q-table \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L234",
+      "id": "fixes_qlearningrl_ts_project_uses_numpy_only_q_table",
+      "community": 1,
+      "norm_label": "`qlearningrl.ts` \u2014 project uses numpy-only q-table \u2705"
+    },
+    {
+      "label": "`generativeAdversarialNetworks.ts` \u2014 Project uses `sklearn.neural_network.MLPClassifier` as discriminator proxy \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L237",
+      "id": "fixes_generativeadversarialnetworks_ts_project_uses_sklearn_neural_network_mlpclassifier_as_discriminator_proxy",
+      "community": 1,
+      "norm_label": "`generativeadversarialnetworks.ts` \u2014 project uses `sklearn.neural_network.mlpclassifier` as discriminator proxy \u2705"
+    },
+    {
+      "label": "`variationalAutoencoders.ts` \u2014 Project uses `sklearn.decomposition.PCA` as linear analog \u2705",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L243",
+      "id": "fixes_variationalautoencoders_ts_project_uses_sklearn_decomposition_pca_as_linear_analog",
+      "community": 1,
+      "norm_label": "`variationalautoencoders.ts` \u2014 project uses `sklearn.decomposition.pca` as linear analog \u2705"
+    },
+    {
+      "label": "GROUP C \u2014 CNN module needs sklearn alternative added to project stage \ud83d\udfe1",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L252",
+      "id": "fixes_group_c_cnn_module_needs_sklearn_alternative_added_to_project_stage",
+      "community": 1,
+      "norm_label": "group c \u2014 cnn module needs sklearn alternative added to project stage \ud83d\udfe1"
+    },
+    {
+      "label": "PART 6 \u2014 COMPLETE SKLEARN SOLUTIONS FOR ALL 27 MODULES",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L318",
+      "id": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "community": 2,
+      "norm_label": "part 6 \u2014 complete sklearn solutions for all 27 modules"
+    },
+    {
+      "label": "1. Linear Regression \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L324",
+      "id": "fixes_1_linear_regression_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "1. linear regression \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "2. Logistic Regression \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L353",
+      "id": "fixes_2_logistic_regression_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "2. logistic regression \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "3. Decision Trees \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L377",
+      "id": "fixes_3_decision_trees_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "3. decision trees \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "4. Random Forests \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L400",
+      "id": "fixes_4_random_forests_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "4. random forests \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "5. K-Means Clustering \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L432",
+      "id": "fixes_5_k_means_clustering_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "5. k-means clustering \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "6. SVM \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L458",
+      "id": "fixes_6_svm_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "6. svm \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "7. Naive Bayes \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L484",
+      "id": "fixes_7_naive_bayes_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "7. naive bayes \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "8. KNN Classification \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L508",
+      "id": "fixes_8_knn_classification_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "8. knn classification \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "9. PCA \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L534",
+      "id": "fixes_9_pca_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "9. pca \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "10. Gradient Descent \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L557",
+      "id": "fixes_10_gradient_descent_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "10. gradient descent \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "11. Decision Tree Algorithm (Tree Splits) \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L579",
+      "id": "fixes_11_decision_tree_algorithm_tree_splits_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "11. decision tree algorithm (tree splits) \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "12. Gradient Boosting \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L601",
+      "id": "fixes_12_gradient_boosting_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "12. gradient boosting \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "13. Single Perceptron \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L624",
+      "id": "fixes_13_single_perceptron_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "13. single perceptron \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "14. Multi-Layer Perceptron \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L649",
+      "id": "fixes_14_multi_layer_perceptron_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "14. multi-layer perceptron \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "15. CNN \u2014 project solution (sklearn \u2014 new, see Part 5 above)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L676",
+      "id": "fixes_15_cnn_project_solution_sklearn_new_see_part_5_above",
+      "community": 2,
+      "norm_label": "15. cnn \u2014 project solution (sklearn \u2014 new, see part 5 above)"
+    },
+    {
+      "label": "16. RNN \u2014 project solution (sklearn \u2014 text classification proxy)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L699",
+      "id": "fixes_16_rnn_project_solution_sklearn_text_classification_proxy",
+      "community": 2,
+      "norm_label": "16. rnn \u2014 project solution (sklearn \u2014 text classification proxy)"
+    },
+    {
+      "label": "17. Transformer Attention \u2014 project solution (sklearn + numpy)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L726",
+      "id": "fixes_17_transformer_attention_project_solution_sklearn_numpy",
+      "community": 2,
+      "norm_label": "17. transformer attention \u2014 project solution (sklearn + numpy)"
+    },
+    {
+      "label": "18. Word Embeddings \u2014 project solution (sklearn cosine similarity)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L754",
+      "id": "fixes_18_word_embeddings_project_solution_sklearn_cosine_similarity",
+      "community": 2,
+      "norm_label": "18. word embeddings \u2014 project solution (sklearn cosine similarity)"
+    },
+    {
+      "label": "19. Q-Learning RL \u2014 project solution (numpy Q-table)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L780",
+      "id": "fixes_19_q_learning_rl_project_solution_numpy_q_table",
+      "community": 2,
+      "norm_label": "19. q-learning rl \u2014 project solution (numpy q-table)"
+    },
+    {
+      "label": "20. GAN \u2014 project solution (sklearn MLP discriminator proxy)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L824",
+      "id": "fixes_20_gan_project_solution_sklearn_mlp_discriminator_proxy",
+      "community": 2,
+      "norm_label": "20. gan \u2014 project solution (sklearn mlp discriminator proxy)"
+    },
+    {
+      "label": "21. VAE \u2014 project solution (sklearn PCA as linear analog)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L861",
+      "id": "fixes_21_vae_project_solution_sklearn_pca_as_linear_analog",
+      "community": 2,
+      "norm_label": "21. vae \u2014 project solution (sklearn pca as linear analog)"
+    },
+    {
+      "label": "22. t-SNE \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L890",
+      "id": "fixes_22_t_sne_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "22. t-sne \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "23. DBSCAN \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L915",
+      "id": "fixes_23_dbscan_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "23. dbscan \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "24. Ridge/Lasso Regularization \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L941",
+      "id": "fixes_24_ridge_lasso_regularization_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "24. ridge/lasso regularization \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "25. Bias-Variance Tradeoff \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L970",
+      "id": "fixes_25_bias_variance_tradeoff_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "25. bias-variance tradeoff \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "26. Neural Activations \u2014 project solution (sklearn)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L998",
+      "id": "fixes_26_neural_activations_project_solution_sklearn",
+      "community": 2,
+      "norm_label": "26. neural activations \u2014 project solution (sklearn)"
+    },
+    {
+      "label": "27. Optimization Algorithms \u2014 project solution (sklearn SGD variants)",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L1028",
+      "id": "fixes_27_optimization_algorithms_project_solution_sklearn_sgd_variants",
+      "community": 2,
+      "norm_label": "27. optimization algorithms \u2014 project solution (sklearn sgd variants)"
+    },
+    {
+      "label": "PART 7 \u2014 SUMMARY CHECKLIST",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L1066",
+      "id": "fixes_part_7_summary_checklist",
+      "community": 1,
+      "norm_label": "part 7 \u2014 summary checklist"
+    },
+    {
+      "label": "QUICK-START PATCH COMMANDS",
+      "file_type": "document",
+      "source_file": "fixes.md",
+      "source_location": "L1082",
+      "id": "fixes_quick_start_patch_commands",
+      "community": 1,
+      "norm_label": "quick-start patch commands"
     }
   ],
   "links": [
@@ -3542,56 +3434,6 @@
       "weight": 1.0,
       "source": "gemini_settings_hooks",
       "target": "gemini_settings_hooks_beforetool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "opencode_opencode",
-      "target": "opencode_opencode_plugin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "opencode_opencode",
-      "target": "opencode_opencode_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "opencode_package",
-      "target": "opencode_package_dependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "opencode_package_dependencies",
-      "target": "opencode_package_dependencies_opencode_ai_plugin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "plugins_graphify",
-      "target": "plugins_graphify_graphifyplugin",
       "confidence_score": 1.0
     },
     {
@@ -4433,7 +4275,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_activationssimulator",
@@ -4444,7 +4286,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_activationssimulator_activationssimulator",
@@ -4485,7 +4327,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L21",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_anomalydetectionsimulator",
@@ -4496,7 +4338,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L21",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_anomalydetectionsimulator_anomalydetectionsimulator",
@@ -4517,7 +4359,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_attentionmap",
@@ -4528,175 +4370,10 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_attentionmap_attentionmap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L216",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_basicgbsimulator",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_buildstump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_defaultpoints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L99",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_drawcanvas",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L135",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_minichart",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_point",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L64",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_predictstump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L173",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_residualbars",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_sigmoid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_stump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L67",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator",
-      "target": "simulators_basicgbsimulator_traingb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "simulators_modulesimulator",
-      "target": "simulators_basicgbsimulator",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L113",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator_drawcanvas",
-      "target": "simulators_basicgbsimulator_sigmoid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L79",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator_traingb",
-      "target": "simulators_basicgbsimulator_buildstump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/BasicGBSimulator.tsx",
-      "source_location": "L81",
-      "weight": 1.0,
-      "source": "simulators_basicgbsimulator_traingb",
-      "target": "simulators_basicgbsimulator_predictstump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "simulators_modulesimulator",
-      "target": "simulators_basicgbsimulator_basicgbsimulator",
       "confidence_score": 1.0
     },
     {
@@ -4754,7 +4431,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_biasvariancesimulator",
@@ -4787,7 +4464,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_biasvariancesimulator_biasvariancesimulator",
@@ -4828,7 +4505,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_cnnsimulator",
@@ -4839,7 +4516,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_cnnsimulator_cnnsimulator",
@@ -4865,17 +4542,6 @@
       "source": "simulators_modulesimulator",
       "target": "simulators_decisiontreesimulator",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/components/Simulators/DecisionTreeSimulator.tsx",
-      "source_location": "L134",
-      "weight": 1.0,
-      "source": "simulators_decisiontreesimulator_decisiontreesimulator",
-      "target": "simulators_ensemblesimulator_buildtree"
     },
     {
       "relation": "imports",
@@ -4913,7 +4579,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_embeddingspace",
@@ -4924,7 +4590,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_embeddingspace_embeddingspace",
@@ -4934,10 +4600,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L23",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_buildtree",
+      "target": "simulators_ensemblesimulator_boundarycell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "simulators_ensemblesimulator",
+      "target": "simulators_ensemblesimulator_computeboundary",
       "confidence_score": 1.0
     },
     {
@@ -4947,57 +4623,7 @@
       "source_location": "L16",
       "weight": 1.0,
       "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_calculatevariance",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L91",
-      "weight": 1.0,
-      "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_classtype",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "simulators_ensemblesimulator",
       "target": "simulators_ensemblesimulator_datapoint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L93",
-      "weight": 1.0,
-      "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_ensemblesimulator",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L90",
-      "weight": 1.0,
-      "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_mode",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L72",
-      "weight": 1.0,
-      "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_predicttree",
       "confidence_score": 1.0
     },
     {
@@ -5007,17 +4633,27 @@
       "source_location": "L80",
       "weight": 1.0,
       "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_seededrandom",
+      "target": "simulators_ensemblesimulator_ensemblesimulator",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
-      "source_location": "L7",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "simulators_ensemblesimulator",
-      "target": "simulators_ensemblesimulator_treenode",
+      "target": "simulators_ensemblesimulator_modeltype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Simulators/EnsembleSimulator.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "simulators_ensemblesimulator",
+      "target": "simulators_ensemblesimulator_seededrng",
       "confidence_score": 1.0
     },
     {
@@ -5025,7 +4661,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_ensemblesimulator",
@@ -5036,7 +4672,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_ensemblesimulator_ensemblesimulator",
@@ -5057,7 +4693,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_featurescalingsimulator",
@@ -5068,7 +4704,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_featurescalingsimulator_featurescalingsimulator",
@@ -5089,7 +4725,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_gansimulator",
@@ -5100,77 +4736,79 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_gansimulator_gansimulator",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L215",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_accchart",
+      "target": "context_appcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "simulators_gradientboostingsimulator",
+      "target": "context_appcontext_useapp",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L33",
+      "source_location": "L294",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_algo",
+      "target": "simulators_gradientboostingsimulator_buildcatboostsymmetrictree",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L14",
+      "source_location": "L160",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_algomode",
+      "target": "simulators_gradientboostingsimulator_buildleafwisetree",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L122",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_buildcattree",
+      "target": "simulators_gradientboostingsimulator_buildlevelwisetree",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L89",
+      "source_location": "L453",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_buildlgbtree",
+      "target": "simulators_gradientboostingsimulator_computeaccuracy",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_buildxgbtree",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
       "target": "simulators_gradientboostingsimulator_defaultpoints",
@@ -5180,17 +4818,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L188",
+      "source_location": "L382",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_drawcanvas",
+      "target": "simulators_gradientboostingsimulator_drawmodeltocanvas",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L255",
+      "source_location": "L587",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
       "target": "simulators_gradientboostingsimulator_gradientboostingsimulator",
@@ -5200,17 +4838,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L84",
+      "source_location": "L145",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_lgbmleaf",
+      "target": "simulators_gradientboostingsimulator_lightgbmleaf",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L7",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
       "target": "simulators_gradientboostingsimulator_point",
@@ -5220,7 +4858,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L44",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
       "target": "simulators_gradientboostingsimulator_predicttree",
@@ -5230,40 +4868,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_sigmoid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_trainedmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L158",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator",
-      "target": "simulators_gradientboostingsimulator_trainmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L8",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "simulators_gradientboostingsimulator",
       "target": "simulators_gradientboostingsimulator_treenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
+      "source_location": "L478",
+      "weight": 1.0,
+      "source": "simulators_gradientboostingsimulator",
+      "target": "simulators_gradientboostingsimulator_treevisualizer",
       "confidence_score": 1.0
     },
     {
@@ -5282,55 +4900,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L196",
+      "source_location": "L939",
       "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator_drawcanvas",
-      "target": "simulators_gradientboostingsimulator_sigmoid",
+      "source": "simulators_gradientboostingsimulator_gradientboostingsimulator",
+      "target": "simulators_gradientboostingsimulator_computeaccuracy",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L176",
+      "source_location": "L588",
       "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator_trainmodel",
-      "target": "simulators_gradientboostingsimulator_predicttree",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L172",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator_trainmodel",
-      "target": "simulators_gradientboostingsimulator_buildxgbtree",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L173",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator_trainmodel",
-      "target": "simulators_gradientboostingsimulator_buildlgbtree",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Simulators/GradientBoostingSimulator.tsx",
-      "source_location": "L174",
-      "weight": 1.0,
-      "source": "simulators_gradientboostingsimulator_trainmodel",
-      "target": "simulators_gradientboostingsimulator_buildcattree",
-      "confidence_score": 1.0
+      "source": "simulators_gradientboostingsimulator_gradientboostingsimulator",
+      "target": "context_appcontext_useapp"
     },
     {
       "relation": "imports",
@@ -5378,7 +4963,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_gradientdescent",
@@ -5389,7 +4974,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_gradientdescent_gradientdescent",
@@ -5430,7 +5015,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_imbalanceddatasimulator",
@@ -5441,7 +5026,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_imbalanceddatasimulator_imbalanceddatasimulator",
@@ -5494,7 +5079,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_kmeanssandbox",
@@ -5505,7 +5090,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_kmeanssandbox_kmeanssandbox",
@@ -5611,7 +5196,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L35",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_modulesimulator_modulesimulator",
@@ -5644,7 +5229,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_neuralnetsandbox",
@@ -5655,7 +5240,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_neuralnetsandbox_neuralnetsandbox",
@@ -5688,7 +5273,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L26",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_perceptronsimulator",
@@ -5699,7 +5284,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L26",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_perceptronsimulator_perceptronsimulator",
@@ -5710,7 +5295,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L23",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_qlearningsimulator",
@@ -5721,7 +5306,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L23",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_qlearningsimulator_qlearningsimulator",
@@ -5754,7 +5339,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_regularizationsimulator",
@@ -5765,7 +5350,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_regularizationsimulator_regularizationsimulator",
@@ -5776,7 +5361,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_rnnsimulator",
@@ -5787,7 +5372,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_rnnsimulator_rnnsimulator",
@@ -5820,7 +5405,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_timeseriessimulator",
@@ -5831,7 +5416,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_timeseriessimulator_timeseriessimulator",
@@ -5842,7 +5427,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L32",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_tsnesimulator",
@@ -5853,7 +5438,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L32",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_tsnesimulator_tsnesimulator",
@@ -5864,7 +5449,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_vaesimulator",
@@ -5875,7 +5460,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "simulators_modulesimulator",
       "target": "simulators_vaesimulator_vaesimulator",
@@ -5887,7 +5472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/Simulators/ModuleSimulator.tsx",
-      "source_location": "L36",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "simulators_modulesimulator_modulesimulator",
       "target": "context_appcontext_useapp"
@@ -9189,300 +8774,606 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_27_modules"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_cnn_sklearn_gap"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_interactive_simulator_system"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_latent_academy"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_lucide_version_bug"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_orphan_files"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_severity_system"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_simulator_id_bugs"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_sklearn_pytorch_convention"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes",
-      "target": "fixes_tailwind_class_bug"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_sklearn_pytorch_convention",
-      "target": "fixes_cnn_sklearn_gap"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_sklearn_pytorch_convention",
-      "target": "fixes_pytorch_only_group_c"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_sklearn_pytorch_convention",
-      "target": "fixes_sklearn_group_a"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_sklearn_pytorch_convention",
-      "target": "fixes_sklearn_pytorch_group_b"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_interactive_simulator_system",
-      "target": "fixes_simulator_id_bugs"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_severity_system",
-      "target": "fixes_simulator_id_bugs"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fixes_pytorch_only_group_c",
-      "target": "fixes_cnn_sklearn_gap"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme",
-      "target": "readme_vite_template"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "index.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "index",
-      "target": "readme_vite_template"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "GEMINI.md",
-      "source_location": null,
+      "source_location": "L1",
       "weight": 1.0,
       "source": "gemini",
-      "target": "gemini_graphify"
+      "target": "gemini_graphify",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 2",
+      "source_file": "README.md",
+      "source_location": "L1",
       "weight": 1.0,
-      "source": "public_icons_bluesky_icon",
-      "target": "public_icons_svg"
+      "source": "readme",
+      "target": "readme_react_typescript_vite",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 6",
+      "source_file": "README.md",
+      "source_location": "L14",
       "weight": 1.0,
-      "source": "public_icons_discord_icon",
-      "target": "public_icons_svg"
+      "source": "readme_react_typescript_vite",
+      "target": "readme_expanding_the_eslint_configuration",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 9",
+      "source_file": "README.md",
+      "source_location": "L10",
       "weight": 1.0,
-      "source": "public_icons_documentation_icon",
-      "target": "public_icons_svg"
+      "source": "readme_react_typescript_vite",
+      "target": "readme_react_compiler",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 14",
+      "source_file": "fixes.md",
+      "source_location": "L1",
       "weight": 1.0,
-      "source": "public_icons_github_icon",
-      "target": "public_icons_svg"
+      "source": "fixes",
+      "target": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 17",
+      "source_file": "fixes.md",
+      "source_location": "L18",
       "weight": 1.0,
-      "source": "public_icons_social_icon",
-      "target": "public_icons_svg"
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_1_simulator_bugs_interactive_simulator_tab_broken_for_3_modules",
+      "confidence_score": 1.0
     },
     {
-      "relation": "conceptually_related_to",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/icons.svg",
-      "source_location": "line 21",
+      "source_file": "fixes.md",
+      "source_location": "L67",
       "weight": 1.0,
-      "source": "public_icons_x_icon",
-      "target": "public_icons_svg"
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_2_dependency_issues",
+      "confidence_score": 1.0
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/assets/react.svg",
-      "source_location": null,
+      "source_file": "fixes.md",
+      "source_location": "L99",
       "weight": 1.0,
-      "source": "assets_react_react_logo",
-      "target": "assets_react_react_framework"
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_3_tailwind_css_bugs",
+      "confidence_score": 1.0
     },
     {
-      "relation": "references",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/assets/vite.svg",
-      "source_location": null,
+      "source_file": "fixes.md",
+      "source_location": "L117",
       "weight": 1.0,
-      "source": "assets_vite_vite_logo",
-      "target": "assets_vite_vite"
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_4_orphan_junk_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_5_coding_sandbox_sklearn_project_assignment_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L1066",
+      "weight": 1.0,
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_part_7_summary_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L1082",
+      "weight": 1.0,
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_quick_start_patch_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "fixes_latent_academy_comprehensive_fix_enhancement_report",
+      "target": "fixes_severity_legend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "fixes_part_1_simulator_bugs_interactive_simulator_tab_broken_for_3_modules",
+      "target": "fixes_bug_1_multilayerperceptron_ts_simulatorid_mismatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "fixes_part_1_simulator_bugs_interactive_simulator_tab_broken_for_3_modules",
+      "target": "fixes_bug_2_generativeadversarialnetworks_ts_missing_simulatorid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "fixes_part_1_simulator_bugs_interactive_simulator_tab_broken_for_3_modules",
+      "target": "fixes_bug_3_variationalautoencoders_ts_missing_simulatorid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "fixes_part_2_dependency_issues",
+      "target": "fixes_bug_4_lucide_react_version_1_16_0_does_not_exist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "fixes_part_2_dependency_issues",
+      "target": "fixes_warn_1_framer_motion_installed_but_never_imported",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "fixes_part_3_tailwind_css_bugs",
+      "target": "fixes_bug_5_w_4_5_h_4_5_are_not_valid_tailwind_classes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "fixes_part_4_orphan_junk_files",
+      "target": "fixes_clean_1_biasvariancetradeoff_ts_draft_orphan_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "fixes_part_4_orphan_junk_files",
+      "target": "fixes_clean_2_scratch_generator_scripts_in_project_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "fixes_part_5_coding_sandbox_sklearn_project_assignment_audit",
+      "target": "fixes_group_a_pure_sklearn_modules_project_assignment_use_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "fixes_part_5_coding_sandbox_sklearn_project_assignment_audit",
+      "target": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "fixes_part_5_coding_sandbox_sklearn_project_assignment_audit",
+      "target": "fixes_group_c_cnn_module_needs_sklearn_alternative_added_to_project_stage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_generativeadversarialnetworks_ts_project_uses_sklearn_neural_network_mlpclassifier_as_discriminator_proxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_multilayerperceptron_ts_project_uses_sklearn_neural_network_mlpclassifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_qlearningrl_ts_project_uses_numpy_only_q_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_recurrentnetworks_ts_project_uses_sklearn_sequence_classification_proxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_singleperceptron_ts_project_uses_sklearn_linear_model_perceptron",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_transformerattention_ts_project_uses_sklearn_attention_approximation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_variationalautoencoders_ts_project_uses_sklearn_decomposition_pca_as_linear_analog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "fixes_group_b_mixed_sklearn_pytorch_modules",
+      "target": "fixes_wordembeddings_ts_project_uses_sklearn_cosine_similarity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L557",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_10_gradient_descent_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L579",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_11_decision_tree_algorithm_tree_splits_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L601",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_12_gradient_boosting_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L624",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_13_single_perceptron_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L649",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_14_multi_layer_perceptron_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L676",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_15_cnn_project_solution_sklearn_new_see_part_5_above",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L699",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_16_rnn_project_solution_sklearn_text_classification_proxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L726",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_17_transformer_attention_project_solution_sklearn_numpy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L754",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_18_word_embeddings_project_solution_sklearn_cosine_similarity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L780",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_19_q_learning_rl_project_solution_numpy_q_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_1_linear_regression_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L824",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_20_gan_project_solution_sklearn_mlp_discriminator_proxy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L861",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_21_vae_project_solution_sklearn_pca_as_linear_analog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L890",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_22_t_sne_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L915",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_23_dbscan_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L941",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_24_ridge_lasso_regularization_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L970",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_25_bias_variance_tradeoff_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L998",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_26_neural_activations_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L1028",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_27_optimization_algorithms_project_solution_sklearn_sgd_variants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L353",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_2_logistic_regression_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L377",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_3_decision_trees_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L400",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_4_random_forests_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L432",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_5_k_means_clustering_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L458",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_6_svm_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L484",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_7_naive_bayes_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L508",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_8_knn_classification_project_solution_sklearn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fixes.md",
+      "source_location": "L534",
+      "weight": 1.0,
+      "source": "fixes_part_6_complete_sklearn_solutions_for_all_27_modules",
+      "target": "fixes_9_pca_project_solution_sklearn",
+      "confidence_score": 1.0
     }
   ],
-  "hyperedges": [
-    {
-      "id": "module_classification_groups",
-      "label": "Sklearn PyTorch Module Classification Groups",
-      "nodes": [
-        "fixes_sklearn_group_a",
-        "fixes_sklearn_pytorch_group_b",
-        "fixes_pytorch_only_group_c"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "fixes.md"
-    }
-  ],
-  "built_at_commit": "653c6de8e0d883b2f369bf2771363b6518cb780f"
+  "hyperedges": [],
+  "built_at_commit": "242ad71be73a6d41ea4e260e00719cca8e8a3c2b"
 }

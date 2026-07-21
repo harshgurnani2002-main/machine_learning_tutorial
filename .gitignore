@@ -35,11 +35,3 @@ dist-ssr
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
-
-# Graphify generated cache
-/graphify-out/cache/
-/graphify-out/.graphify_python
-/graphify-out/cost.json
-
-# opencode editor config
-/.opencode/
