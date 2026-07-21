@@ -86,7 +86,8 @@ export const naturalLanguageProcessing: MLModule = {
   X = vectorizer.fit_transform(docs)
   print(f"Shape: {X.shape}")
   print(f"Features: {vectorizer.get_feature_names_out()}")
-  \`\`\``,
+  \`\``,
+  `,
 
   interactiveSummary: 'Type a sentence and watch the NLP pipeline in action: tokenization splits the text, TF-IDF highlights the most informative keywords, and a simulated classifier predicts sentiment with word-level attention weights visualized as a heatmap. Toggle between a simple Bag-of-Words model and a Deep Transformer model to see how attention patterns change.',
   simulatorId: 'nlp-sentiment',

@@ -83,7 +83,8 @@ export const hyperparameterTuning: MLModule = {
   grid = GridSearchCV(SVC(), params, cv=3)
   grid.fit(X, y)
   print(f"Best params: {grid.best_params_}")
-  \`\`\``,
+  \`\``,
+  `,
 
   interactiveSummary: 'A visual simulator comparing grid search, random search, and Bayesian optimization on a 2D hyperparameter loss surface. Watch grid points march in lockstep across the space, random points scatter unpredictably, or Bayesian points converge adaptively toward the optimum. Toggle between surface modes to see how each method handles single peaks, multiple optima, and elongated ridges. The regret metric tracks how each method approaches the true optimum over successive evaluations.',
   simulatorId: 'hyperparam-tuning',
