@@ -6,84 +6,7 @@ export const logisticRegression: MLModule = {
   "category": "Foundations & Math",
   "description": "Model discrete class probabilities using Log-Odds and Sigmoid functions.",
   "formula": "p = \\sigma(w^T x + b)",
-    theory: `### Logistic Regression: A Comprehensive Guide
-  
-  #### What is it?
-  Logistic Regression is a fundamental supervised learning algorithm used primarily for classification tasks. Despite the word "regression" in its name, it is a classification algorithm. It is used to predict the probability that a given instance belongs to a particular class (e.g., probability that an email is spam). If the probability is greater than a certain threshold (usually 0.5), it classifies the instance into the positive class; otherwise, the negative class. This is known as Binary Logistic Regression.
-  
-  #### Why do we need it?
-  We need Logistic Regression when the target variable is categorical (discrete). While Linear Regression outputs unbounded continuous values (which can be > 1 or < 0), probabilities must strictly lie between 0 and 1.
-  1. **Classification:** Identifying whether a tumor is malignant or benign.
-  2. **Probability Estimation:** Not just classifying, but outputting a confidence score. For instance, an ad click-through rate (predicting a 15% chance a user will click an ad).
-  It serves as the foundation for more complex models, such as neural networks (where it acts as a single neuron with a sigmoid activation).
-  
-  #### How does it work?
-  Logistic Regression works by taking the linear combination of inputs (similar to Linear Regression) and passing it through a non-linear activation function called the Sigmoid (or Logistic) function. This function squashes any real-valued number into the range [0, 1].
-  Instead of minimizing Mean Squared Error, Logistic Regression minimizes the Binary Cross-Entropy Loss (also known as Log Loss). This loss function heavily penalizes confident but incorrect predictions, ensuring that the model assigns high probabilities to the correct classes.
-  
-  #### The Math Behind It
-  Let $x \\in \\mathbb{R}^n$ be the feature vector and $y \\in \\{0, 1\\}$ be the binary target.
-  
-  **The Sigmoid Function:**
-  $\\sigma(z) = frac{1}{1 + e^{-z}}$
-  
-  **Hypothesis Function:**
-  We compute the linear combination $z = w^T x + b$, and then apply the sigmoid function to get the probability $p$:
-  $p = h_w(x) = \\sigma(w^T x + b) = frac{1}{1 + e^{-(w^T x + b)}}$
-  
-  **The Log-Odds (Logit):**
-  The inverse of the sigmoid is the logit function, which maps probabilities back to the real number line:
-  $\\log \\left( frac{p}{1 - p} ight) = w^T x + b$
-  This shows that Logistic Regression is a linear model for the *log-odds* of the positive class.
-  
-  **Binary Cross-Entropy Loss (Log Loss):**
-  $J(w, b) = -frac{1}{m} \\sum_{i=1}^{m} \\left[ y^{(i)} \\log(h_w(x^{(i)})) + (1 - y^{(i)}) \\log(1 - h_w(x^{(i)})) ight]$
-  
-  **Parameter Optimization (Gradient Descent):**
-  Interestingly, the gradient of the log loss with respect to the weights is mathematically identical to the gradient of MSE in linear regression (though the hypothesis function is different):
-  $w_j \\leftarrow w_j - frac{u0007lpha}{m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} ight) x_j^{(i)}$
-  
-  #### Worked Example
-  Suppose we want to predict if a student passes ($y=1$) or fails ($y=0$) based on hours studied ($x$).
-  Assume the model learned $w = 1.5$ and $b = -3$.
-  A student studies for 4 hours.
-  1. Calculate linear part: $z = 1.5(4) - 3 = 6 - 3 = 3$.
-  2. Apply sigmoid: $p = 1 / (1 + e^{-3}) u0007pprox 1 / (1 + 0.0498) u0007pprox 0.952$.
-  The model predicts a 95.2% probability of passing. Since 0.952 > 0.5, the classification is "Pass".
-  
-  #### Common Pitfalls
-  1. **Non-linear Data:** Logistic regression is a linear classifier. It draws a straight line (or hyperplane) to separate classes. If classes are not linearly separable, it will perform poorly unless features are transformed.
-  2. **Outliers:** While less sensitive than linear regression, massive outliers can still skew the decision boundary.
-  3. **Class Imbalance:** If 99% of data is class A, the model might just always predict class A. Techniques like class weighting or SMOTE are required.
-  
-  #### When to Use vs Not Use
-  **When to Use:**
-  - Binary classification problems where a linear decision boundary is sufficient.
-  - You need well-calibrated probabilities, not just hard class labels.
-  - You need a lightweight, highly interpretable model.
-  
-  **When Not to Use:**
-  - The data has complex, non-linear relationships (use Decision Trees, Random Forests, or Neural Networks).
-  - The dataset has many missing values and outliers (Tree models are more robust to this).
-  
-  #### Key Takeaways
-  - Logistic Regression outputs probabilities between 0 and 1 using the Sigmoid function.
-  - It is a linear classifier because its decision boundary is linear.
-  - It minimizes Binary Cross-Entropy Loss (Log Loss) instead of Mean Squared Error.
-  
-#### Python Implementation
-
-\`\`\`python
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_classification
-
-X, y = make_classification(n_samples=100, n_features=2, random_state=42)
-model = LogisticRegression()
-model.fit(X, y)
-print(f"Accuracy: {model.score(X, y):.2f}")
-print(f"Coefficients: {model.coef_}")
-\`\`\`
-`,
+  "theory": "### Logistic Regression: A Comprehensive Guide\n\n#### What is it?\nLogistic Regression is a fundamental supervised learning algorithm used primarily for classification tasks. Despite the word \"regression\" in its name, it is a classification algorithm. It is used to predict the probability that a given instance belongs to a particular class (e.g., probability that an email is spam). If the probability is greater than a certain threshold (usually 0.5), it classifies the instance into the positive class; otherwise, the negative class. This is known as Binary Logistic Regression.\n\n#### Why do we need it?\nWe need Logistic Regression when the target variable is categorical (discrete). While Linear Regression outputs unbounded continuous values (which can be > 1 or < 0), probabilities must strictly lie between 0 and 1.\n1. **Classification:** Identifying whether a tumor is malignant or benign.\n2. **Probability Estimation:** Not just classifying, but outputting a confidence score. For instance, an ad click-through rate (predicting a 15% chance a user will click an ad).\nIt serves as the foundation for more complex models, such as neural networks (where it acts as a single neuron with a sigmoid activation).\n\n#### How does it work?\nLogistic Regression works by taking the linear combination of inputs (similar to Linear Regression) and passing it through a non-linear activation function called the Sigmoid (or Logistic) function. This function squashes any real-valued number into the range [0, 1].\nInstead of minimizing Mean Squared Error, Logistic Regression minimizes the Binary Cross-Entropy Loss (also known as Log Loss). This loss function heavily penalizes confident but incorrect predictions, ensuring that the model assigns high probabilities to the correct classes.\n\n#### The Math Behind It\nLet $x \\in \\mathbb{R}^n$ be the feature vector and $y \\in \\{0, 1\\}$ be the binary target.\n\n**The Sigmoid Function:**\n$$\\sigma(z) = \frac{1}{1 + e^{-z}}$$\n\n**Hypothesis Function:**\nWe compute the linear combination $z = w^T x + b$, and then apply the sigmoid function to get the probability $p$:\n$$p = h_w(x) = \\sigma(w^T x + b) = \frac{1}{1 + e^{-(w^T x + b)}}$$\n\n**The Log-Odds (Logit):**\nThe inverse of the sigmoid is the logit function, which maps probabilities back to the real number line:\n$$\\log \\left( \frac{p}{1 - p} \right) = w^T x + b$$\nThis shows that Logistic Regression is a linear model for the *log-odds* of the positive class.\n\n**Binary Cross-Entropy Loss (Log Loss):**\n$$J(w, b) = -\frac{1}{m} \\sum_{i=1}^{m} \\left[ y^{(i)} \\log(h_w(x^{(i)})) + (1 - y^{(i)}) \\log(1 - h_w(x^{(i)})) \right]$$\n\n**Parameter Optimization (Gradient Descent):**\nInterestingly, the gradient of the log loss with respect to the weights is mathematically identical to the gradient of MSE in linear regression (though the hypothesis function is different):\n$$w_j \\leftarrow w_j - \frac{\u0007lpha}{m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} \right) x_j^{(i)}$$\n\n#### Worked Example\nSuppose we want to predict if a student passes ($y=1$) or fails ($y=0$) based on hours studied ($x$).\nAssume the model learned $w = 1.5$ and $b = -3$.\nA student studies for 4 hours.\n1. Calculate linear part: $z = 1.5(4) - 3 = 6 - 3 = 3$.\n2. Apply sigmoid: $p = 1 / (1 + e^{-3}) \u0007pprox 1 / (1 + 0.0498) \u0007pprox 0.952$.\nThe model predicts a 95.2% probability of passing. Since 0.952 > 0.5, the classification is \"Pass\".\n\n#### Common Pitfalls\n1. **Non-linear Data:** Logistic regression is a linear classifier. It draws a straight line (or hyperplane) to separate classes. If classes are not linearly separable, it will perform poorly unless features are transformed.\n2. **Outliers:** While less sensitive than linear regression, massive outliers can still skew the decision boundary.\n3. **Class Imbalance:** If 99% of data is class A, the model might just always predict class A. Techniques like class weighting or SMOTE are required.\n\n#### When to Use vs Not Use\n**When to Use:**\n- Binary classification problems where a linear decision boundary is sufficient.\n- You need well-calibrated probabilities, not just hard class labels.\n- You need a lightweight, highly interpretable model.\n\n**When Not to Use:**\n- The data has complex, non-linear relationships (use Decision Trees, Random Forests, or Neural Networks).\n- The dataset has many missing values and outliers (Tree models are more robust to this).\n\n#### Key Takeaways\n- Logistic Regression outputs probabilities between 0 and 1 using the Sigmoid function.\n- It is a linear classifier because its decision boundary is linear.\n- It minimizes Binary Cross-Entropy Loss (Log Loss) instead of Mean Squared Error.\n",
   "interactiveSummary": "This interactive simulator shows the Logistic Regression decision boundary on a 2D canvas. Click to add red (Class 0) or blue (Class 1) data points. The model automatically fits a sigmoid probability surface and draws the linear decision boundary as a separating line. The color gradient in the background represents predicted probabilities — darker orange means higher probability of Class 1. Try adding overlapping points to see how the boundary shifts, and observe how the sigmoid function translates linear scores into smooth 0-to-1 probabilities.",
   "simulatorId": "log-reg",
   "quiz": [

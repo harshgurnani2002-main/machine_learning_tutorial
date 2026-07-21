@@ -97,22 +97,7 @@ With each iteration, the gradient decreases, and the step size naturally shrinks
 - Gradient descent iteratively minimizes a loss function by taking steps proportional to the negative gradient.
 - The Learning Rate ($\\eta$) dictates step size and is the most critical hyperparameter to tune.
 - Mini-batch GD balances the noisy, rapid updates of SGD with the stable, slow updates of Batch GD.
-- Advanced optimizers (Momentum, RMSProp, Adam) solve the inherent flaws of standard SGD by dampening oscillations and independently adapting learning rates for each parameter.
-#### Python Implementation
-
-\`\`\`python
-import numpy as np
-
-X = np.array([[1, 1], [1, 2], [1, 3]])
-y = np.array([2, 4, 6])
-lr = 0.01
-w = np.zeros(2)
-for _ in range(100):
-    grad = (2 / len(X)) * X.T @ (X @ w - y)
-    w -= lr * grad
-print(f"Weights: {w}")
-\`\`\`
-`,
+- Advanced optimizers (Momentum, RMSProp, Adam) solve the inherent flaws of standard SGD by dampening oscillations and independently adapting learning rates for each parameter.`,
   "interactiveSummary": "In this interactive simulator, you can visualize the loss landscape and observe how changing the learning rate, momentum, and optimizer type (SGD vs Adam) affects the trajectory of the weights towards the global minimum. Experiment with different starting points to see how optimizers handle local minima and saddle points.",
   "simulatorId": "gradient-descent",
   "quiz": [

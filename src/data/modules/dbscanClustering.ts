@@ -77,21 +77,7 @@ Imagine a 2D spatial dataset representing GPS coordinates of people in a park. W
 - DBSCAN groups points by tracing continuous regions of high density connectivity.
 - It operates strictly on two parameters: $\\epsilon$ (radius) and MinPts (density threshold).
 - It fundamentally categorizes all points into Core Points (bulk of cluster), Border Points (edges of cluster), and Noise (outliers).
-- It is profoundly superior to K-Means for discovering complex geometric shapes and automatically filtering out noise, provided the data has relatively uniform density.
-#### Python Implementation
-
-\`\`\`python
-from sklearn.cluster import DBSCAN
-import numpy as np
-
-X = np.random.randn(100, 2)
-db = DBSCAN(eps=0.5, min_samples=5)
-labels = db.fit_predict(X)
-n_clusters = len(set(labels)) - (1 if -1 in labels else 0)
-print(f"Clusters found: {n_clusters}")
-print(f"Noise points: {list(labels).count(-1)}")
-\`\`\`
-`,
+- It is profoundly superior to K-Means for discovering complex geometric shapes and automatically filtering out noise, provided the data has relatively uniform density.`,
     interactiveSummary: 'In this interactive simulation, you can click anywhere on the canvas to place GPS-style coordinate points and watch DBSCAN classify them in real time. The Epsilon (ε) slider controls the neighborhood radius — think of it as drawing a circle of that radius around every point and counting how many other points fall inside it. The Min Samples slider sets the density threshold: a point needs at least that many neighbors within ε to become a Core Point (shown in vivid color), otherwise it degrades to a Border Point (lighter ring) or a Noise outlier (grey ×). Try drawing two dense clusters connected by a sparse bridge and watch how increasing ε eventually merges them into one cluster. Then lower Min Samples to see previously noisy isolated points get absorbed as border points. This directly mirrors real anomaly detection workflows where tuning these two parameters determines what counts as "normal traffic" versus a suspicious outlier.',
     simulatorId: 'dbscan',
     quiz: [

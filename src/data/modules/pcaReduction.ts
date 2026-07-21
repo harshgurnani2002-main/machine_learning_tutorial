@@ -65,19 +65,7 @@ Since "Overall Size" explains 95% of the variance, we can drop the 2nd component
 #### Key Takeaways
 - PCA maximizes variance and minimizes reconstruction error.
 - Standardizing features is an absolute prerequisite.
-- The output components are mathematically orthogonal (independent) to each other.
-#### Python Implementation
-
-\`\`\`python
-from sklearn.decomposition import PCA
-from sklearn.datasets import load_digits
-
-digits = load_digits()
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(digits.data)
-print(f"Explained variance ratio: {pca.explained_variance_ratio_}")
-\`\`\`
-`,
+- The output components are mathematically orthogonal (independent) to each other.`,
     simulatorId: 'pca',
     quiz: [
       {

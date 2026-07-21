@@ -161,18 +161,6 @@ The random feature subsets are overwhelmingly composed of uninformative zeros.
 - **Bias-Variance Tradeoff**: Systematically reduces variance without significantly increasing bias.
 - **Robustness**: Extremely robust to outliers and does not strictly require feature scaling.
 - **OOB Evaluation**: The Out-Of-Bag (OOB) error gives an unbiased estimate of the test set error.
-
-#### Python Implementation
-
-\`\`\`python
-from sklearn.ensemble import RandomForestClassifier
-
-X = [[0, 0], [1, 1], [2, 2], [3, 3]]
-y = [0, 0, 1, 1]
-rf = RandomForestClassifier(n_estimators=100, max_depth=2)
-rf.fit(X, y)
-print(f"Feature importances: {rf.feature_importances_}")
-\`\`\`
 `,
     simulatorId: 'random-forest',
     quiz: [

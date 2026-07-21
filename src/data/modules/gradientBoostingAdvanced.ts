@@ -66,21 +66,6 @@ Suppose we are predicting salary residuals.
 #### Common Pitfalls
 1. **Under-tuning LightGBM leaves:** Leaf-wise growth can grow very deep trees, leading to severe overfitting. You must set \`max_depth\` or control \`num_leaves\` and \`min_data_in_leaf\`.
 2. **Ignoring Categorical Indices:** Standard libraries treat integers as ordered numerical values. You must explicitly mark categorical columns using categorical features parameters.
-
-#### Python Implementation
-
-\`\`\`python
-import xgboost as xgb
-import numpy as np
-
-X = np.random.randn(100, 5)
-y = np.random.randn(100)
-dtrain = xgb.DMatrix(X, label=y)
-params = {"max_depth": 4, "eta": 0.1, "objective": "reg:squarederror"}
-model = xgb.train(params, dtrain, num_boost_round=50)
-predictions = model.predict(dtrain)
-print(f"RMSE: {np.sqrt(np.mean((predictions - y)**2)):.4f}")
-\`\`\`
 `,
   interactiveSummary: 'This simulator lets you visualize advanced tree boosting. See how individual shallow decision trees are added sequentially to target residuals of previous trees. Change model parameters to see how learning rate and tree depth control model variance.',
   simulatorId: 'gradient-boosting-advanced',

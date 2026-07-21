@@ -144,19 +144,6 @@ The feature with the largest range will completely skew the clustering.
 - **Lloyd\'s Algorithm**: Uses an elegant, iterative two-step process: Assign points, then Update centroids.
 - **Assumptions**: Implicitly assumes clusters are convex, isotropic, and similarly sized.
 - **Preprocessing Dependency**: Standardization of features is absolutely necessary before training.
-
-#### Python Implementation
-
-\`\`\`python
-from sklearn.cluster import KMeans
-import numpy as np
-
-X = np.random.randn(100, 2)
-kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
-kmeans.fit(X)
-print(f"Inertia: {kmeans.inertia_:.2f}")
-print(f"Cluster centers:\n{kmeans.cluster_centers_}")
-\`\`\`
 `,
     simulatorId: 'kmeans',
     quiz: [

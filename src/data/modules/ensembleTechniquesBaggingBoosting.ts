@@ -118,20 +118,6 @@ where $g$ is the meta-learner and $f_k$ are the base learners. This often outper
 | Bagging | Parallel | Random subsets | Reduces Variance | Random Forest |
 | Boosting | Sequential | Residuals/errors | Reduces Bias | XGBoost, AdaBoost |
 | Stacking | Parallel + Meta | Full dataset | Combines strengths | Kaggle Blending |
-
-#### Python Implementation
-
-\`\`\`python
-from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.datasets import make_classification
-
-X, y = make_classification(n_samples=200, random_state=42)
-bag = BaggingClassifier(estimator=DecisionTreeClassifier(), n_estimators=10)
-ada = AdaBoostClassifier(n_estimators=50)
-print(f"Bagging: {bag.fit(X, y).score(X, y):.3f}")
-print(f"Boosting: {ada.fit(X, y).score(X, y):.3f}")
-\`\`\`
 `,
   quiz: [
     {

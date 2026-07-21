@@ -6,69 +6,7 @@ export const wordEmbeddings: MLModule = {
   "category": "Deep Learning",
   "description": "Learn dense semantic vector coordinates for words using local contexts.",
   "formula": "cos(\theta) = \frac{u \\cdot v}{\\|u\\| \\|v\\|}",
-    theory: `### Word Embeddings & Word2Vec
-  
-  #### What is it?
-  Word embeddings are dense, continuous, low-dimensional vector representations of words. Instead of representing words as sparse, high-dimensional one-hot encoded vectors where all words are equidistant, word embeddings place words with similar meanings close together in a mathematical vector space. Algorithms like Word2Vec (Continuous Bag-of-Words and Skip-Gram) are the foundational methods for generating these vectors by learning from large text corpora.
-  
-  #### Why do we need it?
-  Before word embeddings, Natural Language Processing (NLP) relied on Bag-of-Words or TF-IDF, treating words as isolated, discrete symbols. The word "king" had no mathematical relationship to "queen" or "man". This resulted in sparse, massive matrices that suffered from the "curse of dimensionality" and could not capture semantics or synonyms. Word embeddings solve this by mapping words to dense vectors (e.g., 300 dimensions) where semantic meaning is explicitly captured by the spatial relationships and distances between vectors.
-  
-  #### How does it work?
-  Word2Vec is a predictive model that learns embeddings by trying to predict a word given its context, or context given a word. 
-  It has two architectures:
-  1. **Continuous Bag of Words (CBOW)**: Predicts the target word based on its surrounding context words.
-  2. **Skip-gram**: Predicts the surrounding context words given a single target word.
-  
-  By training a shallow neural network on this fake task over billions of words, the weights of the hidden layer become the word embeddings. Because words that appear in similar contexts tend to have similar meanings (the *distributional hypothesis*), their resulting embeddings will be geometrically close.
-  
-  #### The Math Behind It
-  In the Skip-gram model, given a target word $w_c$, we want to maximize the probability of observing its context words $w_o$. The probability is calculated using the softmax function over the dot product of their vectors:
-  $P(w_o | w_c) = frac{\\exp(v_{w_o}^T \\cdot v_{w_c})}{\\sum_{w=1}^V \\exp(v_w^T \\cdot v_{w_c})}$
-  
-  Where:
-  - $v_{w_c}$ is the vector representation of the center word.
-  - $v_{w_o}$ is the vector representation of the context word.
-  - $V$ is the total vocabulary size.
-  
-  **Negative Sampling**: Calculating the denominator over the entire vocabulary $V$ for every step is computationally impossible for large datasets. Negative sampling solves this by approximating the softmax. Instead of updating all vectors, we only update the true context word and a small number ($k$) of randomly chosen "negative" words that do not appear in the context. We maximize the dot product for the true pair and minimize it for the negative pairs using the sigmoid function $\\sigma$:
-  $\\log \\sigma(v_{w_o}^T \\cdot v_{w_c}) + \\sum_{i=1}^k \\mathbb{E}_{w_i \\sim P_n(w)} [ \\log \\sigma(-v_{w_i}^T \\cdot v_{w_c}) ]$
-  
-  #### Worked Example
-  Consider the sentence: "The quick brown fox jumps over the lazy dog."
-  If we use the Skip-gram model with a window size of 2, and the target word is "fox":
-  The context words are: ["quick", "brown", "jumps", "over"].
-  The network takes "fox" as input and tries to output high probabilities for those context words. As the model trains, the weights for "fox" are adjusted so its vector aligns closely with words that share similar contexts, like "wolf" or "hound".
-  
-  This leads to the famous vector arithmetic property:
-  $Vector("King") - Vector("Man") + Vector("Woman") \\approx Vector("Queen")$
-  
-  #### Common Pitfalls
-  - **Out of Vocabulary (OOV)**: Traditional Word2Vec models assign a distinct vector to each exact word. If a word was not seen during training, it cannot be processed. FastText solves this by using subword n-grams.
-  - **Polysemy**: Word2Vec assigns a single, static vector to a word. The word "bank" has the same vector whether it means a riverbank or a financial institution. Contextual embeddings like ELMo and BERT were developed to solve this.
-  
-  #### When to Use vs Not Use
-  - **Use When**: You are building traditional NLP models (like sentiment analysis with LSTMs), calculating document similarity, or need lightweight features for text classification without the heavy compute of Transformers.
-  - **Not Use When**: You need to capture complex context where words have multiple meanings (polysemy), or when you are building state-of-the-art language models, in which case you should use contextual embeddings directly trained via Transformer architectures (like BERT or GPT).
-  
-  #### Key Takeaways
-  1. Word embeddings are dense vectors where geometric distance represents semantic similarity.
-  2. Word2Vec uses the distributional hypothesis: words appearing in similar contexts have similar meanings.
-  3. Skip-gram predicts context from a word; CBOW predicts a word from its context.
-  4. Negative Sampling makes training on large vocabularies computationally feasible.
-  5. They are static representations, meaning they cannot capture multiple meanings of the same word.
-#### Python Implementation
-
-\`\`\`python
-from gensim.models import Word2Vec
-
-sentences = [["cat", "sat", "mat"], ["dog", "ran", "park"]]
-model = Word2Vec(sentences, vector_size=50, window=3, min_count=1)
-vector = model.wv["cat"]
-print(f"Vector shape: {vector.shape}")
-print(f"Most similar to cat: {model.wv.most_similar("cat")}")
-\`\`\`
-`,
+  "theory": "### Word Embeddings & Word2Vec\n\n#### What is it?\nWord embeddings are dense, continuous, low-dimensional vector representations of words. Instead of representing words as sparse, high-dimensional one-hot encoded vectors where all words are equidistant, word embeddings place words with similar meanings close together in a mathematical vector space. Algorithms like Word2Vec (Continuous Bag-of-Words and Skip-Gram) are the foundational methods for generating these vectors by learning from large text corpora.\n\n#### Why do we need it?\nBefore word embeddings, Natural Language Processing (NLP) relied on Bag-of-Words or TF-IDF, treating words as isolated, discrete symbols. The word \"king\" had no mathematical relationship to \"queen\" or \"man\". This resulted in sparse, massive matrices that suffered from the \"curse of dimensionality\" and could not capture semantics or synonyms. Word embeddings solve this by mapping words to dense vectors (e.g., 300 dimensions) where semantic meaning is explicitly captured by the spatial relationships and distances between vectors.\n\n#### How does it work?\nWord2Vec is a predictive model that learns embeddings by trying to predict a word given its context, or context given a word. \nIt has two architectures:\n1. **Continuous Bag of Words (CBOW)**: Predicts the target word based on its surrounding context words.\n2. **Skip-gram**: Predicts the surrounding context words given a single target word.\n\nBy training a shallow neural network on this fake task over billions of words, the weights of the hidden layer become the word embeddings. Because words that appear in similar contexts tend to have similar meanings (the *distributional hypothesis*), their resulting embeddings will be geometrically close.\n\n#### The Math Behind It\nIn the Skip-gram model, given a target word $w_c$, we want to maximize the probability of observing its context words $w_o$. The probability is calculated using the softmax function over the dot product of their vectors:\n$$P(w_o | w_c) = \frac{\\exp(v_{w_o}^T \\cdot v_{w_c})}{\\sum_{w=1}^V \\exp(v_w^T \\cdot v_{w_c})}$$\n\nWhere:\n- $v_{w_c}$ is the vector representation of the center word.\n- $v_{w_o}$ is the vector representation of the context word.\n- $V$ is the total vocabulary size.\n\n**Negative Sampling**: Calculating the denominator over the entire vocabulary $V$ for every step is computationally impossible for large datasets. Negative sampling solves this by approximating the softmax. Instead of updating all vectors, we only update the true context word and a small number ($k$) of randomly chosen \"negative\" words that do not appear in the context. We maximize the dot product for the true pair and minimize it for the negative pairs using the sigmoid function $\\sigma$:\n$$\\log \\sigma(v_{w_o}^T \\cdot v_{w_c}) + \\sum_{i=1}^k \\mathbb{E}_{w_i \\sim P_n(w)} [ \\log \\sigma(-v_{w_i}^T \\cdot v_{w_c}) ]$$\n\n#### Worked Example\nConsider the sentence: \"The quick brown fox jumps over the lazy dog.\"\nIf we use the Skip-gram model with a window size of 2, and the target word is \"fox\":\nThe context words are: [\"quick\", \"brown\", \"jumps\", \"over\"].\nThe network takes \"fox\" as input and tries to output high probabilities for those context words. As the model trains, the weights for \"fox\" are adjusted so its vector aligns closely with words that share similar contexts, like \"wolf\" or \"hound\".\n\nThis leads to the famous vector arithmetic property:\n$$Vector(\"King\") - Vector(\"Man\") + Vector(\"Woman\") \\approx Vector(\"Queen\")$$\n\n#### Common Pitfalls\n- **Out of Vocabulary (OOV)**: Traditional Word2Vec models assign a distinct vector to each exact word. If a word was not seen during training, it cannot be processed. FastText solves this by using subword n-grams.\n- **Polysemy**: Word2Vec assigns a single, static vector to a word. The word \"bank\" has the same vector whether it means a riverbank or a financial institution. Contextual embeddings like ELMo and BERT were developed to solve this.\n\n#### When to Use vs Not Use\n- **Use When**: You are building traditional NLP models (like sentiment analysis with LSTMs), calculating document similarity, or need lightweight features for text classification without the heavy compute of Transformers.\n- **Not Use When**: You need to capture complex context where words have multiple meanings (polysemy), or when you are building state-of-the-art language models, in which case you should use contextual embeddings directly trained via Transformer architectures (like BERT or GPT).\n\n#### Key Takeaways\n1. Word embeddings are dense vectors where geometric distance represents semantic similarity.\n2. Word2Vec uses the distributional hypothesis: words appearing in similar contexts have similar meanings.\n3. Skip-gram predicts context from a word; CBOW predicts a word from its context.\n4. Negative Sampling makes training on large vocabularies computationally feasible.\n5. They are static representations, meaning they cannot capture multiple meanings of the same word.",
   "interactiveSummary": "Explore the 3D space of learned word embeddings. You can search for words to see their nearest neighbors based on cosine similarity, and test vector arithmetic (like King - Man + Woman).",
   "simulatorId": "word-embeddings",
   "quiz": [

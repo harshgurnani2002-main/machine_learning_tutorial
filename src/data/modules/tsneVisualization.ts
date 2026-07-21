@@ -64,18 +64,6 @@ Imagine applying t-SNE to the famous MNIST dataset of handwritten digits (784 di
 - It operates by matching probability distributions of pairwise distances.
 - It beautifully preserves local neighborhoods (clusters) but destroys global distances and topology.
 - It utilizes the heavy-tailed Student-t distribution to solve the crowding problem of high-dimensional spaces.
-
-#### Python Implementation
-
-\`\`\`python
-from sklearn.manifold import TSNE
-from sklearn.datasets import load_digits
-
-digits = load_digits()
-tsne = TSNE(n_components=2, random_state=42)
-X_tsne = tsne.fit_transform(digits.data)
-print(f"Shape: {X_tsne.shape}")
-\`\`\`
 `,
     interactiveSummary: 'This interactive simulator lets you adjust the perplexity and learning rate hyperparameters of the t-SNE algorithm in real-time. You can observe how the high-dimensional points are projected onto the 2D canvas, and how the algorithm iterations minimize the KL divergence loss. Use this to understand the impact of perplexity on the formation and separation of local clusters.',
     simulatorId: 'tsne',

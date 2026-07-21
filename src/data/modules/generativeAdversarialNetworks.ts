@@ -83,24 +83,7 @@ GANs are notoriously difficult to train due to the delicate balance required bet
 2. The Generator maps random noise to data space; the Discriminator acts as a binary critic.
 3. The objective relies on the minimax formulation: $\\min_G \\max_D V(D,G)$.
 4. While GANs produce incredibly sharp outputs, they suffer from training instabilities like Mode Collapse and Vanishing Gradients.
-5. Architectural improvements like DCGAN and loss formulation changes like Wasserstein GAN (WGAN) are standard practices to stabilize training.
-#### Python Implementation
-
-\`\`\`python
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-
-discriminator = Sequential([
-    Dense(128, activation="relu", input_shape=(784,)),
-    Dense(1, activation="sigmoid")
-])
-generator = Sequential([
-    Dense(128, activation="relu", input_shape=(100,)),
-    Dense(784, activation="tanh")
-])
-print(generator.summary())
-\`\`\`
-`,
+5. Architectural improvements like DCGAN and loss formulation changes like Wasserstein GAN (WGAN) are standard practices to stabilize training.`,
     interactiveSummary: 'This interactive simulation demonstrates the delicate adversarial dance between the Generator and the Discriminator. Use the controls to adjust the learning rates for each network. You will observe how the Generator attempts to warp the red data points (synthetic data) to perfectly overlap the blue data points (real data distribution), while the Discriminator dynamically shifts its confidence boundary (the background color map) to tell them apart. Watch out for mode collapse if the generator focuses on a single dense cluster!',
     simulatorId: 'gan',
     quiz: [

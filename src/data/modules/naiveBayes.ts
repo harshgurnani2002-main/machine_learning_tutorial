@@ -70,20 +70,7 @@ Since $0.024 > 0.0003$, the email is classified as Spam.
 - Based on Bayes' Theorem with a naive independence assumption.
 - Highly scalable, fast to train, and computationally efficient at inference.
 - Requires logarithmic transformations to prevent mathematical underflow.
-- Handles missing or unseen data gracefully using Laplace smoothing.
-#### Python Implementation
-
-\`\`\`python
-from sklearn.naive_bayes import GaussianNB
-from sklearn.datasets import load_iris
-
-iris = load_iris()
-X, y = iris.data, iris.target
-gnb = GaussianNB()
-gnb.fit(X, y)
-print(f"Accuracy: {gnb.score(X, y):.2f}")
-\`\`\`
-`,
+- Handles missing or unseen data gracefully using Laplace smoothing.`,
   interactiveSummary: "This interactive simulator shows Naive Bayes in action as a live probability calculator. Each time you adjust a feature slider or toggle a word, the bar chart on the right updates in real time to display the posterior probability P(Class | Features) for each class — the taller the bar, the more confident the model is that the input belongs to that class. You can see how the prior probability (the baseline class frequency) shifts the bars before any features are added, and how each additional feature multiplies the likelihood and pushes probability mass toward the correct class. The visualization also highlights what happens with rare or unseen features: without Laplace smoothing, a single zero probability would collapse the entire bar to nothing, demonstrating why smoothing is critical. This makes it easy to build intuition for how Naive Bayes combines independent evidence into a final, probabilistic verdict.",
   simulatorId: 'naive-bayes',
   quiz: [

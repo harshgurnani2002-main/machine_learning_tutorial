@@ -62,19 +62,6 @@ Suppose we have a feature vector of housing sizes in sq ft: $X = [1000, 1500, 30
 
 **Not Use when:**
 - Using pure Deep Learning on raw pixels or raw waveforms where end-to-end representation learning is preferred.
-
-#### Python Implementation
-
-\`\`\`python
-from sklearn.preprocessing import PolynomialFeatures, StandardScaler
-import numpy as np
-
-X = np.array([[1, 2], [3, 4], [5, 6]])
-poly = PolynomialFeatures(degree=2, include_bias=False)
-X_poly = poly.fit_transform(X)
-print(f"Original shape: {X.shape}")
-print(f"Polynomial shape: {X_poly.shape}")
-\`\`\`
 `,
   interactiveSummary: 'This interactive simulator demonstrates the effects of feature scaling. Plot points and observe how they compress under MinMax scaling vs. Standardization. Notice how extreme outliers distort standard scaling methods, showing the need for robust transformers.',
   simulatorId: 'feature-scaling',
