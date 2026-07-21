@@ -64,6 +64,21 @@ If the top-left 3x3 patch of the image is all 1s, and the filter is all 1s, the 
 - They are built by stacking Conv, ReLU, and Pooling layers, culminating in Dense or GAP layers.
 - They automatically learn a hierarchy of features: edges $\rightarrow$ shapes $\rightarrow$ objects.
 - ResNets (with skip connections) and MobileNets (with depthwise separable convolutions) represent significant modern advancements in CNN architecture.
+
+#### Python Implementation
+
+\`\`\`python
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+model = Sequential([
+    Conv2D(32, (3,3), activation="relu", input_shape=(28,28,1)),
+    MaxPooling2D((2,2)),
+    Flatten(),
+    Dense(10, activation="softmax")
+])
+model.summary()
+\`\`\`
 `,
     simulatorId: 'cnn',
     quiz: [

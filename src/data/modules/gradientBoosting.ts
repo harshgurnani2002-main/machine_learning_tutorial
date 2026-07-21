@@ -75,7 +75,20 @@ This meticulous, iterative process continues, slowly inching towards the true ta
 - Gradient Boosting trains a sequence of shallow, high-bias trees to methodically correct the aggregated errors of prior trees.
 - It elegantly translates the concept of boosting into a gradient descent optimization problem occurring in function space rather than parameter space.
 - The learning rate directly scales individual tree contributions, acting as a vital regularizer that requires more trees but yields better generalization.
-- Advanced framework implementations like XGBoost and LightGBM leverage second-order derivatives and strict architectural regularization to achieve unmatched, state-of-the-art tabular performance.`,
+- Advanced framework implementations like XGBoost and LightGBM leverage second-order derivatives and strict architectural regularization to achieve unmatched, state-of-the-art tabular performance.
+#### Python Implementation
+
+\`\`\`python
+from sklearn.ensemble import GradientBoostingRegressor
+import numpy as np
+
+X = np.random.randn(100, 1)
+y = X.ravel() ** 2
+model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3)
+model.fit(X, y)
+print(f"Train R²: {model.score(X, y):.3f}")
+\`\`\`
+`,
   "interactiveSummary": "This simulator visualizes the sequential ensemble-building process of Gradient Boosting step by step. Each iteration adds a new shallow decision tree trained exclusively on the pseudo-residuals — the negative gradient of the loss — left by the current ensemble, progressively correcting errors rather than fitting the original targets. The residual panel shows how the magnitude of remaining errors shrinks with each boosting round, while the prediction curve converges toward the true function. Adjusting the learning rate (shrinkage) controls how aggressively each tree's contribution is scaled: lower values produce a smoother, more regularized fit at the cost of requiring more trees. Toggle between MSE and Log-loss objectives to observe how the pseudo-residual formula changes, connecting the algorithm's math directly to its visual behavior.",
   "simulatorId": "gradient-boosting",
   "quiz": [

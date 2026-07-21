@@ -6,7 +6,86 @@ export const decisionTrees: MLModule = {
   "category": "Supervised Learning",
   "description": "Split datasets recursively to isolate target variables based on impurity reductions.",
   "formula": "IG(D, A) = H(D) - H(D|A)",
-  "theory": "### Decision Trees: A Comprehensive Guide\n\n#### What is it?\nA Decision Tree is a versatile, interpretable supervised machine learning algorithm used for both classification and regression tasks. It builds a flow-chart-like tree structure where each internal node represents a \"test\" or \"split\" on a feature (e.g., is age > 25?), each branch represents the outcome of the test, and each leaf node represents a class label (classification) or a continuous value (regression).\n\n#### Why do we need it?\nDecision Trees are needed because they mimic human decision-making, making them highly intuitive and explainable. You can easily visualize the tree and explain to stakeholders exactly why a specific prediction was made.\nFurthermore, unlike linear models (Linear/Logistic Regression), Decision Trees can automatically capture complex non-linear relationships and interactions between features without requiring manual feature transformations.\n\n#### How does it work?\nThe tree is built top-down recursively. It starts with the entire dataset at the root node.\n1. The algorithm searches through all features and all possible split points to find the \"best\" split.\n2. The \"best\" split is the one that maximally separates the target variables, essentially making the resulting child nodes as pure as possible.\n3. It splits the dataset into two subsets (left and right branches).\n4. This process repeats recursively on each child node until a stopping criterion is met (e.g., maximum depth reached, or a node is 100% pure).\nThe impurity is measured using metrics like Gini Impurity or Entropy.\n\n#### The Math Behind It\nLet a dataset $D$ contain samples belonging to $C$ different classes.\n\n**Entropy $H(D)$:**\nEntropy is a concept from information theory that measures the impurity or chaos of a dataset. If a dataset is 50/50 split between two classes, entropy is at its maximum (1.0). If it contains only one class, entropy is 0.\n$$H(D) = -\\sum_{c=1}^{C} p_c \\log_2(p_c)$$\nwhere $p_c$ is the proportion of samples belonging to class $c$ in dataset $D$.\n\n**Gini Impurity $Gini(D)$:**\nAn alternative to Entropy used by the CART (Classification and Regression Trees) algorithm. It measures the probability of incorrectly classifying a randomly chosen element.\n$$Gini(D) = 1 - \\sum_{c=1}^{C} p_c^2$$\n\n**Information Gain $IG(D, A)$:**\nTo choose a split on feature $A$, we calculate the Information Gain, which is the difference between the parent node's entropy and the weighted average entropy of the child nodes. The algorithm picks the split that maximizes Information Gain.\n$$IG(D, A) = H(D) - \\sum_{v \\in values(A)} \frac{|D_v|}{|D|} H(D_v)$$\nwhere $D_v$ is the subset of $D$ for which feature $A$ has value $v$.\n\n#### Worked Example\nImagine classifying whether to \"Play Tennis\" (Yes/No) based on feature \"Outlook\" (Sunny/Overcast/Rain).\n- The root node has 9 Yes, 5 No. Entropy $H(D) = 0.940$.\n- Splitting by \"Outlook\" creates 3 child nodes:\n  - Overcast: 4 Yes, 0 No. Entropy = 0.0 (Pure!).\n  - Sunny: 2 Yes, 3 No. Entropy = 0.970.\n  - Rain: 3 Yes, 2 No. Entropy = 0.970.\n- Weighted average of child entropy = $(4/14)*0 + (5/14)*0.970 + (5/14)*0.970 = 0.693$.\n- Information Gain = $0.940 - 0.693 = 0.247$.\nThe algorithm computes this for all features (Humidity, Wind, etc.) and picks the one with the highest gain for the root split.\n\n#### Common Pitfalls\n1. **Overfitting:** Trees have a massive tendency to overfit. If grown unconstrained, they will create a leaf node for every single outlier, achieving 100% training accuracy but failing on test data (high variance).\n2. **Instability:** A small change in the training data can cause a completely different tree to be generated.\n3. **Orthogonal Boundaries:** Decision trees can only draw axis-aligned boundaries (step functions). They struggle to model smooth diagonal lines.\n\n#### When to Use vs Not Use\n**When to Use:**\n- Interpretability is critical.\n- Data has non-linear relationships and you don\'t want to engineer features.\n- You have a mix of categorical and numerical data.\n- As a building block for powerful ensemble models like Random Forests or Gradient Boosting Machines (XGBoost).\n\n**When Not to Use:**\n- You have highly smooth, linear datasets (linear regression is better).\n- You are using it completely standalone without limits (it will overfit).\n- You are predicting time-series trends requiring extrapolation (Trees cannot predict values outside the range of training data).\n\n#### Key Takeaways\n- Decision Trees split data recursively based on Information Gain (Entropy reduction) or Gini Impurity.\n- They are intuitive, interpretable, and handle non-linear data well.\n- They are highly prone to overfitting, so hyperparameters like `max_depth` and `min_samples_split` must be tuned, or ensemble methods should be used.\n",
+    theory: `### Decision Trees: A Comprehensive Guide
+  
+  #### What is it?
+  A Decision Tree is a versatile, interpretable supervised machine learning algorithm used for both classification and regression tasks. It builds a flow-chart-like tree structure where each internal node represents a "test" or "split" on a feature (e.g., is age > 25?), each branch represents the outcome of the test, and each leaf node represents a class label (classification) or a continuous value (regression).
+  
+  #### Why do we need it?
+  Decision Trees are needed because they mimic human decision-making, making them highly intuitive and explainable. You can easily visualize the tree and explain to stakeholders exactly why a specific prediction was made.
+  Furthermore, unlike linear models (Linear/Logistic Regression), Decision Trees can automatically capture complex non-linear relationships and interactions between features without requiring manual feature transformations.
+  
+  #### How does it work?
+  The tree is built top-down recursively. It starts with the entire dataset at the root node.
+  1. The algorithm searches through all features and all possible split points to find the "best" split.
+  2. The "best" split is the one that maximally separates the target variables, essentially making the resulting child nodes as pure as possible.
+  3. It splits the dataset into two subsets (left and right branches).
+  4. This process repeats recursively on each child node until a stopping criterion is met (e.g., maximum depth reached, or a node is 100% pure).
+  The impurity is measured using metrics like Gini Impurity or Entropy.
+  
+  #### The Math Behind It
+  Let a dataset $D$ contain samples belonging to $C$ different classes.
+  
+  **Entropy $H(D)$:**
+  Entropy is a concept from information theory that measures the impurity or chaos of a dataset. If a dataset is 50/50 split between two classes, entropy is at its maximum (1.0). If it contains only one class, entropy is 0.
+  $H(D) = -\\sum_{c=1}^{C} p_c \\log_2(p_c)$
+  where $p_c$ is the proportion of samples belonging to class $c$ in dataset $D$.
+  
+  **Gini Impurity $Gini(D)$:**
+  An alternative to Entropy used by the CART (Classification and Regression Trees) algorithm. It measures the probability of incorrectly classifying a randomly chosen element.
+  $Gini(D) = 1 - \\sum_{c=1}^{C} p_c^2$
+  
+  **Information Gain $IG(D, A)$:**
+  To choose a split on feature $A$, we calculate the Information Gain, which is the difference between the parent node's entropy and the weighted average entropy of the child nodes. The algorithm picks the split that maximizes Information Gain.
+  $IG(D, A) = H(D) - \\sum_{v \\in values(A)} frac{|D_v|}{|D|} H(D_v)$
+  where $D_v$ is the subset of $D$ for which feature $A$ has value $v$.
+  
+  #### Worked Example
+  Imagine classifying whether to "Play Tennis" (Yes/No) based on feature "Outlook" (Sunny/Overcast/Rain).
+  - The root node has 9 Yes, 5 No. Entropy $H(D) = 0.940$.
+  - Splitting by "Outlook" creates 3 child nodes:
+    - Overcast: 4 Yes, 0 No. Entropy = 0.0 (Pure!).
+    - Sunny: 2 Yes, 3 No. Entropy = 0.970.
+    - Rain: 3 Yes, 2 No. Entropy = 0.970.
+  - Weighted average of child entropy = $(4/14)*0 + (5/14)*0.970 + (5/14)*0.970 = 0.693$.
+  - Information Gain = $0.940 - 0.693 = 0.247$.
+  The algorithm computes this for all features (Humidity, Wind, etc.) and picks the one with the highest gain for the root split.
+  
+  #### Common Pitfalls
+  1. **Overfitting:** Trees have a massive tendency to overfit. If grown unconstrained, they will create a leaf node for every single outlier, achieving 100% training accuracy but failing on test data (high variance).
+  2. **Instability:** A small change in the training data can cause a completely different tree to be generated.
+  3. **Orthogonal Boundaries:** Decision trees can only draw axis-aligned boundaries (step functions). They struggle to model smooth diagonal lines.
+  
+  #### When to Use vs Not Use
+  **When to Use:**
+  - Interpretability is critical.
+  - Data has non-linear relationships and you don't want to engineer features.
+  - You have a mix of categorical and numerical data.
+  - As a building block for powerful ensemble models like Random Forests or Gradient Boosting Machines (XGBoost).
+  
+  **When Not to Use:**
+  - You have highly smooth, linear datasets (linear regression is better).
+  - You are using it completely standalone without limits (it will overfit).
+  - You are predicting time-series trends requiring extrapolation (Trees cannot predict values outside the range of training data).
+  
+  #### Key Takeaways
+  - Decision Trees split data recursively based on Information Gain (Entropy reduction) or Gini Impurity.
+  - They are intuitive, interpretable, and handle non-linear data well.
+  - They are highly prone to overfitting, so hyperparameters like \`max_depth\` and \`min_samples_split\` must be tuned, or ensemble methods should be used.
+  
+#### Python Implementation
+
+\`\`\`python
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+
+X = [[0, 0], [1, 1]]
+y = [0, 1]
+clf = DecisionTreeClassifier(max_depth=3)
+clf = clf.fit(X, y)
+print(tree.export_text(clf))
+\`\`\`
+`,
   "interactiveSummary": "In this simulator, you can interact with a plotted dataset to see how a Decision Tree algorithm creates step-like partitions. Adjust the 'Max Depth' slider to observe how deeper trees create smaller, highly customized bounding boxes that fit the training data perfectly (demonstrating overfitting), while shallower trees maintain robust generalized boundaries.",
   "simulatorId": "decision-tree",
   "quiz": [

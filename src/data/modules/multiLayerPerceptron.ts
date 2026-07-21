@@ -65,6 +65,18 @@ The output of the network is 1. If the target was 2, we would backpropagate the 
 - They rely on non-linear activation functions and the backpropagation algorithm.
 - Regularization and proper initialization are critical to training deep MLPs successfully.
 - While powerful for unstructured vectors, they are often superseded by specialized architectures for images and sequences.
+
+#### Python Implementation
+
+\`\`\`python
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_samples=100, random_state=42)
+mlp = MLPClassifier(hidden_layer_sizes=(10, 5), max_iter=500, random_state=42)
+mlp.fit(X, y)
+print(f"Accuracy: {mlp.score(X, y):.3f}")
+\`\`\`
 `,
     simulatorId: 'mlp',
     quiz: [

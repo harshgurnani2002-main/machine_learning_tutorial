@@ -118,6 +118,20 @@ Most classifiers output a probability, not a hard class. The default threshold i
 | Undersampling | Very large majority class (millions of samples) |
 | SMOTE + Tomek | Best overall for most tabular problems |
 | Threshold tuning | When you have asymmetric misclassification costs |
+
+#### Python Implementation
+
+\`\`\`python
+from imblearn.over_sampling import SMOTE
+from sklearn.datasets import make_classification
+import numpy as np
+
+X, y = make_classification(weights=[0.9, 0.1], n_samples=200, random_state=42)
+smote = SMOTE(random_state=42)
+X_res, y_res = smote.fit_resample(X, y)
+print(f"Before: {np.bincount(y)}")
+print(f"After: {np.bincount(y_res)}")
+\`\`\`
 `,
   quiz: [
     {

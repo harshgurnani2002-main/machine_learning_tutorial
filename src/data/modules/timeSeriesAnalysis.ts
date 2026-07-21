@@ -50,6 +50,19 @@ Now, we can predict today's sales using yesterday's sales as a tabular regressio
 1. **Future Leakage:** Creating rolling features or lags using future target values, or using future data during training.
 2. **Spurious Regression:** Regressing two non-stationary variables that both trend upwards (e.g., global temperatures and grocery prices), resulting in a high $R^2$ even though they are completely unrelated.
 3. **Improper Splitting:** Using standard \`train_test_split\` which randomly shuffles data, leaking future points into the training fold.
+
+#### Python Implementation
+
+\`\`\`python
+from statsmodels.tsa.arima.model import ARIMA
+import numpy as np
+
+np.random.seed(42)
+data = np.cumsum(np.random.randn(100))
+model = ARIMA(data, order=(1,1,1))
+result = model.fit()
+print(result.summary())
+\`\`\`
 `,
   interactiveSummary: 'This interactive simulator demonstrates how to extract time-series patterns. Add coordinates along a temporal stream and observe lag and rolling window features change dynamically. See how time-based cross-validation prevents data leakage in regression.',
   simulatorId: 'time-series',

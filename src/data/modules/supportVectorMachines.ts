@@ -147,6 +147,18 @@ Without a thorough grid search, performance can be abysmal.
 - **Support Vectors**: The model discards the vast majority of training data after training.
 - **The Kernel Trick**: Efficiently solves complex, non-linear classification boundaries.
 - **Preprocessing**: Standardization and hyperparameter tuning are absolute prerequisites.
+
+#### Python Implementation
+
+\`\`\`python
+from sklearn.svm import SVC
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_samples=50, n_features=2, random_state=42)
+clf = SVC(kernel="rbf", C=1.0)
+clf.fit(X, y)
+print(f"Support vectors: {len(clf.support_vectors_)}")
+\`\`\`
 `,
     simulatorId: 'svm',
     quiz: [

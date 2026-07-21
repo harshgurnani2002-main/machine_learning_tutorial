@@ -77,7 +77,20 @@ Prediction: Apple.
 - KNN is a lazy learner: zero training time, but expensive prediction time.
 - Distance metric and $K$ are the core hyperparameters.
 - Feature scaling is an absolute prerequisite.
-- Susceptible to the curse of dimensionality.`,
+- Susceptible to the curse of dimensionality.
+#### Python Implementation
+
+\`\`\`python
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+X, y = iris.data[:, :2], iris.target
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X, y)
+print(f"Accuracy: {knn.score(X, y):.2f}")
+\`\`\`
+`,
     interactiveSummary: "This interactive simulator brings K-Nearest Neighbors to life on a 2D canvas where you place your own training points by clicking — assign each point to Class A (blue) or Class B (orange) to build a custom dataset, then click anywhere to drop a query point and watch the algorithm draw lines to its K nearest neighbors and cast a majority vote. The entire background is shaded in real time to show the decision boundary across the full feature space: blue regions predict Class A, orange regions predict Class B. Use the K slider to see a direct demonstration of the bias-variance tradeoff: at K=1 the boundary is jagged and tightly fitted to individual points (high variance), while at K=15 it smooths out into broad, confident regions (higher bias). This shows exactly why choosing the right K matters — too small and the model memorizes noise; too large and it averages away meaningful patterns.",
     simulatorId: 'knn',
     quiz: [

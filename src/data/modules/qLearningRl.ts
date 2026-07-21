@@ -70,7 +70,25 @@ Consider an agent navigating a grid.
 2. It learns an action-value function mapping states and actions to expected future rewards.
 3. It utilizes the Bellman equation and Temporal Difference updates.
 4. It requires a delicate balance of exploration and exploitation to discover optimal policies.
-5. While limited by discrete state spaces, it forms the theoretical foundation for advanced Deep RL techniques.`,
+5. While limited by discrete state spaces, it forms the theoretical foundation for advanced Deep RL techniques.
+#### Python Implementation
+
+\`\`\`python
+import numpy as np
+
+n_states, n_actions = 5, 2
+Q = np.zeros((n_states, n_actions))
+lr, gamma, eps = 0.1, 0.9, 0.1
+
+for _ in range(1000):
+    s = 0
+    while s < n_states - 1:
+        a = np.random.randint(n_actions) if np.random.random() < eps else np.argmax(Q[s])
+        s2, reward = s + a + 1, 1 if s + a + 1 >= n_states - 1 else 0
+        Q[s, a] += lr * (reward + gamma * np.max(Q[s2]) - Q[s, a])
+        s = s2
+\`\`\`
+`,
     interactiveSummary: 'This interactive simulation demonstrates a grid-world environment where an agent learns to navigate to a goal while avoiding obstacles. You can adjust the learning rate, discount factor, and epsilon decay to observe how the agent balances exploration and exploitation. The Q-table is visualized as a heatmap overlaying the grid, showing how value slowly propagates backward from the goal.',
     simulatorId: 'q-learning',
     quiz: [

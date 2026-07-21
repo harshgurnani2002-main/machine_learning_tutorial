@@ -121,6 +121,18 @@ Without labels:
 | LOF | Slow | ❌ Poor | High | Local anomalies, small datasets |
 | One-Class SVM | Medium | ✅ Good | Low | Clean training data of normals |
 | Z-Score / IQR | Very Fast | ❌ Univariate only | High | Quick EDA, univariate screening |
+
+#### Python Implementation
+
+\`\`\`python
+from sklearn.ensemble import IsolationForest
+import numpy as np
+
+X = np.random.randn(200, 2)
+clf = IsolationForest(contamination=0.1, random_state=42)
+preds = clf.fit_predict(X)
+print(f"Anomalies detected: {np.sum(preds == -1)}")
+\`\`\`
 `,
   quiz: [
     {

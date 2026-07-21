@@ -6,7 +6,87 @@ export const linearRegression: MLModule = {
   "category": "Foundations & Math",
   "description": "Fit lines to continuous variables using Least Squares or Gradient Descent.",
   "formula": "y = w^T x + b",
-  "theory": "### Linear Regression: A Comprehensive Guide\n\n#### What is it?\nLinear Regression is one of the most fundamental and widely used machine learning algorithms. It is a supervised learning algorithm used for predictive analysis, specifically for predicting a continuous target variable based on one or more input features. In its simplest form (Simple Linear Regression), it attempts to draw a straight line that best fits the relationship between a single feature and the target. When there are multiple features, it fits a hyperplane in a multi-dimensional space (Multiple Linear Regression).\n\n#### Why do we need it?\nWe need Linear Regression to model and analyze the relationship between variables. It serves two primary purposes:\n1. **Forecasting/Prediction:** Given a set of features (e.g., house size, number of bedrooms), we can predict a continuous outcome (e.g., house price).\n2. **Inference:** It helps us understand the strength and direction of the relationship between variables. For example, quantifying how much the sales of a product increase for every additional dollar spent on marketing.\nIts simplicity and interpretability make it the perfect baseline model for almost any regression problem.\n\n#### How does it work?\nLinear Regression works by assuming a linear relationship between the input features ($X$) and the target variable ($y$). The model assigns a weight (coefficient) to each feature and adds a bias term (intercept). The prediction is simply the weighted sum of the inputs plus the bias.\nTo find the \"best-fitting\" line, the algorithm minimizes a loss function, typically the Mean Squared Error (MSE), which measures the average squared difference between the predicted values and the actual target values. The minimization can be done analytically using the Normal Equation or iteratively using Gradient Descent.\n\n#### The Math Behind It\nLet $m$ be the number of training examples and $n$ be the number of features.\nLet $X \\in \\mathbb{R}^{m \times n}$ be the feature matrix and $y \\in \\mathbb{R}^m$ be the target vector.\n\n**Hypothesis Function:**\n$$h_w(x) = w_0 + w_1 x_1 + w_2 x_2 + \\dots + w_n x_n = w^T x$$\nwhere $w \\in \\mathbb{R}^{n+1}$ is the weight vector (including the bias $w_0$) and $x$ is the feature vector (with $x_0 = 1$).\n\n**Cost Function (Mean Squared Error):**\n$$J(w) = \frac{1}{2m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} \right)^2$$\n\n**Parameter Optimization (Normal Equation):**\nTo find the global minimum, we can take the derivative of the cost function with respect to $w$ and set it to zero:\n$$\nabla_w J(w) = X^T X w - X^T y = 0 \\implies w = (X^T X)^{-1} X^T y$$\n\n**Parameter Optimization (Gradient Descent):**\nFor large datasets, we iteratively update the weights to minimize the cost function:\n$$w_j \\leftarrow w_j - \\alpha \frac{\\partial J}{\\partial w_j} = w_j - \frac{\\alpha}{m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} \right) x_j^{(i)}$$\nwhere $\\alpha$ is the learning rate.\n\n#### Worked Example\nImagine predicting house prices ($y$ in $1000s) based on size ($x$ in 1000 sq ft).\nDataset: $(x_1, y_1) = (1, 150), (x_2, y_2) = (2, 250), (x_3, y_3) = (3, 350)$\nAssume $h_w(x) = w_1 x + w_0$.\nUsing the Normal Equation, we find $w_1 = 100$ and $w_0 = 50$.\nSo, $y = 100x + 50$.\nFor a new house of size 2.5k sq ft, the predicted price is $100(2.5) + 50 = 300$ ($300,000).\n\n#### Common Pitfalls\n1. **Outliers:** Linear regression minimizes squared errors, making it highly sensitive to outliers. A single extreme value can significantly skew the best-fit line.\n2. **Multicollinearity:** When features are highly correlated, the matrix $X^T X$ becomes nearly singular, leading to unstable coefficient estimates.\n3. **Non-linearity:** Applying linear regression to non-linear data without polynomial transformations leads to underfitting.\n4. **Heteroscedasticity:** The assumption of constant variance of residuals might be violated, making confidence intervals unreliable.\n\n#### When to Use vs Not Use\n**When to Use:**\n- The relationship between features and target is known or suspected to be linear.\n- Interpretability is a high priority (you need to explain the model to stakeholders).\n- You need a simple, fast baseline model before trying complex algorithms.\n\n**When Not to Use:**\n- The data is highly non-linear and complex.\n- There are many significant outliers that cannot be removed.\n- You are dealing with categorical targets (use Logistic Regression instead).\n\n#### Key Takeaways\n- Linear Regression is a fundamental supervised learning technique for continuous targets.\n- It finds the best-fit hyperplane by minimizing the Mean Squared Error (MSE).\n- It can be solved analytically via the Normal Equation or iteratively via Gradient Descent.\n- While simple and highly interpretable, it assumes linearity and is sensitive to outliers.\n",
+    theory: `### Linear Regression: A Comprehensive Guide
+  
+  #### What is it?
+  Linear Regression is one of the most fundamental and widely used machine learning algorithms. It is a supervised learning algorithm used for predictive analysis, specifically for predicting a continuous target variable based on one or more input features. In its simplest form (Simple Linear Regression), it attempts to draw a straight line that best fits the relationship between a single feature and the target. When there are multiple features, it fits a hyperplane in a multi-dimensional space (Multiple Linear Regression).
+  
+  #### Why do we need it?
+  We need Linear Regression to model and analyze the relationship between variables. It serves two primary purposes:
+  1. **Forecasting/Prediction:** Given a set of features (e.g., house size, number of bedrooms), we can predict a continuous outcome (e.g., house price).
+  2. **Inference:** It helps us understand the strength and direction of the relationship between variables. For example, quantifying how much the sales of a product increase for every additional dollar spent on marketing.
+  Its simplicity and interpretability make it the perfect baseline model for almost any regression problem.
+  
+  #### How does it work?
+  Linear Regression works by assuming a linear relationship between the input features ($X$) and the target variable ($y$). The model assigns a weight (coefficient) to each feature and adds a bias term (intercept). The prediction is simply the weighted sum of the inputs plus the bias.
+  To find the "best-fitting" line, the algorithm minimizes a loss function, typically the Mean Squared Error (MSE), which measures the average squared difference between the predicted values and the actual target values. The minimization can be done analytically using the Normal Equation or iteratively using Gradient Descent.
+  
+  #### The Math Behind It
+  Let $m$ be the number of training examples and $n$ be the number of features.
+  Let $X \\in \\mathbb{R}^{m 	imes n}$ be the feature matrix and $y \\in \\mathbb{R}^m$ be the target vector.
+  
+  **Hypothesis Function:**
+  $h_w(x) = w_0 + w_1 x_1 + w_2 x_2 + \\dots + w_n x_n = w^T x$
+  where $w \\in \\mathbb{R}^{n+1}$ is the weight vector (including the bias $w_0$) and $x$ is the feature vector (with $x_0 = 1$).
+  
+  **Cost Function (Mean Squared Error):**
+  $J(w) = frac{1}{2m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} ight)^2$
+  
+  **Parameter Optimization (Normal Equation):**
+  To find the global minimum, we can take the derivative of the cost function with respect to $w$ and set it to zero:
+  $
+  abla_w J(w) = X^T X w - X^T y = 0 \\implies w = (X^T X)^{-1} X^T y$
+  
+  **Parameter Optimization (Gradient Descent):**
+  For large datasets, we iteratively update the weights to minimize the cost function:
+  $w_j \\leftarrow w_j - \\alpha frac{\\partial J}{\\partial w_j} = w_j - frac{\\alpha}{m} \\sum_{i=1}^{m} \\left( h_w(x^{(i)}) - y^{(i)} ight) x_j^{(i)}$
+  where $\\alpha$ is the learning rate.
+  
+  #### Worked Example
+  Imagine predicting house prices ($y$ in $1000s) based on size ($x$ in 1000 sq ft).
+  Dataset: $(x_1, y_1) = (1, 150), (x_2, y_2) = (2, 250), (x_3, y_3) = (3, 350)$
+  Assume $h_w(x) = w_1 x + w_0$.
+  Using the Normal Equation, we find $w_1 = 100$ and $w_0 = 50$.
+  So, $y = 100x + 50$.
+  For a new house of size 2.5k sq ft, the predicted price is $100(2.5) + 50 = 300$ ($300,000).
+  
+  #### Common Pitfalls
+  1. **Outliers:** Linear regression minimizes squared errors, making it highly sensitive to outliers. A single extreme value can significantly skew the best-fit line.
+  2. **Multicollinearity:** When features are highly correlated, the matrix $X^T X$ becomes nearly singular, leading to unstable coefficient estimates.
+  3. **Non-linearity:** Applying linear regression to non-linear data without polynomial transformations leads to underfitting.
+  4. **Heteroscedasticity:** The assumption of constant variance of residuals might be violated, making confidence intervals unreliable.
+  
+  #### When to Use vs Not Use
+  **When to Use:**
+  - The relationship between features and target is known or suspected to be linear.
+  - Interpretability is a high priority (you need to explain the model to stakeholders).
+  - You need a simple, fast baseline model before trying complex algorithms.
+  
+  **When Not to Use:**
+  - The data is highly non-linear and complex.
+  - There are many significant outliers that cannot be removed.
+  - You are dealing with categorical targets (use Logistic Regression instead).
+  
+  #### Key Takeaways
+  - Linear Regression is a fundamental supervised learning technique for continuous targets.
+  - It finds the best-fit hyperplane by minimizing the Mean Squared Error (MSE).
+  - It can be solved analytically via the Normal Equation or iteratively via Gradient Descent.
+  - While simple and highly interpretable, it assumes linearity and is sensitive to outliers.
+  
+#### Python Implementation
+
+\`\`\`python
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+X, y = [[1], [2], [3], [4], [5]], [2, 4, 6, 8, 10]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+print(f"R² Score: {model.score(X_test, y_test):.2f}")
+\`\`\`
+`,
   "interactiveSummary": "In this interactive simulator, you can plot data points on a 2D plane and visualize the best-fit line. Adjust the slope and intercept sliders manually to see how the Mean Squared Error (MSE) changes in real-time, or click 'Run Gradient Descent' to watch the line automatically converge to the optimal parameters. Use this to intuitively understand how the line minimizes residual distances.",
   "simulatorId": "lin-reg",
   "quiz": [

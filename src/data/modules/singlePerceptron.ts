@@ -60,6 +60,21 @@ $b = -0.1 + 0.1(-1) = -0.2$.
 - It uses a step function and simple error-correction weight updates.
 - Guaranteed to converge only on linearly separable data (Perceptron Convergence Theorem).
 - The inability to solve the XOR problem mathematically proved by Minsky and Papert led to the first "AI Winter" until MLPs were popularized.
+
+#### Python Implementation
+
+\`\`\`python
+import numpy as np
+
+X = np.array([[0,0,1],[0,1,1],[1,0,1],[1,1,1]])
+y = np.array([0, 0, 0, 1])
+w = np.random.randn(3)
+for _ in range(10):
+    for xi, yi in zip(X, y):
+        pred = 1 if xi @ w > 0 else 0
+        w += 0.1 * (yi - pred) * xi
+print(f"Trained weights: {w}")
+\`\`\`
 `,
     simulatorId: 'perceptron',
     quiz: [

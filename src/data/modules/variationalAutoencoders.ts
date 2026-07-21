@@ -65,7 +65,25 @@ Let's walk through an image of a handwritten digit '7' passing through a VAE:
 1. VAEs encode inputs as probability distributions (mean and variance), not fixed distinct points.
 2. The ELBO loss function carefully balances accurate reconstruction with strict latent space regularization.
 3. The Reparameterization Trick is a critical mathematical maneuver enabling backpropagation through stochastic nodes.
-4. They provide excellent latent space interpolation and stable training, but typically yield slightly blurry generations.`,
+4. They provide excellent latent space interpolation and stable training, but typically yield slightly blurry generations.
+#### Python Implementation
+
+\`\`\`python
+import torch
+import torch.nn as nn
+
+class VAE(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.encoder = nn.Linear(784, 20)
+        self.decoder = nn.Linear(10, 784)
+    
+def vae_loss(recon, x, mu, logvar):
+    recon_loss = nn.functional.binary_cross_entropy(recon, x, reduction="sum")
+    kl_loss = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
+    return recon_loss + kl_loss
+\`\`\`
+`,
     interactiveSummary: 'This interactive tool visualizes the 2D latent space of a trained VAE. You can click anywhere on the coordinate grid, which represents a sampled vector $z$, and watch the Decoder reconstruct an image in real-time. Dragging your cursor across the space demonstrates smooth interpolation, morphing one digit/image seamlessly into another, showing the continuous nature of the learned distributions.',
     simulatorId: 'vae',
     quiz: [

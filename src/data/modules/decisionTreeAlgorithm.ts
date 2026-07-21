@@ -81,7 +81,20 @@ Because $0.40 < 0.48$, this specific split effectively reduces impurity. The tre
 - Decision Trees partition data recursively to maximize purity (minimize impurity) using orthogonal splits.
 - They utilize Gini Impurity or Information Gain for classification, and Mean Squared Error (variance reduction) for regression.
 - They are remarkably easy to understand and visualize but are highly susceptible to overfitting if not properly regularized or pruned.
-- They form the foundational weak learners for state-of-the-art ensemble models like Random Forests and XGBoost.`,
+- They form the foundational weak learners for state-of-the-art ensemble models like Random Forests and XGBoost.
+#### Python Implementation
+
+\`\`\`python
+import numpy as np
+
+def entropy(y):
+    p = np.bincount(y) / len(y)
+    return -np.sum(p * np.log2(p + 1e-9))
+
+y = np.array([0, 0, 1, 1])
+print(f"Entropy: {entropy(y):.3f}")
+\`\`\`
+`,
   "interactiveSummary": "In this interactive simulator, you can build a decision tree step-by-step. Adjust hyperparameters like 'max_depth' and 'min_samples_split' to see how they directly impact the tree's size and shape. Observe the decision boundaries changing in real-time as the tree depth increases, illustrating the concept of overfitting.",
   "simulatorId": "tree-splits",
   "quiz": [

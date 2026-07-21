@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
+import { KaggleDataPreview } from './KaggleDataPreview';
 import { InteractiveRegression } from './InteractiveRegression';
 import { LogisticRegressionSimulator } from './LogisticRegressionSimulator';
 import { DecisionTreeSimulator } from './DecisionTreeSimulator';
@@ -11,8 +12,10 @@ import { PCASimulator } from './PCASimulator';
 import { GradientBoostingSimulator } from './GradientBoostingSimulator';
 import { BasicGBSimulator } from './BasicGBSimulator';
 import { KMeansSandbox } from './KMeansSandbox';
+import { DbscanSandbox } from './DbscanSandbox';
 import { NeuralNetSandbox } from './NeuralNetSandbox';
 import { GradientDescent } from './GradientDescent';
+import { OptimizerCompare } from './OptimizerCompare';
 import { AttentionMap } from './AttentionMap';
 import { EmbeddingSpace } from './EmbeddingSpace';
 import { TimeSeriesSimulator } from './TimeSeriesSimulator';
@@ -27,9 +30,13 @@ import { PerceptronSimulator } from './PerceptronSimulator';
 import { ActivationsSimulator } from './ActivationsSimulator';
 import { CNNSimulator } from './CNNSimulator';
 import { RNNSimulator } from './RNNSimulator';
+import { NLPSentimentSimulator } from './NLPSentimentSimulator';
 import { RegularizationSimulator } from './RegularizationSimulator';
 import { BiasVarianceSimulator } from './BiasVarianceSimulator';
 import { TSNESimulator } from './TSNESimulator';
+import { RecommenderSimulator } from './RecommenderSimulator';
+import { ModelEvalSimulator } from './ModelEvalSimulator';
+import { HyperparamTuningSimulator } from './HyperparamTuningSimulator';
 import { Database } from 'lucide-react';
 
 export const ModuleSimulator: React.FC = () => {
@@ -39,13 +46,7 @@ export const ModuleSimulator: React.FC = () => {
     switch (activeModule.simulatorId) {
       case 'intro-simulator':
       case 'kaggle-notebook':
-        return (
-          <div className="flex flex-col items-center justify-center h-full p-12 text-center text-[#6E6257]">
-            <Database className="w-16 h-16 mb-4 text-[#CFC5B4]" />
-            <h3 className="text-xl font-bold text-[#2E251E] mb-2">Conceptual Overview</h3>
-            <p>This module is designed for reading and reflection rather than interactive simulation. Explore the theory tab for a deep dive.</p>
-          </div>
-        );
+        return <KaggleDataPreview />;
       case 'lin-reg':
         return <InteractiveRegression />;
       case 'log-reg':
@@ -70,13 +71,7 @@ export const ModuleSimulator: React.FC = () => {
       case 'kmeans':
         return <KMeansSandbox />;
       case 'dbscan':
-        return (
-          <div className="flex flex-col items-center justify-center h-full p-12 text-center text-[#6E6257]">
-            <Database className="w-16 h-16 mb-4 text-[#CFC5B4]" />
-            <h3 className="text-xl font-bold text-[#2E251E] mb-2">DBSCAN Simulator Coming Soon</h3>
-            <p>DBSCAN is a density-based clustering algorithm. The K-Means simulator is available for comparison in the meantime.</p>
-          </div>
-        );
+        return <DbscanSandbox />;
       case 'gradient-descent':
         return <GradientDescent />;
       case 'attention':
@@ -94,7 +89,7 @@ export const ModuleSimulator: React.FC = () => {
       case 'mlp':
         return <NeuralNetSandbox />;
       case 'optimizers':
-        return <GradientDescent />;
+        return <OptimizerCompare />;
       case 'tsne':
         return <TSNESimulator />;
       case 'perceptron':
@@ -103,6 +98,8 @@ export const ModuleSimulator: React.FC = () => {
         return <CNNSimulator />;
       case 'rnn':
         return <RNNSimulator />;
+      case 'nlp-sentiment':
+        return <NLPSentimentSimulator />;
       case 'q-learning':
         return <QLearningSimulator />;
       case 'gan':
@@ -117,6 +114,12 @@ export const ModuleSimulator: React.FC = () => {
         return <AnomalyDetectionSimulator />;
       case 'ensemble-simulator':
         return <EnsembleSimulator />;
+      case 'recommender':
+        return <RecommenderSimulator />;
+      case 'model-eval':
+        return <ModelEvalSimulator />;
+      case 'hyperparam-tuning':
+        return <HyperparamTuningSimulator />;
       default:
         return (
           <div className="flex flex-col items-center justify-center h-full p-12 text-center text-[#6E6257]">

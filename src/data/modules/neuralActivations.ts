@@ -80,6 +80,21 @@ The resulting value $a$ is passed to the next layer.
 - The choice of activation function directly dictates how effectively gradients can flow backwards through the network.
 - ReLU is the undisputed king of hidden layers for general-purpose deep learning, solving the vanishing gradient problem for positive values.
 - Understanding the derivative of these functions is crucial, as the derivative is what actually updates the weights during backpropagation.
+
+#### Python Implementation
+
+\`\`\`python
+import numpy as np
+
+def sigmoid(x): return 1 / (1 + np.exp(-x))
+def relu(x): return np.maximum(0, x)
+def tanh(x): return np.tanh(x)
+
+z = np.array([-2, -1, 0, 1, 2])
+print(f"Sigmoid: {sigmoid(z)}")
+print(f"ReLU:    {relu(z)}")
+print(f"Tanh:    {tanh(z)}")
+\`\`\`
 `,
   "interactiveSummary": "The simulator renders four side-by-side activation function curves — Sigmoid, Tanh, ReLU, and GeLU — plotted over the full input range from −6 to +6, giving you an immediate visual feel for their shape, saturation zones, and output ranges. Drag the interactive input slider (z-value) and watch a live marker traverse each curve simultaneously, with the exact output value and its derivative displayed in real time; this makes it viscerally clear how the Sigmoid derivative collapses to near-zero at extreme values (vanishing gradient) while ReLU's derivative is a crisp constant 1 in the positive region. A dedicated 'Derivative Mode' overlays the gradient curves, revealing at a glance why deep stacking of Sigmoid layers starves backpropagation while ReLU preserves gradient flow. Toggle the 'Dying Neuron' scenario to simulate a neuron stuck at large negative z and observe how Leaky ReLU maintains a small non-zero gradient whereas standard ReLU flatlines, directly motivating the fix.",
   "simulatorId": "activations",

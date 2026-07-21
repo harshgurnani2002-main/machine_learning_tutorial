@@ -76,7 +76,21 @@ Imagine fitting a regression line to a dataset mapping 'Years of Experience' to 
 - Regularization deliberately trades a little bias for a massive, generalizing reduction in variance.
 - $L_2$ (Ridge) shrinks weights smoothly, provides a closed-form solution, and handles correlated features beautifully.
 - $L_1$ (Lasso) drives weights to exactly zero, acting as an automated feature selection mechanism.
-- Always normalize or scale your data before applying any form of distance-based regularization.`,
+- Always normalize or scale your data before applying any form of distance-based regularization.
+#### Python Implementation
+
+\`\`\`python
+from sklearn.linear_model import Ridge, Lasso
+from sklearn.datasets import make_regression
+import numpy as np
+
+X, y = make_regression(n_samples=50, n_features=10, noise=0.1, random_state=42)
+ridge = Ridge(alpha=1.0).fit(X, y)
+lasso = Lasso(alpha=0.1).fit(X, y)
+print(f"Ridge coefs non-zero: {np.sum(ridge.coef_ != 0)}")
+print(f"Lasso coefs non-zero: {np.sum(lasso.coef_ != 0)}")
+\`\`\`
+`,
     interactiveSummary: 'This simulator visualizes the regularization path — a classic diagnostic plot showing how each feature coefficient shrinks as the regularization strength λ (lambda) increases from left to right. Each colored line represents one feature weight: watch how Ridge (L2) smoothly decays all coefficients toward zero simultaneously, while Lasso (L1) aggressively kinks individual coefficients to exactly 0.0 at different λ thresholds, effectively removing those features from the model. Use the toggle to switch between L1 and L2 modes and observe the stark geometric difference. The constraint region overlay (bottom panel) shows why: the elliptical loss contours hit the circular L2 constraint smoothly, but touch the diamond-shaped L1 constraint at sharp corners on the axes — the exact points where a coefficient is zero.',
     simulatorId: 'regularization',
     quiz: [

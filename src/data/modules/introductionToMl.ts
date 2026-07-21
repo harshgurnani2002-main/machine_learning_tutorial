@@ -100,6 +100,20 @@ A reliable general heuristic:
 - Start with a simple **Logistic Regression** or **Linear Regression** as your baseline.
 - Try **Gradient Boosting (XGBoost)** for structured/tabular data — it wins most Kaggle competitions.
 - Use **Deep Learning** when you have massive data and the problem is images, text, or audio.
+
+#### Python Implementation
+
+\`\`\`python
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+iris = datasets.load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+print(f"Accuracy: {clf.score(X_test, y_test):.2f}")
+\`\`\`
 `,
   quiz: [
     {

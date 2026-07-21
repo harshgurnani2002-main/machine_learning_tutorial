@@ -63,7 +63,20 @@ Imagine trying to predict house prices based purely on square footage. The true 
 - Total Error is mathematically defined as Bias² + Variance + Irreducible Error.
 - Model complexity strictly decreases bias but strictly increases variance.
 - The overarching goal of machine learning is to find the "sweet spot" at the bottom of the U-shaped error curve that minimizes the sum of bias and variance on unseen test data.
-- Cross-validation, learning curves, and validation curves are the mandatory primary tools used in practice to visualize and aggressively manage this tradeoff.`,
+- Cross-validation, learning curves, and validation curves are the mandatory primary tools used in practice to visualize and aggressively manage this tradeoff.
+#### Python Implementation
+
+\`\`\`python
+from sklearn.model_selection import cross_val_score
+from sklearn.tree import DecisionTreeRegressor
+import numpy as np
+
+X = np.random.randn(100, 1)
+y = X.ravel() ** 2 + np.random.randn(100) * 0.1
+scores = cross_val_score(DecisionTreeRegressor(max_depth=5), X, y, cv=5)
+print(f"CV scores: {scores.mean():.3f} +/- {scores.std():.3f}")
+\`\`\`
+`,
     interactiveSummary: "This simulator visualizes the bias-variance decomposition across a sweep of model complexities using a live polynomial regression fitted to a noisy, real-world-style dataset. The top chart renders the fitted polynomial curve against the noisy data points, making it immediately visible when the model underfits (flat line misses the curve) or overfits (wild oscillations between points). The bottom chart plots the U-shaped error curve: as polynomial degree increases, training MSE monotonically decreases while validation MSE first falls then sharply rises — the inflection point is the bias-variance sweet spot. Hovering over any degree value decomposes the total error into its bias² and variance components, connecting the visual pattern to the mathematical decomposition Error = Bias² + Variance + Irreducible Noise. Use the noise level slider to observe how higher irreducible noise raises the floor of the entire error curve without shifting the optimal model complexity.",
     simulatorId: 'bias-variance',
     quiz: [

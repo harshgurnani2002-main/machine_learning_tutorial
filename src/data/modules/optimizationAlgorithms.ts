@@ -91,6 +91,23 @@ The weight has been updated to $0.68$, moving in the opposite direction of the p
 - Momentum helps the optimizer bulldoze through saddle points and flat plateaus.
 - Adaptive optimizers (like Adam) automatically adjust the learning rate on a per-parameter basis, making them incredibly robust and fast.
 - There is no single "best" optimizer; the choice represents a trade-off between speed of convergence and the quality of final generalization.
+
+#### Python Implementation
+
+\`\`\`python
+import numpy as np
+
+def gradient_descent(f, df, x0, lr=0.1, steps=50):
+    x = x0
+    for i in range(steps):
+        x -= lr * df(x)
+    return x
+
+f = lambda x: x**2 + 5
+df = lambda x: 2*x
+x_min = gradient_descent(f, df, 10.0)
+print(f"Minimum at x = {x_min:.4f}")
+\`\`\`
 `,
   "interactiveSummary": "The simulator renders a 2D loss landscape — either a convex bowl, an elongated elliptical valley, or a saddle-point surface — as a contour heat map, with warmer colors marking higher loss regions and cooler colors indicating lower loss. Each optimizer (SGD, SGD+Momentum, RMSprop, Adam) plots its own trajectory on this surface as animated colored path lines, making it immediately clear how vanilla SGD zigzags slowly down the gradient while Momentum builds inertia to shoot through ravines, and how Adam adapts its step size per dimension to take near-straight diagonal paths. The convergence panel below the landscape tracks the loss vs. iteration curves for all optimizers simultaneously, so you can directly compare how quickly each one reaches the minimum and whether it overshoots. Slider controls for learning rate and momentum let you cause deliberate failure modes — set the learning rate too high and watch all paths diverge and oscillate, or set momentum too high and observe the characteristic overshoot spiral that wraps around the minimum before settling.",
   "simulatorId": "optimizers",
