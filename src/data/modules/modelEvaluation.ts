@@ -116,8 +116,7 @@ export const modelEvaluation: MLModule = {
   print(f"Precision: {precision_score(y_true, y_pred):.2f}")
   print(f"Recall: {recall_score(y_true, y_pred):.2f}")
   print(f"F1: {f1_score(y_true, y_pred):.2f}")
-  \`\``,
-  `,
+  \`\`\``,
 
 
   interactiveSummary: 'Explore how classification thresholds affect the confusion matrix and derived metrics. The simulator lets you drag a threshold slider to trace an ROC curve in real time, toggle between balanced and imbalanced datasets, and inspect how precision, recall, F1, and accuracy change. You can also visualize learning curves to diagnose bias and variance.',

@@ -122,8 +122,7 @@ export const recommendationSystems: MLModule = {
   algo = SVD()
   results = cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=3, verbose=True)
   print(f"Mean RMSE: {results['test_rmse'].mean():.3f}")
-  \`\``,
-  `,
+  \`\`\``,
 
   quiz: [
     {
